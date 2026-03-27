@@ -1,0 +1,301 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - link "Aller au contenu principal" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner [ref=e3]:
+    - navigation [ref=e4]:
+      - generic [ref=e5]:
+        - link "waveIA" [ref=e6] [cursor=pointer]:
+          - /url: /
+          - img [ref=e9]
+          - generic [ref=e13]: waveIA
+        - navigation [ref=e14]:
+          - link "Création Site" [ref=e16] [cursor=pointer]:
+            - /url: /creation-site-internet
+            - text: Création Site
+            - img [ref=e17]
+          - link "Référencement SEO" [ref=e20] [cursor=pointer]:
+            - /url: /referencement-seo
+            - text: Référencement SEO
+            - img [ref=e21]
+          - link "Communication" [ref=e24] [cursor=pointer]:
+            - /url: /agence-communication
+            - text: Communication
+            - img [ref=e25]
+          - link "L'Agence" [ref=e28] [cursor=pointer]:
+            - /url: /a-propos
+            - text: L'Agence
+            - img [ref=e29]
+          - link "Tarifs & Offres" [ref=e32] [cursor=pointer]:
+            - /url: /tarifs
+            - text: Tarifs & Offres
+            - img [ref=e33]
+        - generic [ref=e35]:
+          - button "Changer de thème" [ref=e36]:
+            - img [ref=e39]
+          - link "Planifier un échange avec WaveIA" [active] [ref=e41] [cursor=pointer]:
+            - /url: /contact
+            - text: Planifier un échange
+  - main [ref=e44]:
+    - generic [ref=e45]:
+      - generic [ref=e49]:
+        - navigation "Breadcrumb" [ref=e51]:
+          - list [ref=e52]:
+            - listitem [ref=e53]:
+              - link "Accueil" [ref=e54] [cursor=pointer]:
+                - /url: /
+                - img [ref=e55]
+                - generic [ref=e58]: Accueil
+            - listitem [ref=e59]:
+              - img [ref=e60]
+              - generic [ref=e62]: Contact
+        - generic [ref=e63]:
+          - text: Contact
+          - heading "Parlons de votre projet" [level=1] [ref=e64]
+          - paragraph [ref=e65]: Vous avez une idée, un projet ou simplement une question ? Contactez-nous et obtenez une réponse sous 24h.
+      - generic [ref=e68]:
+        - generic [ref=e69]:
+          - generic [ref=e70]:
+            - heading "Coordonnées" [level=2] [ref=e71]
+            - paragraph [ref=e72]: N'hésitez pas à nous contacter par le moyen qui vous convient le mieux.
+            - generic [ref=e73]:
+              - generic [ref=e74]:
+                - img [ref=e76]
+                - generic [ref=e79]:
+                  - generic [ref=e80]: Email
+                  - link "contact@waveia.fr" [ref=e81] [cursor=pointer]:
+                    - /url: mailto:contact@waveia.fr
+              - generic [ref=e82]:
+                - img [ref=e84]
+                - generic [ref=e86]:
+                  - generic [ref=e87]: Téléphone
+                  - link "06 95 91 36 69" [ref=e88] [cursor=pointer]:
+                    - /url: tel:+33695913669
+              - generic [ref=e89]:
+                - img [ref=e91]
+                - generic [ref=e94]:
+                  - generic [ref=e95]: Localisation
+                  - generic [ref=e96]: Biarritz • Bayonne • Anglet
+              - generic [ref=e97]:
+                - img [ref=e99]
+                - generic [ref=e102]:
+                  - generic [ref=e103]: Horaires
+                  - generic [ref=e104]: "Lun-Ven : 9h-18h"
+          - generic [ref=e105]:
+            - generic [ref=e106]:
+              - img [ref=e107]
+              - generic [ref=e109]: Consultation gratuite
+            - paragraph [ref=e110]: Réservez un appel de 30 minutes pour discuter de votre projet et obtenir des conseils personnalisés.
+            - button "Réserver un créneau" [ref=e111]
+        - generic [ref=e113]:
+          - generic [ref=e114]:
+            - img [ref=e115]
+            - generic [ref=e120]: Décrivez votre projet
+          - generic [ref=e121]:
+            - generic [ref=e122]:
+              - generic [ref=e123]: Nom complet *
+              - textbox "Nom complet *" [ref=e124]:
+                - /placeholder: Jean Dupont
+            - generic [ref=e125]:
+              - generic [ref=e126]: Email *
+              - textbox "Email *" [ref=e127]:
+                - /placeholder: jean@entreprise.fr
+            - generic [ref=e128]:
+              - generic [ref=e129]: Téléphone
+              - textbox "Téléphone" [ref=e130]:
+                - /placeholder: 06 00 00 00 00
+            - generic [ref=e131]:
+              - generic [ref=e132]: Entreprise
+              - textbox "Entreprise" [ref=e133]:
+                - /placeholder: Ma Super Entreprise
+            - generic [ref=e134]:
+              - generic [ref=e135]: Type de projet *
+              - combobox "Type de projet *" [ref=e136] [cursor=pointer]:
+                - option "Sélectionnez..." [selected]
+                - option "Site vitrine"
+                - option "E-commerce"
+                - option "Application web"
+                - option "Refonte de site"
+                - option "SEO / Référencement"
+                - option "Identité visuelle"
+                - option "Autre"
+            - generic [ref=e137]:
+              - generic [ref=e138]: Budget estimé
+              - combobox "Budget estimé" [ref=e139] [cursor=pointer]:
+                - option "Sélectionnez..." [selected]
+                - option "< 1 500€"
+                - option "1 500€ - 3 000€"
+                - option "3 000€ - 5 000€"
+                - option "5 000€ - 10 000€"
+                - option "> 10 000€"
+            - generic [ref=e140]:
+              - generic [ref=e141]: Décrivez votre projet *
+              - textbox "Décrivez votre projet *" [ref=e142]:
+                - /placeholder: Parlez-nous de votre projet, vos objectifs, vos contraintes...
+          - generic [ref=e143]:
+            - paragraph [ref=e144]: "* Champs obligatoires"
+            - button "Envoyer le message" [ref=e145]:
+              - generic [ref=e148]:
+                - text: Envoyer le message
+                - img [ref=e149]
+      - generic [ref=e153]:
+        - generic [ref=e154]:
+          - heading "Retrouvez-nous sur la Côte Basque" [level=2] [ref=e155]
+          - paragraph [ref=e156]: "Nous intervenons sur l'ensemble du territoire : Biarritz, Bayonne, Anglet et toute la côte basque française."
+        - iframe [ref=e159]:
+          
+  - contentinfo [ref=e160]:
+    - generic [ref=e164]:
+      - generic [ref=e165]:
+        - generic [ref=e167]: On se rencontre ?
+        - paragraph [ref=e168]: L'excellence digitale, l'intelligence en plus.
+        - paragraph [ref=e169]: Ancrés au Pays Basque. Discutons de votre projet autour d'un café.
+      - generic [ref=e170]:
+        - link "Démarrer un projet" [ref=e171] [cursor=pointer]:
+          - /url: /contact
+          - generic [ref=e174]:
+            - text: Démarrer un projet
+            - img [ref=e175]
+        - link "Voir les tarifs" [ref=e178] [cursor=pointer]:
+          - /url: /tarifs
+    - generic [ref=e180]:
+      - generic [ref=e181]:
+        - link "waveIA" [ref=e182] [cursor=pointer]:
+          - /url: /
+          - img [ref=e185]
+          - generic [ref=e189]: waveIA
+        - paragraph [ref=e190]: Codé avec passion au Pays Basque. Sites internet haute performance, SEO local et identité de marque.
+        - generic [ref=e191]:
+          - link "LinkedIn" [ref=e192] [cursor=pointer]:
+            - /url: https://linkedin.com/company/waveia
+            - img [ref=e193]
+          - link "Instagram" [ref=e197] [cursor=pointer]:
+            - /url: https://instagram.com/waveia.fr
+            - img [ref=e198]
+        - generic [ref=e202]:
+          - generic [ref=e203]:
+            - generic [ref=e204]: ★
+            - generic [ref=e205]: ★
+            - generic [ref=e206]: ★
+            - generic [ref=e207]: ★
+            - generic [ref=e208]: ★
+          - generic [ref=e209]: 5.0 sur Google
+        - generic [ref=e210]:
+          - generic [ref=e211]:
+            - paragraph [ref=e212]: Agence
+            - list [ref=e213]:
+              - listitem [ref=e214]:
+                - link "À propos" [ref=e215] [cursor=pointer]:
+                  - /url: /a-propos
+              - listitem [ref=e216]:
+                - link "Contact" [ref=e217] [cursor=pointer]:
+                  - /url: /contact
+          - generic [ref=e218]:
+            - paragraph [ref=e219]: Ressources
+            - list [ref=e220]:
+              - listitem [ref=e221]:
+                - link "Le Blog" [ref=e222] [cursor=pointer]:
+                  - /url: /blog
+                  - text: Le Blog
+              - listitem [ref=e224]:
+                - link "Tous les Guides" [ref=e225] [cursor=pointer]:
+                  - /url: /ressources
+              - listitem [ref=e226]:
+                - link "Guide SEO Local" [ref=e227] [cursor=pointer]:
+                  - /url: /ressources/referencement-local-pays-basque
+      - generic [ref=e228]:
+        - paragraph [ref=e229]:
+          - link "Services" [ref=e230] [cursor=pointer]:
+            - /url: /creation-site-internet
+        - list [ref=e231]:
+          - listitem [ref=e232]:
+            - link "Site Vitrine" [ref=e233] [cursor=pointer]:
+              - /url: /creation-site-internet/site-vitrine
+              - text: Site Vitrine
+          - listitem [ref=e235]:
+            - link "E-commerce" [ref=e236] [cursor=pointer]:
+              - /url: /creation-site-internet/site-ecommerce
+              - text: E-commerce
+          - listitem [ref=e238]:
+            - link "Refonte Web" [ref=e239] [cursor=pointer]:
+              - /url: /creation-site-internet/refonte-site-web
+              - text: Refonte Web
+          - listitem [ref=e241]:
+            - link "SEO" [ref=e242] [cursor=pointer]:
+              - /url: /referencement-seo
+              - text: SEO
+      - generic [ref=e244]:
+        - paragraph [ref=e245]:
+          - link "Solutions Métiers" [ref=e246] [cursor=pointer]:
+            - /url: /solutions
+        - list [ref=e247]:
+          - listitem [ref=e248]:
+            - link "Restaurant" [ref=e249] [cursor=pointer]:
+              - /url: /solutions/site-web-restaurant
+              - text: Restaurant
+          - listitem [ref=e251]:
+            - link "Hôtellerie" [ref=e252] [cursor=pointer]:
+              - /url: /solutions/site-web-hotel
+              - text: Hôtellerie
+          - listitem [ref=e254]:
+            - link "Immobilier" [ref=e255] [cursor=pointer]:
+              - /url: /solutions/site-web-immobilier
+              - text: Immobilier
+          - listitem [ref=e257]:
+            - link "Artisan BTP" [ref=e258] [cursor=pointer]:
+              - /url: /solutions/site-web-artisan-btp
+              - text: Artisan BTP
+      - generic [ref=e260]:
+        - paragraph [ref=e261]:
+          - link "Zones d'intervention" [ref=e262] [cursor=pointer]:
+            - /url: /creation-site-internet
+        - list [ref=e263]:
+          - listitem [ref=e264]:
+            - link "Agence Web Bayonne" [ref=e265] [cursor=pointer]:
+              - /url: /creation-site-internet/bayonne
+              - text: Agence Web Bayonne
+          - listitem [ref=e267]:
+            - link "Agence Web Biarritz" [ref=e268] [cursor=pointer]:
+              - /url: /creation-site-internet/biarritz
+              - text: Agence Web Biarritz
+          - listitem [ref=e270]:
+            - link "Agence Web Anglet" [ref=e271] [cursor=pointer]:
+              - /url: /creation-site-internet/anglet
+              - text: Agence Web Anglet
+          - listitem [ref=e273]:
+            - link "Agence Web Hossegor" [ref=e274] [cursor=pointer]:
+              - /url: /creation-site-internet/hossegor
+              - text: Agence Web Hossegor
+      - generic [ref=e276]:
+        - paragraph [ref=e277]: Contact
+        - list [ref=e278]:
+          - listitem [ref=e279]:
+            - link "Côte Basque Biarritz • Bayonne • Anglet" [ref=e280] [cursor=pointer]:
+              - /url: /contact
+              - img [ref=e282]
+              - generic [ref=e285]:
+                - text: Côte Basque
+                - text: Biarritz • Bayonne • Anglet
+          - listitem [ref=e286]:
+            - link "contact@waveia.fr" [ref=e287] [cursor=pointer]:
+              - /url: mailto:contact@waveia.fr
+              - img [ref=e289]
+              - text: contact@waveia.fr
+          - listitem [ref=e292]:
+            - link "06 95 91 36 69" [ref=e293] [cursor=pointer]:
+              - /url: tel:+33695913669
+              - img [ref=e295]
+              - text: 06 95 91 36 69
+    - generic [ref=e299]:
+      - paragraph [ref=e300]: © 2025 WaveIA. Tous droits réservés.
+      - generic [ref=e301]:
+        - link "Mentions légales" [ref=e302] [cursor=pointer]:
+          - /url: /legal
+        - link "Confidentialité" [ref=e303] [cursor=pointer]:
+          - /url: /privacy
+        - link "CGV" [ref=e304] [cursor=pointer]:
+          - /url: /cgv
+  - alert [ref=e305]: Contact | WaveIA
+```

@@ -1,0 +1,673 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - link "Aller au contenu principal" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner [ref=e3]:
+    - navigation [ref=e4]:
+      - generic [ref=e5]:
+        - link "waveIA" [ref=e6] [cursor=pointer]:
+          - /url: /
+          - img [ref=e9]
+          - generic [ref=e13]: waveIA
+        - generic [ref=e14]:
+          - button "Changer de thème" [ref=e15]:
+            - img [ref=e18]
+          - button "Ouvrir le menu" [ref=e20]:
+            - img [ref=e21]
+  - navigation [ref=e27]:
+    - generic [ref=e28]:
+      - link "waveIA" [active] [ref=e29] [cursor=pointer]:
+        - /url: /
+        - img [ref=e30]
+        - generic [ref=e34]: waveIA
+      - button "Fermer le menu" [ref=e35]:
+        - img [ref=e36]
+    - generic [ref=e39]:
+      - link "Audit SEO Gratuit Analysez votre site Gratuit" [ref=e41] [cursor=pointer]:
+        - /url: /referencement-seo/audit-seo-gratuit
+        - generic [ref=e43]:
+          - img [ref=e45]
+          - generic [ref=e47]:
+            - generic [ref=e48]: Audit SEO Gratuit
+            - generic [ref=e49]: Analysez votre site
+        - generic [ref=e50]: Gratuit
+      - generic [ref=e51]:
+        - button "Création Site" [ref=e53]:
+          - generic [ref=e54]: Création Site
+          - img [ref=e56]
+        - button "Référencement SEO" [ref=e59]:
+          - generic [ref=e60]: Référencement SEO
+          - img [ref=e62]
+        - button "Communication" [ref=e65]:
+          - generic [ref=e66]: Communication
+          - img [ref=e68]
+        - button "Solutions Métiers" [ref=e71]:
+          - generic [ref=e72]: Solutions Métiers
+          - img [ref=e74]
+      - generic [ref=e76]:
+        - link "Projets" [ref=e78] [cursor=pointer]:
+          - /url: /realisations
+        - link "Tarifs" [ref=e80] [cursor=pointer]:
+          - /url: /tarifs
+        - link "À propos" [ref=e82] [cursor=pointer]:
+          - /url: /a-propos
+    - generic [ref=e83]:
+      - link "Démarrer un projet" [ref=e84] [cursor=pointer]:
+        - /url: /contact
+      - paragraph [ref=e85]: Biarritz • Bayonne • Anglet
+  - main [ref=e86]:
+    - generic [ref=e87]:
+      - generic [ref=e88]:
+        - generic [ref=e89]:
+          - img "Côte Basque au crépuscule" [ref=e90]
+          - generic:
+            - img
+        - generic [ref=e94]:
+          - generic [ref=e99]: L'Intelligence du Mouvement
+          - heading "Anticiper la vague. Créer l'impact." [level=1] [ref=e100]:
+            - generic [ref=e101]: Anticiper la vague. Créer l'impact.
+          - paragraph [ref=e103]: Le web est en mouvement perpétuel. Nous concevons des sites intelligents et évolutifs, capables de s'adapter à votre marché avec la fluidité de l'eau et la puissance de l'IA.
+          - generic [ref=e104]:
+            - link "Lancer votre projet" [ref=e105] [cursor=pointer]:
+              - /url: /contact
+              - generic [ref=e108]:
+                - text: Lancer votre projet
+                - img [ref=e109]
+            - link "Découvrir le portfolio" [ref=e112] [cursor=pointer]:
+              - /url: /realisations
+              - img [ref=e114]
+              - generic [ref=e116]: Découvrir le portfolio
+      - generic [ref=e121]:
+        - generic [ref=e122]:
+          - generic [ref=e123]:
+            - img [ref=e124]
+            - generic [ref=e127]: Pour comprendre
+          - heading "Pourquoi votre site est votre meilleur commercial" [level=2] [ref=e128]
+          - paragraph [ref=e129]: Un investissement qui rapporte, pas une dépense.
+          - paragraph [ref=e130]: Votre site travaille 24/7, ne prend pas de congés et ne demande jamais d'augmentation. Il transforme chaque visiteur en opportunité de vente. C'est le seul employé qui génère des leads pendant que vous dormez.
+          - generic [ref=e131]:
+            - heading "Impact Concret sur votre Business" [level=3] [ref=e132]
+            - list [ref=e133]:
+              - listitem [ref=e134]:
+                - img [ref=e136]
+                - generic [ref=e138]: "Acquisition client : 10x moins cher qu'un commercial terrain"
+              - listitem [ref=e139]:
+                - img [ref=e141]
+                - generic [ref=e143]: "Crédibilité : 80% des clients vérifient votre site avant d'acheter"
+              - listitem [ref=e144]:
+                - img [ref=e146]
+                - generic [ref=e148]: "Scalabilité : Gérez 1000 visiteurs/jour sans embaucher"
+        - img [ref=e155]
+      - generic [ref=e185]:
+        - generic [ref=e186]:
+          - generic [ref=e187]:
+            - img [ref=e188]
+            - text: RÉSULTATS PROUVÉS
+          - heading "Des Résultats Mesurables" [level=2] [ref=e191]
+        - generic [ref=e192]:
+          - generic [ref=e193]:
+            - img [ref=e195]
+            - generic [ref=e198]: 100%
+            - generic [ref=e199]: Score PageSpeed
+            - generic [ref=e200]: "Source: Core Web Vitals"
+          - generic [ref=e201]:
+            - img [ref=e203]
+            - generic [ref=e205]: <100ms
+            - generic [ref=e206]: Temps de Réponse
+            - generic [ref=e207]: "Source: Vercel Edge"
+          - generic [ref=e208]:
+            - img [ref=e210]
+            - generic [ref=e215]: 0.01s
+            - generic [ref=e216]: Downtime / An
+            - generic [ref=e217]: "Source: SLA 99.99%"
+          - generic [ref=e218]:
+            - img [ref=e220]
+            - generic [ref=e223]: 7/7
+            - generic [ref=e224]: Support Tech
+            - generic [ref=e225]: "Source: Réponse < 2h"
+      - generic [ref=e228]:
+        - generic [ref=e229]:
+          - generic [ref=e230]:
+            - img [ref=e231]
+            - text: Pourquoi Waveia
+          - heading "L'innovation au service de votre succès digital" [level=2] [ref=e234]
+          - paragraph [ref=e235]: Nous combinons expertise humaine et intelligence artificielle pour créer des sites web d'exception à des prix imbattables sur la Côte Basque.
+        - generic [ref=e236]:
+          - generic [ref=e241]:
+            - img [ref=e245]
+            - generic [ref=e247]: 2-4 sem
+            - heading "Ultra-rapide" [level=3] [ref=e248]
+            - paragraph [ref=e249]: Livraison en 2-4 semaines
+          - generic [ref=e254]:
+            - img [ref=e258]
+            - generic [ref=e260]: 100%
+            - heading "Garanti" [level=3] [ref=e261]
+            - paragraph [ref=e262]: Satisfait ou remboursé
+          - generic [ref=e267]:
+            - img [ref=e271]
+            - generic [ref=e274]: 24/7
+            - heading "Support 24/7" [level=3] [ref=e275]
+            - paragraph [ref=e276]: Maintenance incluse
+        - generic [ref=e280]:
+          - generic [ref=e281]:
+            - generic [ref=e282]:
+              - img [ref=e283]
+              - text: Notre avantage
+            - heading "L'IA nous permet de vous offrir plus, pour moins" [level=3] [ref=e288]
+            - paragraph [ref=e289]: Là où les agences traditionnelles facturent 2000€ minimum pour un site vitrine, nous proposons la même qualité à moins de 1000€. Comment ? En automatisant les tâches répétitives grâce à l'intelligence artificielle, tout en conservant l'expertise humaine pour la stratégie et la créativité.
+            - list [ref=e290]:
+              - listitem [ref=e291]:
+                - img [ref=e293]
+                - generic [ref=e295]: Design sur-mesure par des experts
+              - listitem [ref=e296]:
+                - img [ref=e298]
+                - generic [ref=e300]: Code optimisé automatiquement
+              - listitem [ref=e301]:
+                - img [ref=e303]
+                - generic [ref=e305]: Contenu SEO généré et optimisé
+              - listitem [ref=e306]:
+                - img [ref=e308]
+                - generic [ref=e310]: Tests qualité automatisés
+          - generic [ref=e311]:
+            - img "Équipe Waveia au travail à Biarritz" [ref=e313]
+            - generic [ref=e316]:
+              - img [ref=e318]
+              - generic [ref=e320]:
+                - generic [ref=e321]: "-40%"
+                - generic [ref=e322]: vs agences classiques
+      - generic [ref=e326]:
+        - generic [ref=e327]:
+          - generic [ref=e328]: Nos expertises
+          - heading "Des services complets pour votre réussite digitale" [level=2] [ref=e329]
+        - generic [ref=e330]:
+          - link "Création Site Internet Agence Web locale au Pays Basque et Landes. Création de sites internet sur-mesure à Bayonne, Biarritz, Anglet, Hossegor. En savoir plus" [ref=e332] [cursor=pointer]:
+            - /url: /creation-site-internet/creation-site-internet
+            - generic [ref=e336]:
+              - img [ref=e340]
+              - heading "Création Site Internet" [level=3] [ref=e344]
+              - paragraph [ref=e345]: Agence Web locale au Pays Basque et Landes. Création de sites internet sur-mesure à Bayonne, Biarritz, Anglet, Hossegor.
+              - generic [ref=e346]:
+                - generic [ref=e347]: En savoir plus
+                - img [ref=e348]
+          - link "Agence SEO Pays Basque Expert en référencement naturel Google. Audit, stratégie et netlinking pour la 1ère place. En savoir plus" [ref=e353] [cursor=pointer]:
+            - /url: /referencement-seo/referencement-seo
+            - generic [ref=e357]:
+              - img [ref=e361]
+              - heading "Agence SEO Pays Basque" [level=3] [ref=e364]
+              - paragraph [ref=e365]: Expert en référencement naturel Google. Audit, stratégie et netlinking pour la 1ère place.
+              - generic [ref=e366]:
+                - generic [ref=e367]: En savoir plus
+                - img [ref=e368]
+          - link "Agence de Communication 360 Agence de communication Pays Basque. Identité visuelle, stratégie de marque et réseaux sociaux. En savoir plus" [ref=e373] [cursor=pointer]:
+            - /url: /agence-communication/agence-communication
+            - generic [ref=e377]:
+              - img [ref=e381]
+              - heading "Agence de Communication 360" [level=3] [ref=e387]
+              - paragraph [ref=e388]: Agence de communication Pays Basque. Identité visuelle, stratégie de marque et réseaux sociaux.
+              - generic [ref=e389]:
+                - generic [ref=e390]: En savoir plus
+                - img [ref=e391]
+          - 'link "Sur-Mesure Solutions Métiers Sites web spécialisés par secteur : Restaurant, Hôtel, Immobilier, Artisan. Des fonctionnalités sur-mesure pour votre activité. En savoir plus" [ref=e396] [cursor=pointer]':
+            - /url: /solutions/solutions
+            - generic [ref=e398]:
+              - generic [ref=e399]: Sur-Mesure
+              - generic [ref=e401]:
+                - img [ref=e405]
+                - heading "Solutions Métiers" [level=3] [ref=e411]
+                - paragraph [ref=e412]: "Sites web spécialisés par secteur : Restaurant, Hôtel, Immobilier, Artisan. Des fonctionnalités sur-mesure pour votre activité."
+                - generic [ref=e413]:
+                  - generic [ref=e414]: En savoir plus
+                  - img [ref=e415]
+          - link "Gratuit Audit SEO Gratuit Demandez votre audit SEO offert. Analyse technique et sémantique de votre site. En savoir plus" [ref=e420] [cursor=pointer]:
+            - /url: /referencement-seo/audit-seo-gratuit
+            - generic [ref=e422]:
+              - generic [ref=e423]: Gratuit
+              - generic [ref=e425]:
+                - img [ref=e429]
+                - heading "Audit SEO Gratuit" [level=3] [ref=e432]
+                - paragraph [ref=e433]: Demandez votre audit SEO offert. Analyse technique et sémantique de votre site.
+                - generic [ref=e434]:
+                  - generic [ref=e435]: En savoir plus
+                  - img [ref=e436]
+          - link "Upgrade Refonte de Site Web Modernisez votre site web existant. Améliorez le design, la vitesse et le taux de conversion. En savoir plus" [ref=e441] [cursor=pointer]:
+            - /url: /creation-site-internet/refonte-site-web
+            - generic [ref=e443]:
+              - generic [ref=e444]: Upgrade
+              - generic [ref=e446]:
+                - img [ref=e450]
+                - heading "Refonte de Site Web" [level=3] [ref=e454]
+                - paragraph [ref=e455]: Modernisez votre site web existant. Améliorez le design, la vitesse et le taux de conversion.
+                - generic [ref=e456]:
+                  - generic [ref=e457]: En savoir plus
+                  - img [ref=e458]
+        - link "Découvrir tous nos services" [ref=e463] [cursor=pointer]:
+          - /url: /creation-site-internet
+          - generic [ref=e464]: Découvrir tous nos services
+          - img [ref=e465]
+      - generic [ref=e471]:
+        - generic [ref=e472]:
+          - generic [ref=e473]: Tarifs Transparents
+          - heading "Des prix clairs et justes" [level=2] [ref=e474]
+          - paragraph [ref=e475]: Pas de devis fantaisiste. Nos tarifs sont affichés publiquement et garantis sans surprise.
+        - generic [ref=e476]:
+          - link "Populaire Site Vitrine 790€ Design sur-mesure Mobile-first responsive SEO optimisé inclus Hébergement 1 an offert Voir tous les tarifs" [ref=e478] [cursor=pointer]:
+            - /url: /tarifs/creation-site-internet
+            - generic [ref=e480]:
+              - generic [ref=e481]: Populaire
+              - generic [ref=e483]:
+                - img [ref=e487]
+                - heading "Site Vitrine" [level=3] [ref=e491]
+                - generic [ref=e492]: 790€
+                - list [ref=e493]:
+                  - listitem [ref=e494]:
+                    - img [ref=e495]
+                    - generic [ref=e497]: Design sur-mesure
+                  - listitem [ref=e498]:
+                    - img [ref=e499]
+                    - generic [ref=e501]: Mobile-first responsive
+                  - listitem [ref=e502]:
+                    - img [ref=e503]
+                    - generic [ref=e505]: SEO optimisé inclus
+                  - listitem [ref=e506]:
+                    - img [ref=e507]
+                    - generic [ref=e509]: Hébergement 1 an offert
+                - generic [ref=e510]:
+                  - generic [ref=e511]: Voir tous les tarifs
+                  - img [ref=e512]
+          - link "Best ROI SEO Mensuel 149€/mois Audit complet offert Optimisations techniques Rapports mensuels détaillés Support prioritaire Voir tous les tarifs" [ref=e516] [cursor=pointer]:
+            - /url: /tarifs/referencement-seo
+            - generic [ref=e518]:
+              - generic [ref=e519]: Best ROI
+              - generic [ref=e521]:
+                - img [ref=e525]
+                - heading "SEO Mensuel" [level=3] [ref=e528]
+                - generic [ref=e529]: 149€/mois
+                - list [ref=e530]:
+                  - listitem [ref=e531]:
+                    - img [ref=e532]
+                    - generic [ref=e534]: Audit complet offert
+                  - listitem [ref=e535]:
+                    - img [ref=e536]
+                    - generic [ref=e538]: Optimisations techniques
+                  - listitem [ref=e539]:
+                    - img [ref=e540]
+                    - generic [ref=e542]: Rapports mensuels détaillés
+                  - listitem [ref=e543]:
+                    - img [ref=e544]
+                    - generic [ref=e546]: Support prioritaire
+                - generic [ref=e547]:
+                  - generic [ref=e548]: Voir tous les tarifs
+                  - img [ref=e549]
+          - link "Logo Pro 490€ 3 propositions créatives Fichiers vectoriels HD Charte couleur incluse Révisions illimitées Voir tous les tarifs" [ref=e553] [cursor=pointer]:
+            - /url: /tarifs/agence-communication
+            - generic [ref=e557]:
+              - img [ref=e561]
+              - heading "Logo Pro" [level=3] [ref=e567]
+              - generic [ref=e568]: 490€
+              - list [ref=e569]:
+                - listitem [ref=e570]:
+                  - img [ref=e571]
+                  - generic [ref=e573]: 3 propositions créatives
+                - listitem [ref=e574]:
+                  - img [ref=e575]
+                  - generic [ref=e577]: Fichiers vectoriels HD
+                - listitem [ref=e578]:
+                  - img [ref=e579]
+                  - generic [ref=e581]: Charte couleur incluse
+                - listitem [ref=e582]:
+                  - img [ref=e583]
+                  - generic [ref=e585]: Révisions illimitées
+              - generic [ref=e586]:
+                - generic [ref=e587]: Voir tous les tarifs
+                - img [ref=e588]
+        - paragraph [ref=e591]:
+          - text: Prix TTC. Paiement en 3x sans frais disponible à partir de 1000€.
+          - link "Voir la grille tarifaire complète →" [ref=e592] [cursor=pointer]:
+            - /url: /tarifs
+      - generic [ref=e595]:
+        - generic [ref=e596]:
+          - generic [ref=e597]:
+            - img [ref=e598]
+            - text: Témoignages
+          - heading "Ils nous font confiance" [level=2] [ref=e600]
+          - paragraph [ref=e601]: Des entrepreneurs de Biarritz, Bayonne et Anglet qui ont fait le choix de l'innovation.
+        - generic [ref=e602]:
+          - generic [ref=e604]:
+            - img [ref=e606]
+            - generic [ref=e609]: +280% de trafic
+            - generic [ref=e611]:
+              - generic [ref=e612]:
+                - img [ref=e613]
+                - img [ref=e615]
+                - img [ref=e617]
+                - img [ref=e619]
+                - img [ref=e621]
+              - paragraph [ref=e623]: “WaveIA a réduit notre temps de chargement de 4s à 0.3s. Notre taux de rebond a chuté de 60% et nos ventes ont doublé. C'est de l'ingénierie de haute précision, pas du bricolage.”
+              - generic [ref=e624]:
+                - img "Sophie Etcheverry" [ref=e627]
+                - generic [ref=e628]:
+                  - generic [ref=e629]: Sophie Etcheverry
+                  - generic [ref=e630]: CTO, Boulangerie Le Fournil - Tech Division
+          - generic [ref=e632]:
+            - img [ref=e634]
+            - generic [ref=e637]: +180% réservations
+            - generic [ref=e639]:
+              - generic [ref=e640]:
+                - img [ref=e641]
+                - img [ref=e643]
+                - img [ref=e645]
+                - img [ref=e647]
+                - img [ref=e649]
+              - paragraph [ref=e651]: “On pensait avoir besoin d'une refonte design, on avait besoin d'une refonte infrastructure. WaveIA a migré notre stack sur Next.js 15. Le résultat est bluffant.”
+              - generic [ref=e652]:
+                - img "Thomas Lacoste" [ref=e655]
+                - generic [ref=e656]:
+                  - generic [ref=e657]: Thomas Lacoste
+                  - generic [ref=e658]: Fondateur, Surf Camp Biarritz
+          - generic [ref=e660]:
+            - img [ref=e662]
+            - generic [ref=e665]: Code Quality A+
+            - generic [ref=e667]:
+              - generic [ref=e668]:
+                - img [ref=e669]
+                - img [ref=e671]
+                - img [ref=e673]
+                - img [ref=e675]
+                - img [ref=e677]
+              - paragraph [ref=e679]: “Le code est propre, documenté et modulaire. En tant que dev moi-même, j'apprécie la qualité technique. C'est rare de voir une agence aussi rigoureuse.”
+              - generic [ref=e680]:
+                - img "Marc Dubos" [ref=e683]
+                - generic [ref=e684]:
+                  - generic [ref=e685]: Marc Dubos
+                  - generic [ref=e686]: Lead Dev, Startup Fintech Anglet
+        - generic [ref=e687]:
+          - generic [ref=e690]:
+            - text: 100%
+            - generic [ref=e691]: score pagespeed
+          - generic [ref=e692]:
+            - generic [ref=e693]:
+              - img [ref=e694]
+              - img [ref=e696]
+              - img [ref=e698]
+              - img [ref=e700]
+              - img [ref=e702]
+            - generic [ref=e704]: 0.01s sur Google
+          - generic [ref=e705]:
+            - img [ref=e706]
+            - generic [ref=e709]:
+              - text: <100ms
+              - generic [ref=e710]: temps de réponse
+      - generic [ref=e711]:
+        - generic [ref=e712]:
+          - generic [ref=e713]:
+            - img [ref=e714]
+            - text: COMPARATIF
+          - heading "Pourquoi WaveIA ?" [level=2] [ref=e717]
+          - paragraph [ref=e718]: Engineering vs Agence Classique
+        - table [ref=e720]:
+          - rowgroup [ref=e721]:
+            - row "Fonctionnalité WaveIA Agence Web Classique Freelance WordPress" [ref=e722]:
+              - columnheader "Fonctionnalité" [ref=e723]
+              - columnheader "WaveIA" [ref=e724]:
+                - generic [ref=e725]:
+                  - img [ref=e726]
+                  - text: WaveIA
+              - columnheader "Agence Web Classique" [ref=e729]
+              - columnheader "Freelance WordPress" [ref=e730]
+          - rowgroup [ref=e731]:
+            - row "Architecture Next.js 15 (React Server Components)" [ref=e732]:
+              - cell "Architecture Next.js 15 (React Server Components)" [ref=e733]
+              - cell [ref=e734]:
+                - img [ref=e735]
+              - cell [ref=e737]:
+                - img [ref=e738]
+              - cell [ref=e741]:
+                - img [ref=e742]
+            - row "Hébergement Edge Network (Global CDN) Serveur Mutualisé Basique" [ref=e745]:
+              - cell "Hébergement Edge Network (Global CDN)" [ref=e746]
+              - cell [ref=e747]:
+                - img [ref=e748]
+              - cell "Serveur Mutualisé" [ref=e750]
+              - cell "Basique" [ref=e751]
+            - row "Score Google PageSpeed 95+ Garanti Variable Non" [ref=e752]:
+              - cell "Score Google PageSpeed 95+ Garanti" [ref=e753]
+              - cell [ref=e754]:
+                - img [ref=e755]
+              - cell "Variable" [ref=e757]
+              - cell "Non" [ref=e758]
+            - row "Code Source 100% Propriétaire (GitHub)" [ref=e759]:
+              - cell "Code Source 100% Propriétaire (GitHub)" [ref=e760]
+              - cell [ref=e761]:
+                - img [ref=e762]
+              - cell [ref=e764]:
+                - img [ref=e765]
+              - cell [ref=e768]:
+                - img [ref=e769]
+            - row "Sécurité Banking-Grade (OWASP) Basique Plugins" [ref=e771]:
+              - cell "Sécurité Banking-Grade (OWASP)" [ref=e772]
+              - cell [ref=e773]:
+                - img [ref=e774]
+              - cell "Basique" [ref=e776]
+              - cell "Plugins" [ref=e777]
+            - row "CI/CD Automatisé" [ref=e778]:
+              - cell "CI/CD Automatisé" [ref=e779]
+              - cell [ref=e780]:
+                - img [ref=e781]
+              - cell [ref=e783]:
+                - img [ref=e784]
+              - cell [ref=e787]:
+                - img [ref=e788]
+            - row "Support Ingénieur Dédié Commercial Variable" [ref=e791]:
+              - cell "Support Ingénieur Dédié" [ref=e792]
+              - cell [ref=e793]:
+                - img [ref=e794]
+              - cell "Commercial" [ref=e796]
+              - cell "Variable" [ref=e797]
+        - paragraph [ref=e799]: La différence est claire. Passez au niveau supérieur.
+      - generic [ref=e804]:
+        - generic [ref=e805]:
+          - generic [ref=e806]:
+            - img [ref=e807]
+            - text: Ancré localement
+          - heading "Votre agence web du Pays Basque" [level=2] [ref=e810]:
+            - text: Votre agence web
+            - text: du Pays Basque
+          - paragraph [ref=e811]: Basés sur la Côte Basque, nous comprenons les enjeux locaux et les spécificités de votre marché. De Biarritz à Bayonne en passant par Anglet, nous accompagnons les entrepreneurs qui veulent se démarquer.
+          - paragraph [ref=e812]: Notre approche combine la proximité d'une agence locale avec l'innovation d'une start-up tech. Rencontrons-nous autour d'un café pour discuter de votre projet !
+          - generic [ref=e813]:
+            - generic [ref=e814]: Biarritz
+            - generic [ref=e815]: Bayonne
+            - generic [ref=e816]: Anglet
+            - generic [ref=e817]: Hossegor
+            - generic [ref=e818]: Saint-Jean-de-Luz
+          - link "Prendre rendez-vous autour d'un café" [ref=e819] [cursor=pointer]:
+            - /url: /contact
+            - img [ref=e821]
+            - text: Prendre rendez-vous autour d'un café
+            - img [ref=e826]
+        - generic [ref=e829]:
+          - generic [ref=e830]:
+            - img "Vue de Biarritz et la Grande Plage" [ref=e831]
+            - generic [ref=e834]:
+              - img [ref=e835]
+              - generic [ref=e838]: Côte Basque, France
+          - generic [ref=e840]:
+            - generic [ref=e841]:
+              - img "Client" [ref=e842]
+              - img "Client" [ref=e843]
+              - img "Client" [ref=e844]
+              - img [ref=e846]
+            - generic [ref=e851]:
+              - generic [ref=e852]: 50+
+              - generic [ref=e853]: clients sur la Côte
+  - generic:
+    - generic:
+      - link "Contacter via WhatsApp":
+        - /url: https://wa.me/33695913669
+        - generic:
+          - img
+      - link "Appeler maintenant":
+        - /url: tel:+33695913669
+        - generic:
+          - img
+          - generic: Appeler
+      - link "Demander un devis":
+        - /url: /contact
+        - generic:
+          - img
+          - generic: Devis
+  - contentinfo [ref=e854]:
+    - generic [ref=e858]:
+      - generic [ref=e859]:
+        - generic [ref=e861]: On se rencontre ?
+        - paragraph [ref=e862]: L'excellence digitale, l'intelligence en plus.
+        - paragraph [ref=e863]: Ancrés au Pays Basque. Discutons de votre projet autour d'un café.
+      - generic [ref=e864]:
+        - link "Démarrer un projet" [ref=e865] [cursor=pointer]:
+          - /url: /contact
+          - generic [ref=e868]:
+            - text: Démarrer un projet
+            - img [ref=e869]
+        - link "Voir les tarifs" [ref=e872] [cursor=pointer]:
+          - /url: /tarifs
+    - generic [ref=e874]:
+      - generic [ref=e875]:
+        - link "waveIA" [ref=e876] [cursor=pointer]:
+          - /url: /
+          - img [ref=e879]
+          - generic [ref=e883]: waveIA
+        - paragraph [ref=e884]: Codé avec passion au Pays Basque. Sites internet haute performance, SEO local et identité de marque.
+        - generic [ref=e885]:
+          - link "LinkedIn" [ref=e886] [cursor=pointer]:
+            - /url: https://linkedin.com/company/waveia
+            - img [ref=e887]
+          - link "Instagram" [ref=e891] [cursor=pointer]:
+            - /url: https://instagram.com/waveia.fr
+            - img [ref=e892]
+        - generic [ref=e896]:
+          - generic [ref=e897]:
+            - generic [ref=e898]: ★
+            - generic [ref=e899]: ★
+            - generic [ref=e900]: ★
+            - generic [ref=e901]: ★
+            - generic [ref=e902]: ★
+          - generic [ref=e903]: 5.0 sur Google
+        - generic [ref=e904]:
+          - generic [ref=e905]:
+            - paragraph [ref=e906]: Agence
+            - list [ref=e907]:
+              - listitem [ref=e908]:
+                - link "À propos" [ref=e909] [cursor=pointer]:
+                  - /url: /a-propos
+              - listitem [ref=e910]:
+                - link "Contact" [ref=e911] [cursor=pointer]:
+                  - /url: /contact
+          - generic [ref=e912]:
+            - paragraph [ref=e913]: Ressources
+            - list [ref=e914]:
+              - listitem [ref=e915]:
+                - link "Le Blog" [ref=e916] [cursor=pointer]:
+                  - /url: /blog
+                  - text: Le Blog
+              - listitem [ref=e918]:
+                - link "Tous les Guides" [ref=e919] [cursor=pointer]:
+                  - /url: /ressources
+              - listitem [ref=e920]:
+                - link "Guide SEO Local" [ref=e921] [cursor=pointer]:
+                  - /url: /ressources/referencement-local-pays-basque
+      - generic [ref=e922]:
+        - paragraph [ref=e923]:
+          - link "Services" [ref=e924] [cursor=pointer]:
+            - /url: /creation-site-internet
+        - list [ref=e925]:
+          - listitem [ref=e926]:
+            - link "Site Vitrine" [ref=e927] [cursor=pointer]:
+              - /url: /creation-site-internet/site-vitrine
+              - text: Site Vitrine
+          - listitem [ref=e929]:
+            - link "E-commerce" [ref=e930] [cursor=pointer]:
+              - /url: /creation-site-internet/site-ecommerce
+              - text: E-commerce
+          - listitem [ref=e932]:
+            - link "Refonte Web" [ref=e933] [cursor=pointer]:
+              - /url: /creation-site-internet/refonte-site-web
+              - text: Refonte Web
+          - listitem [ref=e935]:
+            - link "SEO" [ref=e936] [cursor=pointer]:
+              - /url: /referencement-seo
+              - text: SEO
+      - generic [ref=e938]:
+        - paragraph [ref=e939]:
+          - link "Solutions Métiers" [ref=e940] [cursor=pointer]:
+            - /url: /solutions
+        - list [ref=e941]:
+          - listitem [ref=e942]:
+            - link "Restaurant" [ref=e943] [cursor=pointer]:
+              - /url: /solutions/site-web-restaurant
+              - text: Restaurant
+          - listitem [ref=e945]:
+            - link "Hôtellerie" [ref=e946] [cursor=pointer]:
+              - /url: /solutions/site-web-hotel
+              - text: Hôtellerie
+          - listitem [ref=e948]:
+            - link "Immobilier" [ref=e949] [cursor=pointer]:
+              - /url: /solutions/site-web-immobilier
+              - text: Immobilier
+          - listitem [ref=e951]:
+            - link "Artisan BTP" [ref=e952] [cursor=pointer]:
+              - /url: /solutions/site-web-artisan-btp
+              - text: Artisan BTP
+      - generic [ref=e954]:
+        - paragraph [ref=e955]:
+          - link "Zones d'intervention" [ref=e956] [cursor=pointer]:
+            - /url: /creation-site-internet
+        - list [ref=e957]:
+          - listitem [ref=e958]:
+            - link "Agence Web Bayonne" [ref=e959] [cursor=pointer]:
+              - /url: /creation-site-internet/bayonne
+              - text: Agence Web Bayonne
+          - listitem [ref=e961]:
+            - link "Agence Web Biarritz" [ref=e962] [cursor=pointer]:
+              - /url: /creation-site-internet/biarritz
+              - text: Agence Web Biarritz
+          - listitem [ref=e964]:
+            - link "Agence Web Anglet" [ref=e965] [cursor=pointer]:
+              - /url: /creation-site-internet/anglet
+              - text: Agence Web Anglet
+          - listitem [ref=e967]:
+            - link "Agence Web Hossegor" [ref=e968] [cursor=pointer]:
+              - /url: /creation-site-internet/hossegor
+              - text: Agence Web Hossegor
+      - generic [ref=e970]:
+        - paragraph [ref=e971]: Contact
+        - list [ref=e972]:
+          - listitem [ref=e973]:
+            - link "Côte Basque Biarritz • Bayonne • Anglet" [ref=e974] [cursor=pointer]:
+              - /url: /contact
+              - img [ref=e976]
+              - generic [ref=e979]:
+                - text: Côte Basque
+                - text: Biarritz • Bayonne • Anglet
+          - listitem [ref=e980]:
+            - link "contact@waveia.fr" [ref=e981] [cursor=pointer]:
+              - /url: mailto:contact@waveia.fr
+              - img [ref=e983]
+              - text: contact@waveia.fr
+          - listitem [ref=e986]:
+            - link "06 95 91 36 69" [ref=e987] [cursor=pointer]:
+              - /url: tel:+33695913669
+              - img [ref=e989]
+              - text: 06 95 91 36 69
+    - generic [ref=e993]:
+      - paragraph [ref=e994]: © 2025 WaveIA. Tous droits réservés.
+      - generic [ref=e995]:
+        - link "Mentions légales" [ref=e996] [cursor=pointer]:
+          - /url: /legal
+        - link "Confidentialité" [ref=e997] [cursor=pointer]:
+          - /url: /privacy
+        - link "CGV" [ref=e998] [cursor=pointer]:
+          - /url: /cgv
+  - alert [ref=e999]
+```

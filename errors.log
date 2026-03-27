@@ -1,0 +1,20 @@
+﻿src/components/sections/pedagogic/TechnoTranslator.tsx(83,20): error TS2532: Object is possibly 'undefined'.
+src/components/sections/simulator/CostSimulator.tsx(105,15): error TS18048: 'currentStep' is possibly 'undefined'.
+src/components/sections/simulator/CostSimulator.tsx(108,20): error TS18048: 'currentStep' is possibly 'undefined'.
+src/components/sections/simulator/CostSimulator.tsx(112,48): error TS2538: Type 'undefined' cannot be used as an index type.
+src/components/sections/simulator/CostSimulator.tsx(151,60): error TS18048: 'currentStep' is possibly 'undefined'.
+src/components/sections/simulator/CostSimulator.tsx(152,65): error TS18048: 'currentStep' is possibly 'undefined'.
+src/components/sections/simulator/CostSimulator.tsx(156,20): error TS18048: 'currentStep' is possibly 'undefined'.
+src/components/sections/simulator/CostSimulator.tsx(172,28): error TS2604: JSX element type 'Icon' does not have any construct or call signatures.
+src/components/sections/simulator/CostSimulator.tsx(172,28): error TS2786: 'Icon' cannot be used as a JSX component.
+  Its type 'LucideIcon | undefined' is not a valid JSX element type.
+    Type 'undefined' is not assignable to type 'ElementType'.
+src/components/templates/AgencyStatsBlock.tsx(96,24): error TS2604: JSX element type 'IconComponent' does not have any construct or call signatures.
+src/components/templates/AgencyStatsBlock.tsx(96,24): error TS2786: 'IconComponent' cannot be used as a JSX component.
+  Its type 'ForwardRefExoticComponent<Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>> | undefined' is not a valid JSX element type.
+    Type 'undefined' is not assignable to type 'ElementType'.
+src/lib/breadcrumbs.ts(35,21): error TS2532: Object is possibly 'undefined'.
+src/lib/data/definitions/services-local.ts(23,7): error TS2322: Type 'ServiceFeature | undefined' is not assignable to type 'ServiceFeature'.
+  Type 'undefined' is not assignable to type 'ServiceFeature'.
+src/lib/data/definitions/services-local.ts(28,7): error TS2322: Type 'ServiceFeature | undefined' is not assignable to type 'ServiceFeature'.
+  Type 'undefined' is not assignable to type 'ServiceFeature'.
