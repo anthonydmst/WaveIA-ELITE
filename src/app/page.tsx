@@ -20,7 +20,8 @@ import { AnimatedFeatures } from "@/components/sections/AnimatedFeatures";
 import { AnimatedServices } from "@/components/sections/AnimatedServices";
 import { AnimatedTestimonials } from "@/components/sections/AnimatedTestimonials";
 import { AnimatedLocalSection } from "@/components/sections/AnimatedLocalSection";
-import { PedagogicBlock } from "@/components/sections/pedagogic/PedagogicBlock";
+import { ServicesTripartite } from "@/components/sections/ServicesTripartite";
+import { WaveDiagnostic } from "@/components/sections/WaveDiagnostic";
 import { AgencyStatsBlock } from "@/components/templates/AgencyStatsBlock";
 import { ComparisonTable } from "@/components/templates/ComparisonTable";
 import { PricingPreviewHome } from "@/components/sections/PricingPreviewHome";
@@ -29,7 +30,6 @@ import {
   TestimonialsSkeleton,
   LocalSectionSkeleton,
 } from "@/components/skeletons/HomepageSkeletons";
-import { TrendingUp } from "lucide-react";
 
 export default function Home() {
   return (
@@ -37,23 +37,11 @@ export default function Home() {
       {/* AIDA: ATTENTION - Hero */}
       <HeroWrapper />
 
+      {/* AIDA: INTEREST - Nos Services (Tripartite) */}
+      <ServicesTripartite />
 
-      {/* AIDA: INTEREST - Value Proposition */}
-      <div className="relative py-20 bg-background/50">
-        <div className="container px-4 mx-auto">
-          <PedagogicBlock 
-            title="Pourquoi votre site est votre meilleur commercial"
-            subtitle="Un investissement qui rapporte, pas une dépense."
-            description="Votre site travaille 24/7, ne prend pas de congés et ne demande jamais d'augmentation. Il transforme chaque visiteur en opportunité de vente. C'est le seul employé qui génère des leads pendant que vous dormez."
-            icon={<TrendingUp />}
-            benefits={[
-              "Acquisition client : 10x moins cher qu'un commercial terrain",
-              "Crédibilité : 80% des clients vérifient votre site avant d'acheter",
-              "Scalabilité : Gérez 1000 visiteurs/jour sans embaucher"
-            ]}
-          />
-        </div>
-      </div>
+      {/* AIDA: INTEREST - Diagnostic IA */}
+      <WaveDiagnostic />
 
       {/* AIDA: INTEREST - Proof (Stats) */}
       <AgencyStatsBlock 
