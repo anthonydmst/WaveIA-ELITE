@@ -46,7 +46,7 @@ export function ServicesTripartite() {
 
       <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-16 lg:mb-20 animate-in">
+        <div className="text-center mb-16 lg:mb-20">
           <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-ocean/10 border border-ocean/20 rounded-full text-ocean text-sm font-semibold uppercase tracking-wider mb-6">
             Nos services
           </span>
@@ -68,7 +68,7 @@ export function ServicesTripartite() {
           {services.map((service, index) => (
             <div
               key={index}
-              className={`group relative animate-in ${
+              className={`group relative ${
                 index === 1
                   ? "delay-100"
                   : index === 2

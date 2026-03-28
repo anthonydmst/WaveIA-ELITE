@@ -1,59 +1,23 @@
 "use client";
 
 import { useEffect } from "react";
-import { usePathname } from "next/navigation";
 
-/**
- * S-Tier ScrollObserver
- * 
- * Un seul IntersectionObserver global pour TOUT le site.
- * Remplace 50+ hooks Framer Motion whileInView par du CSS natif.
- * 
- * Performance:
- * - Zero JS weight après setup - L'animation est 100% CSS
- * - Performance GPU native - Utilise le compositing matériel
- * - 0 layout thrashing - Se déclenche une seule fois par élément
- */
 export function ScrollObserver() {
-  const pathname = usePathname();
-
   useEffect(() => {
-    // Sélectionne tous les éléments avec animations scroll-triggered
-    const animatedElements = document.querySelectorAll(
-      ".animate-in, .animate-in-left, .animate-in-right, .animate-scale-in, .animate-bar-grow"
-    );
-
-    if (animatedElements.length === 0) return;
-
-    // UN SEUL observer natif pour TOUT le site
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            // Déclenche l'animation
-            entry.target.setAttribute("data-in-view", "true");
-            // Fire once, puis stop (performance)
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      {
-        threshold: 0.1, // Trigger quand 10% visible
-        rootMargin: "50px", // Anticipe légèrement pour fluidité
-      }
-    );
-
-    // Observer tous les éléments animés
-    animatedElements.forEach((el) => {
-      observer.observe(el);
-    });
-
-    // Cleanup function for the observer
-    return () => {
-      observer.disconnect();
+    // Force immediate visibility of all animated elements to debug the black blocks issue
+    const forceVisible = () => {
+      const elements = document.querySelectorAll(
+        ".animate-in, .animate-in-left, .animate-in-right, .animate-in-up, .animate-in-down, .animate-scale-in, .animate-bar-grow"
+      );
+      elements.forEach(el => el.setAttribute("data-in-view", "true"));
     };
-  }, [pathname]);
 
-  // Ce composant ne render rien, c'est juste un side-effect
+    // Run immediately and repeatedly to ensure no animations are left hidden
+    forceVisible();
+    const interval = setInterval(forceVisible, 200);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return null;
 }

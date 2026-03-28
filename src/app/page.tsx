@@ -22,6 +22,10 @@ import { AnimatedTestimonials } from "@/components/sections/AnimatedTestimonials
 import { AnimatedLocalSection } from "@/components/sections/AnimatedLocalSection";
 import { ServicesTripartite } from "@/components/sections/ServicesTripartite";
 import { WaveDiagnostic } from "@/components/sections/WaveDiagnostic";
+import { CreationRefonteBlock } from "@/components/sections/CreationRefonteBlock";
+import { ReferencementVisibiliteBlock } from "@/components/sections/ReferencementVisibiliteBlock";
+import { CommunicationIdentiteBlock } from "@/components/sections/CommunicationIdentiteBlock";
+import { HomePageRealisationsBlock } from "@/components/sections/HomePageRealisationsBlock";
 import { AgencyStatsBlock } from "@/components/templates/AgencyStatsBlock";
 import { ComparisonTable } from "@/components/templates/ComparisonTable";
 import { PricingPreviewHome } from "@/components/sections/PricingPreviewHome";
@@ -42,6 +46,18 @@ export default function Home() {
 
       {/* AIDA: INTEREST - Diagnostic IA */}
       <WaveDiagnostic />
+
+      {/* AIDA: INTEREST - Création & Refonte */}
+      <CreationRefonteBlock />
+
+      {/* AIDA: INTEREST - SEO & Visibilité */}
+      <ReferencementVisibiliteBlock />
+
+      {/* AIDA: INTEREST - Communication & Identité */}
+      <CommunicationIdentiteBlock />
+
+      {/* AIDA: DESIRE - Nos Réalisations Carousel */}
+      <HomePageRealisationsBlock />
 
       {/* AIDA: INTEREST - Proof (Stats) */}
       <AgencyStatsBlock 
