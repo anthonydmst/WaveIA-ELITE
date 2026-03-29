@@ -21,6 +21,7 @@ import { AnimatedServices } from "@/components/sections/AnimatedServices";
 import { AnimatedTestimonials } from "@/components/sections/AnimatedTestimonials";
 import { AnimatedLocalSection } from "@/components/sections/AnimatedLocalSection";
 import { ServicesTripartite } from "@/components/sections/ServicesTripartite";
+import { LocalExpertsBlock } from "@/components/sections/CreationSiteDetails";
 import { WaveDiagnostic } from "@/components/sections/WaveDiagnostic";
 import { CreationRefonteBlock } from "@/components/sections/CreationRefonteBlock";
 import { ReferencementVisibiliteBlock } from "@/components/sections/ReferencementVisibiliteBlock";
@@ -64,6 +65,9 @@ export default function Home() {
       <Suspense fallback={<LocalSectionSkeleton />}>
         <AnimatedLocalSection />
       </Suspense>
+
+      {/* AIDA: DESIRE - Local Experts */}
+      <LocalExpertsBlock />
 
       {/* AIDA: INTEREST/DESIRE - How we do it */}
       <AnimatedFeatures />

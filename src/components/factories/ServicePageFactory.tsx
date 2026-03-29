@@ -63,6 +63,7 @@ interface FactoryProps {
   rootPath?: string;
   service?: Service; // DIRECT INJECTION MODE
   extraContent?: React.ReactNode; // For Humanization blocks
+  renderHero?: (breadcrumbs: any[]) => React.ReactNode; // S-Tier Custom Hero Override
 }
 
 // The Universal Factory (RSC)
@@ -72,6 +73,7 @@ export async function ServicePageFactory({
   rootPath,
   service: injectedService,
   extraContent,
+  renderHero,
 }: FactoryProps) {
   let service: Service | undefined = injectedService;
 
@@ -166,7 +168,10 @@ export async function ServicePageFactory({
       )}
       <StructuredData data={faqSchema} />
       <main id="main-content">
-        <ServiceHero hero={service.hero} breadcrumbItems={breadcrumbItems} />
+        {renderHero 
+          ? renderHero(breadcrumbItems) 
+          : <ServiceHero hero={service.hero} breadcrumbItems={breadcrumbItems} />
+        }
 
         
         {/* AIDA: Interest Phase (Zone Links immediately after Hero) */}

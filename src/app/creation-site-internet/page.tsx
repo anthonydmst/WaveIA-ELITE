@@ -3,6 +3,12 @@ import { ServicePageFactory } from "@/components/factories/ServicePageFactory";
 import { SERVICES } from "@/lib/data/services";
 import { PedagogicBlock } from "@/components/sections/pedagogic/PedagogicBlock";
 import { Laptop } from "lucide-react";
+import { CustomHeroCreationSite } from "@/components/sections/CustomHeroCreationSite";
+import { CreationRefonteBlock } from "@/components/sections/CreationRefonteBlock";
+import { HomePageRealisationsBlock } from "@/components/sections/HomePageRealisationsBlock";
+import { TwoWeeksFramework } from "@/components/sections/TwoWeeksFramework";
+import { TargetAudienceBlock } from "@/components/sections/TargetAudienceBlock";
+import { SuccessStepsBlock, LocalExpertsBlock, RevolutionCTABlock, AgencyHowItWorksBlock } from "@/components/sections/CreationSiteDetails";
 
 export function generateMetadata() {
   const service = SERVICES.find((s) => s.slug === "creation-site-internet");
@@ -22,6 +28,19 @@ export default function Page() {
   return (
     <ServicePageFactory 
       service={service} 
+      renderHero={(breadcrumbs) => (
+        <>
+          <CustomHeroCreationSite breadcrumbItems={breadcrumbs} />
+          <CreationRefonteBlock />
+          <HomePageRealisationsBlock />
+          <TwoWeeksFramework />
+          <TargetAudienceBlock />
+          <SuccessStepsBlock />
+          <LocalExpertsBlock />
+          <RevolutionCTABlock />
+          <AgencyHowItWorksBlock />
+        </>
+      )}
       extraContent={
         <div className="max-w-7xl mx-auto px-6 lg:px-8 mt-8 lg:-mt-20 relative z-10 mb-24">
            <PedagogicBlock 
