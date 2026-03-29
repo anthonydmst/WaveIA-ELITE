@@ -29,6 +29,7 @@ import { HomePageRealisationsBlock } from "@/components/sections/HomePageRealisa
 import { AgencyStatsBlock } from "@/components/templates/AgencyStatsBlock";
 import { ComparisonTable } from "@/components/templates/ComparisonTable";
 import { PricingPreviewHome } from "@/components/sections/PricingPreviewHome";
+import { FAQSection } from "@/components/sections/FAQSection";
 import { AGENCY_STATS, AGENCY_COMPARISON } from "@/lib/data";
 import {
   TestimonialsSkeleton,
@@ -59,27 +60,21 @@ export default function Home() {
       {/* AIDA: DESIRE - Nos Réalisations Carousel */}
       <HomePageRealisationsBlock />
 
-      {/* AIDA: INTEREST - Proof (Stats) */}
-      <AgencyStatsBlock 
-        title="Des Résultats Mesurables"
-        metrics={AGENCY_STATS.metrics}
-      />
+      {/* AIDA: ACTION - Local CTA */}
+      <Suspense fallback={<LocalSectionSkeleton />}>
+        <AnimatedLocalSection />
+      </Suspense>
 
       {/* AIDA: INTEREST/DESIRE - How we do it */}
       <AnimatedFeatures />
-
-
-      {/* AIDA: DESIRE - Services Portfolio */}
-      <AnimatedServices />
-
-
-      {/* AIDA: DESIRE - Pricing Transparency */}
-      <PricingPreviewHome />
 
       {/* AIDA: DESIRE - Social Proof */}
       <Suspense fallback={<TestimonialsSkeleton />}>
         <AnimatedTestimonials />
       </Suspense>
+
+      {/* AIDA: DESIRE - Pricing Transparency */}
+      <PricingPreviewHome />
 
       {/* AIDA: DESIRE - Competitive Advantage */}
       <ComparisonTable 
@@ -89,10 +84,18 @@ export default function Home() {
         rows={AGENCY_COMPARISON.rows}
       />
 
-      {/* AIDA: ACTION - Local CTA */}
-      <Suspense fallback={<LocalSectionSkeleton />}>
-        <AnimatedLocalSection />
-      </Suspense>
+      {/* AIDA: DESIRE - FAQ */}
+      <FAQSection />
+
+      {/* AIDA: INTEREST - Proof (Stats) */}
+      <AgencyStatsBlock 
+        title="Des Résultats Mesurables"
+        metrics={AGENCY_STATS.metrics}
+      />
+
+      {/* AIDA: DESIRE - Services Portfolio */}
+      <AnimatedServices />
+
     </div>
   );
 }
