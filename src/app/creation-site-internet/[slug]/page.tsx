@@ -25,15 +25,27 @@ export async function generateMetadata({
 }
 
 import { TechnoTranslator } from "@/components/sections/pedagogic/TechnoTranslator";
+import { SiteVitrineLanding } from "@/components/sections/SiteVitrineLanding";
+import { SiteEcommerceLanding } from "@/components/sections/SiteEcommerceLanding";
+import { ServiceHero } from "@/components/templates/ServiceHero";
+import { SERVICES } from "@/lib/data/services";
 
 export default async function Page({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
+  const service = SERVICES.find(s => s.slug === slug);
   
   let extraContent = null;
+  let renderHeroFn: ((breadcrumbs: any[]) => React.ReactNode) | undefined = undefined;
 
   if (slug === "site-vitrine") {
+    renderHeroFn = (breadcrumbs) => (
+      <>
+        <SiteVitrineLanding />
+        {service && <ServiceHero hero={service.hero} breadcrumbItems={breadcrumbs} />}
+      </>
+    );
     extraContent = (
-      <div className="max-w-4xl mx-auto px-6 lg:px-8 -mt-8 relative z-10 mb-20">
+      <div className="max-w-4xl mx-auto px-6 lg:px-8 mt-12 relative z-10 mb-20">
          <TechnoTranslator 
             title="Le Site Vitrine Expliqué" 
             terms={[
@@ -57,8 +69,14 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
       </div>
     );
   } else if (slug === "site-ecommerce") {
+    renderHeroFn = (breadcrumbs) => (
+      <>
+        <SiteEcommerceLanding />
+        {service && <ServiceHero hero={service.hero} breadcrumbItems={breadcrumbs} />}
+      </>
+    );
     extraContent = (
-      <div className="max-w-4xl mx-auto px-6 lg:px-8 -mt-8 relative z-10 mb-20">
+      <div className="max-w-4xl mx-auto px-6 lg:px-8 mt-12 relative z-10 mb-20">
          <TechnoTranslator 
             title="L'E-commerce sans Stress" 
             terms={[
@@ -139,6 +157,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
       silo={["web", "local"]}
       rootPath="/creation-site-internet"
       extraContent={extraContent}
+      renderHero={renderHeroFn}
     />
   );
 }
