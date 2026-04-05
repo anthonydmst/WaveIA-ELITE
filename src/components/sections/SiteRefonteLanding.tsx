@@ -19,18 +19,18 @@ export function SiteRefonteLanding() {
           <div className="text-center max-w-4xl mx-auto py-24 animate-hero-fade-up">
             <div className="inline-flex items-center gap-2 bg-ocean/10 border border-ocean/25 rounded-full px-4 py-1.5 text-xs font-semibold text-ocean uppercase tracking-[0.14em] mb-7">
               <span className="w-1.5 h-1.5 bg-ocean rounded-full animate-pulse-glow" />
-              Agence Digitale 360° × IA
+              Expertise Refonte Web × IA
             </div>
             
             <h1 className="text-5xl md:text-6xl lg:text-[4.2rem] font-bold font-heading mb-6 text-foreground leading-[1.1] tracking-tight">
-              Votre présence digitale,<br />
+              Donnez une nouvelle vie à votre site,<br />
               <em className="not-italic text-ocean relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:right-0 after:h-[2px] after:bg-gradient-to-r after:from-ocean after:to-transparent">
-                augmentée par l'IA.
+                en faire une machine d'acquisition.
               </em>
             </h1>
             
             <p className="text-lg md:text-xl text-muted-foreground font-light max-w-2xl mx-auto mb-10 leading-relaxed">
-              WaveIA ne se contente pas de créer des sites. Nous pilotons votre croissance digitale sur tous les leviers — web, SEO prédictif, automatisation, acquisition et data — grâce à des processus IA ultra-avancés.
+              Ne laissez plus un site vieillissant ou lent freiner votre croissance. WaveIA repense intégralement votre plateforme : design premium, structure SEO-first et parcours repensé pour multiplier vos conversions locales et nationales.
             </p>
             
             <div className="flex flex-wrap justify-center items-center gap-4">

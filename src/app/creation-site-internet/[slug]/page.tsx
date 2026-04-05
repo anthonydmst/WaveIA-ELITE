@@ -28,6 +28,7 @@ import { TechnoTranslator } from "@/components/sections/pedagogic/TechnoTranslat
 import { SiteVitrineLanding } from "@/components/sections/SiteVitrineLanding";
 import { SiteEcommerceLanding } from "@/components/sections/SiteEcommerceLanding";
 import { SiteRefonteLanding } from "@/components/sections/SiteRefonteLanding";
+import { MaintenanceWebLanding } from "@/components/sections/MaintenanceWebLanding";
 import { ServiceHero } from "@/components/templates/ServiceHero";
 import { SERVICES } from "@/lib/data/services";
 
@@ -101,6 +102,12 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
       </div>
     );
   } else if (slug === "maintenance-web") {
+    renderHeroFn = (breadcrumbs) => (
+      <>
+        <MaintenanceWebLanding />
+        {service && <ServiceHero hero={service.hero} breadcrumbItems={breadcrumbs} />}
+      </>
+    );
     extraContent = (
       <div className="max-w-4xl mx-auto px-6 lg:px-8 -mt-8 relative z-10 mb-20">
          <TechnoTranslator 

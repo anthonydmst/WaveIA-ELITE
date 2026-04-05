@@ -18,13 +18,24 @@ export async function generateMetadata({
 
 import { TechnoTranslator } from "@/components/sections/pedagogic/TechnoTranslator";
 import { LocalSeoStatsBlock } from "@/components/sections/LocalSeoStatsBlock";
+import { AuditSeoLanding } from "@/components/sections/AuditSeoLanding";
+import { ServiceHero } from "@/components/templates/ServiceHero";
+import { SERVICES } from "@/lib/data/services";
 
 export default async function Page({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
+  const service = SERVICES.find((s) => s.slug === slug);
   
   let extraContent = null;
+  let renderHeroFn: ((breadcrumbs: any[]) => React.ReactNode) | undefined = undefined;
 
   if (slug === "audit-seo-gratuit") {
+    renderHeroFn = (breadcrumbs) => (
+      <>
+        <AuditSeoLanding />
+        {service && <ServiceHero hero={service.hero} breadcrumbItems={breadcrumbs} />}
+      </>
+    );
     extraContent = (
       <div className="max-w-4xl mx-auto px-6 lg:px-8 -mt-8 relative z-10 mb-20">
          <TechnoTranslator 
@@ -130,6 +141,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
       silo="seo"
       rootPath="/referencement-seo"
       extraContent={extraContent}
+      renderHero={renderHeroFn}
     />
   );
 }
