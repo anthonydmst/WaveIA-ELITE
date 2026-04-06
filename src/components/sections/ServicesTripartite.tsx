@@ -27,8 +27,8 @@ const services = [
     title: "Communication et identité visuelle",
     description:
       "Propulsez votre marque avec une identité visuelle forte et cohérente. De la gestion de vos réseaux sociaux à la création de contenus percutants (web et posts), nous orchestrons vos publicités pour amplifier votre impact global. WaveIA unifie votre communication pour que votre message rayonne sur tous les canaux.",
-    gradient: "from-sunset to-sand",
-    glowColor: "var(--sunset, #f97316)",
+    gradient: "from-ocean to-accent",
+    glowColor: "var(--ocean)",
     href: "/agence-communication",
   },
 ];
@@ -93,24 +93,7 @@ export function ServicesTripartite() {
                     className={`absolute top-0 right-0 w-48 h-48 bg-linear-to-br ${service.gradient} opacity-0 group-hover:opacity-[0.12] blur-3xl transition-opacity duration-700`}
                   />
 
-                  {/* Decorative Number */}
-                  <div className="absolute top-6 right-6 text-7xl font-black text-foreground/[0.03] select-none leading-none pointer-events-none group-hover:text-foreground/[0.07] transition-colors duration-500">
-                    {String(index + 1).padStart(2, "0")}
-                  </div>
-
                   <div className="relative flex flex-col h-full">
-                    {/* Icon */}
-                    <div className="relative w-16 h-16 mb-8">
-                      <div
-                        className={`absolute inset-0 bg-linear-to-br ${service.gradient} blur-xl opacity-0 group-hover:opacity-50 transition-opacity duration-300`}
-                      />
-                      <div
-                        className={`relative w-full h-full flex items-center justify-center bg-linear-to-br ${service.gradient} rounded-2xl group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg`}
-                      >
-                        <service.icon className="w-8 h-8 text-background" />
-                      </div>
-                    </div>
-
                     {/* Title */}
                     <h3 className="text-xl lg:text-2xl font-bold mb-4 group-hover:text-ocean transition-colors duration-300 leading-tight">
                       {service.title}
