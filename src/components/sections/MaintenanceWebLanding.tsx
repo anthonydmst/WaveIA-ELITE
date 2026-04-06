@@ -66,6 +66,10 @@ export function MaintenanceWebLanding() {
                 <strong className="block font-heading text-3xl font-bold text-ocean">&lt;2h</strong>
                 <span className="text-xs text-muted-foreground uppercase tracking-wider">Délai d'intervention</span>
               </div>
+              <div className="text-center">
+                <strong className="block font-heading text-3xl font-bold text-ocean">24/7</strong>
+                <span className="text-xs text-muted-foreground uppercase tracking-wider">Surveillance IA</span>
+              </div>
             </div>
             
             <p className="mt-9 text-xs text-muted-foreground/70 tracking-wider">

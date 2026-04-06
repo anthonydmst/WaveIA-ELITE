@@ -40,7 +40,7 @@ export function AuditSeoLanding() {
         <div className="absolute inset-0 bg-[linear-gradient(rgba(14,165,233,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(14,165,233,0.04)_1px,transparent_1px)] bg-[size:60px_60px] [mask-image:radial-gradient(ellipse_80%_60%_at_50%_0%,black_40%,transparent_100%)] pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-6 lg:px-8 relative w-full">
-          <div className="text-center max-w-4xl mx-auto py-24 animate-in fade-in slide-in-from-bottom-6 duration-700">
+          <div className="text-center max-w-4xl mx-auto py-24 animate-hero-fade-up">
             <div className="inline-flex items-center gap-2 bg-ocean/10 border border-ocean/25 rounded-full px-4 py-1.5 text-xs font-semibold text-ocean uppercase tracking-widest mb-7">
               <span className="w-1.5 h-1.5 bg-ocean rounded-full animate-pulse-glow" />
               Audit SEO intelligent — Pays Basque
@@ -78,6 +78,10 @@ export function AuditSeoLanding() {
               <div className="text-center">
                 <strong className="block font-heading text-3xl font-bold text-ocean">100%</strong>
                 <span className="text-xs text-muted-foreground uppercase tracking-wider">Sans engagement</span>
+              </div>
+              <div className="text-center">
+                <strong className="block font-heading text-3xl font-bold text-ocean">200+</strong>
+                <span className="text-xs text-muted-foreground uppercase tracking-wider">Points de contrôle</span>
               </div>
             </div>
             

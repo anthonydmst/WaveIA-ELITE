@@ -19,6 +19,8 @@ export async function generateMetadata({
 import { TechnoTranslator } from "@/components/sections/pedagogic/TechnoTranslator";
 import { LocalSeoStatsBlock } from "@/components/sections/LocalSeoStatsBlock";
 import { AuditSeoLanding } from "@/components/sections/AuditSeoLanding";
+import { SeoLocalLanding } from "@/components/sections/SeoLocalLanding";
+import { SeoGmbLanding } from "@/components/sections/SeoGmbLanding";
 import { ServiceHero } from "@/components/templates/ServiceHero";
 import { SERVICES } from "@/lib/data/services";
 
@@ -61,6 +63,12 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
       </div>
     );
   } else if (slug === "local") {
+    renderHeroFn = (breadcrumbs) => (
+      <>
+        <SeoLocalLanding />
+        {service && <ServiceHero hero={service.hero} breadcrumbItems={breadcrumbs} />}
+      </>
+    );
     extraContent = (
       <>
         <LocalSeoStatsBlock />
@@ -89,7 +97,13 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
       </>
     );
   } else if (slug === "google-my-business") {
-        extraContent = (
+    renderHeroFn = (breadcrumbs) => (
+      <>
+        <SeoGmbLanding />
+        {service && <ServiceHero hero={service.hero} breadcrumbItems={breadcrumbs} />}
+      </>
+    );
+    extraContent = (
       <div className="max-w-4xl mx-auto px-6 lg:px-8 -mt-8 relative z-10 mb-20">
          <TechnoTranslator 
             title="Votre Fiche Google Business" 
