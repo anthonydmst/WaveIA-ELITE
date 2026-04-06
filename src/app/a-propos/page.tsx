@@ -1,4 +1,4 @@
-
+import { AProposLanding } from "@/components/sections/AProposLanding";
 import { AProposPageClient } from "@/components/sections/AProposPageClient";
 
 import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
@@ -17,6 +17,7 @@ export default function AProposPage() {
   return (
     <>
       <BreadcrumbSchema items={items} />
+      <AProposLanding />
       <AProposPageClient items={items} />
 
     </>
