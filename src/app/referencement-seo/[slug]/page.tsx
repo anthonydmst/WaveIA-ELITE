@@ -21,6 +21,7 @@ import { LocalSeoStatsBlock } from "@/components/sections/LocalSeoStatsBlock";
 import { AuditSeoLanding } from "@/components/sections/AuditSeoLanding";
 import { SeoLocalLanding } from "@/components/sections/SeoLocalLanding";
 import { SeoGmbLanding } from "@/components/sections/SeoGmbLanding";
+import { SeoNetlinkingLanding } from "@/components/sections/SeoNetlinkingLanding";
 import { ServiceHero } from "@/components/templates/ServiceHero";
 import { SERVICES } from "@/lib/data/services";
 
@@ -123,7 +124,13 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
       </div>
     );
   } else if (slug === "netlinking") {
-        extraContent = (
+    renderHeroFn = (breadcrumbs) => (
+      <>
+        <SeoNetlinkingLanding />
+        {service && <ServiceHero hero={service.hero} breadcrumbItems={breadcrumbs} />}
+      </>
+    );
+    extraContent = (
       <div className="max-w-4xl mx-auto px-6 lg:px-8 -mt-8 relative z-10 mb-20">
          <TechnoTranslator 
             title="Le Netlinking pour les Nuls" 
