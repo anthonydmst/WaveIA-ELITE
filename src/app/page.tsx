@@ -22,7 +22,7 @@ import { AnimatedTestimonials } from "@/components/sections/AnimatedTestimonials
 import { AnimatedLocalSection } from "@/components/sections/AnimatedLocalSection";
 import { ServicesTripartite } from "@/components/sections/ServicesTripartite";
 import { LocalExpertsBlock } from "@/components/sections/CreationSiteDetails";
-import { WaveDiagnostic } from "@/components/sections/WaveDiagnostic";
+import { WaveDiagnosticForm } from "@/components/sections/WaveDiagnosticForm";
 import { CreationRefonteBlock } from "@/components/sections/CreationRefonteBlock";
 import { ReferencementVisibiliteBlock } from "@/components/sections/ReferencementVisibiliteBlock";
 import { CommunicationIdentiteBlock } from "@/components/sections/CommunicationIdentiteBlock";
@@ -47,7 +47,7 @@ export default function Home() {
       <ServicesTripartite />
 
       {/* AIDA: INTEREST - Diagnostic IA */}
-      <WaveDiagnostic />
+      <WaveDiagnosticForm />
 
       {/* AIDA: INTEREST - Création & Refonte */}
       <CreationRefonteBlock />
