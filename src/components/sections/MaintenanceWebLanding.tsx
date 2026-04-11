@@ -20,6 +20,17 @@ export function MaintenanceWebLanding() {
   return (
     <div className="w-full relative z-10 pt-20">
       
+      {/* Inline Styles for specific custom animations */}
+      <style dangerouslySetInnerHTML={{__html: `
+        @keyframes scroll-left {
+          from { transform: translateX(0); }
+          to { transform: translateX(-50%); }
+        }
+        .animate-scroll {
+          animation: scroll-left 25s linear infinite;
+        }
+      `}} />
+
       {/* ─── HERO ─── */}
       <section id="hero-landing" className="min-h-[90vh] flex items-center relative overflow-hidden pt-[70px]">
         {/* Glow & Grid Backgrounds matching WaveIA theme */}
@@ -78,6 +89,17 @@ export function MaintenanceWebLanding() {
           </div>
         </div>
       </section>
+
+      {/* ─── MARQUEE ─── */}
+      <div className="bg-background border-y border-border py-4 overflow-hidden flex">
+        <div className="flex gap-12 whitespace-nowrap animate-scroll items-center">
+          {Array(3).fill(['Sécurité IA', 'Performance Web', 'Uptime 99.9%', 'Monitoring 24/7', 'Sauvegardes J+1', 'Optimisation Vitesse', 'Support Réactif']).flat().map((item, i) => (
+            <div key={i} className="font-heading text-xs font-bold tracking-widest uppercase text-muted-foreground/70 flex items-center gap-12">
+              {item} <span className="text-ocean text-[10px]">✦</span>
+            </div>
+          ))}
+        </div>
+      </div>
 
       {/* ─── WHY SECTION ─── */}
       <section id="why" className="py-24 bg-card border-t border-border">
