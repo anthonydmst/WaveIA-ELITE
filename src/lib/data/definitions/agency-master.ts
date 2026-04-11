@@ -5,6 +5,8 @@
  */
 
 import { DeepContent } from "../types";
+import { CITIES } from "./cities";
+import { POWER_5_CITIES } from "../whitelist";
 
 // ============================================
 // PART 1: AGENCY-WIDE SIGNALS
@@ -636,5 +638,7 @@ import { AGENCY_FAQS } from "./faq-master";
 // ============================================
 // PART 3: AGENCY FAQS & UTILS
 // ============================================
+
+export const LOCAL_CITIES = CITIES.filter(c => POWER_5_CITIES.includes(c.slug));
 
 export { AGENCY_FAQS };
