@@ -1,5 +1,5 @@
-
 import { TarifsHubClient } from "@/components/sections/pricing/TarifsHubClient";
+import { DevisSimulator } from "@/components/sections/pricing/DevisSimulator";
 
 import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import { generateBreadcrumbs } from "@/lib/breadcrumbs";
@@ -16,6 +16,7 @@ export default function TarifsPage() {
   return (
     <>
       <BreadcrumbSchema items={items} />
+      <DevisSimulator />
       <TarifsHubClient items={items} />
 
     </>

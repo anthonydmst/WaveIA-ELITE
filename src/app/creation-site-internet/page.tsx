@@ -3,6 +3,7 @@ import { ServicePageFactory } from "@/components/factories/ServicePageFactory";
 import { SERVICES } from "@/lib/data/services";
 import { PedagogicBlock } from "@/components/sections/pedagogic/PedagogicBlock";
 import { Laptop } from "lucide-react";
+import { CreationSiteSiloLanding } from "@/components/sections/CreationSiteSiloLanding";
 import { CustomHeroCreationSite } from "@/components/sections/CustomHeroCreationSite";
 import { CreationRefonteBlock } from "@/components/sections/CreationRefonteBlock";
 import { HomePageRealisationsBlock } from "@/components/sections/HomePageRealisationsBlock";
@@ -30,6 +31,7 @@ export default function Page() {
       service={service} 
       renderHero={(breadcrumbs) => (
         <>
+          <CreationSiteSiloLanding />
           <CustomHeroCreationSite breadcrumbItems={breadcrumbs} />
           <CreationRefonteBlock />
           <HomePageRealisationsBlock />
