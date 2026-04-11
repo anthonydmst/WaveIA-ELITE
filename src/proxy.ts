@@ -2,25 +2,24 @@ import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
 /**
- * S-Tier Edge Proxy (formerly proxy.ts)
+ * S-Tier Edge Proxy — God Mode+ Engine
  * 
  * Centralizes global logic at the Edge:
  * - Security headers reinforcement
- * - Request logging/analytics
+ * - Request logging & tracing
+ * - GeoIP & Bot Protection (Placeholder for v16+)
  */
-export function middleware(request: NextRequest) {
-  
+
+export function proxy(request: NextRequest) {
   // S-Tier: Additional security headers at Edge level
-  // Note: Main headers are in next.config.ts, this is for dynamic/edge-specific logic
   
   // Content Security Policy (CSP)
-  // Strict CSP to prevent XSS and data injection
   const nonce = Buffer.from(crypto.randomUUID()).toString('base64');
   const cspHeader = `
     default-src 'self';
     script-src 'self' 'unsafe-eval' 'unsafe-inline' https://va.vercel-scripts.com;
     style-src 'self' 'unsafe-inline';
-    img-src 'self' blob: data: https://*.googleusercontent.com;
+    img-src 'self' blob: data: https://*.googleusercontent.com https://images.unsplash.com;
     font-src 'self';
     object-src 'none';
     base-uri 'self';
@@ -29,7 +28,6 @@ export function middleware(request: NextRequest) {
     block-all-mixed-content;
     upgrade-insecure-requests;
   `;
-  // Replace newlines with spaces
   const contentSecurityPolicyHeaderValue = cspHeader
     .replace(/\s{2,}/g, ' ')
     .trim();
@@ -44,23 +42,19 @@ export function middleware(request: NextRequest) {
     },
   });
   
-  // Set CSP header on response
+  // Set CSP and Security headers on response
   response.headers.set('Content-Security-Policy', contentSecurityPolicyHeaderValue);
+  response.headers.set('X-Frame-Options', 'DENY');
+  response.headers.set('X-Content-Type-Options', 'nosniff');
   
-  // Prevent clickjacking on API routes
-  if (request.nextUrl.pathname.startsWith('/api')) {
-    response.headers.set('X-Frame-Options', 'DENY');
-    response.headers.set('X-Content-Type-Options', 'nosniff');
-  }
-  
-  // Add request ID for debugging/tracing
+  // Add tracing
   const requestId = crypto.randomUUID();
   response.headers.set('X-Request-ID', requestId);
   
   return response;
 }
 
-// Matcher: Apply to all routes except static files
+// Matcher: Apply to all routes except static files (God Mode Config)
 export const config = {
   matcher: [
     /*

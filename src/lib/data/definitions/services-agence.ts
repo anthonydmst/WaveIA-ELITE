@@ -2,9 +2,14 @@ import { Service } from "../types";
 import { CITIES } from "./cities";
 import { POWER_5_CITIES } from "../whitelist";
 import { PROCESS_AGENCE_PREMIUM, FEATURES_AGENCE_PREMIUM } from "./premium-defaults";
-import { AGENCE_FAQS } from "./specific-faqs";
-import { CONTENT_AGENCE_HUB, CONTENT_AGENCE_IDENTITE, CONTENT_AGENCE_STRATEGIE } from "./content-agence";
-import { CONTENT_AGENCE_PHOTO, CONTENT_AGENCE_RESEAUX } from "./content-agence-2";
+import { 
+  CONTENT_AGENCE_HUB, 
+  CONTENT_AGENCE_IDENTITE, 
+  CONTENT_AGENCE_STRATEGIE,
+  CONTENT_AGENCE_PHOTO, 
+  CONTENT_AGENCE_RESEAUX,
+  AGENCY_FAQS as AGENCE_FAQS_MASTER
+} from "./agency-master";
 import { CONTENT_AGENCE_VIDEO } from "./content-tech";
 import { getSiloLocalContext } from "./silo-local-context";
 import { generateHeroDescription, generateHeroSubtitle } from "./hero-descriptions";
@@ -25,7 +30,7 @@ export const AGENCE_SERVICES: Service[] = [
     },
     features: FEATURES_AGENCE_PREMIUM,
     process: PROCESS_AGENCE_PREMIUM,
-    faq: AGENCE_FAQS,
+    faq: AGENCE_FAQS_MASTER,
     content: CONTENT_AGENCE_HUB,
   },
   // Services
@@ -46,7 +51,7 @@ export const AGENCE_SERVICES: Service[] = [
       ...FEATURES_AGENCE_PREMIUM.slice(2)
     ],
     process: PROCESS_AGENCE_PREMIUM,
-    faq: AGENCE_FAQS,
+    faq: AGENCE_FAQS_MASTER,
     content: CONTENT_AGENCE_IDENTITE,
   },
   {
@@ -66,7 +71,7 @@ export const AGENCE_SERVICES: Service[] = [
       ...FEATURES_AGENCE_PREMIUM.slice(2)
     ],
     process: PROCESS_AGENCE_PREMIUM,
-    faq: AGENCE_FAQS,
+    faq: AGENCE_FAQS_MASTER,
     content: CONTENT_AGENCE_RESEAUX,
   },
   {
@@ -86,7 +91,7 @@ export const AGENCE_SERVICES: Service[] = [
         ...FEATURES_AGENCE_PREMIUM.slice(2)
     ],
     process: PROCESS_AGENCE_PREMIUM,
-    faq: AGENCE_FAQS,
+    faq: AGENCE_FAQS_MASTER,
     content: CONTENT_AGENCE_PHOTO,
   },
   {
@@ -106,7 +111,7 @@ export const AGENCE_SERVICES: Service[] = [
         ...FEATURES_AGENCE_PREMIUM.slice(2)
     ],
     process: PROCESS_AGENCE_PREMIUM,
-    faq: AGENCE_FAQS,
+    faq: AGENCE_FAQS_MASTER,
     content: CONTENT_AGENCE_VIDEO,
   },
   {
@@ -126,7 +131,7 @@ export const AGENCE_SERVICES: Service[] = [
       ...FEATURES_AGENCE_PREMIUM.slice(2)
     ],
     process: PROCESS_AGENCE_PREMIUM,
-    faq: AGENCE_FAQS,
+    faq: AGENCE_FAQS_MASTER,
     // Import CONTENT_AGENCE_STRATEGIE at top of file first!
     content: CONTENT_AGENCE_STRATEGIE, 
   },
@@ -152,7 +157,7 @@ export const AGENCE_SERVICES: Service[] = [
         },
         features: FEATURES_AGENCE_PREMIUM,
         process: PROCESS_AGENCE_PREMIUM,
-        faq: AGENCE_FAQS,
+        faq: AGENCE_FAQS_MASTER,
         // ✅ PAS DE CONTENT ICI - Pages ville ont TerritorialContext unique via siloContext
         localContext: { 
           city: city.name, 

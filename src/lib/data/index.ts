@@ -3,4 +3,4 @@ export * from "./pricing";
 export * from "./contact";
 export * from "./site";
 export * from "./services";
-export * from "./definitions/agency-content";
+export * from "./definitions/agency-master";

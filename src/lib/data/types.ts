@@ -104,43 +104,37 @@ export interface Service {
   };
 }
 
-export interface City {
+export interface CityBase {
   slug: string;
   name: string;
   zipCode: string;
   department: string; // "64" or "40"
-  description: string;
-  neighborhoods?: string[]; // e.g. ["Saint-Esprit", "Petit Bayonne"]
-  landmarks?: string[]; // e.g. ["Cathédrale", "Musée Basque"]
-  population?: string; // e.g. "50 000"
   coordinates?: { lat: number; lng: number }; // GPS for Schema.org
-  
-  // Grade A++ Local SEO Extensions
+}
+
+export interface CitySEO {
+  description: string;
+  neighborhoods?: string[];
+  landmarks?: string[];
+  population?: string;
   localSEO?: {
-    // Identity & History
-    identity: string; // Short identity statement
-    history: string; // Brief historical context
-    economicContext: string; // Local business environment
-    
-    // Geographic Context
-    zones: string[]; // Zones d'intervention (quartiers, communes limitrophes)
-    nearbyAreas: string[]; // Villes/villages proches
-    
-    // Local Keywords (Semantic SEO)
-    primaryKeywords: string[]; // Main target keywords
-    secondaryKeywords: string[]; // LSI keywords
-    
-    // Trust Signals
+    identity: string;
+    history: string;
+    economicContext: string;
+    zones: string[];
+    nearbyAreas: string[];
+    primaryKeywords: string[];
+    secondaryKeywords: string[];
     localStats: {
-      businesses?: string; // "1200+ entreprises"
-      digitalNeed?: string; // "72% sans site web"
-      opportunity?: string; // "Marché en croissance"
+      businesses?: string;
+      digitalNeed?: string;
+      opportunity?: string;
     };
-    
-    // Unique Selling Points for this city
     localUSPs: string[];
   };
 }
+
+export interface City extends CityBase, CitySEO {}
 
 // DEEP CONTENT ARCHITECTURE (Grade A+)
 export interface ContentSection {

@@ -1,39 +1,43 @@
-# WaveIA - Agence Web & SEO / Pays Basque
+# WaveIA - Agence Web & SEO S-Tier / Pays Basque
 
-> Une agence digitale experte en création de sites internet, référencement SEO et stratégie de marque. Nous transformons votre vision en performance digitale.
+> **Identité** : Agence digitale d'ingénierie web spécialisée dans la création d'écosystèmes haute performance (LCP < 1.2s). Expertises en Next.js, SEO sémantique et automatisation IA.
 
-## Nos Expertises
+## 🚀 Vision S-Tier God Mode
+Nous appliquons le standard **S-TIER GOD MODE V2.0** :
+- **Architecture** : Next.js 16 (Canary), React 19, App Router SSG.
+- **Performance** : Budgets JS stricts (< 128kB), AVIF/WebP natif.
+- **Design** : Esthétique "Ghost-Glass", interactivité cynétique via GSAP & Lenis.
 
-### 1. Création de Sites Internet
-- **Site Vitrine** : Présentez votre activité avec élégance.
-- **Site E-commerce** : Vendez vos produits en ligne.
-- **Site Sur-Mesure** : Applications web complexes et SaaS.
-- **Maintenance Web** : Sécurité, mises à jour et performances.
-- [Voir nos solutions web](/creation-site-internet)
+## 🛠️ Nos Expertises
 
-### 2. Référencement SEO (Search Engine Optimization)
-- **Audit SEO** : Analyse complète de votre visibilité.
-- **SEO Local** : Dominez les recherches au Pays Basque (Biarritz, Bayonne, Anglet).
-- **Contenu & Netlinking** : Stratégies de croissance organique.
-- [Nos services SEO](/referencement-seo)
+### 1. Développement d'Élite
+- **Sites Vitrines & Branding** : Identités visuelles fortes et déploiement ultra-rapide.
+- **E-commerce & Conversion** : Taux de transformation optimisés via UX psychologique.
+- **SaaS & Custom Apps** : Solutions sur-mesure pour besoins complexes.
+- [Exploration des Solutions](/creation-site-internet)
 
-### 3. Agence de Communication 360
-- **Identité Visuelle** : Logos, chartes graphiques, branding.
-- **Réseaux Sociaux** : Gestion et stratégie community management.
-- **Production Visuelle** : Photographie et Vidéo professionnelle.
-- [Notre pôle communication](/agence-communication)
+### 2. Autorité SEO & Visibilité
+- **Audit Sémantique** : Analyse de niche et maillage territorial profond.
+- **SEO Local Pays Basque** : Domination géographique (Biarritz, Bayonne, Anglet).
+- **IndexNow & AI Readiness** : Soumission instantanée aux moteurs et optimisation LLM.
+- [Pôle Performance SEO](/referencement-seo)
 
-## L'Agence
+### 3. Stratégie de Marque & Design
+- **Ghost-Glass UI** : Interfaces modernes, transparentes et dynamiques.
+- **Production Contenu IA** : Rédaction assistée pour autorité maximale.
+- [Identité & Communication](/agence-communication)
 
-WaveIA est basée sur la Côte Basque et intervient principalement dans les Landes (40) et les Pyrénées-Atlantiques (64).
-Nous prônons une approche **S-Tier** : Excellence technique, Design premium "Ghost-Glass", et Performance maximale.
+## 📍 Ancrage Territorial
+WaveIA opère sur la **Côte Basque (Pyrénées-Atlantiques, 64)** et le **Sud des Landes (40)**.
+Siège : Technopôle Izarbel, Bidart.
 
-- [A Propos](/a-propos)
-- [Contact](/contact)
-- [Projets](/realisations)
+## 🔗 Liens Directs
+- [Notre Histoire](/a-propos)
+- [Projets d'Exception](/realisations)
+- [Diagnostic Digital IA](/contact)
 
-## Contact
-
+## 📞 Contact SSOT
 - **Email** : contact@waveia.fr
-- **Téléphone** : 06 95 91 36 69
-- **Siège** : Côte Basque, France
+- **Téléphone** : +33 6 95 91 36 69
+- **Site Web** : https://waveia.fr
+- **Dernière mise à jour** : Avril 2026 (Stack V16 Ready)

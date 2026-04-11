@@ -1,33 +1,34 @@
 import { JsonLd } from "./JsonLd";
+import { COMPANY_CONFIG } from "@/lib/seo/company";
 
 export default function LocalBusinessSchema() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "@id": "https://waveia.fr/#localbusiness",
-    "name": "WaveIA",
-    "alternateName": "WaveIA - Agence Web Pays Basque",
-    "description": "Agence web premium du Pays Basque. Création de sites internet haute performance, SEO local et identité de marque pour les entreprises de Biarritz, Bayonne, Anglet et environs.",
-    "image": "https://waveia.fr/opengraph-image.png",
-    "logo": "https://waveia.fr/logo.png",
-    "url": "https://waveia.fr",
-    "telephone": "+33695913669",
-    "email": "contact@waveia.fr",
-    "priceRange": "€€",
+    "@id": `${COMPANY_CONFIG.url}/#localbusiness`,
+    "name": COMPANY_CONFIG.name,
+    "alternateName": `${COMPANY_CONFIG.name} - Agence Web Pays Basque`,
+    "description": COMPANY_CONFIG.description,
+    "image": `${COMPANY_CONFIG.url}/opengraph-image.png`,
+    "logo": COMPANY_CONFIG.logo,
+    "url": COMPANY_CONFIG.url,
+    "telephone": COMPANY_CONFIG.telephone,
+    "email": COMPANY_CONFIG.email,
+    "priceRange": COMPANY_CONFIG.priceRange,
     "currenciesAccepted": "EUR",
     "paymentAccepted": "Virement, Carte bancaire",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Technopôle Izarbel",
-      "addressLocality": "Bidart",
-      "postalCode": "64210",
-      "addressRegion": "Pyrénées-Atlantiques",
-      "addressCountry": "FR"
+      "streetAddress": COMPANY_CONFIG.address.street,
+      "addressLocality": COMPANY_CONFIG.address.city,
+      "postalCode": COMPANY_CONFIG.address.postalCode,
+      "addressRegion": COMPANY_CONFIG.address.region,
+      "addressCountry": COMPANY_CONFIG.address.country
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": 43.4285,
-      "longitude": -1.5896
+      "latitude": COMPANY_CONFIG.geo.latitude,
+      "longitude": COMPANY_CONFIG.geo.longitude
     },
     "areaServed": [
       {
@@ -111,8 +112,8 @@ export default function LocalBusinessSchema() {
     ],
     "aggregateRating": {
       "@type": "AggregateRating",
-      "ratingValue": "5.0",
-      "reviewCount": "50",
+      "ratingValue": COMPANY_CONFIG.aggregateRating.ratingValue,
+      "reviewCount": COMPANY_CONFIG.aggregateRating.reviewCount,
       "bestRating": "5",
       "worstRating": "1"
     },
@@ -144,16 +145,16 @@ export default function LocalBusinessSchema() {
       "React"
     ],
     "sameAs": [
-      "https://www.linkedin.com/company/waveia",
-      "https://www.instagram.com/waveia.fr",
-      "https://twitter.com/waveia"
+      COMPANY_CONFIG.socials.linkedin,
+      COMPANY_CONFIG.socials.instagram,
+      COMPANY_CONFIG.socials.twitter
     ],
     "founder": {
       "@type": "Person",
       "name": "WaveIA Team",
       "jobTitle": "Fondateurs"
     },
-    "foundingDate": "2023",
+    "foundingDate": COMPANY_CONFIG.foundingDate,
     "slogan": "Votre vague digitale commence ici"
   };
 

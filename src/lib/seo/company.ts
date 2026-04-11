@@ -20,10 +20,15 @@ export const COMPANY_CONFIG = {
   telephone: "+33695913669",
   telephoneLabel: "06 95 91 36 69",
   address: {
-    street: "Côte Basque",
-    city: "Biarritz • Bayonne • Anglet",
-    postalCode: "64200", // Defaulting to Biarritz code or generic
+    street: "Technopôle Izarbel",
+    city: "Bidart",
+    region: "Pyrénées-Atlantiques",
+    postalCode: "64210",
     country: "FR",
+  },
+  geo: {
+    latitude: 43.4285,
+    longitude: -1.5896,
   },
 
   // Socials

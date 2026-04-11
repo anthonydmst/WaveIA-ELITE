@@ -1,6 +1,6 @@
 import { DeepContent } from "../types";
 import { CONTENT_SEO_HUB } from "./content-seo";
-import { CONTENT_AGENCE_HUB } from "./content-agence";
+import { CONTENT_AGENCE_HUB } from "./agency-master";
 
 export const CONTENT_SITE_VITRINE: DeepContent = {
   problem: {

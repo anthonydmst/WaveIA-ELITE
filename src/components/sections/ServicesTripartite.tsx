@@ -2,6 +2,7 @@
 
 import { Link } from "next-view-transitions";
 import { Globe, Search, Palette, ArrowRight } from "lucide-react";
+import { useHaptics } from "@/hooks/use-haptics";
 
 const services = [
   {
@@ -34,6 +35,8 @@ const services = [
 ];
 
 export function ServicesTripartite() {
+  const { trigger } = useHaptics();
+
   return (
     <section
       id="nos-services"
@@ -80,7 +83,11 @@ export function ServicesTripartite() {
                 backfaceVisibility: "hidden",
               }}
             >
-              <Link href={service.href} className="block h-full">
+              <Link 
+                href={service.href} 
+                className="block h-full"
+                onClick={() => trigger("light")}
+              >
                 {/* Gradient Border Glow on Hover */}
                 <div
                   className={`absolute inset-0 bg-linear-to-br ${service.gradient} opacity-0 group-hover:opacity-15 transition-opacity duration-500 rounded-2xl blur-md`}

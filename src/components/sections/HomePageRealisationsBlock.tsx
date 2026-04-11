@@ -5,11 +5,14 @@ import Image from "next/image";
 import { Link } from "next-view-transitions";
 import { ChevronLeft, ChevronRight, ExternalLink, MapPin, ArrowRight } from "lucide-react";
 import { PROJECTS_SHOWCASE } from "@/lib/data";
+import { useHaptics } from "@/hooks/use-haptics";
 
 export function HomePageRealisationsBlock() {
+  const { trigger } = useHaptics();
   const scrollContainerRef = useRef<HTMLDivElement>(null);
 
   const scroll = (direction: "left" | "right") => {
+    trigger("light");
     if (scrollContainerRef.current) {
       const container = scrollContainerRef.current;
       const scrollAmount = window.innerWidth > 768 ? container.clientWidth / 2 : container.clientWidth * 0.8;
@@ -77,7 +80,8 @@ export function HomePageRealisationsBlock() {
             {PROJECTS_SHOWCASE.map((project) => (
               <div
                 key={project.id}
-                className="w-[85vw] md:w-[45vw] lg:w-[30vw] shrink-0 snap-center lg:snap-start group"
+                className="w-[85vw] md:w-[45vw] lg:w-[30vw] shrink-0 snap-center lg:snap-start group cursor-pointer"
+                onClick={() => trigger("light")}
               >
                 <article className="relative h-full bg-card rounded-2xl border border-glass-border overflow-hidden transition-all duration-300 hover:border-ocean/30 hover:shadow-[0_20px_40px_rgba(14,165,233,0.1)] flex flex-col">
                   {/* Image Container */}
@@ -150,6 +154,7 @@ export function HomePageRealisationsBlock() {
                 <p className="text-muted-foreground mb-8">Découvrez plus de réalisations sur notre page dédiée.</p>
                 <Link
                   href="/realisations"
+                  onClick={() => trigger("medium")}
                   className="px-6 py-3 bg-ocean text-background font-semibold rounded-full hover:bg-ocean-light transition-colors"
                 >
                   Ouvrir le portfolio
