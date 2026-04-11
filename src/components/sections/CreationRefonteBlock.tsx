@@ -93,56 +93,58 @@ export function CreationRefonteBlock() {
         {/* Services Grid */}
         <div className="grid md:grid-cols-2 gap-6 lg:gap-8 max-w-5xl mx-auto">
           {services.map((service, index) => {
-            const IconComponent = service.icon;
-
             return (
               <div
                 key={index}
-                className=""
-                style={{ animationDelay: `${index * 150}ms` }}
+                className={`group relative ${
+                  index === 1
+                    ? "delay-100"
+                    : index === 2
+                      ? "delay-200"
+                      : index === 3
+                        ? "delay-300"
+                        : ""
+                }`}
+                style={{
+                  willChange: "transform",
+                  backfaceVisibility: "hidden",
+                }}
               >
                 <Link
                   href={service.href}
                   className="block h-full group outline-none"
                 >
-                  <div className="relative h-full bg-glass-bg backdrop-blur-sm border border-glass-border rounded-2xl p-6 lg:p-8 overflow-hidden transition-all duration-300 hover:border-ocean/30 hover:-translate-y-1 hover:shadow-2xl hover:shadow-ocean/10">
+                  {/* Gradient Border Glow on Hover */}
+                  <div
+                    className={`absolute inset-0 bg-linear-to-br ${service.gradient} opacity-0 group-hover:opacity-15 transition-opacity duration-500 rounded-2xl blur-md`}
+                  />
+
+                  {/* Card */}
+                  <div className="relative h-full p-8 lg:p-10 bg-glass-bg backdrop-blur-sm rounded-2xl border border-glass-border overflow-hidden transition-all duration-500 group-hover:border-transparent group-hover:translate-y-[-8px] group-hover:shadow-[0_20px_40px_var(--glass-glow)]">
                     
-                    {/* Hover Glow */}
+                    {/* Corner Glow */}
                     <div
-                      className={`absolute top-0 right-0 w-32 h-32 bg-linear-to-br ${service.gradient} opacity-0 blur-2xl transition-opacity duration-500 pointer-events-none group-hover:opacity-20`}
+                      className={`absolute top-0 right-0 w-48 h-48 bg-linear-to-br ${service.gradient} opacity-0 group-hover:opacity-[0.12] blur-3xl transition-opacity duration-700`}
                     />
 
-                    {/* Number Deco */}
-                    <div className="absolute top-4 right-6 text-6xl font-black text-foreground/[0.02] select-none pointer-events-none transition-colors duration-500 group-hover:text-foreground/[0.04]">
-                      {String(index + 1).padStart(2, "0")}
-                    </div>
-
                     <div className="relative flex flex-col h-full z-10">
-                      {/* Icon */}
-                      <div className="mb-6">
-                        <div
-                          className={`w-14 h-14 flex items-center justify-center rounded-xl bg-linear-to-br ${service.gradient} shadow-lg transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-3`}
-                        >
-                          <IconComponent className="w-6 h-6 text-background" />
-                        </div>
-                      </div>
-
                       {/* Text */}
                       <div className="flex-1">
-                        <h3 className="text-xl font-bold mb-3 text-foreground transition-colors duration-300 group-hover:text-ocean-light">
+                        <h3 className="text-xl lg:text-2xl font-bold mb-4 group-hover:text-ocean transition-colors duration-300 leading-tight">
                           {service.title}
                         </h3>
-                        <p className="text-muted-foreground text-sm leading-relaxed mb-6">
+                        <p className="text-muted-foreground text-sm lg:text-base leading-relaxed mb-8 flex-grow">
                           {service.description}
                         </p>
                       </div>
 
                       {/* Footer / CTA */}
-                      <div className="mt-auto pt-4 border-t border-glass-border transition-colors duration-300 group-hover:border-ocean/20">
-                        <div className="flex items-center gap-2 text-sm font-semibold text-muted-foreground transition-colors duration-300 group-hover:text-ocean-light">
-                          <span>Découvrir le service</span>
-                          <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
-                        </div>
+                      <div className="flex items-center gap-2 text-sm font-semibold text-ocean/70 group-hover:text-ocean transition-all duration-300 mt-auto pt-4 border-t border-glass-border group-hover:border-transparent">
+                        <span className="relative">
+                          Découvrir le service
+                          <span className="absolute bottom-0 left-0 w-0 h-px bg-ocean group-hover:w-full transition-all duration-300" />
+                        </span>
+                        <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
                       </div>
                     </div>
                   </div>

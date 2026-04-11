@@ -3,6 +3,7 @@ import { ServicePageFactory } from "@/components/factories/ServicePageFactory";
 import { SERVICES } from "@/lib/data/services";
 import { PedagogicBlock } from "@/components/sections/pedagogic/PedagogicBlock";
 import { TrendingUp } from "lucide-react";
+import { SeoSiloLanding } from "@/components/sections/SeoSiloLanding";
 
 export function generateMetadata() {
   const service = SERVICES.find((s) => s.slug === "referencement-seo");
@@ -22,6 +23,9 @@ export default function Page() {
   return (
     <ServicePageFactory 
       service={service} 
+      renderHero={() => (
+        <SeoSiloLanding />
+      )}
       extraContent={
         <div className="max-w-7xl mx-auto px-6 lg:px-8 mt-8 lg:-mt-20 relative z-10 mb-24">
            <PedagogicBlock 
