@@ -17,13 +17,27 @@ export async function generateMetadata({
 }
 
 import { TechnoTranslator } from "@/components/sections/pedagogic/TechnoTranslator";
+import { IdentiteVisuelleLanding } from "@/components/sections/IdentiteVisuelleLanding";
+import { ReseauxSociauxLanding } from "@/components/sections/ReseauxSociauxLanding";
+import { PhotographieLanding } from "@/components/sections/PhotographieLanding";
+import { VideoLanding } from "@/components/sections/VideoLanding";
+import { ServiceHero } from "@/components/templates/ServiceHero";
+import { SERVICES } from "@/lib/data/services";
 
 export default async function Page({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
+  const service = SERVICES.find((s) => s.slug === slug);
   
   let extraContent = null;
+  let renderHeroFn: ((breadcrumbs: any[]) => React.ReactNode) | undefined = undefined;
 
   if (slug === "identite-visuelle") {
+    renderHeroFn = (breadcrumbs) => (
+      <>
+        <IdentiteVisuelleLanding />
+        {service && <ServiceHero hero={service.hero} breadcrumbItems={breadcrumbs} />}
+      </>
+    );
     extraContent = (
       <div className="max-w-4xl mx-auto px-6 lg:px-8 -mt-8 relative z-10 mb-20">
          <TechnoTranslator 
@@ -49,6 +63,12 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
       </div>
     );
   } else if (slug === "reseaux-sociaux") {
+    renderHeroFn = (breadcrumbs) => (
+      <>
+        <ReseauxSociauxLanding />
+        {service && <ServiceHero hero={service.hero} breadcrumbItems={breadcrumbs} />}
+      </>
+    );
     extraContent = (
       <div className="max-w-4xl mx-auto px-6 lg:px-8 -mt-8 relative z-10 mb-20">
          <TechnoTranslator 
@@ -74,6 +94,12 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
       </div>
     );
   } else if (slug === "photographie") {
+    renderHeroFn = (breadcrumbs) => (
+      <>
+        <PhotographieLanding />
+        {service && <ServiceHero hero={service.hero} breadcrumbItems={breadcrumbs} />}
+      </>
+    );
     extraContent = (
       <div className="max-w-4xl mx-auto px-6 lg:px-8 -mt-8 relative z-10 mb-20">
          <TechnoTranslator 
@@ -99,6 +125,12 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
       </div>
     );
   } else if (slug === "video") {
+    renderHeroFn = (breadcrumbs) => (
+      <>
+        <VideoLanding />
+        {service && <ServiceHero hero={service.hero} breadcrumbItems={breadcrumbs} />}
+      </>
+    );
     extraContent = (
       <div className="max-w-4xl mx-auto px-6 lg:px-8 -mt-8 relative z-10 mb-20">
          <TechnoTranslator 
@@ -131,6 +163,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
       silo="agence"
       rootPath="/agence-communication"
       extraContent={extraContent}
+      renderHero={renderHeroFn}
     />
   );
 }
