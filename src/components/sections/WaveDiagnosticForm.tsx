@@ -398,8 +398,9 @@ export function WaveDiagnosticForm() {
           )}
 
           {/* ÉTAPE 3 */}
-          {step === 3 && qs[currentQ] && (() => {
+          {step === 3 && (() => {
             const q = qs[currentQ];
+            if (!q) return null;
             return (
               <div className="animate-in fade-in slide-in-from-right-4 duration-500" key={`q-${currentQ}`}>
                 <div className="text-xs text-muted-foreground font-semibold tracking-wider uppercase mb-2">Étape 3 / 6 — Diagnostic · Question {currentQ + 1} / {qs.length}</div>
@@ -572,7 +573,7 @@ export function WaveDiagnosticForm() {
                 <h2 className="text-2xl sm:text-3xl font-bold font-heading text-foreground mb-6">Bonjour {contact.prenom}, voici votre diagnostic</h2>
                 
                 <div className="mx-auto flex flex-col justify-center items-center py-4">
-                  <div className="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-ocean to-ocean-light font-heading">
+                  <div className="text-5xl font-extrabold text-transparent bg-clip-text bg-linear-to-r from-ocean to-ocean-light font-heading">
                     {Math.round(res.pct)} %
                   </div>
                   <div className="text-lg font-bold text-foreground mb-1 mt-2">Score de maturité numérique</div>

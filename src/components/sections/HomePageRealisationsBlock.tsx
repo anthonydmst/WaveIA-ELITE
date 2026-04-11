@@ -27,7 +27,7 @@ export function HomePageRealisationsBlock() {
       <div className="absolute inset-0 bg-noise opacity-[0.02]" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,var(--ocean-dark)_0%,transparent_50%)] opacity-10" />
 
-      <div className="relative max-w-[90rem] mx-auto px-6 lg:px-8">
+      <div className="relative max-w-360 mx-auto px-6 lg:px-8">
         {/* Header & Controls Content */}
         <div className="flex flex-col items-center text-center max-w-4xl mx-auto mb-16">
           <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-ocean/10 border border-ocean/20 rounded-full text-ocean text-sm font-semibold uppercase tracking-wider mb-6">
@@ -81,7 +81,7 @@ export function HomePageRealisationsBlock() {
               >
                 <article className="relative h-full bg-card rounded-2xl border border-glass-border overflow-hidden transition-all duration-300 hover:border-ocean/30 hover:shadow-[0_20px_40px_rgba(14,165,233,0.1)] flex flex-col">
                   {/* Image Container */}
-                  <div className="relative aspect-video lg:aspect-[4/3] overflow-hidden">
+                  <div className="relative aspect-video lg:aspect-4/3 overflow-hidden">
                     <Image
                       src={project.image}
                       alt={project.title}

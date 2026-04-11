@@ -51,7 +51,7 @@ export function CommunicationIdentiteBlock() {
       {/* Background Decorators */}
       <div className="absolute inset-0 bg-card/30" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,var(--ocean)_0%,transparent_50%)] opacity-[0.03]" />
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-ocean-light/20 to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-ocean-light/20 to-transparent" />
 
       <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
         {/* Section Header */}
@@ -69,18 +69,18 @@ export function CommunicationIdentiteBlock() {
           <div className="space-y-4">
             <p className="text-muted-foreground text-base lg:text-lg leading-relaxed">
               Nous donnons vie à votre vision à travers des{" "}
-              <strong className="text-foreground font-semibold font-normal">
+              <strong className="text-foreground font-semibold">
                 contenus percutants
               </strong>{" "}
               et une{" "}
-              <strong className="text-foreground font-semibold font-normal">
+              <strong className="text-foreground font-semibold">
                 identité de marque forte
               </strong>
               .
             </p>
             <p className="text-muted-foreground text-base lg:text-lg leading-relaxed">
               De la création visuelle à l&apos;engagement social, nous alignons votre image sur vos ambitions pour créer un{" "}
-              <strong className="text-ocean-light font-semibold font-normal">
+              <strong className="text-ocean-light font-semibold">
                 impact fort et authentique
               </strong>{" "}
               auprès de votre audience.
@@ -131,7 +131,7 @@ export function CommunicationIdentiteBlock() {
                         <h3 className="text-xl lg:text-2xl font-bold mb-4 group-hover:text-ocean transition-colors duration-300 leading-tight">
                           {service.title}
                         </h3>
-                        <p className="text-muted-foreground text-sm lg:text-base leading-relaxed mb-8 flex-grow">
+                        <p className="text-muted-foreground text-sm lg:text-base leading-relaxed mb-8 grow">
                           {service.description}
                         </p>
                       </div>

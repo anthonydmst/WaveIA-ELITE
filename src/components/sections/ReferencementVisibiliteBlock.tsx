@@ -51,7 +51,7 @@ export function ReferencementVisibiliteBlock() {
       {/* Background Decorators */}
       <div className="absolute inset-0 bg-background/50" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,var(--accent)_0%,transparent_50%)] opacity-[0.03]" />
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-accent/20 to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-accent/20 to-transparent" />
 
       <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
         {/* Section Header */}
@@ -69,18 +69,18 @@ export function ReferencementVisibiliteBlock() {
           <div className="space-y-4">
             <p className="text-muted-foreground text-base lg:text-lg leading-relaxed">
               Nous propulsons votre site en tête des résultats de recherche grâce à une{" "}
-              <strong className="text-foreground font-semibold font-normal">
+              <strong className="text-foreground font-semibold">
                 synergie entre expertise technique
               </strong>{" "}
               et{" "}
-              <strong className="text-foreground font-semibold font-normal">
+              <strong className="text-foreground font-semibold">
                 stratégie sémantique
               </strong>
               .
             </p>
             <p className="text-muted-foreground text-base lg:text-lg leading-relaxed">
               De l&apos;analyse de votre potentiel à la conquête de positions dominantes, nous bâtissons une{" "}
-              <strong className="text-ocean-light font-semibold font-normal">
+              <strong className="text-ocean-light font-semibold">
                 autorité numérique solide
               </strong>{" "}
               pour attirer un trafic qualifié et durable.
@@ -131,7 +131,7 @@ export function ReferencementVisibiliteBlock() {
                         <h3 className="text-xl lg:text-2xl font-bold mb-4 group-hover:text-ocean transition-colors duration-300 leading-tight">
                           {service.title}
                         </h3>
-                        <p className="text-muted-foreground text-sm lg:text-base leading-relaxed mb-8 flex-grow">
+                        <p className="text-muted-foreground text-sm lg:text-base leading-relaxed mb-8 grow">
                           {service.description}
                         </p>
                       </div>

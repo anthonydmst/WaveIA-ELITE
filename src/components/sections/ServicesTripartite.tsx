@@ -42,7 +42,7 @@ export function ServicesTripartite() {
       {/* Background Effects */}
       <div className="absolute inset-0 bg-card/30" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,var(--ocean)_0%,transparent_60%)] opacity-[0.04]" />
-      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-ocean/20 to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-ocean/20 to-transparent" />
 
       <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
         {/* Section Header */}
@@ -100,7 +100,7 @@ export function ServicesTripartite() {
                     </h3>
 
                     {/* Description */}
-                    <p className="text-muted-foreground text-sm lg:text-base leading-relaxed mb-8 flex-grow">
+                    <p className="text-muted-foreground text-sm lg:text-base leading-relaxed mb-8 grow">
                       {service.description}
                     </p>
 
