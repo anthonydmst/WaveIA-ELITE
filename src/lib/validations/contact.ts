@@ -25,6 +25,15 @@ export const contactSchema = z.object({
     .optional()
     .or(z.literal("")),
   
+  projectType: z
+    .string()
+    .min(2, "Le type de projet est requis"),
+
+  budget: z
+    .string()
+    .optional()
+    .or(z.literal("")),
+
   message: z
     .string()
     .min(10, "Le message doit contenir au moins 10 caractères")

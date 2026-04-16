@@ -87,7 +87,9 @@ export function DevisSimulator() {
     window.scrollTo({ top: undefined, behavior: 'smooth' }); // Avoid hard top jump for now, or you can supply element ref
   };
 
-  const submitDevis = () => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const submitDevis = async () => {
     const err = [];
     if (!formData.prenom) err.push('Prénom');
     if (!formData.nom) err.push('Nom');
@@ -99,8 +101,39 @@ export function DevisSimulator() {
     setErrors(err);
 
     if (err.length === 0) {
-      setCurrentStep(3);
-      window.scrollTo({ top: undefined, behavior: 'smooth' });
+      setIsSubmitting(true);
+      try {
+        const payload = {
+          _source: 'Simulateur de Devis',
+          Prénom: formData.prenom,
+          Nom: formData.nom,
+          Email: formData.email,
+          Téléphone: formData.tel || 'Non renseigné',
+          Entreprise: formData.entreprise,
+          Poste: formData.poste || 'Non renseigné',
+          Secteur: formData.secteur,
+          'URL du site': formData.url || 'Non renseigné',
+          'Description du projet': formData.projet,
+          'Délai souhaité': formData.delai || 'Non renseigné',
+          'Agence déjà sollicitée': formData.agence || 'Non renseigné',
+          Newsletter: formData.newsletter ? 'Oui' : 'Non',
+          'Enveloppe budgétaire': budget || 'À définir',
+          'Prestations sélectionnées': selectedServiceObjects.map(s => s?.name).join(', ') || 'Aucune sélection',
+          'Estimation Totale': totalStr || 'Sur devis',
+        };
+
+        await fetch('/api/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+      } catch (err) {
+        console.error("Erreur lors de l'envoi du devis", err);
+      } finally {
+        setIsSubmitting(false);
+        setCurrentStep(3);
+        window.scrollTo({ top: undefined, behavior: 'smooth' });
+      }
     }
   };
 
@@ -420,10 +453,11 @@ export function DevisSimulator() {
 
               <button 
                 onClick={submitDevis}
-                className="w-full bg-ocean hover:bg-ocean-dark text-white font-heading font-semibold py-4 rounded-xl flex items-center justify-center gap-2 transition-all transform active:scale-95 shadow-lg shadow-ocean/20 text-lg"
+                disabled={isSubmitting}
+                className="w-full bg-ocean hover:bg-ocean-dark text-white font-heading font-semibold py-4 rounded-xl flex items-center justify-center gap-2 transition-all transform active:scale-95 shadow-lg shadow-ocean/20 text-lg disabled:opacity-50"
               >
-                Envoyer ma demande de devis
-                <ArrowRight className="w-5 h-5" />
+                {isSubmitting ? 'Envoi en cours...' : 'Envoyer ma demande de devis'}
+                {!isSubmitting && <ArrowRight className="w-5 h-5" />}
               </button>
               <p className="text-xs text-center text-muted-foreground mt-4">Réponse garantie sous 24 h ouvrées · Sans engagement</p>
 

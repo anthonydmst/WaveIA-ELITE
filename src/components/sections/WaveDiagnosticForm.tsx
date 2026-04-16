@@ -162,6 +162,7 @@ const PRIORITY_MAP: Record<string, string> = {
 /* ─── MAIN COMPONENT ─── */
 export function WaveDiagnosticForm() {
   const [step, setStep] = useState(1);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [hasSite, setHasSite] = useState<boolean>(false);
   const [siteUrl, setSiteUrl] = useState('');
   const [noSiteChecked, setNoSiteChecked] = useState(false);
@@ -232,7 +233,7 @@ export function WaveDiagnosticForm() {
     setStep(5);
   };
 
-  const handleStep5 = () => {
+  const handleStep5 = async () => {
     const errs: Record<string, string> = {};
     if (!contact.prenom.trim()) errs.prenom = 'Requis';
     if (!contact.nom.trim()) errs.nom = 'Requis';
@@ -244,10 +245,52 @@ export function WaveDiagnosticForm() {
       return;
     }
     setErrors({});
-    setStep(6);
+    setIsSubmitting(true);
+
+    try {
+      const res = computeResults();
+      const formattedAnswers: Record<string, string> = {};
+      
+      const currentQs = hasSite ? Q_SITE : Q_NOSITE;
+      Object.entries(answers).forEach(([qId, oL]) => {
+         const qData = currentQs.find(q => q.id === parseInt(qId));
+         if(qData) {
+            const optData = qData.opts.find(o => o.l === oL);
+            formattedAnswers[`Q${qId}: ${qData.text}`] = optData ? optData.t : oL;
+         }
+      });
+
+      const payload = {
+        _source: 'Simulateur Diagnostic Numérique',
+        Prenom: contact.prenom,
+        Nom: contact.nom,
+        Email: contact.email,
+        Telephone: contact.tel,
+        "A un site ?": hasSite ? "Oui" : "Non",
+        "URL du site": siteUrl || "N/A",
+        "Modèle": model,
+        "Secteur d'activité": sector === 'Autre' ? otherSector : sector,
+        "Taille de l'entreprise": size,
+        "Échéance estimée": timeline,
+        "SCORE FINAL": String(res.pct) + "% (" + res.level + ")",
+        "Priorité business N°1": PRIORITY_MAP[res.topDim],
+        "--- REPONSES DETAILLEES ---": formattedAnswers
+      };
+
+      await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+    } catch(err) {
+      console.error(err);
+    } finally {
+      setIsSubmitting(false);
+      setStep(6);
+    }
   };
 
-  const computeResults = () => {
+  function computeResults() {
     const total = scores.A + scores.B + scores.C + scores.D;
     if (total === 0) return { pct: 0, level: 'Débutant', cat: 'low', topDim: 'A' };
     
@@ -551,8 +594,8 @@ export function WaveDiagnosticForm() {
                 <button onClick={() => setStep(4)} className="inline-flex items-center gap-2 px-4 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
                   <ChevronLeft size={16} /> Retour
                 </button>
-                <button onClick={handleStep5} className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-ocean text-white font-semibold rounded-xl hover:bg-ocean/90 transition-all">
-                  Recevoir mon diagnostic <ArrowRight size={16} />
+                <button onClick={handleStep5} disabled={isSubmitting} className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-ocean text-white font-semibold rounded-xl hover:bg-ocean/90 transition-all disabled:opacity-50">
+                  {isSubmitting ? 'Analyse en cours...' : 'Recevoir mon diagnostic'} {!isSubmitting && <ArrowRight size={16} />}
                 </button>
               </div>
             </div>
