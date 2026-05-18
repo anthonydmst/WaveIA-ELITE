@@ -1,4 +1,6 @@
 import { ImageResponse } from "next/og";
+import fs from "fs";
+import path from "path";
 
 
 
@@ -11,10 +13,10 @@ export const size = {
 export const contentType = "image/png";
 
 export default async function Image() {
-  // Font loading (using fetch for edge compatibility)
-  const outfitBold = await fetch(
-    new URL("https://fonts.gstatic.com/s/outfit/v11/QGYyz_MVcBeNP4NjuGObqx1XmO1I4TC0C4G-6rLv.woff")
-  ).then((res) => res.arrayBuffer());
+  // Font loading (using fs for Node runtime compatibility)
+  const outfitBold = fs.readFileSync(
+    path.join(process.cwd(), "src/app/outfit-bold.woff")
+  );
 
   return new ImageResponse(
     (
@@ -68,57 +70,67 @@ export default async function Image() {
             border: "1px solid rgba(255, 255, 255, 0.1)",
             background: "rgba(255, 255, 255, 0.03)",
             borderRadius: "40px",
-            padding: "60px 100px",
+            padding: "80px 120px",
             boxShadow: "0 0 60px rgba(14, 165, 233, 0.15)",
           }}
         >
-          {/* Logo/Icon */}
+          {/* Real Site Logo */}
           <div
             style={{
               display: "flex",
-              width: "120px",
-              height: "120px",
-              background: "linear-gradient(135deg, #0ea5e9, #06b6d4)",
-              borderRadius: "30px",
-              marginBottom: "40px",
+              flexDirection: "row",
               alignItems: "center",
-              justifyContent: "center",
-              boxShadow: "0 0 40px rgba(14, 165, 233, 0.4)",
+              marginBottom: "20px",
             }}
           >
-            <svg
-              width="64"
-              height="64"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="white"
-              strokeWidth="3"
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                marginRight: "24px",
+              }}
             >
-              <path d="M12 2a10 10 0 0 1 10 10c0 5.523-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2zm0 2a8 8 0 1 0 0 16 8 8 0 0 0 0-16z" />
-              <path d="M12 8v8" />
-              <path d="M8 12h8" />
-            </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="100"
+                height="100"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#0ea5e9"
+                strokeWidth="2.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.6 2 5.2 2 2.5 0 2.5-2 5.2-2 1.3 0 1.9.5 2.5 1" />
+                <path d="M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.6 2 5.2 2 2.5 0 2.5-2 5.2-2 1.3 0 1.9.5 2.5 1" />
+                <path d="M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.6 2 5.2 2 2.5 0 2.5-2 5.2-2 1.3 0 1.9.5 2.5 1" />
+              </svg>
+            </div>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                fontSize: "100px",
+                fontWeight: 800,
+                color: "white",
+                letterSpacing: "-4px",
+                textShadow: "0 0 40px rgba(255,255,255,0.2)",
+              }}
+            >
+              <span>wave</span>
+              <span style={{ color: "#0ea5e9" }}>IA</span>
+            </div>
           </div>
-
+          
           <div
             style={{
-              fontSize: "80px",
-              fontWeight: 800,
-              color: "white",
-              letterSpacing: "-2px",
-              marginBottom: "10px",
-              textShadow: "0 0 40px rgba(255,255,255,0.2)",
-            }}
-          >
-            WaveIA
-          </div>
-          <div
-            style={{
-              fontSize: "32px",
+              fontSize: "36px",
               color: "#94a3b8",
-              letterSpacing: "4px",
+              letterSpacing: "6px",
               textTransform: "uppercase",
               fontWeight: 600,
+              marginTop: "10px",
             }}
           >
             Agence Web Premium
