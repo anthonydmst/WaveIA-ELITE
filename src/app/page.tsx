@@ -21,12 +21,14 @@ import { AnimatedServices } from "@/components/sections/AnimatedServices";
 import { AnimatedTestimonials } from "@/components/sections/AnimatedTestimonials";
 import { AnimatedLocalSection } from "@/components/sections/AnimatedLocalSection";
 import { ServicesTripartite } from "@/components/sections/ServicesTripartite";
+import { WaveBento } from "@/components/sections/WaveBento";
 import { LocalExpertsBlock } from "@/components/sections/CreationSiteDetails";
 import { WaveDiagnosticForm } from "@/components/sections/WaveDiagnosticForm";
 import { CreationRefonteBlock } from "@/components/sections/CreationRefonteBlock";
 import { ReferencementVisibiliteBlock } from "@/components/sections/ReferencementVisibiliteBlock";
 import { CommunicationIdentiteBlock } from "@/components/sections/CommunicationIdentiteBlock";
 import { HomePageRealisationsBlock } from "@/components/sections/HomePageRealisationsBlock";
+import { InterventionZone } from "@/components/sections/InterventionZone";
 import { AgencyStatsBlock } from "@/components/templates/AgencyStatsBlock";
 import { ComparisonTable } from "@/components/templates/ComparisonTable";
 import { PricingPreviewHome } from "@/components/sections/PricingPreviewHome";
@@ -46,6 +48,9 @@ export default function Home() {
       {/* AIDA: INTEREST - Nos Services (Tripartite) */}
       <ServicesTripartite />
 
+      {/* WAVE BENTO - Ingénierie web */}
+      <WaveBento />
+
       {/* AIDA: INTEREST - Diagnostic IA */}
       <WaveDiagnosticForm />
 
@@ -60,6 +65,9 @@ export default function Home() {
 
       {/* AIDA: DESIRE - Nos Réalisations Carousel */}
       <HomePageRealisationsBlock />
+
+      {/* ZONE D'INTERVENTION CÔTE BASQUE */}
+      <InterventionZone />
 
       {/* AIDA: ACTION - Local CTA */}
       <Suspense fallback={<LocalSectionSkeleton />}>
