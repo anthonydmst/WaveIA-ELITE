@@ -263,8 +263,8 @@ export function ArchitectureBlock() {
         </div>
 
         <div className="wa-card">
-          <div className="wa-panel-content" dangerouslySetInnerHTML={{ __html: panels[current].left }} />
-          <div className="wa-preview" dangerouslySetInnerHTML={{ __html: panels[current].right }} />
+          <div className="wa-panel-content" dangerouslySetInnerHTML={{ __html: panels[current]?.left ?? "" }} />
+          <div className="wa-preview" dangerouslySetInnerHTML={{ __html: panels[current]?.right ?? "" }} />
         </div>
       </div>
     </section>
