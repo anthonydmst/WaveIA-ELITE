@@ -17,6 +17,7 @@ export const metadata: Metadata = {
 
 import { HeroWrapper } from "@/components/sections/HeroWrapper";
 import { ArchitectureBlock } from "@/components/sections/ArchitectureBlock";
+import { ServicesBlock } from "@/components/sections/ServicesBlock";
 import { AnimatedFeatures } from "@/components/sections/AnimatedFeatures";
 import { AnimatedServices } from "@/components/sections/AnimatedServices";
 import { AnimatedTestimonials } from "@/components/sections/AnimatedTestimonials";
@@ -48,6 +49,9 @@ export default function Home() {
 
       {/* ARCHITECTURE BLOCK */}
       <ArchitectureBlock />
+
+      {/* SERVICES BLOCK */}
+      <ServicesBlock />
 
       {/* AIDA: INTEREST - Nos Services (Tripartite) */}
       <ServicesTripartite />
