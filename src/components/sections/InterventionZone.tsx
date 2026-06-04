@@ -153,8 +153,8 @@ export function InterventionZone() {
       const match = transform?.match(/translate\(([^,]+),([^)]+)\)/);
 
       if (match) {
-        pt.x = parseFloat(match[1]);
-        pt.y = parseFloat(match[2]);
+        pt.x = parseFloat(match[1]!);
+        pt.y = parseFloat(match[2]!);
         const svgP = pt.matrixTransform(svgEl.getScreenCTM()!);
         const relX = svgP.x - containerRect.left;
         const relY = svgP.y - containerRect.top;
