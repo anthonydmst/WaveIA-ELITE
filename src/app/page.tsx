@@ -16,6 +16,7 @@ export const metadata: Metadata = {
 
 
 import { HeroWrapper } from "@/components/sections/HeroWrapper";
+import { ArchitectureBlock } from "@/components/sections/ArchitectureBlock";
 import { AnimatedFeatures } from "@/components/sections/AnimatedFeatures";
 import { AnimatedServices } from "@/components/sections/AnimatedServices";
 import { AnimatedTestimonials } from "@/components/sections/AnimatedTestimonials";
@@ -44,6 +45,9 @@ export default function Home() {
     <div className="relative overflow-hidden">
       {/* AIDA: ATTENTION - Hero */}
       <HeroWrapper />
+
+      {/* ARCHITECTURE BLOCK */}
+      <ArchitectureBlock />
 
       {/* AIDA: INTEREST - Nos Services (Tripartite) */}
       <ServicesTripartite />
