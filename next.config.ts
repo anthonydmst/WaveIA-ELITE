@@ -24,6 +24,7 @@ const nextConfig: NextConfig = {
   },
   images: {
     formats: ['image/avif', 'image/webp'], // S-Tier: AVIF first, WebP fallback
+    qualities: [25, 50, 75, 80, 90, 100],
     remotePatterns: [
       {
         protocol: 'https',

@@ -19,6 +19,9 @@ import { HeroWrapper } from "@/components/sections/HeroWrapper";
 import { ArchitectureBlock } from "@/components/sections/ArchitectureBlock";
 import { ServicesBlock } from "@/components/sections/ServicesBlock";
 import { ProcessBlock } from "@/components/sections/ProcessBlock";
+import { ModulesGridBlock } from "@/components/sections/ModulesGridBlock";
+import { AddonsBlock } from "@/components/sections/AddonsBlock";
+import { PlatformCarouselBlock } from "@/components/sections/PlatformCarouselBlock";
 import { AnimatedFeatures } from "@/components/sections/AnimatedFeatures";
 import { AnimatedServices } from "@/components/sections/AnimatedServices";
 import { AnimatedTestimonials } from "@/components/sections/AnimatedTestimonials";
@@ -56,6 +59,16 @@ export default function Home() {
 
       {/* PROCESS BLOCK */}
       <ProcessBlock />
+
+      {/* MODULES GRID BLOCK */}
+      <ModulesGridBlock />
+
+      {/* ADDONS BLOCK */}
+      <AddonsBlock />
+
+      {/* PLATFORM CAROUSEL BLOCK */}
+      <PlatformCarouselBlock />
+
 
       {/* AIDA: INTEREST - Nos Services (Tripartite) */}
       <ServicesTripartite />

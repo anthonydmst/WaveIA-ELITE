@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;1,9..40,300&display=swap');
+  .wave-section { font-family: 'DM Sans', sans-serif; padding: 2rem 0; }
+  .wave-eyebrow { font-family: 'Bricolage Grotesque', sans-serif; font-size: 13px; font-weight: 500; color: var(--color-text-secondary); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 0.5rem; }
+  .wave-title { font-family: 'Bricolage Grotesque', sans-serif; font-size: 26px; font-weight: 600; color: var(--color-text-primary); margin: 0 0 1.75rem; line-height: 1.2; }
+  .wave-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .wave-card { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: 16px; overflow: hidden; display: grid; grid-template-columns: 220px 1fr; min-height: 280px; }
+  .wave-card-img { position: relative; overflow: hidden; background: var(--color-background-secondary); }
+  .wave-card-img-inner { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .wave-img-placeholder { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 8px; }
+  .wave-card-body { padding: 1.25rem 1.25rem 1rem; display: flex; flex-direction: column; gap: 10px; }
+  .wave-card-header { display: flex; justify-content: space-between; align-items: flex-start; }
+  .wave-card-title { font-family: 'Bricolage Grotesque', sans-serif; font-size: 18px; font-weight: 600; color: var(--color-text-primary); margin: 0; }
+  .wave-price { font-family: 'Bricolage Grotesque', sans-serif; font-size: 13px; font-weight: 500; color: var(--color-text-secondary); text-align: right; }
+  .wave-price strong { font-size: 17px; font-weight: 600; color: var(--color-text-primary); display: block; }
+  .wave-badge { display: inline-block; font-size: 10px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; padding: 3px 9px; border-radius: 5px; background: #eafce4; color: #2a7a1a; border: 0.5px solid #b0e09a; width: fit-content; }
+  .wave-subtitle { font-size: 13px; color: var(--color-text-secondary); margin: 0; line-height: 1.4; }
+  .wave-btn { display: block; text-align: center; background: var(--color-background-primary); border: 1.5px solid var(--color-border-primary); border-radius: 50px; padding: 9px 16px; font-family: 'Bricolage Grotesque', sans-serif; font-size: 13px; font-weight: 600; color: var(--color-text-primary); cursor: pointer; text-decoration: none; transition: background 0.15s; margin: 2px 0; }
+  .wave-btn:hover { background: var(--color-background-secondary); }
+  .wave-btn-primary { background: var(--color-text-primary); color: var(--color-background-primary); border-color: var(--color-text-primary); }
+  .wave-btn-primary:hover { opacity: 0.88; background: var(--color-text-primary); }
+  .wave-features { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0; }
+  .wave-features li { font-size: 12.5px; color: var(--color-text-secondary); padding: 6px 0; border-bottom: 0.5px solid var(--color-border-tertiary); line-height: 1.4; display: flex; align-items: flex-start; gap: 7px; }
+  .wave-features li:last-child { border-bottom: none; }
+  .wave-features li i { color: #3a9a28; flex-shrink: 0; margin-top: 2px; }
+  .wave-accent { color: #3a9a28; }
+  .seo-icon-wrap { width: 56px; height: 56px; border-radius: 12px; background: linear-gradient(135deg, #e8fce0 0%, #d0f5c4 100%); display: flex; align-items: center; justify-content: center; margin-bottom: 8px; }
+  .branding-icon-wrap { width: 56px; height: 56px; border-radius: 12px; background: linear-gradient(135deg, #f0ebfe 0%, #e0d7fd 100%); display: flex; align-items: center; justify-content: center; margin-bottom: 8px; }
+  @media (prefers-color-scheme: dark) {
+    .wave-badge { background: #1a3d12; color: #8fd97a; border-color: #3a6a2a; }
+    .seo-icon-wrap { background: linear-gradient(135deg, #1a3a10 0%, #254d18 100%); }
+    .branding-icon-wrap { background: linear-gradient(135deg, #1e1540 0%, #2d2060 100%); }
+    .wave-features li i { color: #6dcc55; }
+    .wave-accent { color: #6dcc55; }
+  }
