@@ -45,7 +45,7 @@ export function ServicesBlock() {
     .wb-card { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-xl); padding: 1.5rem; display: flex; flex-direction: column; gap: 0.6rem; }
 
     .wb-card-head { display: flex; align-items: center; gap: 10px; margin-bottom: 0.2rem; }
-    .wb-card-icon { font-size: 22px; color: #0E5EFF; }
+    .wb-card-icon { font-size: 22px; color: #0ea5e9; }
     .wb-card-title { font-family: 'Syne', sans-serif; font-size: 18px; font-weight: 700; color: var(--color-text-primary); margin: 0; }
     .wb-card-desc { font-size: 13px; color: var(--color-text-secondary); line-height: 1.65; margin: 0; }
 
@@ -78,10 +78,10 @@ export function ServicesBlock() {
     .wb-portfolio { padding: 12px; }
     .wb-port-tabs { display: flex; gap: 5px; margin-bottom: 8px; }
     .wb-port-tab { font-size: 10px; padding: 3px 10px; border-radius: 999px; border: 0.5px solid var(--color-border-tertiary); color: var(--color-text-secondary); background: var(--color-background-primary); }
-    .wb-port-tab.active { background: #0E5EFF; color: #fff; border-color: #0E5EFF; }
+    .wb-port-tab.active { background: #0ea5e9; color: #fff; border-color: #0ea5e9; }
     .wb-port-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5px; }
     .wb-port-item { border-radius: 7px; overflow: hidden; height: 70px; display: flex; align-items: center; justify-content: center; }
-    .wb-port-item-1 { background: linear-gradient(135deg, #0b2a52 0%, #0E5EFF 100%); }
+    .wb-port-item-1 { background: linear-gradient(135deg, #0b2a52 0%, #0ea5e9 100%); }
     .wb-port-item-2 { background: linear-gradient(135deg, #1a3a6e 0%, #3b6dbf 100%); }
     .wb-port-label { font-size: 10px; color: rgba(255,255,255,0.7); font-weight: 500; text-align: center; padding: 0 6px; }
 
@@ -89,7 +89,7 @@ export function ServicesBlock() {
     .wb-brand { padding: 12px; display: flex; flex-direction: column; gap: 7px; }
     .wb-brand-post { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: 7px; padding: 9px 11px; }
     .wb-brand-header { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
-    .wb-brand-avatar { width: 26px; height: 26px; border-radius: 50%; background: #0E5EFF; display: flex; align-items: center; justify-content: center; font-size: 9px; font-weight: 700; color: #fff; font-family: 'Syne', sans-serif; flex-shrink: 0; }
+    .wb-brand-avatar { width: 26px; height: 26px; border-radius: 50%; background: #0ea5e9; display: flex; align-items: center; justify-content: center; font-size: 9px; font-weight: 700; color: #fff; font-family: 'Syne', sans-serif; flex-shrink: 0; }
     .wb-brand-name { font-size: 11px; font-weight: 500; color: var(--color-text-primary); }
     .wb-brand-time { font-size: 10px; color: var(--color-text-secondary); }
     .wb-brand-text { font-size: 10px; color: var(--color-text-secondary); line-height: 1.5; }
@@ -100,12 +100,12 @@ export function ServicesBlock() {
     .wb-ads { padding: 12px; display: flex; flex-direction: column; gap: 7px; }
     .wb-ads-stat { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: 7px; padding: 9px 11px; display: flex; justify-content: space-between; align-items: center; }
     .wb-ads-label { font-size: 10px; color: var(--color-text-secondary); }
-    .wb-ads-val { font-family: 'Syne', sans-serif; font-size: 16px; font-weight: 700; color: #0E5EFF; }
+    .wb-ads-val { font-family: 'Syne', sans-serif; font-size: 16px; font-weight: 700; color: #0ea5e9; }
     .wb-ads-val.green { color: #3B6D11; }
     .dark .wb-ads-val.green { color: #84CC39; }
     .wb-bar-wrap { margin-top: 4px; }
     .wb-bar-bg { height: 5px; background: var(--color-background-secondary); border-radius: 99px; overflow: hidden; margin-top: 4px; }
-    .wb-bar-fill { height: 100%; border-radius: 99px; background: #0E5EFF; }
+    .wb-bar-fill { height: 100%; border-radius: 99px; background: #0ea5e9; }
     .wb-bar-fill.green { background: #639922; }
     .dark .wb-bar-fill.green { background: #84CC39; }
 
@@ -117,10 +117,10 @@ export function ServicesBlock() {
     .wb-avis-key { color: var(--color-text-secondary); }
     .wb-avis-pct { font-weight: 500; color: var(--color-text-primary); }
     .wb-avis-bar-bg { flex: 1; height: 4px; background: var(--color-background-secondary); border-radius: 99px; overflow: hidden; margin: 0 8px; }
-    .wb-avis-bar-fill { height: 100%; border-radius: 99px; background: #0E5EFF; }
+    .wb-avis-bar-fill { height: 100%; border-radius: 99px; background: #0ea5e9; }
 
     .wb-cta-wrap { text-align: center; margin-top: 2.5rem; }
-    .wb-cta { display: inline-flex; align-items: center; gap: 8px; background: #0E5EFF; color: #fff; border: none; padding: 13px 28px; border-radius: 999px; font-size: 15px; font-weight: 500; font-family: 'Inter', sans-serif; cursor: pointer; transition: transform 0.2s; }
+    .wb-cta { display: inline-flex; align-items: center; gap: 8px; background: #0ea5e9; color: #fff; border: none; padding: 13px 28px; border-radius: 999px; font-size: 15px; font-weight: 500; font-family: 'Inter', sans-serif; cursor: pointer; transition: transform 0.2s; }
     .wb-cta:hover { transform: translateY(-2px); }
   `;
 
@@ -151,7 +151,7 @@ export function ServicesBlock() {
                 <span class="wb-toolbar-btn" style="font-style:italic;">I</span>
                 <div class="wb-toolbar-sep"></div>
                 <i class="ti ti-link" style="font-size:13px;color:var(--color-text-secondary)" aria-hidden="true"></i>
-                <i class="ti ti-bolt" style="font-size:13px;color:#0E5EFF" aria-hidden="true"></i>
+                <i class="ti ti-bolt" style="font-size:13px;color:#0ea5e9" aria-hidden="true"></i>
               </div>
               <div class="wb-h1">Site Vitrine</div>
               <div class="wb-h2">E-commerce Shopify</div>
@@ -235,7 +235,7 @@ export function ServicesBlock() {
                 </div>
                 <div class="wb-brand-text">Logo + charte graphique + typographies livrés en 10 jours.</div>
                 <div class="wb-brand-palette">
-                  <div class="wb-swatch" style="background:#0E5EFF"></div>
+                  <div class="wb-swatch" style="background:#0ea5e9"></div>
                   <div class="wb-swatch" style="background:#1a3a6e"></div>
                   <div class="wb-swatch" style="background:#E6F1FB"></div>
                   <div class="wb-swatch" style="background:#F1F5F9"></div>

@@ -270,7 +270,7 @@ export function Hero() {
             <span className="relative inline-flex rounded-full h-2 w-2 bg-ocean" />
           </span>
           <span className="text-sm font-medium text-ocean tracking-wide uppercase">
-            L&apos;Intelligence du Mouvement
+            PERFORMANCE & INNOVATION IA
           </span>
         </div>
 
@@ -283,7 +283,7 @@ export function Hero() {
           <span className="block mt-2 relative">
             <span className="absolute inset-0 bg-linear-to-r from-ocean via-accent to-ocean-light blur-2xl opacity-20" />
             <span className="relative text-transparent bg-clip-text bg-linear-to-r from-ocean via-(--hero-gradient-center) to-ocean-light animate-gradient">
-              Anticiper la vague. Créer l&apos;impact.
+              Prendre l&apos;avantage. Accélérer par l&apos;IA.
             </span>
           </span>
         </SectionHeader>
@@ -291,7 +291,7 @@ export function Hero() {
         <p
           className="max-w-3xl text-xl sm:text-2xl text-muted-foreground dark:text-muted-foreground light:text-slate-700 leading-relaxed mb-12 font-light animate-hero-fade-up delay-200"
         >
-          Le web est en mouvement perpétuel. Nous concevons des sites <span className="text-foreground font-medium underline decoration-ocean/30 decoration-2 underline-offset-4">intelligents</span> et <span className="text-ocean font-medium">évolutifs</span>, capables de s&apos;adapter à votre marché avec la fluidité de l&apos;eau et la puissance de l&apos;IA.
+          Votre marché évolue. Nous créons des sites <span className="text-foreground font-medium underline decoration-ocean/30 decoration-2 underline-offset-4">performants</span> et <span className="text-ocean font-medium">rentables</span>, pensés pour accélérer votre développement grâce à la rigueur de nos process et la puissance de l&apos;IA.
         </p>
 
         <div

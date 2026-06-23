@@ -65,10 +65,10 @@ const panels = [
         </div>
         <div style="padding:0 1rem 1rem;">
           <div style="background:var(--color-background-primary);border:0.5px solid var(--color-border-tertiary);border-radius:8px;padding:12px;display:flex;align-items:center;gap:10px;">
-            <i class="ti ti-bolt" style="font-size:20px;color:#0E5EFF" aria-hidden="true"></i>
+            <i class="ti ti-bolt" style="font-size:20px;color:#0ea5e9" aria-hidden="true"></i>
             <div>
               <div style="font-size:12px;font-weight:500;color:var(--color-text-primary);">Temps de réponse</div>
-              <div style="font-size:18px;font-weight:700;font-family:'Syne',sans-serif;color:#0E5EFF;">&lt; 100ms</div>
+              <div style="font-size:18px;font-weight:700;font-family:'Syne',sans-serif;color:#0ea5e9;">&lt; 100ms</div>
             </div>
           </div>
         </div>
@@ -138,13 +138,13 @@ const panels = [
           <div class="wa-sidebar-block">
             <div class="wa-sidebar-label">Réseaux</div>
             <div style="display:flex;gap:8px;margin-top:4px;">
-              <i class="ti ti-brand-linkedin" style="font-size:18px;color:#0E5EFF" aria-hidden="true"></i>
+              <i class="ti ti-brand-linkedin" style="font-size:18px;color:#0ea5e9" aria-hidden="true"></i>
               <i class="ti ti-brand-instagram" style="font-size:18px;color:var(--color-text-secondary)" aria-hidden="true"></i>
               <i class="ti ti-brand-github" style="font-size:18px;color:var(--color-text-secondary)" aria-hidden="true"></i>
             </div>
           </div>
         </div>
-        <button class="wa-contact-btn" style="margin-top:10px;width:100%;padding:9px;background:#0E5EFF;color:#fff;border:none;border-radius:6px;font-size:12px;font-weight:500;font-family:'Inter',sans-serif;cursor:pointer;">
+        <button class="wa-contact-btn" style="margin-top:10px;width:100%;padding:9px;background:#0ea5e9;color:#fff;border:none;border-radius:6px;font-size:12px;font-weight:500;font-family:'Inter',sans-serif;cursor:pointer;">
           <i class="ti ti-send" style="font-size:13px;vertical-align:-2px;margin-right:5px" aria-hidden="true"></i>Nous contacter
         </button>
       </div>`
@@ -187,7 +187,7 @@ export function ArchitectureBlock() {
     .wa-tabs { display: flex; justify-content: center; gap: 8px; flex-wrap: wrap; margin-bottom: 2rem; padding: 0 1rem; }
     .wa-tab { padding: 8px 20px; border-radius: 999px; font-size: 14px; font-weight: 500; cursor: pointer; border: 0.5px solid var(--color-border-secondary); background: var(--color-background-primary); color: var(--color-text-secondary); transition: all 0.18s; font-family: 'Inter', sans-serif; outline: none; }
     .wa-tab:hover { background: var(--color-background-secondary); color: var(--color-text-primary); }
-    .wa-tab.active { background: #0E5EFF; color: #fff; border-color: #0E5EFF; }
+    .wa-tab.active { background: #0ea5e9; color: #fff; border-color: #0ea5e9; }
 
     .wa-card { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-xl); padding: 2rem; display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; align-items: center; margin: 0 1rem; }
     
@@ -197,7 +197,7 @@ export function ArchitectureBlock() {
     }
 
     .wa-step-badge { display: flex; align-items: center; gap: 10px; margin-bottom: 1.25rem; }
-    .wa-step-num { width: 28px; height: 28px; border-radius: 50%; background: #0E5EFF; color: #fff; font-size: 13px; font-weight: 700; display: flex; align-items: center; justify-content: center; font-family: 'Syne', sans-serif; flex-shrink: 0; }
+    .wa-step-num { width: 28px; height: 28px; border-radius: 50%; background: #0ea5e9; color: #fff; font-size: 13px; font-weight: 700; display: flex; align-items: center; justify-content: center; font-family: 'Syne', sans-serif; flex-shrink: 0; }
     .wa-step-label { font-size: 13px; font-weight: 500; color: var(--color-text-secondary); }
 
     .wa-card-title { font-family: 'Syne', sans-serif; font-size: 22px; font-weight: 700; color: var(--color-text-primary); margin: 0 0 0.75rem; line-height: 1.25; }
@@ -205,39 +205,39 @@ export function ArchitectureBlock() {
 
     .wa-features { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; }
     .wa-features li { font-size: 13px; color: var(--color-text-secondary); display: flex; align-items: flex-start; gap: 8px; }
-    .wa-features li::before { content: ''; width: 18px; height: 18px; border-radius: 50%; background: #0E5EFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M3 8l3.5 3.5L13 5' stroke='white' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"); background-size: 14px; background-repeat: no-repeat; background-position: center; margin-top: 1px; }
+    .wa-features li::before { content: ''; width: 18px; height: 18px; border-radius: 50%; background: #0ea5e9; display: flex; align-items: center; justify-content: center; flex-shrink: 0; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M3 8l3.5 3.5L13 5' stroke='white' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"); background-size: 14px; background-repeat: no-repeat; background-position: center; margin-top: 1px; }
 
     .wa-preview { background: var(--color-background-secondary); border-radius: var(--border-radius-lg); overflow: hidden; border: 0.5px solid var(--color-border-tertiary); position: relative; }
     .wa-preview-inner { padding: 1rem; }
 
     .wa-mockup-header { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; border-radius: 8px; overflow: hidden; margin-bottom: -30px; }
-    .wa-cover-img { height: 90px; background: linear-gradient(135deg, #1a3a6e 0%, #0E5EFF 100%); display: flex; align-items: center; justify-content: center; }
+    .wa-cover-img { height: 90px; background: linear-gradient(135deg, #1a3a6e 0%, #0ea5e9 100%); display: flex; align-items: center; justify-content: center; }
     .wa-cover-img-2 { height: 90px; background: linear-gradient(135deg, #0b2a52 0%, #1e4db7 100%); display: flex; align-items: center; justify-content: center; }
     .wa-cover-icon { font-size: 28px; color: rgba(255,255,255,0.25); }
 
     .wa-brand-row { display: flex; align-items: flex-end; gap: 12px; padding: 0 1rem 1rem; position: relative; z-index: 1; }
-    .wa-logo { width: 52px; height: 52px; border-radius: 50%; background: #0E5EFF; display: flex; align-items: center; justify-content: center; font-family: 'Syne', sans-serif; font-weight: 700; font-size: 16px; color: #fff; border: 3px solid var(--color-background-secondary); flex-shrink: 0; }
+    .wa-logo { width: 52px; height: 52px; border-radius: 50%; background: #0ea5e9; display: flex; align-items: center; justify-content: center; font-family: 'Syne', sans-serif; font-weight: 700; font-size: 16px; color: #fff; border: 3px solid var(--color-background-secondary); flex-shrink: 0; }
     .wa-brand-info { padding-bottom: 4px; }
-    .wa-name-tag { display: inline-block; background: #0E5EFF; color: #fff; font-size: 9px; font-weight: 500; padding: 2px 7px; border-radius: 4px; margin-bottom: 3px; text-transform: uppercase; letter-spacing: 0.04em; }
+    .wa-name-tag { display: inline-block; background: #0ea5e9; color: #fff; font-size: 9px; font-weight: 500; padding: 2px 7px; border-radius: 4px; margin-bottom: 3px; text-transform: uppercase; letter-spacing: 0.04em; }
     .wa-name { font-family: 'Syne', sans-serif; font-size: 16px; font-weight: 700; color: var(--color-text-primary); margin: 0; }
     .wa-meta { font-size: 11px; color: var(--color-text-secondary); display: flex; gap: 8px; margin-top: 2px; }
     .wa-meta span { display: flex; align-items: center; gap: 3px; }
 
     .wa-nav-mockup { display: flex; gap: 6px; padding: 0 1rem 1rem; flex-wrap: wrap; }
     .wa-nav-pill { padding: 5px 12px; border-radius: 999px; font-size: 11px; background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); color: var(--color-text-secondary); }
-    .wa-nav-pill.active { background: #0E5EFF; color: #fff; border-color: #0E5EFF; }
+    .wa-nav-pill.active { background: #0ea5e9; color: #fff; border-color: #0ea5e9; }
 
     .wa-content-mockup { padding: 0 1rem 1rem; display: flex; flex-direction: column; gap: 6px; }
     .wa-service-row { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: 8px; padding: 10px 12px; display: flex; justify-content: space-between; align-items: center; }
     .wa-service-name { font-size: 12px; font-weight: 500; color: var(--color-text-primary); }
-    .wa-service-price { font-size: 11px; color: #0E5EFF; font-weight: 500; }
+    .wa-service-price { font-size: 11px; color: #0ea5e9; font-weight: 500; }
     .wa-service-tag { font-size: 10px; color: var(--color-text-secondary); margin-top: 1px; }
 
     .wa-sidebar-mockup { padding: 0 1rem 1rem; display: grid; grid-template-columns: 1fr; gap: 6px; }
     .wa-sidebar-block { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: 8px; padding: 10px 12px; }
     .wa-sidebar-label { font-size: 10px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-text-secondary); margin-bottom: 4px; }
     .wa-sidebar-value { font-size: 12px; font-weight: 500; color: var(--color-text-primary); }
-    .wa-contact-btn { width: 100%; padding: 8px; background: #0E5EFF; color: #fff; border: none; border-radius: 6px; font-size: 12px; font-weight: 500; font-family: 'Inter', sans-serif; cursor: pointer; margin-top: 2px; }
+    .wa-contact-btn { width: 100%; padding: 8px; background: #0ea5e9; color: #fff; border: none; border-radius: 6px; font-size: 12px; font-weight: 500; font-family: 'Inter', sans-serif; cursor: pointer; margin-top: 2px; }
   `;
 
   return (

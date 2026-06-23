@@ -60,11 +60,11 @@ export function ProcessBlock() {
 
     /* Timeline */
     .wp-timeline { position: relative; display: flex; flex-direction: column; align-items: center; }
-    .wp-line { width: 1px; background: #0E5EFF; opacity: 0.25; flex-shrink: 0; }
+    .wp-line { width: 1px; background: #0ea5e9; opacity: 0.25; flex-shrink: 0; }
     .wp-line-top { height: 48px; }
     .wp-line-mid { height: 64px; }
     .wp-line-bot { height: 64px; }
-    .wp-dot { width: 40px; height: 40px; border-radius: 50%; background: #0E5EFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0; z-index: 1; }
+    .wp-dot { width: 40px; height: 40px; border-radius: 50%; background: #0ea5e9; display: flex; align-items: center; justify-content: center; flex-shrink: 0; z-index: 1; }
     .wp-dot i { color: #fff; font-size: 18px; }
 
     /* Step row */
@@ -84,7 +84,7 @@ export function ProcessBlock() {
 
     .wp-step-label { display: flex; align-items: center; gap: 10px; margin-bottom: 0.75rem; }
     .wp-step-tag { font-size: 13px; color: var(--color-text-secondary); font-weight: 400; }
-    .wp-step-num { width: 28px; height: 28px; border-radius: 50%; background: #0E5EFF; color: #fff; font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center; font-family: 'Syne', sans-serif; flex-shrink: 0; }
+    .wp-step-num { width: 28px; height: 28px; border-radius: 50%; background: #0ea5e9; color: #fff; font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center; font-family: 'Syne', sans-serif; flex-shrink: 0; }
     .wp-step-title { font-family: 'Syne', sans-serif; font-size: 22px; font-weight: 700; color: var(--color-text-primary); margin: 0 0 0.6rem; }
     .wp-step-desc { font-size: 14px; color: var(--color-text-secondary); line-height: 1.7; margin: 0; }
 
@@ -96,20 +96,20 @@ export function ProcessBlock() {
     .wm1-steps { display: flex; gap: 4px; align-items: center; margin-bottom: 10px; overflow: hidden; }
     .wm1-step-item { display: flex; flex-direction: column; align-items: center; gap: 2px; flex: 1; }
     .wm1-step-circle { width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 9px; font-weight: 700; font-family: 'Syne', sans-serif; }
-    .wm1-step-circle.done { background: #0E5EFF; color: #fff; }
-    .wm1-step-circle.active { background: #0E5EFF; color: #fff; }
+    .wm1-step-circle.done { background: #0ea5e9; color: #fff; }
+    .wm1-step-circle.active { background: #0ea5e9; color: #fff; }
     .wm1-step-circle.todo { background: var(--color-background-secondary); color: var(--color-text-secondary); border: 0.5px solid var(--color-border-tertiary); }
     .wm1-step-name { font-size: 8px; color: var(--color-text-secondary); text-align: center; }
-    .wm1-step-name.active { color: #0E5EFF; font-weight: 500; }
+    .wm1-step-name.active { color: #0ea5e9; font-weight: 500; }
     .wm1-connector { flex: 0.4; height: 1px; background: var(--color-border-tertiary); margin-bottom: 10px; }
-    .wm1-connector.done { background: #0E5EFF; }
+    .wm1-connector.done { background: #0ea5e9; }
     .wm1-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 5px; }
     .wm1-module { background: var(--color-background-secondary); border: 0.5px solid var(--color-border-tertiary); border-radius: 7px; padding: 7px 8px; }
     .wm1-module-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 3px; }
     .wm1-module-name { font-size: 9px; font-weight: 500; color: var(--color-text-primary); }
     .wm1-module-desc { font-size: 8px; color: var(--color-text-secondary); line-height: 1.4; }
     .wm1-toggle { width: 22px; height: 12px; border-radius: 99px; display: flex; align-items: center; padding: 0 2px; flex-shrink: 0; cursor: pointer; transition: background 0.2s; }
-    .wm1-toggle.on { background: #0E5EFF; justify-content: flex-end; }
+    .wm1-toggle.on { background: #0ea5e9; justify-content: flex-end; }
     .wm1-toggle.off { background: var(--color-border-tertiary); justify-content: flex-start; }
     .wm1-toggle-thumb { width: 8px; height: 8px; border-radius: 50%; background: #fff; }
 
@@ -120,7 +120,7 @@ export function ProcessBlock() {
     .wm2-input { width: 100%; background: var(--color-background-secondary); border: 0.5px solid var(--color-border-tertiary); border-radius: 6px; padding: 6px 8px; font-size: 10px; color: var(--color-text-primary); font-family: 'Inter', sans-serif; }
     .wm2-img-zone { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
     .wm2-upload { background: var(--color-background-secondary); border: 0.5px dashed var(--color-border-secondary); border-radius: 6px; padding: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; }
-    .wm2-upload-img { background: linear-gradient(135deg, #1a3a6e 0%, #0E5EFF 100%); border-radius: 5px; padding: 10px; display: flex; align-items: center; justify-content: center; position: relative; }
+    .wm2-upload-img { background: linear-gradient(135deg, #1a3a6e 0%, #0ea5e9 100%); border-radius: 5px; padding: 10px; display: flex; align-items: center; justify-content: center; position: relative; }
     .wm2-img-del { position: absolute; top: -5px; right: -5px; width: 14px; height: 14px; border-radius: 50%; background: #E24B4A; display: flex; align-items: center; justify-content: center; }
     .wm2-row { display: flex; justify-content: space-between; align-items: center; }
     .wm2-toggle-row { display: flex; justify-content: space-between; align-items: center; padding: 5px 0; border-top: 0.5px solid var(--color-border-tertiary); }
@@ -129,7 +129,7 @@ export function ProcessBlock() {
     .wm3 { display: flex; flex-direction: column; gap: 8px; }
     .wm3-logo-row { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
     .wm3-logo-upload { background: var(--color-background-secondary); border: 0.5px dashed var(--color-border-secondary); border-radius: 6px; padding: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; }
-    .wm3-logo-preview { background: #0E5EFF; border-radius: 6px; padding: 8px; display: flex; align-items: center; justify-content: center; }
+    .wm3-logo-preview { background: #0ea5e9; border-radius: 6px; padding: 8px; display: flex; align-items: center; justify-content: center; }
     .wm3-colors { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 5px; margin-top: 4px; }
     .wm3-color-card { background: var(--color-background-secondary); border: 0.5px solid var(--color-border-tertiary); border-radius: 7px; padding: 8px; }
     .wm3-color-label { font-size: 8px; color: var(--color-text-secondary); margin-bottom: 5px; }
@@ -139,14 +139,14 @@ export function ProcessBlock() {
 
     /* "C'est fini" */
     .wp-fin { padding: 3rem 0; text-align: center; }
-    .wp-fin-arrow { color: #0E5EFF; opacity: 0.4; margin-bottom: 2rem; }
+    .wp-fin-arrow { color: #0ea5e9; opacity: 0.4; margin-bottom: 2rem; }
     .wp-fin-title { font-family: 'Syne', sans-serif; font-size: 36px; font-weight: 700; color: var(--color-text-primary); margin: 0 0 1rem; }
     .wp-fin-sub { font-size: 14px; color: var(--color-text-secondary); max-width: 600px; margin: 0 auto 2.5rem; line-height: 1.7; }
     .wp-fin-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; }
     .wp-fin-card { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: 12px; padding: 1.1rem; text-align: left; display: flex; gap: 12px; align-items: flex-start; }
     .wp-fin-icon { width: 36px; height: 36px; border-radius: 10px; background: #E6F1FB; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
     .dark .wp-fin-icon { background: rgba(14,94,255,0.2); }
-    .wp-fin-icon i { font-size: 18px; color: #0E5EFF; }
+    .wp-fin-icon i { font-size: 18px; color: #0ea5e9; }
     .wp-fin-card-title { font-family: 'Syne', sans-serif; font-size: 14px; font-weight: 700; color: var(--color-text-primary); margin: 0 0 3px; }
     .wp-fin-card-desc { font-size: 12px; color: var(--color-text-secondary); line-height: 1.55; margin: 0; }
   `;
@@ -275,7 +275,7 @@ export function ProcessBlock() {
               </div>
               <div class="wm2-field">
                 <div class="wm2-label">Lien GitHub (code source)</div>
-                <div class="wm2-input" style="color:#0E5EFF;">https://github.com/waveia</div>
+                <div class="wm2-input" style="color:#0ea5e9;">https://github.com/waveia</div>
               </div>
             </div>
           </div>
@@ -318,8 +318,8 @@ export function ProcessBlock() {
                 <div class="wm3-color-card">
                   <div class="wm3-color-label">Couleur principale</div>
                   <div class="wm3-color-swatch-row">
-                    <div class="wm3-swatch" style="background:#0E5EFF;border:0.5px solid rgba(0,0,0,0.1)"></div>
-                    <span class="wm3-hex">#0E5EFF</span>
+                    <div class="wm3-swatch" style="background:#0ea5e9;border:0.5px solid rgba(0,0,0,0.1)"></div>
+                    <span class="wm3-hex">#0ea5e9</span>
                   </div>
                 </div>
                 <div class="wm3-color-card">
@@ -343,7 +343,7 @@ export function ProcessBlock() {
 
         <div class="wp-line wp-line-mid"></div>
         <div class="wp-dot" style="background:transparent;border:none;">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0E5EFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="opacity:0.4"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0ea5e9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="opacity:0.4"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
         </div>
 
       </div>

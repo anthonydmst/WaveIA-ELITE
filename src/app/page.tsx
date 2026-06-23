@@ -16,6 +16,7 @@ export const metadata: Metadata = {
 
 
 import { HeroWrapper } from "@/components/sections/HeroWrapper";
+import { StatsBand } from "@/components/sections/StatsBand";
 import { ArchitectureBlock } from "@/components/sections/ArchitectureBlock";
 import { ServicesBlock } from "@/components/sections/ServicesBlock";
 import { ProcessBlock } from "@/components/sections/ProcessBlock";
@@ -27,6 +28,7 @@ import { AnimatedServices } from "@/components/sections/AnimatedServices";
 import { AnimatedTestimonials } from "@/components/sections/AnimatedTestimonials";
 import { AnimatedLocalSection } from "@/components/sections/AnimatedLocalSection";
 import { ServicesTripartite } from "@/components/sections/ServicesTripartite";
+import { ServicesInteractiveBlock } from "@/components/sections/ServicesInteractiveBlock";
 import { WaveBento } from "@/components/sections/WaveBento";
 import { LocalExpertsBlock } from "@/components/sections/CreationSiteDetails";
 import { WaveDiagnosticForm } from "@/components/sections/WaveDiagnosticForm";
@@ -51,6 +53,9 @@ export default function Home() {
       {/* AIDA: ATTENTION - Hero */}
       <HeroWrapper />
 
+      {/* STATS BAND (Reassurance) */}
+      <StatsBand />
+
       {/* ARCHITECTURE BLOCK */}
       <ArchitectureBlock />
 
@@ -72,6 +77,9 @@ export default function Home() {
 
       {/* AIDA: INTEREST - Nos Services (Tripartite) */}
       <ServicesTripartite />
+
+      {/* NOUVEAU BLOC SERVICES INTERACTIF */}
+      <ServicesInteractiveBlock />
 
       {/* WAVE BENTO - Ingénierie web */}
       <WaveBento />

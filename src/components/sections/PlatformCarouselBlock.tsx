@@ -39,7 +39,7 @@ export function PlatformCarouselBlock() {
   <div className="wv-slider-outer">
     <div className="wv-track" id="wvTrack" ref={trackRef}>
 
-      <div className="wv-card" onclick="sendPrompt('Parlez-moi de l\'ingénierie web Next.js de WaveIA')">
+      <div className="wv-card">
         <div className="wv-card-visual" style={{"background":"#1a1a2e"}}>
           <div style={{"width":"100%","display":"flex","flexDirection":"column","gap":"6px"}}>
             <div className="wv-mock-bar"><div className="wv-mock-dot" style={{"background":"#ff5f57"}}></div><div className="wv-mock-dot" style={{"background":"#febc2e"}}></div><div className="wv-mock-dot" style={{"background":"#28c840"}}></div><span style={{"fontSize":"9px","color":"#888","marginLeft":"4px"}}>waveia-client.vercel.app</span></div>

@@ -54,14 +54,22 @@ export default function Error({
             </SectionHeader>
           </m.div>
 
-          <m.p
+          <m.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
             className="text-lg text-muted-foreground mb-10 max-w-md mx-auto leading-relaxed"
           >
-            Ne vous inquiétez pas, nos équipes ont été notifiées. Vous pouvez essayer de rafraîchir la page.
-          </m.p>
+            <h1 className="text-2xl md:text-3xl font-bold mb-4">
+              Une erreur est survenue
+            </h1>
+            <p className="text-muted-foreground mb-8">
+              {error?.message || "Erreur inconnue"}
+            </p>
+            <pre className="text-left text-xs text-red-400 bg-black/50 p-4 rounded mb-8 overflow-auto max-w-full">
+              {error?.stack}
+            </pre>
+          </m.div>
 
           <m.div
             initial={{ opacity: 0, y: 20 }}
