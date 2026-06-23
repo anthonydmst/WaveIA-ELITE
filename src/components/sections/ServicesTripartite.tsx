@@ -7,27 +7,27 @@ import { useHaptics } from "@/hooks/use-haptics";
 const services = [
   {
     icon: Globe,
-    title: "Création ou refonte de site internet",
+    title: "Création & Refonte Web",
     description:
-      "De la création à la refonte, WaveIA donne vie à votre vision digitale. Site vitrine ou e-commerce, nous concevons des plateformes sur-mesure et performantes pour faire déferler votre plein potentiel sur le web. Une solution unique, fluide et pensée pour captiver vos futurs clients dès le premier clic.",
+      "Votre site est le cœur de votre réacteur commercial. Nous développons des plateformes (vitrine ou e-commerce) structurées pour la conversion. En alliant une base technique irréprochable et nos process IA, nous créons un outil fiable, rapide et conçu pour générer des leads qualifiés.",
     gradient: "from-ocean to-accent",
     glowColor: "var(--ocean)",
     href: "/creation-site-internet",
   },
   {
     icon: Search,
-    title: "Référencement naturel et payant",
+    title: "Acquisition de Trafic (SEO & SEA)",
     description:
-      "Nous aidons les internautes à trouver le chemin vers votre site grâce à une stratégie complète. Que ce soit par le référencement naturel (SEO) pour une présence durable ou par la publicité ciblée (SEA) pour des résultats immédiats, nous attirons des visiteurs qualifiés. Une visibilité rentable sur Google, sans termes compliqués.",
+      "Nous attirons ceux qui vous cherchent déjà. À travers une stratégie de référencement naturel (SEO) pérenne et des campagnes publicitaires ciblées (SEA), nous pilotons votre visibilité par la donnée. L'objectif : un trafic qualifié et un retour sur investissement transparent et maîtrisé.",
     gradient: "from-ocean-light to-ocean",
     glowColor: "var(--ocean-light)",
     href: "/referencement-seo",
   },
   {
     icon: Palette,
-    title: "Communication et identité visuelle",
+    title: "Branding & Identité Visuelle",
     description:
-      "Propulsez votre marque avec une identité visuelle forte et cohérente. De la gestion de vos réseaux sociaux à la création de contenus percutants (web et posts), nous orchestrons vos publicités pour amplifier votre impact global. WaveIA unifie votre communication pour que votre message rayonne sur tous les canaux.",
+      "L'expertise ne suffit plus si elle ne se voit pas. Nous structurons une identité visuelle forte et une communication cohérente. Plus qu'un simple \"beau design\", nous créons un discours de marque professionnel et rassurant qui installe votre autorité et votre crédibilité sur votre marché.",
     gradient: "from-ocean to-accent",
     glowColor: "var(--ocean)",
     href: "/agence-communication",
@@ -51,18 +51,17 @@ export function ServicesTripartite() {
         {/* Section Header */}
         <div className="text-center mb-16 lg:mb-20">
           <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-ocean/10 border border-ocean/20 rounded-full text-ocean text-sm font-semibold uppercase tracking-wider mb-6">
-            Nos services
+            NOS EXPERTISES
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mt-4 mb-6">
-            Trois expertises pour
+            Trois leviers stratégiques pour
             <br className="hidden sm:block" />
             <span className="font-heading italic text-ocean-light">
-              une présence digitale complète
+              structurer votre croissance.
             </span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed">
-            Chaque projet est unique. Nous l&apos;abordons sous trois angles
-            complémentaires pour maximiser votre impact en ligne.
+            Nous alignons la technique, l&apos;acquisition de trafic et votre image de marque pour transformer votre présence en ligne en un véritable actif commercial, mesurable et performant.
           </p>
         </div>
 

@@ -19,6 +19,7 @@ import { HeroWrapper } from "@/components/sections/HeroWrapper";
 import { StatsBand } from "@/components/sections/StatsBand";
 import { ArchitectureBlock } from "@/components/sections/ArchitectureBlock";
 import { ServicesBlock } from "@/components/sections/ServicesBlock";
+import { MethodBlock } from "@/components/sections/MethodBlock";
 import { ProcessBlock } from "@/components/sections/ProcessBlock";
 import { ModulesGridBlock } from "@/components/sections/ModulesGridBlock";
 import { AddonsBlock } from "@/components/sections/AddonsBlock";
@@ -56,6 +57,12 @@ export default function Home() {
       {/* STATS BAND (Reassurance) */}
       <StatsBand />
 
+      {/* AIDA: INTEREST - Nos Services (Tripartite) */}
+      <ServicesTripartite />
+
+      {/* NOTRE METHODE BLOCK */}
+      <MethodBlock />
+
       {/* ARCHITECTURE BLOCK */}
       <ArchitectureBlock />
 
@@ -73,10 +80,6 @@ export default function Home() {
 
       {/* PLATFORM CAROUSEL BLOCK */}
       <PlatformCarouselBlock />
-
-
-      {/* AIDA: INTEREST - Nos Services (Tripartite) */}
-      <ServicesTripartite />
 
       {/* NOUVEAU BLOC SERVICES INTERACTIF */}
       <ServicesInteractiveBlock />

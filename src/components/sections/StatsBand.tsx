@@ -16,7 +16,9 @@ function AnimatedCounter({
 }) {
   const ref = useRef<HTMLSpanElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
-  const isInView = useInView(containerRef, { once: true, margin: "-10%" });
+  // amount: 0.5 signifie que l'animation se déclenchera uniquement
+  // quand au moins 50% du bloc sera visible à l'écran lors du scroll.
+  const isInView = useInView(containerRef, { once: true, amount: 0.5 });
 
   useEffect(() => {
     if (isInView && ref.current) {
