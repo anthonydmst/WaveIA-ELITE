@@ -160,25 +160,20 @@ export function MethodBlock() {
         </div>
       </div>
 
-      {/* 6 Reassurance Cards - Scrollable horizontal */}
-      <div className="w-full relative px-0 sm:px-6 mt-32">
-        <div className="absolute inset-y-0 left-0 w-8 sm:w-24 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
-        <div className="absolute inset-y-0 right-0 w-8 sm:w-24 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
-        
-        <div 
-          ref={scrollRef}
-          className="flex overflow-x-auto gap-6 pb-12 pt-4 px-6 sm:px-24 snap-x snap-mandatory scrollbar-hide"
-          style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
-        >
+      {/* 6 Reassurance Cards - 2 Columns Grid */}
+      <div className="w-full max-w-5xl mx-auto relative px-6 mt-24">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
           {cards.map((card, i) => (
             <div 
               key={i} 
-              className="min-w-[300px] sm:min-w-[350px] max-w-[350px] flex-shrink-0 snap-center p-8 rounded-2xl bg-glass-bg border border-glass-border hover:border-ocean/50 transition-colors duration-300"
+              className="flex flex-col p-8 rounded-2xl bg-glass-bg border border-glass-border hover:border-ocean/50 hover:shadow-[0_10px_30px_rgba(14,165,233,0.1)] hover:-translate-y-1 transition-all duration-300"
             >
-              <div className="w-12 h-12 rounded-xl bg-ocean/10 flex items-center justify-center mb-6">
-                <card.icon className="w-6 h-6 text-ocean" />
+              <div className="flex items-center gap-4 mb-4">
+                <div className="w-12 h-12 shrink-0 rounded-xl bg-ocean/10 flex items-center justify-center">
+                  <card.icon className="w-6 h-6 text-ocean" />
+                </div>
+                <h4 className="text-lg font-bold leading-tight">{card.title}</h4>
               </div>
-              <h4 className="text-lg font-bold mb-3">{card.title}</h4>
               <p className="text-sm text-muted-foreground leading-relaxed">
                 {card.desc}
               </p>
