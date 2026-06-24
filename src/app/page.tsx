@@ -17,30 +17,21 @@ export const metadata: Metadata = {
 
 import { HeroWrapper } from "@/components/sections/HeroWrapper";
 import { StatsBand } from "@/components/sections/StatsBand";
-import { ArchitectureBlock } from "@/components/sections/ArchitectureBlock";
-import { ServicesBlock } from "@/components/sections/ServicesBlock";
 import { MethodBlock } from "@/components/sections/MethodBlock";
 import { WhyChooseUsBlock } from "@/components/sections/WhyChooseUsBlock";
 import { WhyChooseUsFAQ } from "@/components/sections/WhyChooseUsFAQ";
 import { WhyChooseUsCTA } from "@/components/sections/WhyChooseUsCTA";
-import { ProcessBlock } from "@/components/sections/ProcessBlock";
-import { ModulesGridBlock } from "@/components/sections/ModulesGridBlock";
-import { AddonsBlock } from "@/components/sections/AddonsBlock";
-import { PlatformCarouselBlock } from "@/components/sections/PlatformCarouselBlock";
 import { AnimatedFeatures } from "@/components/sections/AnimatedFeatures";
 import { AnimatedServices } from "@/components/sections/AnimatedServices";
 import { AnimatedTestimonials } from "@/components/sections/AnimatedTestimonials";
 import { AnimatedLocalSection } from "@/components/sections/AnimatedLocalSection";
 import { ServicesTripartite } from "@/components/sections/ServicesTripartite";
-import { ServicesInteractiveBlock } from "@/components/sections/ServicesInteractiveBlock";
-import { WaveBento } from "@/components/sections/WaveBento";
 import { LocalExpertsBlock } from "@/components/sections/CreationSiteDetails";
 import { WaveDiagnosticForm } from "@/components/sections/WaveDiagnosticForm";
 import { CreationRefonteBlock } from "@/components/sections/CreationRefonteBlock";
 import { ReferencementVisibiliteBlock } from "@/components/sections/ReferencementVisibiliteBlock";
 import { CommunicationIdentiteBlock } from "@/components/sections/CommunicationIdentiteBlock";
 import { HomePageRealisationsBlock } from "@/components/sections/HomePageRealisationsBlock";
-import { InterventionZone } from "@/components/sections/InterventionZone";
 import { AgencyStatsBlock } from "@/components/templates/AgencyStatsBlock";
 import { ComparisonTable } from "@/components/templates/ComparisonTable";
 import { PricingPreviewHome } from "@/components/sections/PricingPreviewHome";
@@ -70,30 +61,6 @@ export default function Home() {
       <WhyChooseUsFAQ />
       <WhyChooseUsCTA />
 
-      {/* ARCHITECTURE BLOCK */}
-      <ArchitectureBlock />
-
-      {/* SERVICES BLOCK */}
-      <ServicesBlock />
-
-      {/* PROCESS BLOCK */}
-      <ProcessBlock />
-
-      {/* MODULES GRID BLOCK */}
-      <ModulesGridBlock />
-
-      {/* ADDONS BLOCK */}
-      <AddonsBlock />
-
-      {/* PLATFORM CAROUSEL BLOCK */}
-      <PlatformCarouselBlock />
-
-      {/* NOUVEAU BLOC SERVICES INTERACTIF */}
-      <ServicesInteractiveBlock />
-
-      {/* WAVE BENTO - Ingénierie web */}
-      <WaveBento />
-
       {/* AIDA: INTEREST - Diagnostic IA */}
       <WaveDiagnosticForm />
 
@@ -108,9 +75,6 @@ export default function Home() {
 
       {/* AIDA: DESIRE - Nos Réalisations Carousel */}
       <HomePageRealisationsBlock />
-
-      {/* ZONE D'INTERVENTION CÔTE BASQUE */}
-      <InterventionZone />
 
       {/* AIDA: ACTION - Local CTA */}
       <Suspense fallback={<LocalSectionSkeleton />}>
