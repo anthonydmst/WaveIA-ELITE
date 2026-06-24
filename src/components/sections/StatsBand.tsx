@@ -38,6 +38,7 @@ function AnimatedCounter({
       });
       return () => controls.stop();
     }
+    return undefined;
   }, [isInView, target, suffix]);
 
   return (
