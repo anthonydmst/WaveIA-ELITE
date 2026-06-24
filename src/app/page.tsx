@@ -21,9 +21,6 @@ import { MethodBlock } from "@/components/sections/MethodBlock";
 import { WhyChooseUsBlock } from "@/components/sections/WhyChooseUsBlock";
 import { WhyChooseUsFAQ } from "@/components/sections/WhyChooseUsFAQ";
 import { WhyChooseUsCTA } from "@/components/sections/WhyChooseUsCTA";
-import { AnimatedFeatures } from "@/components/sections/AnimatedFeatures";
-import { AnimatedServices } from "@/components/sections/AnimatedServices";
-import { AnimatedTestimonials } from "@/components/sections/AnimatedTestimonials";
 import { AnimatedLocalSection } from "@/components/sections/AnimatedLocalSection";
 import { ServicesTripartite } from "@/components/sections/ServicesTripartite";
 import { LocalExpertsBlock } from "@/components/sections/CreationSiteDetails";
@@ -32,12 +29,7 @@ import { CreationRefonteBlock } from "@/components/sections/CreationRefonteBlock
 import { ReferencementVisibiliteBlock } from "@/components/sections/ReferencementVisibiliteBlock";
 import { CommunicationIdentiteBlock } from "@/components/sections/CommunicationIdentiteBlock";
 import { HomePageRealisationsBlock } from "@/components/sections/HomePageRealisationsBlock";
-import { AgencyStatsBlock } from "@/components/templates/AgencyStatsBlock";
-import { ComparisonTable } from "@/components/templates/ComparisonTable";
-import { PricingPreviewHome } from "@/components/sections/PricingPreviewHome";
-import { AGENCY_STATS, AGENCY_COMPARISON } from "@/lib/data";
 import {
-  TestimonialsSkeleton,
   LocalSectionSkeleton,
 } from "@/components/skeletons/HomepageSkeletons";
 
@@ -83,34 +75,6 @@ export default function Home() {
 
       {/* AIDA: DESIRE - Local Experts */}
       <LocalExpertsBlock />
-
-      {/* AIDA: INTEREST/DESIRE - How we do it */}
-      <AnimatedFeatures />
-
-      {/* AIDA: DESIRE - Social Proof */}
-      <Suspense fallback={<TestimonialsSkeleton />}>
-        <AnimatedTestimonials />
-      </Suspense>
-
-      {/* AIDA: DESIRE - Pricing Transparency */}
-      <PricingPreviewHome />
-
-      {/* AIDA: DESIRE - Competitive Advantage */}
-      <ComparisonTable 
-        title="Pourquoi WaveIA ?"
-        subtitle="Engineering vs Agence Classique"
-        competitors={AGENCY_COMPARISON.competitors}
-        rows={AGENCY_COMPARISON.rows}
-      />
-
-      {/* AIDA: INTEREST - Proof (Stats) */}
-      <AgencyStatsBlock 
-        title="Des Résultats Mesurables"
-        metrics={AGENCY_STATS.metrics}
-      />
-
-      {/* AIDA: DESIRE - Services Portfolio */}
-      <AnimatedServices />
 
     </div>
   );
