@@ -20,6 +20,7 @@ import { StatsBand } from "@/components/sections/StatsBand";
 import { ArchitectureBlock } from "@/components/sections/ArchitectureBlock";
 import { ServicesBlock } from "@/components/sections/ServicesBlock";
 import { MethodBlock } from "@/components/sections/MethodBlock";
+import { WhyChooseUsBlock } from "@/components/sections/WhyChooseUsBlock";
 import { ProcessBlock } from "@/components/sections/ProcessBlock";
 import { ModulesGridBlock } from "@/components/sections/ModulesGridBlock";
 import { AddonsBlock } from "@/components/sections/AddonsBlock";
@@ -62,6 +63,9 @@ export default function Home() {
 
       {/* NOTRE METHODE BLOCK */}
       <MethodBlock />
+
+      {/* POURQUOI NOUS CHOISIR */}
+      <WhyChooseUsBlock />
 
       {/* ARCHITECTURE BLOCK */}
       <ArchitectureBlock />
