@@ -21,6 +21,8 @@ import { ArchitectureBlock } from "@/components/sections/ArchitectureBlock";
 import { ServicesBlock } from "@/components/sections/ServicesBlock";
 import { MethodBlock } from "@/components/sections/MethodBlock";
 import { WhyChooseUsBlock } from "@/components/sections/WhyChooseUsBlock";
+import { WhyChooseUsFAQ } from "@/components/sections/WhyChooseUsFAQ";
+import { WhyChooseUsCTA } from "@/components/sections/WhyChooseUsCTA";
 import { ProcessBlock } from "@/components/sections/ProcessBlock";
 import { ModulesGridBlock } from "@/components/sections/ModulesGridBlock";
 import { AddonsBlock } from "@/components/sections/AddonsBlock";
@@ -42,7 +44,6 @@ import { InterventionZone } from "@/components/sections/InterventionZone";
 import { AgencyStatsBlock } from "@/components/templates/AgencyStatsBlock";
 import { ComparisonTable } from "@/components/templates/ComparisonTable";
 import { PricingPreviewHome } from "@/components/sections/PricingPreviewHome";
-import { FAQSection } from "@/components/sections/FAQSection";
 import { AGENCY_STATS, AGENCY_COMPARISON } from "@/lib/data";
 import {
   TestimonialsSkeleton,
@@ -66,6 +67,8 @@ export default function Home() {
 
       {/* POURQUOI NOUS CHOISIR */}
       <WhyChooseUsBlock />
+      <WhyChooseUsFAQ />
+      <WhyChooseUsCTA />
 
       {/* ARCHITECTURE BLOCK */}
       <ArchitectureBlock />
@@ -135,9 +138,6 @@ export default function Home() {
         competitors={AGENCY_COMPARISON.competitors}
         rows={AGENCY_COMPARISON.rows}
       />
-
-      {/* AIDA: DESIRE - FAQ */}
-      <FAQSection />
 
       {/* AIDA: INTEREST - Proof (Stats) */}
       <AgencyStatsBlock 
