@@ -19,34 +19,26 @@ export function CreationSiteSiloLanding() {
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "Combien de temps faut-il à Wave IA pour créer un site ?",
+        "name": "Quel budget prévoir pour un projet digital avec Waveia ?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Grâce à notre processus augmenté à l'IA, nous divisons les délais classiques par deux. Un site vitrine performant peut être déployé en 2 à 3 semaines, et un e-commerce complet en 4 à 6 semaines, sans compromis sur la qualité."
+          "text": "Chaque écosystème est chiffré sur-mesure. Toutefois, l'utilisation de nos process IA nous permet d'être très compétitifs. Un site vitrine optimisé conversion démarre à [X] €, tandis qu'un e-commerce se situe entre [X] € et [X] €. Le chiffrage exact est réalisé après un échange gratuit de 30 minutes, sans frais cachés."
         }
       },
       {
         "@type": "Question",
-        "name": "L'IA remplace-t-elle les développeurs chez Wave IA ?",
+        "name": "Sommes-nous réellement propriétaires de notre site ?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Absolument pas. L'IA est un co-pilote qui accélère la production, automatise les tâches répétitives (optimisation de base, génération de maquettes structurelles) et teste des milliers de variations. L'expertise humaine reste au centre pour la stratégie, l'UX avancée et l'assurance qualité."
+          "text": "À 100%. Contrairement à certaines agences qui \"louent\" leurs solutions, nous vous remettons tous les accès administrateurs et les droits sur le nom de domaine une fois le solde réglé. Vous restez totalement indépendant."
         }
       },
       {
         "@type": "Question",
-        "name": "Quel est le budget moyen pour la création d'un site web ?",
+        "name": "Puis-je gérer mon site moi-même après la livraison ?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Le budget varie selon la complexité : un site vitrine ultra-performant démarre souvent autour de 990€, tandis qu'une plateforme e-commerce ou sur-mesure commence vers 2500€. Nous proposons toujours des devis transparents et adaptés à votre retour sur investissement."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Mon site sera-t-il optimisé pour le référencement (SEO) ?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Oui, c'est notre signature. Chaque site livré par Wave IA intègre nativement une architecture sémantique parfaite, un balisage Schema.org, et des temps de chargement records (Core Web Vitals) pour plaire immédiatement à Google."
+          "text": "Oui. Chaque site est livré avec une interface d'administration intuitive. Une formation à la prise en main est incluse. Pour les évolutions techniques ou la sécurité, notre équipe reste disponible via nos offres de maintenance."
         }
       }
     ]
@@ -529,13 +521,13 @@ export function CreationSiteSiloLanding() {
       </section>
 
       {/* ─── BLOC 7 : FAQ ─── */}
-      <section className="py-24">
+      <section className="py-24 bg-background">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="max-w-3xl mb-14 text-center mx-auto">
              <span className="inline-flex items-center justify-center gap-2 text-xs font-bold uppercase tracking-widest text-ocean mb-4">
-               Foire Aux Questions
+               QUESTIONS FRÉQUENTES
             </span>
-            <h2 className="text-3xl md:text-5xl font-extrabold font-heading mb-4">Vos interrogations <em className="not-italic text-ocean relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:right-0 after:h-[2px] after:bg-gradient-to-r after:from-ocean after:to-transparent">clarifiées</em></h2>
+            <h2 className="text-3xl md:text-5xl font-extrabold font-heading mb-4">Clarifions vos derniers doutes <em className="not-italic text-ocean relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:right-0 after:h-[2px] after:bg-gradient-to-r after:from-ocean after:to-transparent">avant d'échanger.</em></h2>
           </div>
           
           <div className="space-y-3">
@@ -581,39 +573,35 @@ export function CreationSiteSiloLanding() {
       </section>
 
       {/* ─── BLOC 9 : CTA FINAL ─── */}
-      <section id="contact-final" className="py-24 bg-card border-t border-border relative overflow-hidden">
+      <section id="contact-final" className="py-32 bg-card border-t border-border relative overflow-hidden">
         <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-ocean via-purple-500 to-transparent"></div>
         <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-[radial-gradient(circle,rgba(14,165,233,0.15)_0%,transparent_70%)] pointer-events-none blur-[60px]" />
         
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center relative z-10 animate-in fade-in slide-in-from-bottom-4 duration-700">
           <h2 className="text-4xl md:text-5xl font-extrabold font-heading mb-6">
-            Prêt à dominer <em className="not-italic text-ocean">votre marché</em> ?
+            Prêt à structurer votre <em className="not-italic text-ocean relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:right-0 after:h-[2px] after:bg-gradient-to-r after:from-ocean after:to-transparent">acquisition digitale ?</em>
           </h2>
-          <p className="text-lg text-muted-foreground font-light mb-10 max-w-2xl mx-auto">
-            Laissez l'IA et nos experts transformer votre vision en réalité. Démarrez votre croissance dès aujourd'hui avec un outil conçu pour la performance.
+          <p className="text-lg text-muted-foreground font-light mb-10 max-w-2xl mx-auto leading-relaxed">
+            Échangeons sur vos enjeux de rentabilité en visio, ou autour d'un café à nos locaux de Biarritz. <strong className="text-foreground">Gratuit et sans jargon technique.</strong>
           </p>
           
-          <div className="glass-card max-w-xl mx-auto p-8 border border-border rounded-2xl bg-background/50 backdrop-blur-xl">
-             <form className="space-y-4">
-                <div className="grid grid-cols-2 gap-4">
-                   <div>
-                     <label className="sr-only">Votre Nom</label>
-                     <input type="text" placeholder="Votre Nom" className="w-full bg-background border border-border rounded-lg px-4 py-3 text-sm text-foreground focus:border-ocean focus:outline-none transition-colors" />
-                   </div>
-                   <div>
-                     <label className="sr-only">Email professionnel</label>
-                     <input type="email" placeholder="Email professionnel" className="w-full bg-background border border-border rounded-lg px-4 py-3 text-sm text-foreground focus:border-ocean focus:outline-none transition-colors" />
-                   </div>
-                </div>
-                <div>
-                   <label className="sr-only">URL de votre site actuel</label>
-                   <input type="url" placeholder="URL de votre site actuel (si applicable)" className="w-full bg-background border border-border rounded-lg px-4 py-3 text-sm text-foreground focus:border-ocean focus:outline-none transition-colors" />
-                </div>
-                <button type="button" className="bg-ocean text-white w-full hover:shadow-[0_8px_32px_rgba(14,165,233,0.35)] font-heading font-bold text-lg py-4 rounded-xl mt-4 transition-transform hover:-translate-y-0.5">
-                   Lancer mon projet 🚀
-                </button>
-                <p className="text-xs text-muted-foreground/70 mt-3 text-center">Un expert Wave IA vous recontacte sous 24h ouvrées.</p>
-             </form>
+          <div className="flex flex-wrap items-center justify-center gap-4 mb-12">
+             <div className="flex items-center gap-2 text-sm font-bold text-foreground bg-background border border-border px-5 py-2.5 rounded-full shadow-sm">
+                <Check className="w-4 h-4 text-ocean" /> Étude de faisabilité
+             </div>
+             <div className="flex items-center gap-2 text-sm font-bold text-foreground bg-background border border-border px-5 py-2.5 rounded-full shadow-sm">
+                <Check className="w-4 h-4 text-ocean" /> Chiffrage transparent
+             </div>
+             <div className="flex items-center gap-2 text-sm font-bold text-foreground bg-background border border-border px-5 py-2.5 rounded-full shadow-sm">
+                <Check className="w-4 h-4 text-ocean" /> Zéro engagement
+             </div>
+          </div>
+
+          <div className="flex justify-center">
+             <Link href="/contact" className="bg-ocean text-white hover:shadow-[0_8px_32px_rgba(14,165,233,0.35)] font-heading font-bold text-lg px-10 py-5 rounded-xl transition-all hover:-translate-y-1 flex items-center gap-3 group">
+                Réserver mon appel de cadrage
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+             </Link>
           </div>
         </div>
       </section>
