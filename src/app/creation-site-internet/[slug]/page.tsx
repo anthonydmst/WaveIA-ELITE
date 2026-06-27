@@ -38,38 +38,11 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
   
   let extraContent = null;
   let renderHeroFn: ((breadcrumbs: any[]) => React.ReactNode) | undefined = undefined;
+  let isStandalone = false;
 
   if (slug === "site-vitrine") {
-    renderHeroFn = (breadcrumbs) => (
-      <>
-        <SiteVitrineLanding />
-        {service && <ServiceHero hero={service.hero} breadcrumbItems={breadcrumbs} />}
-      </>
-    );
-    extraContent = (
-      <div className="max-w-4xl mx-auto px-6 lg:px-8 mt-12 relative z-10 mb-20">
-         <TechnoTranslator 
-            title="Le Site Vitrine Expliqué" 
-            terms={[
-              {
-                tech: "CMS (Content Management System)",
-                human: "Autonomie Totale",
-                description: "Une interface simple comme Word pour modifier vos textes et photos vous-même, sans appeler un développeur."
-              },
-              {
-                tech: "Mobile First",
-                human: "Priorité Smartphone",
-                description: "On conçoit le site pour le téléphone d'abord (là où sont 70% de vos clients), puis on l'adapte aux grands écrans."
-              },
-              {
-                tech: "SEO Native",
-                human: "Aimant à Google",
-                description: "Le site est codé pour plaire aux robots de Google dès le premier jour (structure, balises, vitesse)."
-              }
-            ]}
-         />
-      </div>
-    );
+    renderHeroFn = (breadcrumbs) => <SiteVitrineLanding />;
+    isStandalone = true;
   } else if (slug === "site-ecommerce") {
     renderHeroFn = (breadcrumbs) => (
       <>
@@ -172,6 +145,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
       rootPath="/creation-site-internet"
       extraContent={extraContent}
       renderHero={renderHeroFn}
+      standaloneHeroOnly={isStandalone}
     />
   );
 }

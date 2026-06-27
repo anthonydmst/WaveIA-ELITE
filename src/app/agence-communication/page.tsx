@@ -23,24 +23,10 @@ export default function Page() {
   return (
     <ServicePageFactory 
       service={service} 
+      standaloneHeroOnly={true}
       renderHero={() => (
         <CommunicationSiloLanding />
       )}
-      extraContent={
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 mt-8 lg:-mt-20 relative z-10 mb-24">
-           <PedagogicBlock 
-            title="La Confiance au Premier Regard"
-            subtitle="On n'achète pas ce qu'on ne comprend pas."
-            description="Votre image est votre première vente. Un logo daté ou une charte incohérente envoient un signal de risque. Nous construisons une identité qui rassure, séduit et justifie vos prix premium."
-            icon={<Palette />}
-            benefits={[
-              "Augmentation du taux de conversion",
-              "Justification de tarifs plus élevés",
-              "Fidélisation par l'émotion"
-            ]}
-          />
-        </div>
-      } 
     />
   );
 }

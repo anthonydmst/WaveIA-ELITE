@@ -23,24 +23,10 @@ export default function Page() {
   return (
     <ServicePageFactory 
       service={service} 
+      standaloneHeroOnly={true}
       renderHero={() => (
         <SeoSiloLanding />
       )}
-      extraContent={
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 mt-8 lg:-mt-20 relative z-10 mb-24">
-           <PedagogicBlock 
-            title="L'Immobilier Digital N°1"
-            subtitle="L'emplacement fait toute la différence."
-            description="Sur Google, la première place vaut de l'or. C'est l'équivalent d'une boutique sur les Champs-Élysées, mais accessible à tous ceux qui investissent intelligemment. Ne laissez pas vos concurrents occuper le meilleur trottoir."
-            icon={<TrendingUp />}
-            benefits={[
-              "Trafic qualifié (ceux qui cherchent achètent)",
-              "Rentabilité long terme (contrairement à la pub)",
-              "Autorité de marché incontestable"
-            ]}
-          />
-        </div>
-      } 
     />
   );
 }
