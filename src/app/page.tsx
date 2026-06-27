@@ -53,29 +53,6 @@ export default function Home() {
       <WhyChooseUsFAQ />
       <WhyChooseUsCTA />
 
-      {/* AIDA: INTEREST - Diagnostic IA */}
-      <WaveDiagnosticForm />
-
-      {/* AIDA: INTEREST - Création & Refonte */}
-      <CreationRefonteBlock />
-
-      {/* AIDA: INTEREST - SEO & Visibilité */}
-      <ReferencementVisibiliteBlock />
-
-      {/* AIDA: INTEREST - Communication & Identité */}
-      <CommunicationIdentiteBlock />
-
-      {/* AIDA: DESIRE - Nos Réalisations Carousel */}
-      <HomePageRealisationsBlock />
-
-      {/* AIDA: ACTION - Local CTA */}
-      <Suspense fallback={<LocalSectionSkeleton />}>
-        <AnimatedLocalSection />
-      </Suspense>
-
-      {/* AIDA: DESIRE - Local Experts */}
-      <LocalExpertsBlock />
-
     </div>
   );
 }

@@ -64,6 +64,7 @@ interface FactoryProps {
   service?: Service; // DIRECT INJECTION MODE
   extraContent?: React.ReactNode; // For Humanization blocks
   renderHero?: (breadcrumbs: any[]) => React.ReactNode; // S-Tier Custom Hero Override
+  standaloneHeroOnly?: boolean; // Skip automated sections below hero
 }
 
 // The Universal Factory (RSC)
@@ -74,6 +75,7 @@ export async function ServicePageFactory({
   service: injectedService,
   extraContent,
   renderHero,
+  standaloneHeroOnly,
 }: FactoryProps) {
   let service: Service | undefined = injectedService;
 
@@ -173,57 +175,60 @@ export async function ServicePageFactory({
           : <ServiceHero hero={service.hero} breadcrumbItems={breadcrumbItems} />
         }
 
-        
-        {/* AIDA: Interest Phase (Zone Links immediately after Hero) */}
-        <ZoneLinksWrapper service={service} />
-        
-        {/* HUMANIZATION INJECTION POINT */}
-        {extraContent}
+        {!standaloneHeroOnly && (
+          <>
+            {/* AIDA: Interest Phase (Zone Links immediately after Hero) */}
+            <ZoneLinksWrapper service={service} />
+            
+            {/* HUMANIZATION INJECTION POINT */}
+            {extraContent}
 
-        {/* AIDA: Desire Phase (Show Solutions/Expertise immediately) */}
-        <SubServicesGridWrapper 
-          currentService={service} 
-        />
-
-        {/* Conditional rendering based on Silo can be added here if needed */}
-        {/* e.g., if (silo === 'local') <LocalMap ... /> */}
-        <ServiceFeatures features={service.features} />
-        
-        {/* GRADE A++++ TERRITORIAL CONTEXT (Expertise & Trust Signals) */}
-        {service.localContext?.siloContext && (
-            <TerritorialContext 
-              siloContext={service.localContext.siloContext} 
-              cityName={service.localContext.city}
+            {/* AIDA: Desire Phase (Show Solutions/Expertise immediately) */}
+            <SubServicesGridWrapper 
+              currentService={service} 
             />
+
+            {/* Conditional rendering based on Silo can be added here if needed */}
+            {/* e.g., if (silo === 'local') <LocalMap ... /> */}
+            <ServiceFeatures features={service.features} />
+            
+            {/* GRADE A++++ TERRITORIAL CONTEXT (Expertise & Trust Signals) */}
+            {service.localContext?.siloContext && (
+                <TerritorialContext 
+                  siloContext={service.localContext.siloContext} 
+                  cityName={service.localContext.city}
+                />
+            )}
+            
+            {/* GRADE A++++ LOCAL CONTEXT (Factual City Data - History, Stats, Zones) */}
+            {enrichedCity && (
+                <LocalContextSection city={enrichedCity} silo={service.silo} />
+            )}
+            
+            {/* GRADE A++ CITY TESTIMONIAL (AIDA Desire) */}
+            {service.localContext?.city && <CityTestimonialInline cityName={service.localContext.city} />}
+            
+            {/* DEEP CONTENT INJECTION (Grade A+) */}
+            {service.content && <DeepContentSection content={service.content} />}
+
+            <ServiceProcess process={service.process} />
+            
+            {/* Final CTA (Grade A++) */}
+
+            
+            {/* Smart Linking (Grade A++) */}
+            <div className="max-w-7xl mx-auto px-6 lg:px-8">
+               <SmartLinker 
+                 silo={service.silo} 
+                 slug={service.slug} 
+                 city={service.localContext?.city}
+                 citySlug={service.localContext?.city?.toLowerCase()}
+               />
+            </div>
+
+            <ServiceFAQ faq={service.faq} />
+          </>
         )}
-        
-        {/* GRADE A++++ LOCAL CONTEXT (Factual City Data - History, Stats, Zones) */}
-        {enrichedCity && (
-            <LocalContextSection city={enrichedCity} silo={service.silo} />
-        )}
-        
-        {/* GRADE A++ CITY TESTIMONIAL (AIDA Desire) */}
-        {service.localContext?.city && <CityTestimonialInline cityName={service.localContext.city} />}
-        
-        {/* DEEP CONTENT INJECTION (Grade A+) */}
-        {service.content && <DeepContentSection content={service.content} />}
-
-        <ServiceProcess process={service.process} />
-        
-        {/* Final CTA (Grade A++) */}
-
-        
-        {/* Smart Linking (Grade A++) */}
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-           <SmartLinker 
-             silo={service.silo} 
-             slug={service.slug} 
-             city={service.localContext?.city}
-             citySlug={service.localContext?.city?.toLowerCase()}
-           />
-        </div>
-
-        <ServiceFAQ faq={service.faq} />
       </main>
     </>
   );

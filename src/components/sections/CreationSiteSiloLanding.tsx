@@ -19,10 +19,42 @@ export function CreationSiteSiloLanding() {
     "mainEntity": [
       {
         "@type": "Question",
+        "name": "Vous mettez en avant l'Intelligence Artificielle. Mon site sera-t-il un simple \"template\" généré automatiquement ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolument pas. L'expérience utilisateur (UX), le design et la stratégie commerciale sont conçus par notre binôme humain, sur-mesure. Nous utilisons l'IA en coulisses (pour l'écriture du code complexe, l'automatisation des tests de sécurité et l'optimisation des requêtes). L'IA est notre moteur pour développer plus vite et sans bugs, mais l'âme de votre site restera unique."
+        }
+      },
+      {
+        "@type": "Question",
         "name": "Quel budget prévoir pour un projet digital avec Waveia ?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Chaque écosystème est chiffré sur-mesure. Toutefois, l'utilisation de nos process IA nous permet d'être très compétitifs. Un site vitrine optimisé conversion démarre à [X] €, tandis qu'un e-commerce se situe entre [X] € et [X] €. Le chiffrage exact est réalisé après un échange gratuit de 30 minutes, sans frais cachés."
+          "text": "Chaque écosystème est chiffré sur-mesure. Toutefois, l'utilisation de nos process IA nous permet d'être très compétitifs. Un site vitrine optimisé conversion démarre à 990 €, tandis qu'un e-commerce se situe entre 2 490 € et 5 000 €. Le chiffrage exact est réalisé après un échange gratuit de 30 minutes, sans frais cachés."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Comment pourrai-je mesurer concrètement ce que me rapporte cet investissement ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Un actif commercial doit être mesurable. Nous livrons votre plateforme avec des outils d'analyse de trafic intégrés et 100% conformes au RGPD. Surtout, nous configurons le suivi de vos conversions (nombre de formulaires qualifiés remplis, clics sur l'agenda, demandes de devis). Vous saurez exactement combien de chiffre d'affaires votre site génère chaque mois."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Devons-nous rédiger nous-mêmes tous les textes de notre futur site ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "C'est vous qui choisissez, selon votre temps disponible. Si vous avez déjà vos textes de présentation, nous les intégrons en les optimisant pour la conversion. Si vous manquez de temps en interne, nous pouvons prendre en charge la rédaction (orientée SEO et copywriting commercial) et la recherche visuelle. Notre but est que ce projet ne devienne pas une surcharge de travail pour vos équipes."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Si nous procédons à une refonte, allons-nous perdre notre positionnement actuel sur Google ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "C'est un risque majeur avec les refontes mal gérées, mais c'est impossible avec notre méthode. Avant de toucher à quoi que ce soit, nous cartographions vos pages existantes. Nous mettons en place un plan de redirections (301) strict et transférons votre \"jus SEO\" vers la nouvelle plateforme. Votre historique est préservé, et votre référencement sera même bonifié grâce à notre nouvelle architecture technique beaucoup plus rapide."
         }
       },
       {
@@ -39,6 +71,14 @@ export function CreationSiteSiloLanding() {
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "Oui. Chaque site est livré avec une interface d'administration intuitive. Une formation à la prise en main est incluse. Pour les évolutions techniques ou la sécurité, notre équipe reste disponible via nos offres de maintenance."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Que se passe-t-il en cas de bug technique ou de faille de sécurité une fois le site en ligne ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nous ne faisons pas de \"livré et oublié\". Votre projet inclut systématiquement 30 jours de suivi post-lancement pour garantir une stabilité parfaite. Passé ce délai, nous proposons des contrats de maintenance préventive (mises à jour de sécurité, sauvegardes) pour que vous n'ayez jamais à gérer les aspects techniques. Vous vous concentrez sur votre métier, nous gérons l'outil."
         }
       }
     ]
@@ -472,56 +512,14 @@ export function CreationSiteSiloLanding() {
          </div>
       </section>
 
-      {/* ─── BLOC 7 : L'ÉDITO SEO ─── */}
-      <section className="py-20 bg-card border-y border-border">
-        <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center animate-in fade-in slide-in-from-bottom-4 duration-700">
-           <h2 className="text-2xl md:text-4xl font-extrabold font-heading mb-6 leading-tight">
-             Pourquoi confier votre projet web à une agence <em className="not-italic text-ocean">nouvelle génération</em> ?
-           </h2>
-           <p className="text-lg text-muted-foreground leading-relaxed">
-             Le web a changé. Hier, un site n'était qu'une simple vitrine numérique. Aujourd'hui, face à la concurrence accablante, il doit s'imposer comme le noyau de votre stratégie de croissance. Chez Wave IA, nous avons révolutionné le <strong>développement web</strong> et le <strong>design UX/UI</strong> grâce à l'intelligence artificielle. Que ce soit pour une conception de zéro ou une <strong>refonte de site</strong> complète, nous intégrons le <strong>SEO technique</strong>, l'intelligence de la <strong>conversion</strong> et les meilleurs <strong>CMS</strong> du marché au cœur de chaque ligne de code. L'objectif ? Vous offrir un outil commercial autonome, évolutif et d'une puissance redoutable.
-           </p>
-        </div>
-      </section>
 
 
 
-      {/* ─── BLOC 6 : LES PILIERS DE LA PERFORMANCE WEB ─── */}
-      <section className="py-24 bg-card border-y border-border">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-           <div className="max-w-3xl animate-in fade-in slide-in-from-bottom-4 duration-700">
-             <span className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-ocean mb-4">
-               <div className="w-5 h-[1.5px] bg-ocean"></div> Architecture Technique
-            </span>
-            <h2 className="text-3xl md:text-5xl font-extrabold font-heading mb-4 leading-tight">
-              Un socle technique irréprochable pour <em className="not-italic text-ocean relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:right-0 after:h-[2px] after:bg-gradient-to-r after:from-ocean after:to-transparent">Google et vos utilisateurs</em>
-            </h2>
-            <p className="text-lg text-muted-foreground font-light mb-16">
-              Les critères algorithmiques deviennent de plus en plus exigeants sur les signaux web essentiels. Nous repoussons les standards de l'industrie.
-            </p>
-          </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              { icon: <Smartphone />, title: "Mobile-First Intégral", desc: "Pensé, conçu et codé en priorité pour les smartphones, répondant à 100% de l’indexation orientée mobile par Google." },
-              { icon: <Gauge />, title: "Vitesse Fulgurante", desc: "Pas de thèmes surchargés. Des plateformes ultra-légères pour des chargements sous la seconde." },
-              { icon: <Search />, title: "SEO Technique Natif", desc: "Balises Schema, canonicals, micro-données sémantiques et architecture générés avec précision dès le premier jour." },
-              { icon: <ShieldCheck />, title: "Sécurité & Données", desc: "Protocoles de chiffrement, serveurs sécurisés et formulaires conformes aux lois européennes sur la protection des données." }
-            ].map((p, i) => (
-              <div key={i} className="glass-card border border-border rounded-xl p-6 hover:border-ocean/40 transition-colors bg-background/50">
-                <div className="w-10 h-10 rounded-lg bg-ocean/10 text-ocean flex items-center justify-center mb-4">
-                  {p.icon}
-                </div>
-                <h3 className="font-heading font-bold text-foreground mb-2">{p.title}</h3>
-                <p className="text-sm text-muted-foreground">{p.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+
 
       {/* ─── BLOC 7 : FAQ ─── */}
-      <section className="py-24 bg-background">
+      <section className="py-24 bg-card border-y border-border">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="max-w-3xl mb-14 text-center mx-auto">
              <span className="inline-flex items-center justify-center gap-2 text-xs font-bold uppercase tracking-widest text-ocean mb-4">
