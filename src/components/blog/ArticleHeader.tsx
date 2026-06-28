@@ -14,11 +14,11 @@ const ArticleHeader = ({ metadata }: { metadata: ResourceMetadata }) => {
         {metadata.title}
       </h1>
       
-      <p className="text-xl text-gray-400 mb-8 max-w-2xl mx-auto leading-relaxed">
+      <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
         {metadata.description}
       </p>
       
-      <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-gray-500 font-medium">
+      <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-muted-foreground font-medium">
         <div className="flex items-center gap-2">
             <div className="w-8 h-8 rounded-full bg-ocean/20 flex items-center justify-center text-ocean">
                 <User size={14} />

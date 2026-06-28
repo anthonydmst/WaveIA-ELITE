@@ -3,6 +3,7 @@
 import { Link } from "next-view-transitions";
 import { Globe, Search, Palette, ArrowRight } from "lucide-react";
 import { useHaptics } from "@/hooks/use-haptics";
+import { SectionHeader } from "@/components/ui/SectionHeader";
 
 const services = [
   {
@@ -44,22 +45,23 @@ export function ServicesTripartite() {
     >
       {/* Background Effects — living ambient surface (ocean blooms over sky-tinted base) */}
       <div className="absolute inset-0 bg-ambient" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,var(--ocean)_0%,transparent_60%)] opacity-[0.06]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,var(--ocean-glow)_0%,transparent_60%)] opacity-[0.12]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,var(--ocean-glow-sec)_0%,transparent_50%)] opacity-[0.08]" />
       <div className="absolute bottom-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-ocean/30 to-transparent" />
 
       <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16 lg:mb-20">
-          <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-ocean/10 border border-ocean/20 rounded-full text-ocean text-sm font-semibold uppercase tracking-wider mb-6">
+          <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-ocean/10 border border-ocean/20 rounded-full text-ocean-text text-sm font-semibold uppercase tracking-wider mb-6">
             NOS EXPERTISES
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mt-4 mb-6">
+          <SectionHeader as="h2" size="page" align="center" className="mt-4 mb-6">
             Trois leviers stratégiques pour
             <br className="hidden sm:block" />
             <span className="font-heading italic text-gradient-brand">
               structurer votre croissance.
             </span>
-          </h2>
+          </SectionHeader>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed">
             Nous alignons la technique, l&apos;acquisition de trafic et votre image de marque pour transformer votre présence en ligne en un véritable actif commercial, mesurable et performant.
           </p>
@@ -93,7 +95,7 @@ export function ServicesTripartite() {
                 />
 
                 {/* Card */}
-                <div className="relative h-full p-8 lg:p-10 rounded-2xl overflow-hidden shadow-card transition-all duration-500 bg-linear-to-b from-white to-sky-50/60 border border-sky-100 dark:bg-glass-bg dark:from-transparent dark:to-transparent dark:border-glass-border dark:backdrop-blur-sm group-hover:-translate-y-2 group-hover:border-sky-300 group-hover:shadow-card-hover dark:group-hover:border-transparent">
+                <div className="relative h-full p-8 lg:p-10 rounded-2xl overflow-hidden shadow-card transition-all duration-500 bg-glass-bg border border-glass-border backdrop-blur-md group-hover:-translate-y-2 group-hover:border-ocean/30 group-hover:shadow-card-hover">
                   {/* Corner Glow */}
                   <div
                     className={`absolute top-0 right-0 w-48 h-48 bg-linear-to-br ${service.gradient} opacity-0 group-hover:opacity-[0.12] blur-3xl transition-opacity duration-700`}
@@ -101,9 +103,9 @@ export function ServicesTripartite() {
 
                   <div className="relative flex flex-col h-full">
                     {/* Title */}
-                    <h3 className="text-xl lg:text-2xl font-bold mb-4 group-hover:text-ocean transition-colors duration-300 leading-tight">
+                    <p className="text-xl lg:text-2xl font-bold mb-4 group-hover:text-ocean transition-colors duration-300 leading-tight">
                       {service.title}
-                    </h3>
+                    </p>
 
                     {/* Description */}
                     <p className="text-muted-foreground text-sm lg:text-base leading-relaxed mb-8 grow">
@@ -111,7 +113,7 @@ export function ServicesTripartite() {
                     </p>
 
                     {/* CTA */}
-                    <div className="flex items-center gap-2 text-sm font-semibold text-ocean/70 group-hover:text-ocean transition-all duration-300 mt-auto">
+                    <div className="flex items-center gap-2 text-sm font-semibold text-ocean-text/80 group-hover:text-ocean-text transition-all duration-300 mt-auto">
                       <span className="relative">
                         Découvrir
                         <span className="absolute bottom-0 left-0 w-0 h-px bg-ocean group-hover:w-full transition-all duration-300" />

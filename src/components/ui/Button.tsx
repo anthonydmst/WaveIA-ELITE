@@ -7,7 +7,7 @@ import { useHaptics } from "@/hooks/use-haptics"
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   asChild?: boolean
-  variant?: "default" | "outline" | "ghost" | "link"
+  variant?: "default" | "outline" | "ghost" | "link" | "glass"
   size?: "default" | "sm" | "lg" | "icon"
 }
 
@@ -16,8 +16,8 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     const { trigger } = useHaptics()
     
     const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-      // Trigger light haptic for primary/outline interactions
-      if (variant === "default" || variant === "outline") {
+      // Trigger light haptic for primary/outline/glass interactions
+      if (variant === "default" || variant === "outline" || variant === "glass") {
         trigger("light")
       }
       onClick?.(e)
@@ -34,6 +34,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       outline: "border border-input bg-background hover:bg-secondary hover:text-secondary-foreground",
       ghost: "hover:bg-secondary hover:text-secondary-foreground",
       link: "text-primary underline-offset-4 hover:underline",
+      glass: "bg-card/60 backdrop-blur-md border border-white/10 text-foreground hover:bg-card/80 hover:border-white/20 shadow-md hover:shadow-lg transition-[color,background-color,box-shadow,transform] transform hover:-translate-y-0.5"
     }
     
     // Size styles

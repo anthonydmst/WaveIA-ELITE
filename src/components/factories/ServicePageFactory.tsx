@@ -3,7 +3,7 @@ import { Metadata } from "next";
 // import { lazy, Suspense } from "react"; // Removed lazy/Suspense to fix ChunkLoadError
 import { SERVICES, getServicesBySilo } from "@/lib/data/services";
 import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
-import { generateBreadcrumbs } from "@/lib/breadcrumbs";
+import { generateBreadcrumbs, BreadcrumbItem } from "@/lib/breadcrumbs";
 import { ServiceHero } from "@/components/templates/ServiceHero";
 import { ServiceFeatures } from "@/components/templates/ServiceFeatures";
 import { ServiceProcess } from "@/components/templates/ServiceProcess";
@@ -63,7 +63,7 @@ interface FactoryProps {
   rootPath?: string;
   service?: Service; // DIRECT INJECTION MODE
   extraContent?: React.ReactNode; // For Humanization blocks
-  renderHero?: (breadcrumbs: any[]) => React.ReactNode; // S-Tier Custom Hero Override
+  renderHero?: (breadcrumbs: BreadcrumbItem[]) => React.ReactNode; // S-Tier Custom Hero Override
   standaloneHeroOnly?: boolean; // Skip automated sections below hero
 }
 

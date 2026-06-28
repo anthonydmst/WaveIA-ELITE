@@ -2,6 +2,7 @@
 
 import { HelpCircle, ChevronDown } from "lucide-react";
 import * as Accordion from "@radix-ui/react-accordion";
+import { SectionHeader } from "@/components/ui/SectionHeader";
 
 const faqs = [
   {
@@ -50,21 +51,21 @@ export function WhyChooseUsFAQ() {
   return (
     <section className="relative py-24 lg:py-32 overflow-hidden">
       <div className="absolute inset-0 bg-ambient" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,var(--ocean)_0%,transparent_50%)] opacity-[0.05]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,var(--ocean-glow)_0%,transparent_50%)] opacity-[0.08]" />
       
       <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           
           {/* Left Column */}
           <div className="lg:col-span-4 lg:sticky lg:top-32 space-y-6">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-ocean/10 border border-ocean/20 rounded-full text-ocean text-sm font-semibold uppercase tracking-wider">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-ocean/10 border border-ocean/20 rounded-full text-ocean-text text-sm font-semibold uppercase tracking-wider">
               <HelpCircle className="w-4 h-4" />
               <span>FAQ</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl font-bold mt-4 leading-tight">
+            <SectionHeader as="h2" size="section" className="mt-4 leading-tight">
               Vous avez encore<br />
               <span className="font-heading italic text-gradient-brand">des questions ?</span>
-            </h2>
+            </SectionHeader>
             <p className="text-muted-foreground text-base lg:text-lg leading-relaxed">
               Retrouvez ici les réponses aux interrogations les plus fréquentes concernant notre accompagnement et nos méthodes.
             </p>
@@ -80,7 +81,7 @@ export function WhyChooseUsFAQ() {
                   className="bg-glass-bg backdrop-blur-sm border border-glass-border rounded-xl overflow-hidden hover:border-ocean/30 transition-colors shadow-card"
                 >
                   <Accordion.Header className="flex">
-                    <Accordion.Trigger className="flex flex-1 items-center justify-between py-5 px-6 font-semibold text-left text-foreground hover:text-ocean-light transition-colors group">
+                    <Accordion.Trigger className="flex flex-1 items-center justify-between py-5 px-6 font-semibold text-left text-foreground hover:text-ocean transition-colors group">
                       <span className="text-lg pr-4">{faq.question}</span>
                       <ChevronDown
                         className="w-5 h-5 text-muted-foreground transition-transform duration-300 ease-in-out group-data-[state=open]:rotate-180 group-data-[state=open]:text-ocean shrink-0"

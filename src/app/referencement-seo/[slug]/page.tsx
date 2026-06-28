@@ -24,13 +24,14 @@ import { SeoGmbLanding } from "@/components/sections/SeoGmbLanding";
 import { SeoNetlinkingLanding } from "@/components/sections/SeoNetlinkingLanding";
 import { ServiceHero } from "@/components/templates/ServiceHero";
 import { SERVICES } from "@/lib/data/services";
+import { BreadcrumbItem } from "@/lib/breadcrumbs";
 
 export default async function Page({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const service = SERVICES.find((s) => s.slug === slug);
   
   let extraContent = null;
-  let renderHeroFn: ((breadcrumbs: any[]) => React.ReactNode) | undefined = undefined;
+  let renderHeroFn: ((breadcrumbs: BreadcrumbItem[]) => React.ReactNode) | undefined = undefined;
 
   if (slug === "audit-seo-gratuit") {
     renderHeroFn = (breadcrumbs) => (

@@ -379,7 +379,7 @@ export function CommunicationSiloLanding() {
           </div>
           
           <div className="space-y-3">
-            {faqSchema.mainEntity.map((faq: any, i: number) => (
+            {faqSchema.mainEntity.map((faq, i: number) => (
               <div key={i} className="glass-card border border-border rounded-2xl overflow-hidden hover:border-ocean/30 transition-colors">
                 <button 
                   onClick={() => toggleFaq(i)}

@@ -1,23 +1,25 @@
 "use client";
 
 import { CheckCircle2, Calculator, Calendar, MousePointerClick, Lock, Bot, Sparkles, LineChart, Cpu, BarChart, MapPin, ArrowRight, Database } from "lucide-react";
-import Link from "next/link";
+import { Link } from "next-view-transitions";
+import { SectionHeader } from "@/components/ui/SectionHeader";
 
 export function WhyChooseUsBlock() {
   return (
     <section className="relative py-24 overflow-hidden">
       {/* Living ambient background */}
       <div className="absolute inset-0 bg-ambient" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom,var(--ocean)_0%,transparent_50%)] opacity-[0.05]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom,var(--ocean-glow)_0%,transparent_50%)] opacity-[0.10]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,var(--ocean-glow-sec)_0%,transparent_50%)] opacity-[0.06]" />
       
       <div className="relative max-w-5xl mx-auto px-6 mb-16 text-center">
-        <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-ocean/10 border border-ocean/20 rounded-full text-ocean text-sm font-semibold uppercase tracking-wider mb-6">
+        <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-ocean/10 border border-ocean/20 rounded-full text-ocean-text text-sm font-semibold uppercase tracking-wider mb-6">
           Pourquoi nous choisir
         </span>
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mt-4 mb-6 leading-tight">
+        <SectionHeader as="h2" size="page" align="center" className="mt-4 mb-6 leading-tight">
           Plus qu&apos;une agence web.<br className="hidden sm:block" />
           <span className="italic text-gradient-brand font-heading ml-0 sm:ml-3">L&apos;ingénierie de votre croissance.</span>
-        </h2>
+        </SectionHeader>
         <p className="text-muted-foreground text-lg max-w-3xl mx-auto leading-relaxed">
           Nous ne livrons pas de simples &quot;cartes de visite digitales&quot;. Nous concevons des écosystèmes connectés où la technologie, l&apos;Intelligence Artificielle et la stratégie commerciale travaillent ensemble pour votre rentabilité.
         </p>
@@ -27,10 +29,10 @@ export function WhyChooseUsBlock() {
         {/* Section 1: Fonctionnalités */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
-            <h3 className="text-2xl sm:text-3xl font-bold leading-tight">
+            <SectionHeader as="h3" size="section" className="leading-tight">
               Un apporteur d&apos;affaires automatisé, <br className="hidden sm:block" />
-              <span className="text-ocean">disponible 24h/7j.</span>
-            </h3>
+              <span className="text-ocean-text">disponible 24h/7j.</span>
+            </SectionHeader>
             <p className="text-muted-foreground text-lg">
               Au-delà d&apos;un design irréprochable, votre plateforme embarque des modules sur-mesure pour transformer l&apos;intérêt en action commerciale concrète :
             </p>
@@ -107,9 +109,9 @@ export function WhyChooseUsBlock() {
             </div>
           </div>
           <div className="order-1 lg:order-2 space-y-6 lg:pl-8">
-            <h3 className="text-2xl sm:text-3xl font-bold leading-tight">
-              L&apos;Intelligence Artificielle au service de <span className="text-ocean">vos marges.</span>
-            </h3>
+            <SectionHeader as="h3" size="section" className="leading-tight">
+              L&apos;Intelligence Artificielle au service de <span className="text-ocean-text">vos marges.</span>
+            </SectionHeader>
             <p className="text-muted-foreground text-lg">
               Nous n&apos;utilisons pas l&apos;IA comme un simple mot à la mode, mais comme un véritable levier de productivité intégré à votre écosystème :
             </p>
@@ -136,10 +138,10 @@ export function WhyChooseUsBlock() {
         {/* Section 3: Humain */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
-            <h3 className="text-2xl sm:text-3xl font-bold leading-tight">
+            <SectionHeader as="h3" size="section" className="leading-tight">
               Le circuit court : <br className="hidden sm:block" />
-              <span className="text-ocean">deux experts, zéro intermédiaire.</span>
-            </h3>
+              <span className="text-ocean-text">deux experts, zéro intermédiaire.</span>
+            </SectionHeader>
             <p className="text-muted-foreground text-lg">
               Oubliez les standards téléphoniques et les chefs de projet juniors qui découvrent votre dossier. Vous travaillez en direct avec un binôme de fondateurs aux compétences croisées :
             </p>
@@ -190,8 +192,8 @@ export function WhyChooseUsBlock() {
                      <span className="font-bold text-2xl text-foreground">J</span>
                    </div>
                 </div>
-                <h4 className="text-2xl font-bold mb-2">Anthony & Julien</h4>
-                <p className="text-ocean font-medium text-lg">Fondateurs de WaveIA</p>
+                <p className="text-2xl font-bold mb-2">Anthony & Julien</p>
+                <p className="text-ocean-text font-medium text-lg">Fondateurs de WaveIA</p>
              </div>
           </div>
         </div>

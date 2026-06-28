@@ -3,7 +3,15 @@
 import React, { useEffect, useRef, useState } from "react";
 import { ArrowRight } from "lucide-react";
 
-const cityData: Record<string, any> = {
+interface TooltipData {
+  name: string;
+  tag: string;
+  tagClass: string;
+  stat: string;
+  cta: string;
+}
+
+const cityData: Record<string, TooltipData> = {
   bidart: {
     name: "Bayonne — QG WaveIA",
     tag: "QG · WaveIA",
@@ -62,6 +70,7 @@ const cityData: Record<string, any> = {
   },
 };
 
+
 export function InterventionZone() {
   const mapContainerRef = useRef<HTMLDivElement>(null);
   const svgRef = useRef<SVGSVGElement>(null);
@@ -71,7 +80,7 @@ export function InterventionZone() {
     visible: boolean;
     x: number;
     y: number;
-    data: any | null;
+    data: TooltipData | null;
   }>({
     visible: false,
     x: 0,
@@ -169,7 +178,7 @@ export function InterventionZone() {
           visible: true,
           x: tx,
           y: ty,
-          data: cityData[cityKey],
+          data: cityData[cityKey] ?? null,
         });
       }
     }

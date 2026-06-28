@@ -3,6 +3,15 @@
 import React, { useState } from 'react';
 import { ArrowRight, Check, ListChecks, Target, CalendarDays, Edit3, ClipboardList } from 'lucide-react';
 
+interface ServiceItem {
+  id: string;
+  name: string;
+  oneoff: number;
+  monthly: number;
+  devis: boolean;
+  detail?: string;
+}
+
 /* ============ SERVICES DATA ============ */
 const GROUPS = [
   {
@@ -151,8 +160,7 @@ export function DevisSimulator() {
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { id, value, type } = e.target;
-    // @ts-ignore
-    const checked = type === 'checkbox' ? e.target.checked : undefined;
+    const checked = type === 'checkbox' ? (e.target as HTMLInputElement).checked : undefined;
     setFormData(prev => ({
       ...prev,
       [id]: type === 'checkbox' ? checked : value
@@ -161,13 +169,16 @@ export function DevisSimulator() {
 
   // Get selected objects for recap
   const selectedServiceObjects = selectedServices.map(id => {
-    let matched: any = null;
-    GROUPS.forEach(g => {
+    let matched: ServiceItem | null = null;
+    for (const g of GROUPS) {
       const found = g.items.find(s => s.id === id);
-      if (found) matched = found;
-    });
+      if (found) {
+        matched = found as ServiceItem;
+        break;
+      }
+    }
     return matched;
-  }).filter(Boolean);
+  }).filter((item): item is ServiceItem => item !== null) as ServiceItem[];
 
   const totalStr = (oneoff > 0 ? `${oneoff.toLocaleString('fr-FR')} €` : '') +
                    (monthly > 0 ? (oneoff > 0 ? ' + ' : '') + `${monthly.toLocaleString('fr-FR')} €/mois` : '');
@@ -305,7 +316,7 @@ export function DevisSimulator() {
                   Vos prestations sélectionnées
                 </div>
                 <div className="space-y-3 mb-4">
-                  {selectedServiceObjects.map((s: any, idx: number) => (
+                  {selectedServiceObjects.map((s, idx) => (
                     <div key={idx} className="flex items-center justify-between py-1 border-b border-ocean/10 text-sm">
                       <span className="text-foreground">{s.name}</span>
                       <span className="font-semibold text-ocean">

@@ -1,5 +1,5 @@
 import React from "react";
-import Link from "next/link";
+import { Link } from "next-view-transitions";
 import { ArrowRight, Check, X, MonitorSmartphone, Share2, ArrowUp, Search, Mail, MapPin, ArrowLeft, Building, Database, Code2, Bot, Plus, Minus } from "lucide-react";
 import { DiagnosticExpress } from "@/components/ui/DiagnosticExpress";
 

@@ -44,7 +44,7 @@ export function PlatformCarouselBlock() {
           <div style={{"width":"100%","display":"flex","flexDirection":"column","gap":"6px"}}>
             <div className="wv-mock-bar"><div className="wv-mock-dot" style={{"background":"#ff5f57"}}></div><div className="wv-mock-dot" style={{"background":"#febc2e"}}></div><div className="wv-mock-dot" style={{"background":"#28c840"}}></div><span style={{"fontSize":"9px","color":"#888","marginLeft":"4px"}}>waveia-client.vercel.app</span></div>
             <div style={{"background":"#0f0f23","borderRadius":"8px","padding":"10px","border":"0.5px solid rgba(255,255,255,0.08)"}}>
-              <div style={{"fontSize":"9px","color":"#a78bfa","fontWeight":"600","marginBottom":"4px","fontFamily":"monospace"}}>// Next.js 15 · Edge CDN</div>
+              <div style={{"fontSize":"9px","color":"#a78bfa","fontWeight":"600","marginBottom":"4px","fontFamily":"monospace"}}>{"// Next.js 15 · Edge CDN"}</div>
               <div style={{"fontSize":"9px","color":"#6ee7b7","fontFamily":"monospace","lineHeight":"1.6"}}>export default async function Page() {"{"}</div>
               <div style={{"fontSize":"9px","color":"#93c5fd","fontFamily":"monospace","paddingLeft":"10px"}}>return &lt;SiteVitrine /&gt;</div>
               <div style={{"fontSize":"9px","color":"#6ee7b7","fontFamily":"monospace"}}>{"}"}</div>

@@ -280,46 +280,58 @@ export function Hero() {
           align="center"
           className="mb-8 animate-hero-fade-up delay-100"
         >
-          <span className="block mt-2 relative">
-            <span className="absolute inset-0 bg-linear-to-r from-ocean via-accent to-ocean-light blur-2xl opacity-20" />
-            <span className="relative text-transparent bg-clip-text bg-linear-to-r from-ocean via-(--hero-gradient-center) to-ocean-light animate-gradient">
-              Prendre l&apos;avantage. Accélérer par l&apos;IA.
+          <span className="block relative">
+            <span className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.15)_0%,transparent_70%)] blur-2xl opacity-40" />
+            <span className="relative text-white font-extrabold tracking-tight">
+              Prendre l&apos;avantage.
+            </span>
+          </span>
+          <span className="block mt-4 relative">
+            <span className="absolute inset-0 bg-linear-to-r from-ocean via-accent to-ocean-light blur-3xl opacity-30" />
+            <span className="relative text-transparent bg-clip-text bg-linear-to-r from-ocean via-ocean-light to-ocean animate-gradient">
+              Accélérer par l&apos;IA.
             </span>
           </span>
         </SectionHeader>
 
-        <p
-          className="max-w-3xl text-xl sm:text-2xl text-muted-foreground leading-relaxed mb-12 font-light animate-hero-fade-up delay-200"
-        >
-          Votre marché évolue. Nous créons des sites <span className="text-foreground font-medium underline decoration-ocean/30 decoration-2 underline-offset-4">performants</span> et <span className="text-ocean font-medium">rentables</span>, pensés pour accélérer votre développement grâce à la rigueur de nos process et la puissance de l&apos;IA.
-        </p>
-
         <div
           className="flex flex-col sm:flex-row items-center gap-6 animate-hero-fade-up delay-300"
         >
-          <Link
-            href="/contact"
-            onClick={() => trigger("medium")}
-            className="group relative px-10 py-5 text-lg font-semibold overflow-hidden rounded-full shadow-glow hover:scale-[1.02] transition-all duration-300"
+          <m.div
+            whileHover={{ scale: 1.02, y: -2 }}
+            whileTap={{ scale: 0.98 }}
+            transition={{ type: "spring", stiffness: 400, damping: 15 }}
           >
-            <div className="absolute inset-0 bg-linear-to-r from-ocean to-accent group-hover:scale-105 transition-transform duration-500" />
-            <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
-            <span className="relative flex items-center gap-2 text-white">
-              Lancer votre projet
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </span>
-          </Link>
+            <Link
+              href="/contact"
+              onClick={() => trigger("medium")}
+              className="group relative block px-10 py-5 text-lg font-semibold overflow-hidden rounded-full shadow-glow"
+            >
+              <div className="absolute inset-0 bg-linear-to-r from-ocean to-accent group-hover:scale-105 transition-transform duration-500" />
+              <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
+              <span className="relative flex items-center gap-2 text-white">
+                Lancer votre projet
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </span>
+            </Link>
+          </m.div>
           
-          <Link
-            href="/realisations"
-            onClick={() => trigger("light")}
-            className="group flex items-center gap-3 px-8 py-5 text-lg font-medium text-muted-foreground hover:text-foreground transition-colors"
+          <m.div
+            whileHover={{ scale: 1.02, y: -2 }}
+            whileTap={{ scale: 0.98 }}
+            transition={{ type: "spring", stiffness: 400, damping: 15 }}
           >
-            <div className="flex items-center justify-center w-12 h-12 bg-glass-bg border border-glass-border rounded-full group-hover:bg-glass-bg-hover group-hover:scale-110 transition-all duration-300">
-              <Play className="w-5 h-5 ml-1 fill-current" />
-            </div>
-            <span>Découvrir le portfolio</span>
-          </Link>
+            <Link
+              href="/realisations"
+              onClick={() => trigger("light")}
+              className="group flex items-center gap-3 px-8 py-5 text-lg font-medium text-muted-foreground hover:text-foreground transition-colors"
+            >
+              <div className="flex items-center justify-center w-12 h-12 bg-glass-bg border border-glass-border rounded-full group-hover:bg-glass-bg-hover transition-all duration-300">
+                <Play className="w-5 h-5 ml-1 fill-current" />
+              </div>
+              <span>Découvrir le portfolio</span>
+            </Link>
+          </m.div>
         </div>
       </m.div>
 

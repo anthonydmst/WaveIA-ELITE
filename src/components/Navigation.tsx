@@ -11,6 +11,7 @@ import { MEGA_MENU_ITEMS } from "@/lib/data";
 import { MegaMenu } from "./layout/MegaMenu";
 import { ThemeToggle } from "./ThemeToggle";
 import { useHaptics } from "@/hooks/use-haptics";
+import { Button } from "@/components/ui/Button";
 
 // Mobile Accordion Item Component
 interface MobileAccordionItemProps {
@@ -119,6 +120,7 @@ function MobileAccordionItem({ item, index, onNavigate }: MobileAccordionItemPro
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
 
   const { trigger } = useHaptics();
 
@@ -131,11 +133,15 @@ export function Navigation() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const isHomeHero = pathname === "/" && !scrolled;
+
   return (
     <>
       <header
         suppressHydrationWarning
         className={`fixed! top-0 left-0 right-0 z-50 transition-all duration-500 ${
+          isHomeHero ? "dark" : ""
+        } ${
           scrolled
             ? "bg-background/80 backdrop-blur-xl border-b border-border shadow-float"
             : "bg-background/60 backdrop-blur-md border-b border-transparent"
@@ -151,7 +157,7 @@ export function Navigation() {
                 <div className="absolute inset-0 bg-ocean/20 blur-xl rounded-full group-hover:bg-ocean/40 transition-colors" />
                 <Waves className="relative w-8 h-8 text-ocean" />
               </div>
-              <span className="text-2xl font-bold tracking-tight">
+              <span className="text-2xl font-bold tracking-tight text-foreground dark:text-white">
                 wave<span className="text-ocean">IA</span>
               </span>
             </Link>
@@ -162,18 +168,15 @@ export function Navigation() {
             {/* CTA Button & Theme Toggle */}
             <div className="hidden lg:flex items-center gap-4">
               <ThemeToggle />
-              <Link
-                href="/contact"
-                className="relative group px-6 py-2.5 text-sm font-semibold overflow-hidden rounded-full"
-                aria-label="Planifier un échange avec WaveIA"
-                style={{ viewTransitionName: "cta-primary" }}
-                onClick={() => trigger("medium")}
-              >
-                <span className="absolute inset-0 bg-linear-to-r from-ocean to-accent rounded-full" />
-
-                <span className="absolute inset-0 bg-linear-to-r from-ocean-light to-ocean opacity-0 group-hover:opacity-100 transition-opacity rounded-full" />
-                <span className="relative text-background">Planifier un échange</span>
-              </Link>
+              <Button asChild size="default" className="shadow-md hover:shadow-lg">
+                <Link
+                  href="/contact"
+                  aria-label="Planifier un échange avec WaveIA"
+                  style={{ viewTransitionName: "cta-primary" }}
+                >
+                  Planifier un échange
+                </Link>
+              </Button>
             </div>
 
             <div className="flex items-center gap-2 lg:hidden">
@@ -228,39 +231,9 @@ export function Navigation() {
                 </div>
 
                 <div className="flex-1 overflow-y-auto">
-                  {/* Highlighted: Audit SEO Gratuit */}
-                  <m.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.1 }}
-                    className="mb-6"
-                  >
-                    <Link
-                      href="/referencement-seo/audit-seo-gratuit"
-                      onClick={() => setIsOpen(false)}
-                      className="group relative flex items-center justify-between px-4 py-3.5 bg-linear-to-r from-ocean/20 to-accent/10 border border-ocean/30 rounded-xl overflow-hidden"
-                    >
-                      <div className="absolute inset-0 bg-linear-to-r from-ocean/10 to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity" />
-                      <div className="relative flex items-center gap-3">
-                        <div className="w-8 h-8 rounded-lg bg-ocean/20 flex items-center justify-center">
-                          <svg className="w-4 h-4 text-ocean" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                          </svg>
-                        </div>
-                        <div>
-                          <div className="text-sm font-semibold text-ocean">Audit SEO Gratuit</div>
-                          <div className="text-xs text-muted-foreground">Analysez votre site</div>
-                        </div>
-                      </div>
-                      <div className="relative px-2 py-1 bg-emerald-500/20 border border-emerald-500/30 rounded-md">
-                        <span className="text-xs font-bold text-emerald-500">Gratuit</span>
-                      </div>
-                    </Link>
-                  </m.div>
-
                   {/* Hub Services with Accordion */}
-                  <div className="space-y-2 mb-6">
-                    {MEGA_MENU_ITEMS.slice(0, 3).map((item, index) => (
+                  <div className="space-y-2 mb-6 pt-4">
+                    {MEGA_MENU_ITEMS.map((item, index) => (
                       <MobileAccordionItem
                         key={item.href}
                         item={item}
@@ -268,62 +241,20 @@ export function Navigation() {
                         onNavigate={() => setIsOpen(false)}
                       />
                     ))}
-                    
-                    {/* Solutions Métiers */}
-                    <MobileAccordionItem
-                      key="/solutions"
-                      item={{
-                        label: "Solutions Métiers",
-                        href: "/solutions",
-                        links: [
-                          { label: "Restaurant", href: "/solutions/site-web-restaurant" },
-                          { label: "Hôtel", href: "/solutions/site-web-hotel" },
-                          { label: "Immobilier", href: "/solutions/site-web-immobilier" },
-                          { label: "Artisan BTP", href: "/solutions/site-web-artisan-btp" },
-                        ]
-                      }}
-                      index={3}
-                      onNavigate={() => setIsOpen(false)}
-                    />
-                  </div>
-
-                  {/* Other Links */}
-                  <div className="space-y-1 pt-4 border-t border-border">
-                    {[
-                      { href: "/realisations", label: "Projets" },
-                      { href: "/tarifs", label: "Tarifs" },
-                      { href: "/a-propos", label: "À propos" },
-                    ].map((link, index) => (
-                      <m.div
-                        key={link.href}
-                        initial={{ opacity: 0, x: 20 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ delay: 0.4 + index * 0.05 }}
-                      >
-                        <Link
-                          href={link.href}
-                          onClick={() => setIsOpen(false)}
-                          className="block px-4 py-2.5 text-sm text-muted-foreground hover:text-foreground hover:bg-foreground/5 rounded-lg transition-colors"
-                        >
-                          {link.label}
-                        </Link>
-                      </m.div>
-                    ))}
                   </div>
                 </div>
 
-                <div className="mt-auto pt-6 border-t border-border"
->
-                  <Link
-                    href="/contact"
-                    onClick={() => {
-                      setIsOpen(false);
-                      trigger("medium");
-                    }}
-                    className="flex items-center justify-center w-full px-6 py-3 text-base font-semibold bg-linear-to-r from-ocean to-accent text-background rounded-full hover:opacity-90 transition-opacity"
-                  >
-                    Démarrer un projet
-                  </Link>
+                <div className="mt-auto pt-6 border-t border-border">
+                  <Button asChild size="lg" className="w-full h-auto py-3.5 text-base font-semibold shadow-glow">
+                    <Link
+                      href="/contact"
+                      onClick={() => {
+                        setIsOpen(false);
+                      }}
+                    >
+                      Planifier un échange
+                    </Link>
+                  </Button>
 
                   <p className="mt-6 text-sm text-muted-foreground text-center">
                     Biarritz • Bayonne • Anglet

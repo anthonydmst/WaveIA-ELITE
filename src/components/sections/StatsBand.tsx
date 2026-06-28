@@ -48,7 +48,7 @@ function AnimatedCounter({
           0
         </span>
       </div>
-      <p className="text-[0.75rem] sm:text-[0.85rem] font-medium text-slate-400 uppercase tracking-[0.1em] max-w-[200px]">
+      <p className="text-[0.75rem] sm:text-[0.85rem] font-semibold text-muted-foreground uppercase tracking-[0.1em] max-w-[200px]">
         {label}
       </p>
     </div>
@@ -57,7 +57,7 @@ function AnimatedCounter({
 
 export function StatsBand() {
   return (
-    <section className="w-full bg-[#0B1120] py-4 sm:py-5 border-b border-border relative z-20">
+    <section className="w-full bg-card/40 backdrop-blur-md py-4 sm:py-5 border-b border-border relative z-20">
       <div className="max-w-[1200px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
         {/* Item 1 */}
         <AnimatedCounter 
