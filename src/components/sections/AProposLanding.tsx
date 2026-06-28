@@ -74,7 +74,7 @@ export function AProposLanding() {
       {/* ─── CONVICTION ─── */}
       <section className="py-12">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="bg-slate-950 rounded-3xl p-10 lg:p-16 relative overflow-hidden animate-in fade-in slide-in-from-bottom-4 shadow-xl">
+          <div className="dark bg-slate-950 rounded-3xl p-10 lg:p-16 relative overflow-hidden animate-in fade-in slide-in-from-bottom-4 shadow-xl">
             <div className="absolute -top-20 -right-20 w-[300px] h-[300px] bg-ocean/40 blur-3xl rounded-full pointer-events-none" />
             <div className="absolute -bottom-10 left-[20%] w-[200px] h-[200px] bg-purple-500/20 blur-3xl rounded-full pointer-events-none" />
             

@@ -3,6 +3,7 @@
 import { Link } from "next-view-transitions";
 import { Globe, Search, Palette, ArrowRight } from "lucide-react";
 import { useHaptics } from "@/hooks/use-haptics";
+import { Card } from "@/components/ui/Card";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 
 const services = [
@@ -95,7 +96,7 @@ export function ServicesTripartite() {
                 />
 
                 {/* Card */}
-                <div className="relative h-full p-8 lg:p-10 rounded-2xl overflow-hidden shadow-card transition-all duration-500 bg-glass-bg border border-glass-border backdrop-blur-md group-hover:-translate-y-2 group-hover:border-ocean/30 group-hover:shadow-card-hover">
+                <Card variant="elevated" className="relative h-full p-8 lg:p-10 overflow-hidden transition-all duration-500 group-hover:-translate-y-2 group-hover:border-ocean/30 group-hover:shadow-card-hover">
                   {/* Corner Glow */}
                   <div
                     className={`absolute top-0 right-0 w-48 h-48 bg-linear-to-br ${service.gradient} opacity-0 group-hover:opacity-[0.12] blur-3xl transition-opacity duration-700`}
@@ -121,7 +122,7 @@ export function ServicesTripartite() {
                       <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
                     </div>
                   </div>
-                </div>
+                </Card>
               </Link>
             </div>
           ))}

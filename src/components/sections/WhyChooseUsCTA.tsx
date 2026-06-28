@@ -7,10 +7,11 @@ import { Button } from "@/components/ui/Button";
 
 export function WhyChooseUsCTA() {
   return (
-    <section className="relative py-24 lg:py-32 overflow-hidden" id="contact-cta">
-      {/* Living ambient background */}
-      <div className="absolute inset-0 bg-ambient" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,var(--ocean-glow)_0%,transparent_50%)] opacity-[0.10]" />
+    <section className="dark relative py-28 lg:py-36 overflow-hidden bg-[#07101e]" id="contact-cta">
+      {/* Dark ocean band — bookends the hero (dark → sand body → dark → footer) */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_-10%,rgba(14,165,233,0.20),transparent_70%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_50%_at_50%_120%,rgba(6,182,212,0.12),transparent_65%)]" />
+      <div className="absolute inset-0 bg-noise opacity-[0.04]" />
       
       <div className="relative max-w-5xl mx-auto px-6 text-center mb-16">
         <SectionHeader as="h2" size="page" align="center" className="mb-6 leading-tight">
@@ -34,7 +35,7 @@ export function WhyChooseUsCTA() {
           <p className="text-muted-foreground leading-relaxed flex-1 mb-8 text-lg">
             Autour d&apos;un café au Pays Basque ou en visio. Faisons connaissance et évaluons ensemble le potentiel de votre projet.
           </p>
-          <Button asChild size="lg" className="w-full h-auto py-4 text-base font-semibold shadow-glow">
+          <Button asChild size="lg" className="w-full h-auto py-4 text-base font-semibold shadow-glow text-white">
             <Link href="#calendly">
               Réserver un échange de 15 min
               <ArrowRight className="w-5 h-5 ml-2" />
@@ -52,7 +53,7 @@ export function WhyChooseUsCTA() {
           <p className="text-muted-foreground leading-relaxed flex-1 mb-8 text-lg">
             Vous avez une idée précise de vos besoins ? Décrivez-nous votre projet en quelques clics pour obtenir une première estimation.
           </p>
-          <Button asChild size="lg" className="w-full h-auto py-4 text-base font-semibold shadow-glow">
+          <Button asChild size="lg" className="w-full h-auto py-4 text-base font-semibold shadow-glow text-white">
             <Link href="#devis">
               Obtenir un chiffrage
               <ArrowRight className="w-5 h-5 ml-2" />

@@ -61,7 +61,7 @@ export function MegaMenu({ isHero = false }: MegaMenuProps) {
                   transition={{ duration: 0.2 }}
                   className="absolute top-full left-1/2 -translate-x-1/2 pt-4 w-[600px] z-50"
                 >
-                  <div className="bg-linear-to-b from-ocean/10 via-card/90 to-card/95 backdrop-blur-3xl border border-ocean/20 rounded-2xl shadow-[0_0_50px_rgba(14,165,233,0.15)] overflow-hidden p-6 grid grid-cols-12 gap-6">
+                  <div className="bg-background/98 backdrop-blur-2xl border border-border rounded-2xl shadow-float overflow-hidden p-6 grid grid-cols-12 gap-6">
                     <div className="col-span-5 bg-linear-to-br from-ocean/10 to-transparent rounded-xl p-5 flex flex-col justify-between">
                       <div>
                         <p className={`font-bold text-lg mb-1 ${panelHeadingClass}`}>{item.featured.title}</p>

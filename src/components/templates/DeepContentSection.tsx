@@ -205,7 +205,7 @@ export function DeepContentSection({ content }: Props) {
 
       {/* 5. BENEFITS */}
       <section className="relative max-w-7xl mx-auto px-6 lg:px-8 w-full">
-         <div className="bg-linear-to-br from-gray-900 to-gray-950 border border-border rounded-3xl p-8 lg:p-12 overflow-hidden relative">
+         <div className="dark bg-linear-to-br from-gray-900 to-gray-950 border border-border rounded-3xl p-8 lg:p-12 overflow-hidden relative">
             <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-ocean/10 blur-[100px] rounded-full pointer-events-none" />
             
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-24 items-center relative z-10">

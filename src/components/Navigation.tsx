@@ -168,7 +168,7 @@ export function Navigation() {
             {/* CTA Button & Theme Toggle */}
             <div className="hidden lg:flex items-center gap-4">
               <ThemeToggle />
-              <Button asChild size="default" className="shadow-md hover:shadow-lg">
+              <Button asChild size="default" className="shadow-glow">
                 <Link
                   href="/contact"
                   aria-label="Planifier un échange avec WaveIA"

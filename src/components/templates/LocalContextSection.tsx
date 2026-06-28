@@ -205,7 +205,7 @@ export function LocalContextSection({ city, silo = "service" }: Props) {
 
       {/* 3. POURQUOI NOUS À [CITY] */}
       <section className="relative max-w-7xl mx-auto px-6 lg:px-8 w-full">
-        <div className="bg-linear-to-br from-gray-900 to-gray-950 border border-border rounded-3xl p-8 lg:p-12 overflow-hidden relative animate-in">
+        <div className="dark bg-linear-to-br from-gray-900 to-gray-950 border border-border rounded-3xl p-8 lg:p-12 overflow-hidden relative animate-in">
           <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-ocean/10 blur-[100px] rounded-full pointer-events-none" />
           
           <div className="relative z-10">

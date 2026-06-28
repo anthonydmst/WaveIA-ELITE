@@ -2,6 +2,7 @@
 
 import { useRef } from "react";
 import { CheckCircle2, TrendingUp, Search, Palette, Code, Target, Anchor, Shield, Users, Zap, Clock } from "lucide-react";
+import { Card } from "@/components/ui/Card";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 
 export function MethodBlock() {
@@ -167,9 +168,11 @@ export function MethodBlock() {
       <div className="w-full max-w-5xl mx-auto relative px-6 mt-24">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
           {cards.map((card, i) => (
-            <div 
-              key={i} 
-              className="flex flex-col p-8 rounded-2xl shadow-card bg-glass-bg border border-glass-border backdrop-blur-md hover:border-ocean/30 hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300"
+            <Card
+              key={i}
+              variant="elevated"
+              interactive
+              className="flex flex-col p-8"
             >
               <div className="flex items-center gap-4 mb-4">
                 <div className="w-12 h-12 shrink-0 rounded-xl bg-ocean/10 flex items-center justify-center">
@@ -180,7 +183,7 @@ export function MethodBlock() {
               <p className="text-sm text-muted-foreground leading-relaxed">
                 {card.desc}
               </p>
-            </div>
+            </Card>
           ))}
         </div>
       </div>
