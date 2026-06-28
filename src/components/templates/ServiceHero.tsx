@@ -15,7 +15,7 @@ interface Props {
 export function ServiceHero({ hero, breadcrumbItems }: Props) {
 
   return (
-    <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden">
+    <section className="hero-dark relative pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,var(--ocean)_0%,transparent_50%)] opacity-20 light:opacity-15" />

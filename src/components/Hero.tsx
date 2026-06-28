@@ -155,7 +155,7 @@ export function Hero() {
     <section
       ref={containerRef}
       onMouseMove={handleMouseMove}
-      className="dark relative min-h-[110vh] flex items-center justify-center overflow-hidden bg-background"
+      className="hero-dark relative min-h-[110vh] flex items-center justify-center overflow-hidden bg-slate-950 text-white"
     >
       {/* Dynamic Background */}
       <div className="absolute inset-0 z-0">

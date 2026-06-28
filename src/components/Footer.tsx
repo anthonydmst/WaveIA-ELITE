@@ -115,14 +115,14 @@ export function Footer() {
             {/* Quick Links (Agence & Ressources) */}
             <div className="grid grid-cols-2 gap-8 mt-10 pt-8 border-t border-border">
                 <div>
-                    <p className="font-bold text-white mb-4 text-sm font-heading">Agence</p>
+                    <p className="font-bold text-foreground dark:text-white mb-4 text-sm font-heading">Agence</p>
                      <ul className="space-y-3 text-sm text-muted-foreground">
                         <li><Link href="/a-propos" className="hover:text-ocean transition-colors">À propos</Link></li>
                         <li><Link href="/contact" className="hover:text-ocean transition-colors">Contact</Link></li>
                      </ul>
                 </div>
                 <div>
-                     <p className="font-bold text-white mb-4 text-sm font-heading">Ressources</p>
+                     <p className="font-bold text-foreground dark:text-white mb-4 text-sm font-heading">Ressources</p>
                      <ul className="space-y-3 text-sm text-muted-foreground">
                         <li><Link href="/blog" className="hover:text-ocean transition-colors flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-ocean animate-pulse" /> Le Blog</Link></li>
                         <li><Link href="/ressources" className="hover:text-ocean transition-colors">Tous les Guides</Link></li>
