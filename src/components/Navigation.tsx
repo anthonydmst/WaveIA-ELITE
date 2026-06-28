@@ -120,20 +120,31 @@ function MobileAccordionItem({ item, index, onNavigate }: MobileAccordionItemPro
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [isHomeHero, setIsHomeHero] = useState(
+    typeof window !== "undefined"
+      ? window.location.pathname === "/" && window.scrollY < 20
+      : usePathname() === "/"
+  );
   const pathname = usePathname();
 
   const { trigger } = useHaptics();
 
   useEffect(() => {
-
     const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
+      const isScrolled = window.scrollY > 20;
+      setScrolled(isScrolled);
+      setIsHomeHero(window.location.pathname === "/" && !isScrolled);
     };
+
+    const handleRouteChange = () => {
+      setIsHomeHero(window.location.pathname === "/" && window.scrollY < 20);
+    };
+
+    handleRouteChange();
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [pathname]);
 
-  const isHomeHero = pathname === "/" && !scrolled;
   const headerText = isHomeHero ? "text-white" : "text-foreground";
   const headerMuted = isHomeHero ? "text-slate-300" : "text-muted-foreground";
   const hoverText = isHomeHero ? "hover:text-white/80" : "hover:text-ocean";
@@ -143,8 +154,6 @@ export function Navigation() {
       <header
         suppressHydrationWarning
         className={`fixed! top-0 left-0 right-0 z-50 transition-all duration-500 ${
-          isHomeHero ? "dark" : ""
-        } ${
           scrolled
             ? "bg-background/80 backdrop-blur-xl border-b border-border shadow-float"
             : "bg-background/60 backdrop-blur-md border-b border-transparent"

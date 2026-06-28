@@ -31,7 +31,7 @@ export function MegaMenu({ isHero = false }: MegaMenuProps) {
   const panelLinkClass = isHero ? "text-white hover:text-ocean" : "text-foreground hover:text-ocean";
 
   return (
-    <nav className={`hidden lg:flex items-center gap-1 ${isHero ? "text-white" : ""}`} onMouseLeave={() => setActiveTab(null)}>
+    <nav className={`hidden lg:flex items-center gap-1 ${isHero ? "text-white" : "text-foreground"}`} onMouseLeave={() => setActiveTab(null)}>
       {MEGA_MENU_ITEMS.map((item, index) => {
         const isActive = isActiveLink(item.href);
 
