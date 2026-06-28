@@ -24,7 +24,7 @@ export function HomePageRealisationsBlock() {
   };
 
   return (
-    <section id="nos-realisations" className="relative py-24 lg:py-32 overflow-hidden border-t border-white/5">
+    <section id="nos-realisations" className="relative py-24 lg:py-32 overflow-hidden border-t border-border">
       {/* Background Decorators */}
       <div className="absolute inset-0 bg-background" />
       <div className="absolute inset-0 bg-noise opacity-[0.02]" />
@@ -116,7 +116,7 @@ export function HomePageRealisationsBlock() {
                       {project.tags.map((tag, i) => (
                         <span
                           key={i}
-                          className="px-2.5 py-1 bg-white/5 border border-white/10 rounded-full text-xs font-medium text-muted-foreground"
+                          className="px-2.5 py-1 bg-foreground/5 border border-border rounded-full text-xs font-medium text-muted-foreground"
                         >
                           {tag}
                         </span>

@@ -48,7 +48,7 @@ function AnimatedCounter({
           0
         </span>
       </div>
-      <p className="text-[0.75rem] sm:text-[0.85rem] font-medium text-muted-foreground uppercase tracking-[0.1em] max-w-[200px]">
+      <p className="text-[0.75rem] sm:text-[0.85rem] font-medium text-slate-400 uppercase tracking-[0.1em] max-w-[200px]">
         {label}
       </p>
     </div>
@@ -57,7 +57,7 @@ function AnimatedCounter({
 
 export function StatsBand() {
   return (
-    <section className="w-full bg-[#0B1120] py-4 sm:py-5 border-b border-white/10 relative z-20">
+    <section className="w-full bg-[#0B1120] py-4 sm:py-5 border-b border-border relative z-20">
       <div className="max-w-[1200px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
         {/* Item 1 */}
         <AnimatedCounter 
@@ -71,21 +71,21 @@ export function StatsBand() {
           target={100} 
           suffix="%" 
           label="Optimisés SEO" 
-          className="py-3.5 sm:py-4 lg:py-0 border-t border-white/10 sm:border-t-0 sm:border-l" 
+          className="py-3.5 sm:py-4 lg:py-0 border-t border-border sm:border-t-0 sm:border-l" 
         />
         {/* Item 3 */}
         <AnimatedCounter 
           target={100} 
           suffix="%" 
           label="Orientés conversion" 
-          className="py-3.5 sm:py-4 lg:py-0 border-t border-white/10 sm:border-t sm:border-l-0 lg:border-t-0 lg:border-l" 
+          className="py-3.5 sm:py-4 lg:py-0 border-t border-border sm:border-t sm:border-l-0 lg:border-t-0 lg:border-l" 
         />
         {/* Item 4 */}
         <AnimatedCounter 
           target={100} 
           suffix="%" 
           label="Design premium & réactif" 
-          className="py-3.5 sm:py-4 lg:py-0 border-t border-white/10 sm:border-t sm:border-l lg:border-t-0 lg:border-l" 
+          className="py-3.5 sm:py-4 lg:py-0 border-t border-border sm:border-t sm:border-l lg:border-t-0 lg:border-l" 
         />
       </div>
     </section>

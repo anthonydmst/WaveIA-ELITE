@@ -216,7 +216,7 @@ export function CreationSiteSiloLanding() {
                     />
 
                     {/* Card */}
-                    <div className="relative h-full p-8 lg:p-10 bg-glass-bg backdrop-blur-sm rounded-2xl border border-glass-border overflow-hidden transition-all duration-500 group-hover:border-transparent group-hover:translate-y-[-8px] group-hover:shadow-[0_20px_40px_var(--glass-glow)] flex flex-col items-start relative overflow-hidden">
+                    <div className="relative h-full p-8 lg:p-10 bg-glass-bg backdrop-blur-sm rounded-2xl border border-glass-border overflow-hidden transition-all duration-500 group-hover:border-transparent group-hover:translate-y-[-8px] shadow-card group-hover:shadow-card-hover flex flex-col items-start relative overflow-hidden">
                       
                       {/* Corner Glow */}
                       <div

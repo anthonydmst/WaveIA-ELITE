@@ -12,8 +12,8 @@ export function LocalContextVisual() {
   }, []);
 
   const bars = [
-    { label: "Concurrents", height: "45%", color: "bg-white/10", delay: 0 },
-    { label: "Moyenne", height: "30%", color: "bg-white/5", delay: 0.1 },
+    { label: "Concurrents", height: "45%", color: "bg-foreground/10", delay: 0 },
+    { label: "Moyenne", height: "30%", color: "bg-foreground/5", delay: 0.1 },
     { label: "Leader (Eux)", height: "85%", color: "bg-red-500/80 shadow-[0_0_20px_rgba(239,68,68,0.4)]", delay: 0.2 },
     { 
       label: "Vous (Avec WaveIA)", 
@@ -69,7 +69,7 @@ export function LocalContextVisual() {
         
         {/* 🪄 MAIN GLASS CARD */}
         <div 
-          className="animate-in relative z-10 w-full bg-card/30 backdrop-blur-xl border border-white/10 rounded-2xl p-6 shadow-2xl overflow-hidden group"
+          className="animate-in relative z-10 w-full bg-card/30 backdrop-blur-xl border border-border rounded-2xl p-6 shadow-2xl overflow-hidden group"
         >
           {/* Scanline Effect */}
           <m.div 
@@ -81,11 +81,11 @@ export function LocalContextVisual() {
           {/* Header */}
           <div className="flex items-center justify-between mb-8 relative z-10">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-lg bg-linear-to-br from-ocean/20 to-purple-500/20 border border-white/5 flex items-center justify-center shadow-inner">
+              <div className="w-10 h-10 rounded-lg bg-linear-to-br from-ocean/20 to-purple-500/20 border border-border flex items-center justify-center shadow-inner">
                 <TrendingUp className="w-5 h-5 text-ocean drop-shadow-[0_0_8px_rgba(14,165,233,0.5)]" />
               </div>
               <div>
-                <div className="text-sm font-bold text-white tracking-wide">Analytiques</div>
+                <div className="text-sm font-bold text-foreground tracking-wide">Analytiques</div>
                 <div className="text-[10px] uppercase tracking-widest text-ocean/80 font-medium">Performance Locale</div>
               </div>
             </div>
@@ -109,7 +109,7 @@ export function LocalContextVisual() {
                    >
                      <span className="relative inline-flex">
                         <span className="flex rounded-full bg-ocean h-2 w-2 absolute -top-1 -right-1 animate-ping opacity-75"></span>
-                        <span className="px-2 py-0.5 bg-ocean text-white text-[10px] font-bold rounded-full shadow-[0_4px_15px_rgba(14,165,233,0.5)] border border-white/20">
+                        <span className="px-2 py-0.5 bg-ocean text-white text-[10px] font-bold rounded-full shadow-[0_4px_15px_rgba(14,165,233,0.5)] border border-border">
                           CIBLE
                         </span>
                      </span>
@@ -125,9 +125,9 @@ export function LocalContextVisual() {
                     <div className="absolute inset-0 bg-linear-to-b from-white/20 to-transparent opacity-0 group-hover/bar:opacity-100 transition-opacity" />
                     
                     {/* Tooltip on hover */}
-                    <div className="hidden sm:block absolute -top-10 left-1/2 -translate-x-1/2 opacity-0 group-hover/bar:opacity-100 transition-all duration-200 bg-black/90 backdrop-blur-md px-3 py-1.5 rounded-lg text-xs font-bold whitespace-nowrap z-20 pointer-events-none border border-white/10 shadow-xl translate-y-2 group-hover/bar:translate-y-0">
+                    <div className="hidden sm:block absolute -top-10 left-1/2 -translate-x-1/2 opacity-0 group-hover/bar:opacity-100 transition-all duration-200 bg-black/90 backdrop-blur-md px-3 py-1.5 rounded-lg text-xs font-bold whitespace-nowrap z-20 pointer-events-none border border-border shadow-xl translate-y-2 group-hover/bar:translate-y-0">
                        {bar.label}
-                       <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-black/90 rotate-45 border-r border-b border-white/10" />
+                       <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-black/90 rotate-45 border-r border-b border-border" />
                     </div>
                 </div>
 
@@ -149,14 +149,14 @@ export function LocalContextVisual() {
           <m.div 
             animate={{ y: [0, -15, 0] }}
             transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-            className="p-3 rounded-xl shadow-[0_10px_40px_-10px_rgba(0,0,0,0.5)] flex items-center gap-3 backdrop-blur-xl border border-white/10 bg-card/60 hover:scale-105 transition-transform cursor-default"
+            className="p-3 rounded-xl shadow-[0_10px_40px_-10px_rgba(0,0,0,0.5)] flex items-center gap-3 backdrop-blur-xl border border-border bg-card/60 hover:scale-105 transition-transform cursor-default"
           >
             <div className="w-10 h-10 rounded-full bg-yellow-500/10 flex items-center justify-center border border-yellow-500/20 relative overflow-hidden">
                <div className="absolute inset-0 bg-yellow-500/20 animate-pulse" />
                <MapPin className="w-5 h-5 text-yellow-400 relative z-10" />
             </div>
             <div>
-               <div className="text-xs font-bold text-white">Top 3 Local</div>
+               <div className="text-xs font-bold text-foreground">Top 3 Local</div>
                <div className="text-[10px] text-yellow-400/80 font-medium">Pack Local Google</div>
             </div>
           </m.div>
@@ -169,14 +169,14 @@ export function LocalContextVisual() {
            <m.div 
             animate={{ y: [0, 15, 0] }}
             transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-            className="p-3 rounded-xl shadow-[0_10px_40px_-10px_rgba(0,0,0,0.5)] flex items-center gap-3 backdrop-blur-xl border border-white/10 bg-card/60 hover:scale-105 transition-transform cursor-default"
+            className="p-3 rounded-xl shadow-[0_10px_40px_-10px_rgba(0,0,0,0.5)] flex items-center gap-3 backdrop-blur-xl border border-border bg-card/60 hover:scale-105 transition-transform cursor-default"
            >
             <div className="w-10 h-10 rounded-full bg-ocean/10 flex items-center justify-center border border-ocean/20 relative overflow-hidden">
                <div className="absolute inset-0 bg-ocean/20 animate-pulse delay-75" />
                <Search className="w-5 h-5 text-ocean relative z-10" />
             </div>
             <div>
-               <div className="text-xs font-bold text-white">1ère Page</div>
+               <div className="text-xs font-bold text-foreground">1ère Page</div>
                <div className="text-[10px] text-ocean/80 font-medium">9+ Mots-clés</div>
             </div>
           </m.div>

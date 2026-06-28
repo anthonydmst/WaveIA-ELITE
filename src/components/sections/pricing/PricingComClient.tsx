@@ -44,7 +44,7 @@ export function PricingComClient({ breadcrumbItems }: { breadcrumbItems?: Breadc
         </div>
       </PricingPageFactory>
 
-      <div className="relative z-10 py-20 bg-background/50 border-t border-white/5">
+      <div className="relative z-10 py-20 bg-background/50 border-t border-border">
         <div className="container px-4 mx-auto space-y-32">
           
           {/* Identity Section */}

@@ -39,7 +39,7 @@ export function TestimonialsGrid({ testimonials, title, showCTA = true }: Props)
           {testimonials.map((testimonial, idx) => (
             <div
               key={idx}
-              className={`relative p-8 bg-card/50 backdrop-blur-sm border border-white/5 hover:border-ocean/30 rounded-2xl transition-all duration-300 group animate-in ${idx === 1 ? "delay-100" : idx === 2 ? "delay-200" : idx === 3 ? "delay-300" : ""}`}
+              className={`relative p-8 bg-card/50 backdrop-blur-sm border border-border hover:border-ocean/30 rounded-2xl transition-all duration-300 group animate-in ${idx === 1 ? "delay-100" : idx === 2 ? "delay-200" : idx === 3 ? "delay-300" : ""}`}
             >
               {/* Quote Icon */}
               <div className="absolute top-6 right-6 w-10 h-10 rounded-full bg-ocean/10 flex items-center justify-center opacity-50 group-hover:opacity-100 transition-opacity">
@@ -52,7 +52,7 @@ export function TestimonialsGrid({ testimonials, title, showCTA = true }: Props)
                   {[...Array(5)].map((_, i) => (
                     <Star
                       key={i}
-                      className={`w-4 h-4 ${i < testimonial.rating! ? "text-yellow-400 fill-yellow-400" : "text-white/20"}`}
+                      className={`w-4 h-4 ${i < testimonial.rating! ? "text-yellow-400 fill-yellow-400" : "text-foreground/20"}`}
                     />
                   ))}
                 </div>
@@ -92,7 +92,7 @@ export function TestimonialsGrid({ testimonials, title, showCTA = true }: Props)
           <div className="text-center mt-12">
             <Link
               href="/contact"
-              className="group inline-flex items-center gap-2 px-6 py-3 bg-linear-to-r from-ocean to-accent text-white rounded-full font-medium hover:shadow-[0_0_20px_rgba(14,165,233,0.4)] transition-all"
+              className="group inline-flex items-center gap-2 px-6 py-3 bg-linear-to-r from-ocean to-accent text-white rounded-full font-medium hover:shadow-glow transition-all"
             >
               Rejoignez-les
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

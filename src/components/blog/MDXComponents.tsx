@@ -45,7 +45,7 @@ const ImportantBlock = ({ children }: { children: React.ReactNode }) => (
 );
 
 const CTABlock = ({ title, description, label, href }: { title: string; description: string; label: string; href: string }) => (
-  <div className="my-12 p-8 rounded-3xl bg-linear-to-br from-gray-900 to-black border border-white/10 shadow-2xl relative overflow-hidden group text-center">
+  <div className="my-12 p-8 rounded-3xl bg-linear-to-br from-gray-900 to-black border border-border shadow-2xl relative overflow-hidden group text-center">
     <div className="absolute inset-0 bg-ocean/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
     
     <h3 className="text-2xl font-heading font-bold text-white mb-2 relative z-10">{title}</h3>
@@ -64,7 +64,7 @@ const CTABlock = ({ title, description, label, href }: { title: string; descript
 const MDXComponents = {
   a: CustomLink,
   blockquote: (props: ComponentProps<"blockquote">) => <blockquote className="border-l-4 border-ocean pl-4 italic text-muted-foreground my-6" {...props} />,
-  NextImage: (props: ComponentProps<typeof NextImage>) => <div className="my-8 rounded-2xl overflow-hidden shadow-lg border border-white/10"><NextImage {...props} /></div>,
+  NextImage: (props: ComponentProps<typeof NextImage>) => <div className="my-8 rounded-2xl overflow-hidden shadow-lg border border-border"><NextImage {...props} /></div>,
   TipBlock,
   ImportantBlock,
   CTABlock,

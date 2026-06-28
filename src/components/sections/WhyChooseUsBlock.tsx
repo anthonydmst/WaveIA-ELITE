@@ -5,9 +5,10 @@ import Link from "next/link";
 
 export function WhyChooseUsBlock() {
   return (
-    <section className="relative py-24 overflow-hidden bg-background">
-      {/* Glow Effects */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom,var(--ocean)_0%,transparent_50%)] opacity-[0.03]" />
+    <section className="relative py-24 overflow-hidden">
+      {/* Living ambient background */}
+      <div className="absolute inset-0 bg-ambient" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom,var(--ocean)_0%,transparent_50%)] opacity-[0.05]" />
       
       <div className="relative max-w-5xl mx-auto px-6 mb-16 text-center">
         <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-ocean/10 border border-ocean/20 rounded-full text-ocean text-sm font-semibold uppercase tracking-wider mb-6">
@@ -15,7 +16,7 @@ export function WhyChooseUsBlock() {
         </span>
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mt-4 mb-6 leading-tight">
           Plus qu&apos;une agence web.<br className="hidden sm:block" />
-          <span className="italic text-ocean-light font-heading ml-0 sm:ml-3">L&apos;ingénierie de votre croissance.</span>
+          <span className="italic text-gradient-brand font-heading ml-0 sm:ml-3">L&apos;ingénierie de votre croissance.</span>
         </h2>
         <p className="text-muted-foreground text-lg max-w-3xl mx-auto leading-relaxed">
           Nous ne livrons pas de simples &quot;cartes de visite digitales&quot;. Nous concevons des écosystèmes connectés où la technologie, l&apos;Intelligence Artificielle et la stratégie commerciale travaillent ensemble pour votre rentabilité.
@@ -53,13 +54,13 @@ export function WhyChooseUsBlock() {
               ))}
             </ul>
             <div className="pt-4">
-              <Link href="#modules" className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-ocean hover:bg-ocean-dark text-white font-semibold transition-all shadow-[0_0_20px_rgba(14,165,233,0.3)] hover:shadow-[0_0_30px_rgba(14,165,233,0.5)]">
+              <Link href="#modules" className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-ocean hover:bg-ocean-dark text-white font-semibold transition-all shadow-glow">
                 Découvrir nos modules sur-mesure
                 <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
           </div>
-          <div className="relative h-full min-h-[400px] rounded-2xl border border-glass-border bg-glass-bg p-8 overflow-hidden flex items-center justify-center">
+          <div className="relative h-full min-h-[400px] rounded-2xl border border-glass-border bg-glass-bg shadow-card p-8 overflow-hidden flex items-center justify-center">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,var(--ocean)_0%,transparent_60%)] opacity-10" />
             <div className="relative z-10 w-full space-y-4">
                {[
@@ -84,7 +85,7 @@ export function WhyChooseUsBlock() {
 
         {/* Section 2: IA */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="order-2 lg:order-1 relative h-full min-h-[400px] rounded-2xl border border-glass-border bg-glass-bg p-8 overflow-hidden flex items-center justify-center">
+          <div className="order-2 lg:order-1 relative h-full min-h-[400px] rounded-2xl border border-glass-border bg-glass-bg shadow-card p-8 overflow-hidden flex items-center justify-center">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,var(--ocean)_0%,transparent_60%)] opacity-10" />
             <div className="relative z-10 w-full grid grid-cols-2 gap-4">
                <div className="aspect-square rounded-xl bg-background/50 border border-ocean/20 flex flex-col items-center justify-center gap-3 backdrop-blur-sm p-4 text-center shadow-sm">
@@ -171,14 +172,14 @@ export function WhyChooseUsBlock() {
             </div>
 
             <div className="pt-4">
-              <Link href="#contact" className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-ocean hover:bg-ocean-dark text-white font-semibold transition-all shadow-[0_0_20px_rgba(14,165,233,0.3)] hover:shadow-[0_0_30px_rgba(14,165,233,0.5)]">
+              <Link href="#contact" className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-ocean hover:bg-ocean-dark text-white font-semibold transition-all shadow-glow">
                 Faire connaissance avec l&apos;équipe
                 <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
           </div>
           
-          <div className="relative h-full min-h-[400px] rounded-2xl border border-glass-border bg-glass-bg overflow-hidden flex items-center justify-center p-8">
+          <div className="relative h-full min-h-[400px] rounded-2xl border border-glass-border bg-glass-bg shadow-card overflow-hidden flex items-center justify-center p-8">
              <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,var(--ocean)_0%,transparent_70%)] opacity-10" />
              <div className="relative z-10 w-full flex flex-col items-center justify-center text-center">
                 <div className="flex -space-x-6 mb-6">

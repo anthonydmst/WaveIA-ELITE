@@ -35,7 +35,7 @@ export function MegaMenu() {
                 relative px-4 py-2 text-[15px] font-medium transition-colors rounded-full flex items-center gap-2
                 ${activeTab === index || isActive 
                   ? "text-ocean bg-ocean/10 shadow-[0_0_15px_rgba(14,165,233,0.15)]" 
-                  : "text-muted-foreground hover:text-foreground hover:bg-white/5"
+                  : "text-muted-foreground hover:text-foreground hover:bg-foreground/5"
                 }
               `}
             >
@@ -89,7 +89,7 @@ export function MegaMenu() {
                       </div>
 
                       {item.cities.length > 0 && (
-                        <div className="mt-6 pt-4 border-t border-white/5">
+                        <div className="mt-6 pt-4 border-t border-border">
                           <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2">
                             Zones Ciblées
                           </p>
@@ -98,7 +98,7 @@ export function MegaMenu() {
                                <Link 
                                  key={city.href}
                                  href={city.href}
-                                 className="text-xs px-2 py-1 rounded-md bg-white/5 hover:bg-ocean/10 hover:text-ocean transition-colors"
+                                 className="text-xs px-2 py-1 rounded-md bg-foreground/5 hover:bg-ocean/10 hover:text-ocean transition-colors"
                                >
                                  {city.label}
                                </Link>

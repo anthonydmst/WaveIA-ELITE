@@ -32,7 +32,7 @@ export function ServiceProcess({ process }: Props) {
 
         <div className="relative">
           {/* Central Connecting Line (Desktop) - CSS Animation */}
-          <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-px bg-white/5 -translate-x-1/2">
+          <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-px bg-foreground/5 -translate-x-1/2">
             <div 
               className="w-full bg-linear-to-b from-ocean via-accent to-ocean-light opacity-50 animate-line-grow"
               style={{ height: '100%' }}
@@ -49,7 +49,7 @@ export function ServiceProcess({ process }: Props) {
               >
                 {/* Content Side */}
                 <div className="flex-1 w-full lg:w-1/2 text-center lg:text-left">
-                  <div className={`group relative p-8 rounded-3xl bg-card/40 backdrop-blur-md border border-white/5 hover:border-ocean/30 hover:bg-card/60 transition-all duration-300 hover:shadow-[0_0_40px_rgba(14,165,233,0.1)] ${
+                  <div className={`group relative p-8 rounded-3xl bg-card/40 backdrop-blur-md border border-border hover:border-ocean/30 hover:bg-card/60 transition-all duration-300 hover:shadow-[0_0_40px_rgba(14,165,233,0.1)] ${
                     index % 2 === 0 ? "lg:text-left" : "lg:text-right"
                   }`}>
                     <div className={`absolute top-0 w-20 h-20 bg-linear-to-br from-ocean/20 to-transparent blur-2xl rounded-full opacity-50 group-hover:opacity-100 transition-opacity ${
@@ -72,7 +72,7 @@ export function ServiceProcess({ process }: Props) {
                   </div>
                    {/* Mobile Line Connector */}
                    {index !== process.length - 1 && (
-                    <div className="lg:hidden absolute top-16 left-1/2 w-px h-12 bg-white/10 -translate-x-1/2" />
+                    <div className="lg:hidden absolute top-16 left-1/2 w-px h-12 bg-foreground/10 -translate-x-1/2" />
                   )}
                 </div>
 

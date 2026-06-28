@@ -91,7 +91,7 @@ export function SeoGmbLanding() {
               type="url" 
               id="auditUrl"
               placeholder="Ex : https://maps.google.com/..." 
-              className="flex-1 bg-white/10 border border-white/20 text-white placeholder-white/50 px-6 py-4 rounded-full focus:outline-none focus:border-white transition-colors"
+              className="flex-1 bg-white/10 border border-border text-white placeholder-white/50 px-6 py-4 rounded-full focus:outline-none focus:border-white transition-colors"
             />
             <button 
               onClick={launchAudit}
@@ -382,7 +382,7 @@ export function SeoGmbLanding() {
               { num: "04", title: "Amélioration continue", desc: "Suivi des performances, ajustements IA et rapports ROI." }
             ].map((p, i) => (
               <div key={i} className="relative z-10 text-center animate-in fade-in slide-in-from-bottom-4" style={{animationDelay: `${i * 150}ms`}}>
-                <div className="w-20 h-20 mx-auto rounded-full glass-card border-2 border-ocean flex items-center justify-center font-heading font-black text-2xl text-ocean mb-6 shadow-[0_0_20px_rgba(14,165,233,0.2)]">
+                <div className="w-20 h-20 mx-auto rounded-full glass-card border-2 border-ocean flex items-center justify-center font-heading font-black text-2xl text-ocean mb-6 shadow-glow">
                   {p.num}
                 </div>
                 <h4 className="text-lg font-bold font-heading text-foreground mb-3">{p.title}</h4>

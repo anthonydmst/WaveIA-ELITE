@@ -81,7 +81,7 @@ export function RealisationsPageClient({ items }: { items?: BreadcrumbItem[] }) 
                 className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all ${
                   activeCategory === category.id
                     ? "bg-ocean text-background"
-                    : "bg-white/5 text-muted-foreground hover:bg-white/10 hover:text-foreground"
+                    : "bg-foreground/5 text-muted-foreground hover:bg-foreground/10 hover:text-foreground"
                 }`}
               >
                 {category.label}
@@ -93,7 +93,7 @@ export function RealisationsPageClient({ items }: { items?: BreadcrumbItem[] }) 
       </section>
 
       {/* Methodology Section (Desire) */}
-      <section className="relative py-12 lg:py-20 bg-card/30 border-y border-white/5">
+      <section className="relative py-12 lg:py-20 bg-card/30 border-y border-border">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
            <div className="text-center mb-12">
              <span className="text-ocean text-sm font-semibold uppercase tracking-wider">Notre Secret</span>
@@ -108,7 +108,7 @@ export function RealisationsPageClient({ items }: { items?: BreadcrumbItem[] }) 
              ].map((item, i) => (
                 <div 
                   key={i} 
-                  className={`p-6 bg-card/50 rounded-xl border border-white/5 hover:border-ocean/30 transition-colors group animate-in ${i === 1 ? "delay-100" : i === 2 ? "delay-200" : ""}`}
+                  className={`p-6 bg-card/50 rounded-xl border border-border hover:border-ocean/30 transition-colors group animate-in ${i === 1 ? "delay-100" : i === 2 ? "delay-200" : ""}`}
                 >
                   <div className="flex items-center gap-4 mb-4">
                     <div className="w-12 h-12 rounded-xl bg-ocean/10 flex items-center justify-center group-hover:scale-110 transition-transform">
@@ -135,7 +135,7 @@ export function RealisationsPageClient({ items }: { items?: BreadcrumbItem[] }) 
                 return (
                   <article
                     key={project.id}
-                    className="group relative bg-card rounded-2xl border border-white/5 overflow-hidden hover:border-ocean/30 transition-all hover:shadow-[0_20px_40px_rgba(14,165,233,0.1)] animate-in"
+                    className="group relative bg-card rounded-2xl border border-border overflow-hidden hover:border-ocean/30 transition-all hover:shadow-[0_20px_40px_rgba(14,165,233,0.1)] animate-in"
                   >
                     <div className="relative aspect-4/3 overflow-hidden">
                       <Image
@@ -162,7 +162,7 @@ export function RealisationsPageClient({ items }: { items?: BreadcrumbItem[] }) 
                         {project.tags.map((tag, i) => (
                           <span
                             key={i}
-                            className="px-2.5 py-1 bg-white/5 rounded-full text-xs font-medium text-muted-foreground"
+                            className="px-2.5 py-1 bg-foreground/5 rounded-full text-xs font-medium text-muted-foreground"
                           >
                             {tag}
                           </span>
@@ -209,7 +209,7 @@ export function RealisationsPageClient({ items }: { items?: BreadcrumbItem[] }) 
                  <Link 
                    key={city.slug} 
                    href={`/creation-site-internet/${city.slug}`}
-                   className="px-4 py-2 rounded-full bg-white/5 border border-white/10 font-medium text-muted-foreground hover:border-ocean/30 hover:text-ocean transition-all"
+                   className="px-4 py-2 rounded-full bg-foreground/5 border border-border font-medium text-muted-foreground hover:border-ocean/30 hover:text-ocean transition-all"
                  >
                    📍 {city.name}
                  </Link>

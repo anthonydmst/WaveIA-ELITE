@@ -48,7 +48,7 @@ export default function NotFound() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8 }}
-          className="relative bg-card/50 backdrop-blur-xl border border-white/10 p-12 rounded-3xl shadow-2xl"
+          className="relative bg-card/50 backdrop-blur-xl border border-border p-12 rounded-3xl shadow-2xl"
         >
           {/* Animated 404 */}
           <m.div
@@ -58,7 +58,7 @@ export default function NotFound() {
             className="flex justify-center mb-8"
           >
             <div className="relative">
-              <span className="font-heading text-9xl font-bold text-transparent bg-clip-text bg-linear-to-b from-white to-white/10">
+              <span className="font-heading text-9xl font-bold text-transparent bg-clip-text bg-linear-to-b from-foreground to-foreground/10">
                 404
               </span>
               <m.div
@@ -110,7 +110,7 @@ export default function NotFound() {
 
             <Link
               href="/contact"
-              className="group px-8 py-4 bg-white/5 hover:bg-white/10 text-foreground font-semibold rounded-full border border-white/10 hover:border-white/20 transition-all duration-300 flex items-center gap-2"
+              className="group px-8 py-4 bg-foreground/5 hover:bg-foreground/10 text-foreground font-semibold rounded-full border border-border hover:border-border transition-all duration-300 flex items-center gap-2"
             >
               <span>Nous contacter</span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

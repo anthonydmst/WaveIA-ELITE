@@ -216,7 +216,7 @@ export function AProposLanding() {
                    { icon: "⚙️", text: "Automatisation des workflows", tag: "Auto" },
                    { icon: "🎨", text: "Création graphique UI assistée", tag: "Design" }
                  ].map((feat, i) => (
-                   <div key={i} className="flex items-center gap-4 bg-background/10 backdrop-blur-md border border-white/10 rounded-xl p-4 hover:bg-background/20 transition-colors">
+                   <div key={i} className="flex items-center gap-4 bg-background/10 backdrop-blur-md border border-border rounded-xl p-4 hover:bg-background/20 transition-colors">
                      <span className="text-xl">{feat.icon}</span>
                      <span className="text-sm text-white/90 font-medium">{feat.text}</span>
                      <span className="ml-auto text-[10px] font-bold px-2 py-1 bg-ocean text-white rounded uppercase tracking-widest">{feat.tag}</span>
@@ -328,7 +328,7 @@ export function AProposLanding() {
                 <a href="#contact" className="inline-flex items-center gap-2 bg-white text-ocean font-heading font-bold text-[0.95rem] px-8 py-3.5 rounded-full hover:scale-105 transition-transform shadow-lg">
                   📞 Réserver un appel gratuit
                 </a>
-                <a href="/contact" className="inline-flex items-center gap-2 bg-transparent text-white text-sm font-heading font-bold px-7 py-3.5 rounded-full border-2 border-white/50 hover:border-white transition-colors">
+                <a href="/contact" className="inline-flex items-center gap-2 bg-transparent text-white text-sm font-heading font-bold px-7 py-3.5 rounded-full border-2 border-border hover:border-white transition-colors">
                   Configurer mon projet
                 </a>
               </div>

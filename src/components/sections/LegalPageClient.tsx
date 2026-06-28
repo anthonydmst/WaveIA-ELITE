@@ -42,7 +42,7 @@ export function LegalPageClient() {
             
             {/* Éditeur */}
             <div
-              className="p-8 bg-card/50 backdrop-blur-sm border border-white/5 rounded-2xl mb-8 animate-in"
+              className="p-8 bg-card/50 backdrop-blur-sm border border-border rounded-2xl mb-8 animate-in"
             >
               <div className="flex items-center gap-3 mb-6">
                 <div className="p-3 bg-ocean/10 rounded-xl">
@@ -62,7 +62,7 @@ export function LegalPageClient() {
 
             {/* Hébergeur */}
             <div
-              className="p-8 bg-card/50 backdrop-blur-sm border border-white/5 rounded-2xl mb-8 animate-in delay-100"
+              className="p-8 bg-card/50 backdrop-blur-sm border border-border rounded-2xl mb-8 animate-in delay-100"
             >
               <div className="flex items-center gap-3 mb-6">
                 <div className="p-3 bg-ocean/10 rounded-xl">
@@ -79,7 +79,7 @@ export function LegalPageClient() {
 
             {/* Propriété intellectuelle */}
             <div
-              className="p-8 bg-card/50 backdrop-blur-sm border border-white/5 rounded-2xl mb-8 animate-in delay-200"
+              className="p-8 bg-card/50 backdrop-blur-sm border border-border rounded-2xl mb-8 animate-in delay-200"
             >
               <div className="flex items-center gap-3 mb-6">
                 <div className="p-3 bg-ocean/10 rounded-xl">
@@ -101,7 +101,7 @@ export function LegalPageClient() {
             </div>
 
             {/* Cookies & Données */}
-            <div className="p-8 bg-card/50 backdrop-blur-sm border border-white/5 rounded-2xl animate-in delay-300">
+            <div className="p-8 bg-card/50 backdrop-blur-sm border border-border rounded-2xl animate-in delay-300">
               <h2 className="text-2xl font-bold mb-4">Cookies et données personnelles</h2>
               <p className="text-muted-foreground mb-4">
                 Pour plus d&apos;informations sur la collecte et le traitement de vos données personnelles, veuillez consulter notre <a href="/privacy" className="text-ocean hover:underline">Politique de Confidentialité</a>.

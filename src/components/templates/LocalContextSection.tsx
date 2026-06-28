@@ -69,7 +69,7 @@ export function LocalContextSection({ city, silo = "service" }: Props) {
               {city.name.toUpperCase()} ({city.zipCode})
             </div>
             
-            <h2 className="font-heading text-4xl md:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-linear-to-r from-white to-white/70">
+            <h2 className="font-heading text-4xl md:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-linear-to-r from-foreground to-foreground/70">
               {getSiloTitle()}
             </h2>
             
@@ -78,7 +78,7 @@ export function LocalContextSection({ city, silo = "service" }: Props) {
             </p>
 
             <div className="space-y-6">
-                <div className="p-6 bg-card/50 backdrop-blur-sm border border-white/5 rounded-2xl hover:border-ocean/20 transition-colors duration-300">
+                <div className="p-6 bg-card/50 backdrop-blur-sm border border-border rounded-2xl hover:border-ocean/20 transition-colors duration-300">
                     <div className="flex items-center gap-3 mb-3 text-ocean">
                         <History className="w-5 h-5" />
                         <span className="text-sm font-bold uppercase tracking-wider">Un peu d&apos;histoire</span>
@@ -88,8 +88,8 @@ export function LocalContextSection({ city, silo = "service" }: Props) {
                     </p>
                 </div>
                 
-                <div className="p-6 bg-card/30 backdrop-blur-sm border border-white/5 rounded-2xl hover:border-ocean/20 transition-colors duration-300">
-                    <div className="flex items-center gap-3 mb-3 text-white">
+                <div className="p-6 bg-card/30 backdrop-blur-sm border border-border rounded-2xl hover:border-ocean/20 transition-colors duration-300">
+                    <div className="flex items-center gap-3 mb-3 text-foreground">
                         <Building2 className="w-5 h-5" />
                         <span className="text-sm font-bold uppercase tracking-wider">Contexte Économique</span>
                     </div>
@@ -103,7 +103,7 @@ export function LocalContextSection({ city, silo = "service" }: Props) {
           {/* Right Visual & Stats */}
           <div className="relative animate-scale-in">
             {/* Main Image Container */}
-            <div className="relative aspect-4/3 rounded-3xl overflow-hidden border border-white/10 shadow-2xl group">
+            <div className="relative aspect-4/3 rounded-3xl overflow-hidden border border-border shadow-2xl group">
                 {/* Fallback pattern or Real Image */}
                  <div className="absolute inset-0 bg-linear-to-br from-gray-900 via-gray-800 to-black overflow-hidden select-none">
                     {/* Dynamic City Image with Premium Filters */}
@@ -120,8 +120,8 @@ export function LocalContextSection({ city, silo = "service" }: Props) {
                  </div>
                  
                  {/* Floating Stats Overlay - Glassmorphism */}
-                 <div className="absolute inset-x-6 bottom-6 p-6 bg-black/60 backdrop-blur-xl border border-white/10 rounded-2xl">
-                     <div className="grid grid-cols-3 gap-4 text-center divide-x divide-white/10">
+                 <div className="absolute inset-x-6 bottom-6 p-6 bg-black/60 backdrop-blur-xl border border-border rounded-2xl">
+                     <div className="grid grid-cols-3 gap-4 text-center divide-x divide-border">
                         {localSEO.localStats.businesses && (
                             <div className="px-2">
                                 <div className="text-2xl font-bold text-white mb-1">{localSEO.localStats.businesses.split(" ")[0]}</div>
@@ -166,7 +166,7 @@ export function LocalContextSection({ city, silo = "service" }: Props) {
 
         <div className="grid md:grid-cols-2 gap-8">
           {/* Quartiers */}
-          <div className="p-8 bg-card/50 backdrop-blur-sm border border-white/5 rounded-2xl animate-in-left">
+          <div className="p-8 bg-card/50 backdrop-blur-sm border border-border rounded-2xl animate-in-left">
             <h4 className="text-lg font-bold mb-6 flex items-center gap-2">
               <span className="w-2 h-2 bg-ocean rounded-full" />
               Quartiers de {city.name}
@@ -175,7 +175,7 @@ export function LocalContextSection({ city, silo = "service" }: Props) {
               {localSEO.zones.map((zone, idx) => (
                 <span
                   key={idx}
-                  className="px-3 py-1.5 bg-white/5 border border-white/10 rounded-full text-sm text-muted-foreground hover:border-ocean/30 hover:text-ocean transition-colors cursor-default"
+                  className="px-3 py-1.5 bg-foreground/5 border border-border rounded-full text-sm text-muted-foreground hover:border-ocean/30 hover:text-ocean transition-colors cursor-default"
                 >
                   📍 {zone}
                 </span>
@@ -184,7 +184,7 @@ export function LocalContextSection({ city, silo = "service" }: Props) {
           </div>
 
           {/* Villes proches */}
-          <div className="p-8 bg-card/50 backdrop-blur-sm border border-white/5 rounded-2xl animate-in-right">
+          <div className="p-8 bg-card/50 backdrop-blur-sm border border-border rounded-2xl animate-in-right">
             <h4 className="text-lg font-bold mb-6 flex items-center gap-2">
               <span className="w-2 h-2 bg-accent rounded-full" />
               Communes alentour
@@ -193,7 +193,7 @@ export function LocalContextSection({ city, silo = "service" }: Props) {
               {localSEO.nearbyAreas.map((area, idx) => (
                 <span
                   key={idx}
-                  className="px-3 py-1.5 bg-white/5 border border-white/10 rounded-full text-sm text-muted-foreground hover:border-accent/30 hover:text-accent transition-colors cursor-default"
+                  className="px-3 py-1.5 bg-foreground/5 border border-border rounded-full text-sm text-muted-foreground hover:border-accent/30 hover:text-accent transition-colors cursor-default"
                 >
                   🗺️ {area}
                 </span>
@@ -205,7 +205,7 @@ export function LocalContextSection({ city, silo = "service" }: Props) {
 
       {/* 3. POURQUOI NOUS À [CITY] */}
       <section className="relative max-w-7xl mx-auto px-6 lg:px-8 w-full">
-        <div className="bg-linear-to-br from-gray-900 to-gray-950 border border-white/5 rounded-3xl p-8 lg:p-12 overflow-hidden relative animate-in">
+        <div className="bg-linear-to-br from-gray-900 to-gray-950 border border-border rounded-3xl p-8 lg:p-12 overflow-hidden relative animate-in">
           <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-ocean/10 blur-[100px] rounded-full pointer-events-none" />
           
           <div className="relative z-10">

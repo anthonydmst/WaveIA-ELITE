@@ -152,10 +152,10 @@ export function Hero() {
   const moveX = useSpring(useTransform(mouseX, [-0.5, 0.5], [-20, 20]), springConfig);
 
   return (
-    <section 
+    <section
       ref={containerRef}
       onMouseMove={handleMouseMove}
-      className="relative min-h-[110vh] flex items-center justify-center overflow-hidden bg-background"
+      className="dark relative min-h-[110vh] flex items-center justify-center overflow-hidden bg-background"
     >
       {/* Dynamic Background */}
       <div className="absolute inset-0 z-0">
@@ -165,11 +165,11 @@ export function Hero() {
           fill
           priority
           quality={80}
-          className="object-cover opacity-15 dark:opacity-15 light:opacity-5"
+          className="object-cover opacity-15"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(14,165,233,0.15),transparent_70%)] dark:bg-[radial-gradient(circle_at_50%_50%,rgba(14,165,233,0.15),transparent_70%)] light:bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,1),transparent_80%)] opacity-50" />
-        <div className="absolute top-0 left-0 right-0 h-[600px] bg-linear-to-b from-ocean/5 dark:from-ocean/10 to-transparent light:opacity-40 opacity-30" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(14,165,233,0.15),transparent_70%)] opacity-50" />
+        <div className="absolute top-0 left-0 right-0 h-[600px] bg-linear-to-b from-ocean/10 to-transparent opacity-30" />
         
         {/* Animated Noise */}
         <div className="absolute inset-0 bg-noise opacity-[0.03]" />
@@ -269,7 +269,7 @@ export function Hero() {
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-ocean opacity-75" />
             <span className="relative inline-flex rounded-full h-2 w-2 bg-ocean" />
           </span>
-          <span className="text-sm font-medium text-ocean tracking-wide uppercase">
+          <span className="text-overline text-ocean">
             PERFORMANCE & INNOVATION IA
           </span>
         </div>
@@ -289,7 +289,7 @@ export function Hero() {
         </SectionHeader>
 
         <p
-          className="max-w-3xl text-xl sm:text-2xl text-muted-foreground dark:text-muted-foreground light:text-slate-700 leading-relaxed mb-12 font-light animate-hero-fade-up delay-200"
+          className="max-w-3xl text-xl sm:text-2xl text-muted-foreground leading-relaxed mb-12 font-light animate-hero-fade-up delay-200"
         >
           Votre marché évolue. Nous créons des sites <span className="text-foreground font-medium underline decoration-ocean/30 decoration-2 underline-offset-4">performants</span> et <span className="text-ocean font-medium">rentables</span>, pensés pour accélérer votre développement grâce à la rigueur de nos process et la puissance de l&apos;IA.
         </p>
@@ -300,11 +300,11 @@ export function Hero() {
           <Link
             href="/contact"
             onClick={() => trigger("medium")}
-            className="group relative px-10 py-5 text-lg font-semibold overflow-hidden rounded-full shadow-lg hover:shadow-ocean/25 transition-all duration-300"
+            className="group relative px-10 py-5 text-lg font-semibold overflow-hidden rounded-full shadow-glow hover:scale-[1.02] transition-all duration-300"
           >
             <div className="absolute inset-0 bg-linear-to-r from-ocean to-accent group-hover:scale-105 transition-transform duration-500" />
             <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
-            <span className="relative flex items-center gap-2 text-white dark:text-background light:text-white">
+            <span className="relative flex items-center gap-2 text-white">
               Lancer votre projet
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </span>

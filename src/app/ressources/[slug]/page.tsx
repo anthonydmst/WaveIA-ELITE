@@ -55,14 +55,14 @@ export default async function ResourcePage(props: { params: Promise<{ slug: stri
 
         <ArticleHeader metadata={resource.metadata} />
         
-        <article className="prose prose-invert prose-lg prose-ocean max-w-4xl mx-auto
-            prose-headings:font-heading prose-headings:font-bold 
-            prose-h1:text-4xl prose-h2:text-3xl prose-h2:text-white prose-h2:mt-12 prose-h2:mb-6
-            prose-h3:text-2xl prose-h3:text-white/90
-            prose-p:text-gray-300 prose-p:leading-relaxed
-            prose-strong:text-white prose-strong:font-bold
-            prose-li:text-gray-300
-            prose-blockquote:border-ocean prose-blockquote:bg-white/5 prose-blockquote:py-2 prose-blockquote:px-6 prose-blockquote:rounded-r-lg prose-blockquote:not-italic
+        <article className="prose prose-lg prose-ocean max-w-4xl mx-auto
+            prose-headings:font-heading prose-headings:font-bold prose-headings:text-foreground
+            prose-h1:text-4xl prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6
+            prose-h3:text-2xl
+            prose-p:text-muted-foreground prose-p:leading-relaxed
+            prose-strong:text-foreground prose-strong:font-bold
+            prose-li:text-muted-foreground
+            prose-blockquote:border-ocean prose-blockquote:bg-foreground/5 prose-blockquote:py-2 prose-blockquote:px-6 prose-blockquote:rounded-r-lg prose-blockquote:not-italic
         ">
           <MDXRemote 
             source={resource.content} 
@@ -71,10 +71,10 @@ export default async function ResourcePage(props: { params: Promise<{ slug: stri
         </article>
 
         {/* CTA Footer Article */}
-        <div className="max-w-4xl mx-auto mt-20 pt-10 border-t border-white/10">
+        <div className="max-w-4xl mx-auto mt-20 pt-10 border-t border-border">
             <div className="bg-linear-to-r from-ocean/10 to-transparent p-8 rounded-2xl border border-ocean/20">
-                <h3 className="text-2xl font-bold font-heading text-white mb-2">Besoin d&apos;aide pour appliquer ces conseils ?</h3>
-                <p className="text-gray-400 mb-6">Nos experts sont spécialisés sur le marché local du Pays Basque.</p>
+                <h3 className="text-2xl font-bold font-heading text-foreground mb-2">Besoin d&apos;aide pour appliquer ces conseils ?</h3>
+                <p className="text-muted-foreground mb-6">Nos experts sont spécialisés sur le marché local du Pays Basque.</p>
                 <Link href="/contact" className="inline-flex justify-center items-center px-6 py-3 bg-ocean text-white font-bold rounded-full hover:bg-ocean-light transition-colors">
                     Prendre rendez-vous
                 </Link>

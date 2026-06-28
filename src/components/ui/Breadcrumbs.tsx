@@ -33,7 +33,7 @@ export function Breadcrumbs({ items: manualItems }: BreadcrumbsProps) {
               className="flex items-center"
             >
               {!isFirst && (
-                <ChevronRight className="w-4 h-4 mx-2 text-white/10 shrink-0" />
+                <ChevronRight className="w-4 h-4 mx-2 text-muted-foreground/40 shrink-0" />
               )}
               
               {isLast ? (

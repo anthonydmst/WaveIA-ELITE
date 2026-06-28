@@ -109,7 +109,7 @@ export function SubServicesGrid({ services, title = "Nos Solutions" }: SubServic
                   <div className="absolute inset-0 bg-linear-to-br from-ocean/20 via-transparent to-accent/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl" />
                   
                   {/* Main Card */}
-                  <div className="relative h-full p-8 bg-card/80 backdrop-blur-sm rounded-2xl border border-white/5 group-hover:border-ocean/30 transition-all duration-300 group-hover:translate-y-[-8px] group-hover:shadow-[0_20px_40px_rgba(14,165,233,0.15)]">
+                  <div className="relative h-full p-8 bg-card/80 backdrop-blur-sm rounded-2xl border border-border group-hover:border-ocean/30 transition-all duration-300 group-hover:translate-y-[-8px] group-hover:shadow-[0_20px_40px_rgba(14,165,233,0.15)]">
                     
                     {/* Glow Effect */}
                     <div className="absolute top-0 right-0 w-32 h-32 bg-ocean/10 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -117,7 +117,7 @@ export function SubServicesGrid({ services, title = "Nos Solutions" }: SubServic
                     {/* Icon Container */}
                     <div className="relative w-14 h-14 mb-6">
                       <div className="absolute inset-0 bg-ocean/20 blur-xl rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                      <div className="relative w-full h-full flex items-center justify-center bg-white/5 border border-white/10 rounded-xl group-hover:bg-ocean/10 group-hover:border-ocean/30 group-hover:scale-110 transition-all duration-300">
+                      <div className="relative w-full h-full flex items-center justify-center bg-foreground/5 border border-border rounded-xl group-hover:bg-ocean/10 group-hover:border-ocean/30 group-hover:scale-110 transition-all duration-300">
                         <Icon className="w-6 h-6 text-muted-foreground group-hover:text-ocean transition-colors duration-300" />
                       </div>
                     </div>

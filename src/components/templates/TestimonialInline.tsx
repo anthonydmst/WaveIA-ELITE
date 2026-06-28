@@ -13,7 +13,7 @@ interface Props {
 export function TestimonialInline({ quote, author, role, company, rating = 5 }: Props) {
   return (
     <section className="relative max-w-4xl mx-auto px-6 lg:px-8 w-full">
-      <div className="relative bg-card/50 backdrop-blur-sm border border-white/5 rounded-3xl p-8 lg:p-12 overflow-hidden animate-scale-in">
+      <div className="relative bg-card/50 backdrop-blur-sm border border-border rounded-3xl p-8 lg:p-12 overflow-hidden animate-scale-in">
         {/* Decorative Quote */}
         <div className="absolute top-6 left-6 w-16 h-16 rounded-full bg-ocean/10 flex items-center justify-center">
           <Quote className="w-8 h-8 text-ocean" />
@@ -29,7 +29,7 @@ export function TestimonialInline({ quote, author, role, company, rating = 5 }: 
               {[...Array(5)].map((_, i) => (
                 <Star
                   key={i}
-                  className={`w-5 h-5 ${i < rating ? "text-yellow-400 fill-yellow-400" : "text-white/20"}`}
+                  className={`w-5 h-5 ${i < rating ? "text-yellow-400 fill-yellow-400" : "text-foreground/20"}`}
                 />
               ))}
             </div>

@@ -31,12 +31,12 @@ export function TerritorialContext({ siloContext, cityName }: TerritorialContext
 
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-12 animate-in">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-card/50 backdrop-blur-sm border border-white/10 mb-4">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-card/50 backdrop-blur-sm border border-border mb-4">
             <MapPin className="w-4 h-4 text-ocean" />
             <span className="text-sm font-medium">Ancrage Local {cityName}</span>
           </div>
           
-          <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4 bg-linear-to-r from-white via-white/90 to-white/70 bg-clip-text text-transparent">
+          <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4 bg-linear-to-r from-foreground via-foreground/90 to-foreground/70 bg-clip-text text-transparent">
             Expertise Territoriale
           </h2>
           
@@ -46,8 +46,8 @@ export function TerritorialContext({ siloContext, cityName }: TerritorialContext
         </div>
 
         {/* Hook Section */}
-        <div className="mb-12 p-6 rounded-xl bg-card/30 backdrop-blur-sm border border-white/5 animate-in delay-100">
-          <p className="text-base md:text-lg text-white/90 leading-relaxed">
+        <div className="mb-12 p-6 rounded-xl bg-card/30 backdrop-blur-sm border border-border animate-in delay-100">
+          <p className="text-base md:text-lg text-foreground leading-relaxed">
             <span className="text-ocean font-semibold">&ldquo;</span>
             {siloContext.hook}
             <span className="text-ocean font-semibold">&rdquo;</span>
@@ -59,10 +59,10 @@ export function TerritorialContext({ siloContext, cityName }: TerritorialContext
           {siloContext.expertise.map((item, index) => (
             <div
               key={index}
-              className={`flex items-start gap-3 p-4 rounded-lg bg-card/20 backdrop-blur-sm border border-white/5 hover:border-ocean/30 transition-colors animate-in-left ${index === 1 ? "delay-100" : index === 2 ? "delay-200" : index === 3 ? "delay-300" : ""}`}
+              className={`flex items-start gap-3 p-4 rounded-lg bg-card/20 backdrop-blur-sm border border-border hover:border-ocean/30 transition-colors animate-in-left ${index === 1 ? "delay-100" : index === 2 ? "delay-200" : index === 3 ? "delay-300" : ""}`}
             >
               <CheckCircle2 className="w-5 h-5 text-ocean shrink-0 mt-0.5" />
-              <p className="text-sm text-white/80">{item}</p>
+              <p className="text-sm text-muted-foreground">{item}</p>
             </div>
           ))}
         </div>
@@ -73,9 +73,9 @@ export function TerritorialContext({ siloContext, cityName }: TerritorialContext
           <div className="p-6 rounded-xl bg-linear-to-br from-ocean/10 to-ocean/5 border border-ocean/20 animate-scale-in">
             <div className="flex items-center gap-3 mb-3">
               <Heart className="w-5 h-5 text-ocean" />
-              <h3 className="font-heading font-semibold text-white">Confiance Locale</h3>
+              <h3 className="font-heading font-semibold text-foreground">Confiance Locale</h3>
             </div>
-            <p className="text-sm text-white/70 leading-relaxed">
+            <p className="text-sm text-muted-foreground leading-relaxed">
               {siloContext.localTrust}
             </p>
           </div>
@@ -85,9 +85,9 @@ export function TerritorialContext({ siloContext, cityName }: TerritorialContext
             <div className="p-6 rounded-xl bg-linear-to-br from-accent/10 to-accent/5 border border-accent/20 animate-scale-in delay-100">
               <div className="flex items-center gap-3 mb-3">
                 <Calendar className="w-5 h-5 text-accent" />
-                <h3 className="font-heading font-semibold text-white">Événements Locaux</h3>
+                <h3 className="font-heading font-semibold text-foreground">Événements Locaux</h3>
               </div>
-              <p className="text-sm text-white/70 leading-relaxed">
+              <p className="text-sm text-muted-foreground leading-relaxed">
                 {siloContext.eventReference}
               </p>
             </div>
@@ -95,7 +95,7 @@ export function TerritorialContext({ siloContext, cityName }: TerritorialContext
         </div>
 
         {/* Cultural Proof */}
-        <div className="text-center p-6 rounded-xl bg-card/10 backdrop-blur-sm border border-white/5 animate-in delay-200">
+        <div className="text-center p-6 rounded-xl bg-card/10 backdrop-blur-sm border border-border animate-in delay-200">
           <p className="text-sm italic text-muted-foreground mb-4">
             {siloContext.culturalProof}
           </p>

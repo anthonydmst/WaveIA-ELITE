@@ -38,7 +38,7 @@ export default function ResourcesPage() {
         </div>
 
         {/* Why Read Our Resources - Content Densification */}
-        <div className="max-w-4xl mx-auto mb-20 p-8 bg-card/30 backdrop-blur-sm rounded-2xl border border-white/5">
+        <div className="max-w-4xl mx-auto mb-20 p-8 bg-card/30 backdrop-blur-sm rounded-2xl border border-border">
           <h2 className="text-2xl font-bold mb-6 text-center">Notre approche pédagogique</h2>
           <div className="grid md:grid-cols-2 gap-6">
             <div className="space-y-2">
@@ -79,7 +79,7 @@ export default function ResourcesPage() {
         {/* Featured Article */}
         {featured && (
           <div className="mb-20">
-            <Link href={`/ressources/${featured.slug}`} className="group relative block rounded-3xl overflow-hidden border border-white/10 bg-card/50 hover:border-ocean/30 transition-all duration-500">
+            <Link href={`/ressources/${featured.slug}`} className="group relative block rounded-3xl overflow-hidden border border-border bg-card/50 hover:border-ocean/30 transition-all duration-500">
               <div className="grid md:grid-cols-2 gap-0 md:h-[500px]">
                 <div className="relative h-[300px] md:h-full overflow-hidden">
                    {/* Placeholder or Actual Image */}
@@ -106,7 +106,7 @@ export default function ResourcesPage() {
                     </span>
                   </div>
                   
-                  <h2 className="text-3xl md:text-4xl font-heading font-bold text-white mb-6 leading-tight group-hover:text-ocean transition-colors">
+                  <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-6 leading-tight group-hover:text-ocean transition-colors">
                     {featured.metadata.title}
                   </h2>
                   <p className="text-lg text-muted-foreground mb-8 line-clamp-3">
@@ -125,7 +125,7 @@ export default function ResourcesPage() {
         {/* Grid of other articles */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {others.map((resource) => (
-            <Link key={resource.slug} href={`/ressources/${resource.slug}`} className="group flex flex-col h-full bg-card/30 backdrop-blur-sm border border-white/5 rounded-2xl overflow-hidden hover:border-ocean/30 hover:-translate-y-1 transition-all duration-300">
+            <Link key={resource.slug} href={`/ressources/${resource.slug}`} className="group flex flex-col h-full bg-card/30 backdrop-blur-sm border border-border rounded-2xl overflow-hidden hover:border-ocean/30 hover:-translate-y-1 transition-all duration-300">
                <div className="relative aspect-video overflow-hidden">
                     <div className="absolute inset-0 bg-gray-900" />
                     {resource.metadata.image && (
@@ -142,13 +142,13 @@ export default function ResourcesPage() {
                         <span className="text-xs font-bold text-ocean uppercase tracking-wider">{resource.metadata.category}</span>
                         <span className="text-xs text-muted-foreground">{new Date(resource.metadata.publishedAt).toLocaleDateString('fr-FR')}</span>
                     </div>
-                    <h3 className="text-xl font-heading font-bold text-white mb-3 group-hover:text-ocean transition-colors line-clamp-2">
+                    <h3 className="text-xl font-heading font-bold text-foreground mb-3 group-hover:text-ocean transition-colors line-clamp-2">
                         {resource.metadata.title}
                     </h3>
                     <p className="text-sm text-muted-foreground mb-6 line-clamp-3">
                         {resource.metadata.description}
                     </p>
-                    <span className="mt-auto flex items-center gap-2 text-sm font-medium text-white group-hover:text-ocean transition-colors">
+                    <span className="mt-auto flex items-center gap-2 text-sm font-medium text-foreground group-hover:text-ocean transition-colors">
                         Lire l&apos;article <MoveRight size={14} />
                     </span>
                </div>

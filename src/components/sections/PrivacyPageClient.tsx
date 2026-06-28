@@ -93,7 +93,7 @@ export function PrivacyPageClient() {
               return (
                 <div
                   key={index}
-                  className="p-8 bg-card/50 backdrop-blur-sm border border-white/5 rounded-2xl hover:border-ocean/20 transition-colors animate-in"
+                  className="p-8 bg-card/50 backdrop-blur-sm border border-border rounded-2xl hover:border-ocean/20 transition-colors animate-in"
                 >
                   <div className="flex items-center gap-3 mb-6">
                     <div className="p-3 bg-ocean/10 rounded-xl">
@@ -140,7 +140,7 @@ export function PrivacyPageClient() {
           </div>
 
           {/* Contact */}
-          <div className="mt-8 p-8 bg-card/50 backdrop-blur-sm border border-white/5 rounded-2xl text-center animate-in delay-100">
+          <div className="mt-8 p-8 bg-card/50 backdrop-blur-sm border border-border rounded-2xl text-center animate-in delay-100">
             <Mail className="w-12 h-12 text-ocean mx-auto mb-4" />
             <h2 className="text-2xl font-bold mb-2">Une question sur vos données ?</h2>
             <p className="text-muted-foreground mb-4">

@@ -64,7 +64,7 @@ export function ServiceZoneLinks({ silo, serviceSlug, currentCity, mode = "hub" 
   };
 
   return (
-    <section className="relative z-20 py-8 bg-card/50 border-b border-white/5 backdrop-blur-sm">
+    <section className="relative z-20 py-8 bg-card/50 border-b border-border backdrop-blur-sm">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-center gap-6">
           <div className="flex items-center gap-3 shrink-0">
@@ -76,14 +76,14 @@ export function ServiceZoneLinks({ silo, serviceSlug, currentCity, mode = "hub" 
             </span>
           </div>
 
-          <div className="h-8 w-px bg-white/10 hidden md:block" />
+          <div className="h-8 w-px bg-foreground/10 hidden md:block" />
 
           <div className="flex flex-wrap items-center justify-center md:justify-start gap-2">
             {displayCities.map((city) => (
               <Link
                 key={city.slug}
                 href={getUrl(city.slug)}
-                className="group relative px-3 py-1.5 rounded-full border border-white/5 bg-white/5 hover:bg-ocean/10 hover:border-ocean/30 transition-all duration-300"
+                className="group relative px-3 py-1.5 rounded-full border border-border bg-foreground/5 hover:bg-ocean/10 hover:border-ocean/30 transition-all duration-300"
                 title={`Agence Web ${city.name}`}
               >
                 <div className="flex items-center gap-1.5">

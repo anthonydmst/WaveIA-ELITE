@@ -22,7 +22,7 @@ export function PageHero({ title, subtitle, className }: PageHeroProps) {
       <SectionHeader 
         as="h1" 
         size="hero" // Assuming 'hero' size matches the desired styling or overrides classes
-        className={cn("mb-6 bg-clip-text text-transparent bg-linear-to-b from-white to-white/60", className)} // Merging specific styles
+        className={cn("mb-6 bg-clip-text text-transparent bg-linear-to-b from-foreground to-foreground/60", className)} // adaptive: dark text on light, white on dark
         // style={{ viewTransitionName: 'hero-title' }} // SectionHeader might not accept style prop directly if not defined, checking definition...
         // SectionHeader definition does NOT accept style. I should pass it via className or if SectionHeader accepts ...props (it doesn't seem to based on previous view).
         // The previous view of SectionHeader showed: ({ size, align, as, className, children }: SectionHeaderProps)

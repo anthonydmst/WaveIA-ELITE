@@ -46,7 +46,7 @@ export function AnimatedTestimonials() {
               style={{ willChange: "transform", backfaceVisibility: "hidden" }}
             >
               {/* Card */}
-              <div className="relative h-full p-8 bg-glass-bg backdrop-blur-sm rounded-2xl border border-glass-border overflow-hidden transition-all duration-500 hover:border-ocean/30 hover:shadow-[0_20px_40px_var(--glass-glow)] hover:translate-y-[-8px]">
+              <div className="relative h-full p-8 bg-glass-bg backdrop-blur-sm rounded-2xl border border-glass-border overflow-hidden transition-all duration-500 hover:border-ocean/30 shadow-card hover:shadow-card-hover hover:translate-y-[-8px]">
                 
                 {/* Quote Icon */}
                 <div className="absolute top-4 right-4 w-10 h-10 flex items-center justify-center bg-ocean/10 rounded-full opacity-50 group-hover:opacity-100 transition-opacity duration-300">
@@ -125,7 +125,7 @@ export function AnimatedTestimonials() {
             </div>
           </div>
           
-          <div className="h-8 w-px bg-white/10 hidden sm:block" />
+          <div className="h-8 w-px bg-foreground/10 hidden sm:block" />
           
           {/* Rating */}
           <div className="flex items-center gap-2">
@@ -140,7 +140,7 @@ export function AnimatedTestimonials() {
             </span>
           </div>
 
-          <div className="h-8 w-px bg-white/10 hidden sm:block" />
+          <div className="h-8 w-px bg-foreground/10 hidden sm:block" />
 
           {/* Satisfaction */}
           <div className="flex items-center gap-2">

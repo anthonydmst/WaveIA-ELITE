@@ -3,7 +3,7 @@
 export function StoreLocator() {
   return (
     <div
-      className="relative aspect-video lg:aspect-21/9 rounded-2xl overflow-hidden border border-white/10 group animate-scale-in"
+      className="relative aspect-video lg:aspect-21/9 rounded-2xl overflow-hidden border border-border group animate-scale-in"
     >
       <div className="absolute inset-0 bg-ocean/5 group-hover:bg-transparent transition-colors z-10 pointer-events-none" />
       <iframe

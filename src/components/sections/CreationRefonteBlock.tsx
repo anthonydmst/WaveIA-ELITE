@@ -120,7 +120,7 @@ export function CreationRefonteBlock() {
                   />
 
                   {/* Card */}
-                  <div className="relative h-full p-8 lg:p-10 bg-glass-bg backdrop-blur-sm rounded-2xl border border-glass-border overflow-hidden transition-all duration-500 group-hover:border-transparent group-hover:translate-y-[-8px] group-hover:shadow-[0_20px_40px_var(--glass-glow)]">
+                  <div className="relative h-full p-8 lg:p-10 bg-glass-bg backdrop-blur-sm rounded-2xl border border-glass-border overflow-hidden transition-all duration-500 group-hover:border-transparent group-hover:translate-y-[-8px] shadow-card group-hover:shadow-card-hover">
                     
                     {/* Corner Glow */}
                     <div

@@ -34,14 +34,14 @@ export function DeepContentSection({ content }: Props) {
                </p>
             </div>
 
-            <div className="bg-card/30 backdrop-blur-sm border border-white/5 rounded-2xl p-8 animate-scale-in">
+            <div className="bg-card/30 backdrop-blur-sm border border-border rounded-2xl p-8 animate-scale-in">
                <SectionHeader as="h3" size="subsection" className="mb-6 flex items-center gap-3">
                   <span className="w-1 h-8 bg-red-500 rounded-full" />
                   Ce qui vous freine aujourd&apos;hui
                </SectionHeader>
                <ul className="space-y-4">
                   {content.problem.painPoints.map((point, idx) => (
-                    <li key={idx} className="flex items-start gap-3 p-4 rounded-lg bg-white/5 border border-white/5">
+                    <li key={idx} className="flex items-start gap-3 p-4 rounded-lg bg-foreground/5 border border-border">
                        <div className="mt-1 w-5 h-5 rounded-full bg-red-500/20 flex items-center justify-center shrink-0">
                           <div className="w-2 h-2 rounded-full bg-red-500" />
                        </div>
@@ -68,7 +68,7 @@ export function DeepContentSection({ content }: Props) {
            </div>
            <div className="grid md:grid-cols-3 gap-6">
               {content.tech_stack.items.map((item, idx) => (
-                 <div key={idx} className="p-6 rounded-xl bg-white/5 border border-white/10 hover:border-ocean/30 transition-colors group">
+                 <div key={idx} className="p-6 rounded-xl bg-foreground/5 border border-border hover:border-ocean/30 transition-colors group">
                     <div className="w-12 h-12 rounded-lg bg-ocean/10 flex items-center justify-center mb-4 group-hover:bg-ocean/20 transition-colors">
                        {item.icon === "Zap" && <Zap className="w-6 h-6 text-ocean" />}
                        {item.icon === "Globe" && <Globe className="w-6 h-6 text-ocean" />}
@@ -101,7 +101,7 @@ export function DeepContentSection({ content }: Props) {
                                 <span className="font-bold text-ocean text-sm">{idx + 1}</span>
                              </div>
                              <div>
-                                <h4 className="font-bold text-white block mb-1">{point.title}</h4>
+                                <h4 className="font-bold text-foreground block mb-1">{point.title}</h4>
                                 <p className="text-sm text-muted-foreground">{point.description}</p>
                              </div>
                           </div>
@@ -137,10 +137,10 @@ export function DeepContentSection({ content }: Props) {
             {content.solution.methodology.map((step, idx) => (
                <div
                   key={idx}
-                  className={`relative group p-8 bg-card/50 backdrop-blur-sm border border-white/5 hover:border-ocean/30 rounded-2xl transition-all duration-300 z-10 animate-in ${idx === 1 ? "delay-200" : idx === 2 ? "delay-400" : ""}`}
+                  className={`relative group p-8 bg-card/50 backdrop-blur-sm border border-border hover:border-ocean/30 rounded-2xl transition-all duration-300 z-10 animate-in ${idx === 1 ? "delay-200" : idx === 2 ? "delay-400" : ""}`}
                >
                   {/* Step Number Badge */}
-                  <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-12 h-12 bg-card border border-ocean/30 rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(14,165,233,0.2)] group-hover:scale-110 transition-transform duration-300">
+                  <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-12 h-12 bg-card border border-ocean/30 rounded-full flex items-center justify-center shadow-glow group-hover:scale-110 transition-transform duration-300">
                      <span className="text-xl font-heading font-bold text-ocean">0{idx + 1}</span>
                   </div>
                   
@@ -168,7 +168,7 @@ export function DeepContentSection({ content }: Props) {
            </div>
            <div className="grid md:grid-cols-4 gap-4">
               {content.process_detailed.steps.map((step, idx) => (
-                 <div key={idx} className="relative p-6 rounded-2xl bg-white/5 border border-white/5 hover:bg-white/10 transition-colors">
+                 <div key={idx} className="relative p-6 rounded-2xl bg-foreground/5 border border-border hover:bg-foreground/10 transition-colors">
                     <div className="text-sm text-ocean font-bold mb-2 flex items-center gap-2">
                        <Clock className="w-4 h-4" />
                        {step.duration}
@@ -184,7 +184,7 @@ export function DeepContentSection({ content }: Props) {
                     </ul>
                     {/* Connector Arrow (Desktop) */}
                     {idx < content.process_detailed!.steps.length - 1 && (
-                       <div className="hidden md:block absolute top-1/2 -right-3 w-6 h-px bg-white/10 z-10" />
+                       <div className="hidden md:block absolute top-1/2 -right-3 w-6 h-px bg-foreground/10 z-10" />
                     )}
                  </div>
               ))}
@@ -205,7 +205,7 @@ export function DeepContentSection({ content }: Props) {
 
       {/* 5. BENEFITS */}
       <section className="relative max-w-7xl mx-auto px-6 lg:px-8 w-full">
-         <div className="bg-linear-to-br from-gray-900 to-gray-950 border border-white/5 rounded-3xl p-8 lg:p-12 overflow-hidden relative">
+         <div className="bg-linear-to-br from-gray-900 to-gray-950 border border-border rounded-3xl p-8 lg:p-12 overflow-hidden relative">
             <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-ocean/10 blur-[100px] rounded-full pointer-events-none" />
             
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-24 items-center relative z-10">
@@ -229,7 +229,7 @@ export function DeepContentSection({ content }: Props) {
                </div>
                
                {/* Visual Illustration (Abstract UI) */}
-               <div className="relative aspect-square lg:aspect-auto h-full min-h-[300px] bg-white/5 rounded-2xl border border-white/10 flex items-center justify-center overflow-hidden">
+               <div className="relative aspect-square lg:aspect-auto h-full min-h-[300px] bg-foreground/5 rounded-2xl border border-border flex items-center justify-center overflow-hidden">
                    <div className="absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-white/20 to-transparent" />
                    <div className="text-center mx-auto">
                       <div className="inline-flex flex-col items-center gap-4">

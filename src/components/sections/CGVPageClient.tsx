@@ -134,7 +134,7 @@ export function CGVPageClient() {
               return (
                 <div
                   key={i}
-                  className={`p-4 bg-card/50 backdrop-blur-sm border border-white/5 rounded-xl text-center animate-in ${i === 1 ? "delay-100" : i === 2 ? "delay-200" : ""}`}
+                  className={`p-4 bg-card/50 backdrop-blur-sm border border-border rounded-xl text-center animate-in ${i === 1 ? "delay-100" : i === 2 ? "delay-200" : ""}`}
                 >
                   <Icon className="w-8 h-8 text-ocean mx-auto mb-2" />
                   <div className="font-bold">{item.value}</div>
@@ -153,7 +153,7 @@ export function CGVPageClient() {
             {articles.map((article, index) => (
               <div
                 key={index}
-                className="p-8 bg-card/50 backdrop-blur-sm border border-white/5 rounded-2xl hover:border-ocean/20 transition-colors animate-in"
+                className="p-8 bg-card/50 backdrop-blur-sm border border-border rounded-2xl hover:border-ocean/20 transition-colors animate-in"
               >
                 <div className="flex items-start gap-4">
                   <div className="shrink-0 w-10 h-10 flex items-center justify-center bg-ocean/10 rounded-full text-ocean font-bold">
@@ -186,7 +186,7 @@ export function CGVPageClient() {
           </div>
 
           {/* Contact */}
-          <div className="mt-8 p-8 bg-card/50 backdrop-blur-sm border border-white/5 rounded-2xl text-center animate-in delay-100">
+          <div className="mt-8 p-8 bg-card/50 backdrop-blur-sm border border-border rounded-2xl text-center animate-in delay-100">
             <Scale className="w-12 h-12 text-ocean mx-auto mb-4" />
             <h2 className="text-2xl font-bold mb-2">Une question sur nos conditions ?</h2>
             <p className="text-muted-foreground mb-4">

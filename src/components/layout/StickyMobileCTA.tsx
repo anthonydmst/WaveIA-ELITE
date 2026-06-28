@@ -27,7 +27,7 @@ export function StickyMobileCTA() {
 
   return (
     <div
-      className={`fixed bottom-0 left-0 right-0 z-50 p-4 md:hidden bg-background/80 backdrop-blur-xl border-t border-white/10 shadow-[0_-4px_20px_rgba(0,0,0,0.2)] transition-all duration-500 transform ${
+      className={`fixed bottom-0 left-0 right-0 z-50 p-4 md:hidden bg-background/80 backdrop-blur-xl border-t border-border shadow-[0_-4px_20px_rgba(0,0,0,0.2)] transition-all duration-500 transform ${
         isVisible ? "translate-y-0 opacity-100" : "translate-y-full opacity-0 pointer-events-none"
       }`}
     >
@@ -64,7 +64,7 @@ export function StickyMobileCTA() {
 
         {/* 3. Bouton Devis (Secondaire - Simple) */}
         <Link href={ACTIONS.quote} className="flex-1" aria-label="Demander un devis" onClick={() => trigger("light")}>
-            <div className="w-full flex items-center justify-center gap-2 h-12 rounded-xl border border-white/10 bg-white/5 text-foreground font-bold shadow-sm transition-all duration-300 hover:bg-white/10 hover:scale-[1.02] active:scale-[0.98]">
+            <div className="w-full flex items-center justify-center gap-2 h-12 rounded-xl border border-border bg-foreground/5 text-foreground font-bold shadow-sm transition-all duration-300 hover:bg-foreground/10 hover:scale-[1.02] active:scale-[0.98]">
               <FileText className="w-4 h-4" />
               <span>Devis</span>
             </div>

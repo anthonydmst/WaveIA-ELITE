@@ -62,7 +62,7 @@ export function TechnoTranslator({
         </div>
 
         {/* Explanation Display */}
-        <div className="relative h-full min-h-[200px] flex items-center justify-center p-6 bg-linear-to-br from-ocean/5 to-transparent rounded-2xl border border-white/5">
+        <div className="relative h-full min-h-[200px] flex items-center justify-center p-6 bg-linear-to-br from-ocean/5 to-transparent rounded-2xl border border-border">
           <AnimatePresence mode="wait">
             {activeTerm !== null && (
               <m.div

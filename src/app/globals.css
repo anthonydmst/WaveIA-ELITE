@@ -53,6 +53,20 @@
   --color-glass-bg: var(--glass-bg);
   --color-glass-bg-hover: var(--glass-bg-hover);
   --color-glass-border: var(--glass-border);
+
+  /* Elevation scale — 3-layer ambient + directional + contact.
+     Adapts to light/dark via the runtime --e-* vars below. */
+  --shadow-card: var(--e-card);
+  --shadow-card-hover: var(--e-card-hover);
+  --shadow-float: var(--e-float);
+  --shadow-modal: var(--e-modal);
+  --shadow-hero: var(--e-hero);
+  --shadow-glow: var(--e-glow);
+
+  /* Motion easing tokens → ease-out-expo / ease-out-quart / ease-spring utilities */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 :root {
@@ -72,8 +86,9 @@
   --secondary-foreground: #0f172a;
   --muted: #f1f5f9;
   --muted-foreground: #64748b;
-  --accent: #f1f5f9;
-  --accent-foreground: #0f172a;
+  /* accent = cyan brand color (consistent both themes); surfaces use --muted/--secondary */
+  --accent: #06b6d4;
+  --accent-foreground: #ffffff;
   --destructive: #ef4444;
   --border: #e2e8f0;
   --input: #e2e8f0;
@@ -83,6 +98,7 @@
   --ocean: #0ea5e9;
   --ocean-light: #38bdf8;
   --ocean-dark: #0369a1;
+  --ocean-text: #0369a1;  /* AA: ocean used as TEXT on light = sky-700 (5.9:1); fills keep --ocean */
   --sand: #d4a574;
   --sunset: #f97316;
   --foam: #f0fdfa;
@@ -117,6 +133,30 @@
   --wave-stop-3-a: rgba(14, 165, 233, 0.35);
   --wave-stop-3-b: rgba(3, 105, 161, 0.3);
   --wave-stop-4: rgba(14, 165, 233, 0.45);
+
+  /* Elevation scale — Light Mode (depth by light, slate-tinted shadows) */
+  --e-card:
+    0 1px 3px rgba(15, 23, 42, 0.06),
+    0 2px 8px rgba(15, 23, 42, 0.04),
+    0 0 0 1px rgba(15, 23, 42, 0.04);
+  --e-card-hover:
+    0 4px 6px rgba(15, 23, 42, 0.05),
+    0 12px 28px rgba(15, 23, 42, 0.10),
+    0 0 0 1px rgba(15, 23, 42, 0.06);
+  --e-float:
+    0 8px 16px rgba(15, 23, 42, 0.06),
+    0 20px 48px rgba(15, 23, 42, 0.12),
+    0 0 0 1px rgba(15, 23, 42, 0.06);
+  --e-modal:
+    0 12px 24px rgba(15, 23, 42, 0.08),
+    0 32px 64px rgba(15, 23, 42, 0.14),
+    0 0 0 1px rgba(15, 23, 42, 0.06);
+  --e-hero:
+    0 16px 32px rgba(15, 23, 42, 0.08),
+    0 40px 80px rgba(15, 23, 42, 0.16);
+  --e-glow:
+    0 4px 16px rgba(14, 165, 233, 0.24),
+    0 8px 32px rgba(14, 165, 233, 0.14);
 }
 
 .dark {
@@ -161,6 +201,30 @@
   --wave-stop-3-a: oklch(0.75 0.15 220 / 0.4);
   --wave-stop-3-b: oklch(0.6 0.2 260 / 0.3);
   --wave-stop-4: oklch(0.8 0.15 200 / 0.6);
+
+  /* Elevation scale — Dark Mode (deeper, hairline light edge) */
+  --e-card:
+    0 1px 3px rgba(0, 0, 0, 0.30),
+    0 2px 8px rgba(0, 0, 0, 0.20),
+    0 0 0 1px rgba(255, 255, 255, 0.04);
+  --e-card-hover:
+    0 4px 6px rgba(0, 0, 0, 0.25),
+    0 12px 28px rgba(0, 0, 0, 0.40),
+    0 0 0 1px rgba(255, 255, 255, 0.06);
+  --e-float:
+    0 8px 16px rgba(0, 0, 0, 0.30),
+    0 20px 48px rgba(0, 0, 0, 0.50),
+    0 0 0 1px rgba(255, 255, 255, 0.05);
+  --e-modal:
+    0 12px 24px rgba(0, 0, 0, 0.35),
+    0 32px 64px rgba(0, 0, 0, 0.55),
+    0 0 0 1px rgba(255, 255, 255, 0.05);
+  --e-hero:
+    0 16px 32px rgba(0, 0, 0, 0.35),
+    0 40px 80px rgba(0, 0, 0, 0.55);
+  --e-glow:
+    0 4px 16px rgba(14, 165, 233, 0.30),
+    0 8px 32px rgba(14, 165, 233, 0.18);
 }
 
 @layer base {
@@ -198,7 +262,8 @@
   }
 
   ::-webkit-scrollbar-thumb {
-    background: rgba(255, 255, 255, 0.1);
+    /* Adaptive: visible on light AND dark (was hard-coded white = invisible in light) */
+    background: var(--border);
     border-radius: 9999px;
     transition: background 0.2s ease;
   }
@@ -207,11 +272,72 @@
     background: rgba(14, 165, 233, 0.5);
   }
 
-  /* Grade A+ Brand Selection */
+  /* Grade A+ Brand Selection — foreground text stays readable in both themes
+     (was color:#ffffff + glow = invisible/blurred selected text on light) */
   ::selection {
-    background: rgba(14, 165, 233, 0.3);
-    color: #ffffff;
-    text-shadow: 0 0 10px rgba(14, 165, 233, 0.5);
+    background: rgba(14, 165, 233, 0.22);
+    color: var(--foreground);
+    text-shadow: none;
+  }
+
+  /* Branded focus ring — accessible + on-brand (replaces default browser blue) */
+  :focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+}
+
+/* ============================================================
+   OPTICAL TYPOGRAPHY SCALE
+   Opt-in classes. Color defaults adapt to theme and are
+   overridable by any Tailwind text-* utility (utilities layer wins).
+   Tracking tightens as size grows (optical law).
+   ============================================================ */
+@layer components {
+  .text-hero {
+    font-size: clamp(3rem, 6vw, 5.5rem);   /* 48 → 88px */
+    font-weight: 800;
+    line-height: 1.06;
+    letter-spacing: -0.04em;
+    color: var(--foreground);
+  }
+  .text-display {
+    font-size: clamp(2rem, 4vw, 3.5rem);   /* 32 → 56px */
+    font-weight: 700;
+    line-height: 1.12;
+    letter-spacing: -0.03em;
+    color: var(--foreground);
+  }
+  .text-title {
+    font-size: clamp(1.5rem, 2.5vw, 2.25rem); /* 24 → 36px */
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    color: var(--foreground);
+  }
+  .text-overline {
+    font-size: 0.6875rem;  /* 11px */
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+  .text-body-lg {
+    font-size: 1.125rem;   /* 18px */
+    line-height: 1.65;
+    color: var(--muted-foreground);
+  }
+  .text-body {
+    font-size: 1rem;       /* 16px */
+    line-height: 1.65;
+    color: var(--muted-foreground);
+  }
+  .text-caption {
+    font-size: 0.8125rem;  /* 13px */
+    line-height: 1.5;
+    letter-spacing: -0.005em;
+    color: var(--muted-foreground);
   }
 }
 
@@ -225,6 +351,29 @@
   }
   .text-gradient-sunset {
     @apply bg-linear-to-r from-sunset via-sand to-sunset bg-clip-text text-transparent;
+  }
+  /* Vivid brand gradient that stays saturated in BOTH themes
+     (unlike .text-gradient whose via-accent turns near-white in light). */
+  .text-gradient-brand {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(110deg, #0284c7 0%, #0ea5e9 42%, #06b6d4 100%);
+  }
+  .dark .text-gradient-brand {
+    background-image: linear-gradient(110deg, #38bdf8 0%, #0ea5e9 45%, #22d3ee 100%);
+  }
+  /* Living ambient background for light sections — soft ocean blooms over a
+     sky-tinted base so sections aren't flat near-white. Adapts in dark. */
+  .bg-ambient {
+    background:
+      radial-gradient(55% 45% at 12% 0%, rgba(14, 165, 233, 0.10), transparent 60%),
+      radial-gradient(50% 45% at 100% 12%, rgba(56, 189, 248, 0.09), transparent 60%),
+      linear-gradient(180deg, #eff8ff 0%, #ffffff 42%, #f5faff 100%);
+  }
+  .dark .bg-ambient {
+    background:
+      radial-gradient(55% 45% at 12% 0%, rgba(14, 165, 233, 0.14), transparent 60%),
+      radial-gradient(50% 45% at 100% 12%, rgba(56, 189, 248, 0.08), transparent 60%),
+      linear-gradient(180deg, #0a0a09 0%, #111110 60%, #0a0a09 100%);
   }
   .bg-noise {
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
@@ -377,21 +526,7 @@
     animation-delay: 0.8s;
   }
 
-  /* S-Tier: Generic Auto-Play Animation (Safe for use with Stagger Delays) */
-  .animate-appear {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 0.5s ease-out forwards;
-    will-change: transform, opacity;
-  }
-
-  /* Safe Zoom In for Trust Badges */
-  .animate-zoom-in {
-    opacity: 0;
-    transform: scale(0.9);
-    animation: scaleIn 0.3s ease-out forwards;
-    will-change: transform, opacity;
-  }
+  /* (.animate-appear and .animate-zoom-in are defined once above — duplicates removed) */
 
   /* Respect reduced motion preference */
   @media (prefers-reduced-motion: reduce) {

@@ -109,13 +109,13 @@ export function TemoignagesPageClient() {
               <span className="font-bold">5.0/5</span>
               <span className="text-muted-foreground text-sm">sur Google</span>
             </div>
-            <div className="h-6 w-px bg-white/10" />
+            <div className="h-6 w-px bg-foreground/10" />
             <div className="flex items-center gap-2">
               <Users className="w-5 h-5 text-ocean" />
               <span className="font-bold">150+</span>
               <span className="text-muted-foreground text-sm">projets livrés</span>
             </div>
-            <div className="h-6 w-px bg-white/10" />
+            <div className="h-6 w-px bg-foreground/10" />
             <div className="flex items-center gap-2">
               <TrendingUp className="w-5 h-5 text-ocean" />
               <span className="font-bold">98%</span>
@@ -134,7 +134,7 @@ export function TemoignagesPageClient() {
                 key={index}
                 className="group relative animate-in"
               >
-                <div className="relative h-full p-8 bg-card/80 backdrop-blur-sm rounded-2xl border border-white/5 overflow-hidden transition-all duration-500 hover:border-ocean/30 hover:shadow-[0_20px_40px_rgba(14,165,233,0.1)] hover:translate-y-[-4px]">
+                <div className="relative h-full p-8 bg-card/80 backdrop-blur-sm rounded-2xl border border-border overflow-hidden transition-all duration-500 hover:border-ocean/30 hover:shadow-[0_20px_40px_rgba(14,165,233,0.1)] hover:translate-y-[-4px]">
                   {/* Quote Icon */}
                   <div className="absolute top-6 right-6 w-12 h-12 flex items-center justify-center bg-ocean/10 rounded-full opacity-50 group-hover:opacity-100 transition-opacity duration-300">
                     <Quote className="w-6 h-6 text-ocean" />
@@ -175,7 +175,7 @@ export function TemoignagesPageClient() {
                             alt={testimonial.author}
                             width={56}
                             height={56}
-                            className="rounded-full border-2 border-white/10 group-hover:border-ocean/30 transition-colors duration-300"
+                            className="rounded-full border-2 border-border group-hover:border-ocean/30 transition-colors duration-300"
                             placeholder="blur"
                             blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAUH/8QAIBAAAgIBBAMBAAAAAAAAAAAAAQIDBAAFERIhBjFBgf/EABQBAQAAAAAAAAAAAAAAAAAAAAX/xAAZEQACAwEAAAAAAAAAAAAAAAABAgADESH/2gAMAwEAAhEDEEA/AMr8f8ltazYu2LN6RoJpnkVSqghSScAce/mMYyHyJqQDdpX/2Q=="
                           />
@@ -196,7 +196,7 @@ export function TemoignagesPageClient() {
                       
                       {/* City Badge */}
                       {testimonial.city && (
-                        <div className="hidden sm:flex items-center gap-1 px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs text-muted-foreground">
+                        <div className="hidden sm:flex items-center gap-1 px-3 py-1 bg-foreground/5 border border-border rounded-full text-xs text-muted-foreground">
                           <MapPin className="w-3 h-3" />
                           {testimonial.city}
                         </div>
@@ -220,7 +220,7 @@ export function TemoignagesPageClient() {
       <section className="relative py-20 lg:py-32">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div
-            className="relative bg-card/50 backdrop-blur-sm border border-white/5 rounded-3xl p-12 text-center overflow-hidden animate-scale-in"
+            className="relative bg-card/50 backdrop-blur-sm border border-border rounded-3xl p-12 text-center overflow-hidden animate-scale-in"
           >
             {/* Background Glows */}
             <div className="absolute -top-20 -left-20 w-60 h-60 bg-ocean/10 blur-[100px] rounded-full" />

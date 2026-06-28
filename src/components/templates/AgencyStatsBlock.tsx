@@ -23,7 +23,7 @@ export function AgencyStatsBlock({ title, metrics, variant = "default" }: Props)
         {metrics.map((metric, idx) => (
           <div
             key={idx}
-            className={`p-4 bg-card/50 border border-white/5 rounded-xl text-center animate-in ${idx === 1 ? "delay-100" : idx === 2 ? "delay-200" : idx === 3 ? "delay-300" : ""}`}
+            className={`p-4 bg-card/50 border border-border rounded-xl text-center animate-in ${idx === 1 ? "delay-100" : idx === 2 ? "delay-200" : idx === 3 ? "delay-300" : ""}`}
           >
             <div className="text-2xl font-heading font-bold text-gradient mb-1">
               {metric.value}
@@ -57,7 +57,7 @@ export function AgencyStatsBlock({ title, metrics, variant = "default" }: Props)
   return (
     <section className="relative py-16">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="bg-card/50 backdrop-blur-sm border border-white/5 rounded-3xl p-8 lg:p-12 overflow-hidden relative">
+        <div className="bg-card/50 backdrop-blur-sm border border-border rounded-3xl p-8 lg:p-12 overflow-hidden relative">
           <div className="absolute -top-20 -right-20 w-80 h-80 bg-ocean/10 blur-[100px] rounded-full pointer-events-none" />
           
           <div className="relative z-10">
@@ -77,7 +77,7 @@ export function AgencyStatsBlock({ title, metrics, variant = "default" }: Props)
                 return (
                   <div
                     key={idx}
-                    className={`group text-center p-6 rounded-2xl bg-white/5 border border-white/5 hover:border-ocean/30 transition-all duration-300 animate-in ${idx === 1 ? "delay-100" : idx === 2 ? "delay-200" : idx === 3 ? "delay-300" : ""}`}
+                    className={`group text-center p-6 rounded-2xl bg-foreground/5 border border-border hover:border-ocean/30 transition-all duration-300 animate-in ${idx === 1 ? "delay-100" : idx === 2 ? "delay-200" : idx === 3 ? "delay-300" : ""}`}
                   >
                     <div className="w-10 h-10 mx-auto mb-4 rounded-xl bg-ocean/10 flex items-center justify-center text-ocean group-hover:scale-110 transition-transform">
                       <IconComponent className="w-5 h-5" />

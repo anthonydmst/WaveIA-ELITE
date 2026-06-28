@@ -137,7 +137,7 @@ export function TarifsPageClient() {
       </section>
 
       {/* Comment ça marche - Process Section for Content Density */}
-      <section className="relative py-16 bg-card/30 border-y border-white/5">
+      <section className="relative py-16 bg-card/30 border-y border-border">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <SectionHeader as="h2" size="section" align="center" className="mb-12">
             Comment fonctionne notre collaboration ?
@@ -281,7 +281,7 @@ export function TarifsPageClient() {
           </div>
 
           {/* Additional Value Section - More Content for Word Count */}
-          <div className="max-w-4xl mx-auto mt-12 p-8 bg-card/30 backdrop-blur-sm rounded-2xl border border-white/5">
+          <div className="max-w-4xl mx-auto mt-12 p-8 bg-card/30 backdrop-blur-sm rounded-2xl border border-border">
             <h2 className="text-2xl font-bold mb-6 text-center">Ce qui nous différencie au Pays Basque</h2>
             <div className="prose prose-invert prose-sm max-w-none">
               <p className="text-muted-foreground mb-4">
@@ -383,7 +383,7 @@ export function TarifsPageClient() {
                     className={`w-full flex items-center justify-center gap-2 px-6 py-3 rounded-full font-semibold transition-all ${
                       plan.popular
                         ? "bg-linear-to-r from-ocean to-accent text-background hover:opacity-90 shadow-lg shadow-ocean/30"
-                        : "bg-muted/50 hover:bg-white/10 border border-border"
+                        : "bg-muted/50 hover:bg-foreground/10 border border-border"
                     }`}
                   >
                     {plan.cta}

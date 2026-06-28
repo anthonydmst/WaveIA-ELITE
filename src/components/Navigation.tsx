@@ -52,7 +52,7 @@ function MobileAccordionItem({ item, index, onNavigate }: MobileAccordionItemPro
           w-full flex items-center justify-between px-4 py-3 text-sm font-medium rounded-lg transition-all
           ${isActive 
             ? "text-ocean bg-ocean/10 border border-ocean/20" 
-            : "text-foreground hover:bg-white/5"
+            : "text-foreground hover:bg-foreground/5"
           }
         `}
       >
@@ -137,8 +137,8 @@ export function Navigation() {
         suppressHydrationWarning
         className={`fixed! top-0 left-0 right-0 z-50 transition-all duration-500 ${
           scrolled
-            ? "bg-background/80 backdrop-blur-xl border-b border-white/5 shadow-lg"
-            : "bg-transparent"
+            ? "bg-background/80 backdrop-blur-xl border-b border-border shadow-float"
+            : "bg-background/60 backdrop-blur-md border-b border-transparent"
         } animate-slide-down!`}
       >
         <nav className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -209,7 +209,7 @@ export function Navigation() {
                 animate={{ x: 0 }}
                 exit={{ x: "100%" }}
                 transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-                className="absolute right-0 top-0 bottom-0 w-full max-w-sm bg-card border-l border-white/5 p-8 flex flex-col"
+                className="absolute right-0 top-0 bottom-0 w-full max-w-sm bg-card border-l border-border p-8 flex flex-col"
               >
                 <div className="flex items-center justify-between mb-12">
                   <Link href="/" className="flex items-center gap-3" onClick={() => setIsOpen(false)}>
@@ -288,7 +288,7 @@ export function Navigation() {
                   </div>
 
                   {/* Other Links */}
-                  <div className="space-y-1 pt-4 border-t border-white/5">
+                  <div className="space-y-1 pt-4 border-t border-border">
                     {[
                       { href: "/realisations", label: "Projets" },
                       { href: "/tarifs", label: "Tarifs" },
@@ -303,7 +303,7 @@ export function Navigation() {
                         <Link
                           href={link.href}
                           onClick={() => setIsOpen(false)}
-                          className="block px-4 py-2.5 text-sm text-muted-foreground hover:text-foreground hover:bg-white/5 rounded-lg transition-colors"
+                          className="block px-4 py-2.5 text-sm text-muted-foreground hover:text-foreground hover:bg-foreground/5 rounded-lg transition-colors"
                         >
                           {link.label}
                         </Link>
@@ -312,7 +312,7 @@ export function Navigation() {
                   </div>
                 </div>
 
-                <div className="mt-auto pt-6 border-t border-white/5"
+                <div className="mt-auto pt-6 border-t border-border"
 >
                   <Link
                     href="/contact"

@@ -85,7 +85,7 @@ export function PricingPreviewHome() {
                 <div className={`absolute inset-0 bg-linear-to-br ${pricing.color} opacity-0 group-hover:opacity-15 transition-opacity duration-500 rounded-2xl blur-md`} />
                 
                 {/* Main Card */}
-                <div className="relative h-full p-8 bg-glass-bg backdrop-blur-sm rounded-2xl border border-glass-border overflow-hidden transition-all duration-500 group-hover:border-transparent group-hover:translate-y-[-4px] group-hover:shadow-[0_20px_40px_var(--glass-glow)]">
+                <div className="relative h-full p-8 bg-glass-bg backdrop-blur-sm rounded-2xl border border-glass-border overflow-hidden transition-all duration-500 group-hover:border-transparent group-hover:translate-y-[-4px] shadow-card group-hover:shadow-card-hover">
                   
                   {/* Tag */}
                   {pricing.tag && (

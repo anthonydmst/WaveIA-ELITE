@@ -45,7 +45,7 @@ export function AnimatedLocalSection() {
               {cities.map((city, index) => (
                 <span
                   key={city}
-                  className={`px-3 py-1.5 bg-white/5 border border-white/10 rounded-full text-sm text-muted-foreground hover:border-ocean/30 hover:text-ocean transition-all duration-300 cursor-default animate-scale-in ${delayClasses[index] ?? ""}`}
+                  className={`px-3 py-1.5 bg-foreground/5 border border-border rounded-full text-sm text-muted-foreground hover:border-ocean/30 hover:text-ocean transition-all duration-300 cursor-default animate-scale-in ${delayClasses[index] ?? ""}`}
                 >
                   {city}
                 </span>
@@ -67,7 +67,7 @@ export function AnimatedLocalSection() {
           {/* Image */}
           <div className="relative">
             <div 
-              className="relative aspect-4/3 rounded-2xl overflow-hidden border border-white/10 shadow-2xl group animate-scale-in"
+              className="relative aspect-4/3 rounded-2xl overflow-hidden border border-border shadow-2xl group animate-scale-in"
               style={{ willChange: "transform", backfaceVisibility: "hidden" }}
             >
               <Image
@@ -81,7 +81,7 @@ export function AnimatedLocalSection() {
               <div className="absolute inset-0 bg-linear-to-t from-background/60 via-transparent to-transparent" />
               
               {/* Location Badge */}
-              <div className="absolute bottom-4 left-4 px-4 py-2 bg-background/80 backdrop-blur-sm rounded-full border border-white/10">
+              <div className="absolute bottom-4 left-4 px-4 py-2 bg-background/80 backdrop-blur-sm rounded-full border border-border">
                 <div className="flex items-center gap-2 text-sm">
                   <MapPin className="w-4 h-4 text-ocean" />
                   <span className="font-medium">Côte Basque, France</span>
@@ -90,7 +90,7 @@ export function AnimatedLocalSection() {
             </div>
             
             {/* Floating Card */}
-            <div className="absolute -bottom-6 -left-6 p-5 bg-card/90 backdrop-blur-sm rounded-2xl border border-white/10 shadow-2xl animate-in delay-300">
+            <div className="absolute -bottom-6 -left-6 p-5 bg-card/90 backdrop-blur-sm rounded-2xl border border-border shadow-2xl animate-in delay-300">
               <div className="flex items-center gap-4">
                 <div className="flex -space-x-3">
                   <Image

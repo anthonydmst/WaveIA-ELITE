@@ -114,7 +114,7 @@ export function ContactPageClient({ items }: { items?: BreadcrumbItem[] }) {
                   {contactInfo.map((item, index) => (
                     <div
                       key={index}
-                      className="flex items-start gap-4 p-4 bg-card/50 backdrop-blur-sm rounded-xl border border-white/5 hover:border-ocean/30 transition-colors group"
+                      className="flex items-start gap-4 p-4 bg-card/50 backdrop-blur-sm rounded-xl border border-border hover:border-ocean/30 transition-colors group"
                     >
                       <div className="w-10 h-10 flex items-center justify-center bg-ocean/10 rounded-lg shrink-0 group-hover:bg-ocean/20 transition-colors">
                         {item.iconName === "Mail" && <Mail className="w-5 h-5 text-ocean" />}
@@ -161,7 +161,7 @@ export function ContactPageClient({ items }: { items?: BreadcrumbItem[] }) {
             <div className="lg:col-span-2">
 
               {state?.success ? (
-                <div className="h-full flex flex-col items-center justify-center text-center p-12 bg-card/50 backdrop-blur-sm rounded-2xl border border-white/5">
+                <div className="h-full flex flex-col items-center justify-center text-center p-12 bg-card/50 backdrop-blur-sm rounded-2xl border border-border">
                   <div className="w-16 h-16 flex items-center justify-center bg-ocean/20 rounded-full mb-6 ring-4 ring-ocean/10">
                     <CheckCircle className="w-8 h-8 text-ocean" />
                   </div>
@@ -185,7 +185,7 @@ export function ContactPageClient({ items }: { items?: BreadcrumbItem[] }) {
                     };
                     formAction(data as ContactFormData); // Assuming validation happens in action
                   }}
-                  className="p-8 bg-card/50 backdrop-blur-sm rounded-2xl border border-white/5 shadow-2xl"
+                  className="p-8 bg-card/50 backdrop-blur-sm rounded-2xl border border-border shadow-2xl"
                 >
                   <div className="flex items-center gap-2 mb-6">
                     <Sparkles className="w-5 h-5 text-ocean" />
@@ -209,7 +209,7 @@ export function ContactPageClient({ items }: { items?: BreadcrumbItem[] }) {
                         value={formState.name}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 bg-background border border-white/10 rounded-lg focus:outline-none focus:border-ocean transition-colors"
+                        className="w-full px-4 py-3 bg-background border border-border rounded-lg focus:outline-none focus:border-ocean transition-colors"
                         placeholder="Jean Dupont"
                       />
                       {state?.errors?.name && (
@@ -230,7 +230,7 @@ export function ContactPageClient({ items }: { items?: BreadcrumbItem[] }) {
                         value={formState.email}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 bg-background border border-white/10 rounded-lg focus:outline-none focus:border-ocean transition-colors"
+                        className="w-full px-4 py-3 bg-background border border-border rounded-lg focus:outline-none focus:border-ocean transition-colors"
                         placeholder="jean@entreprise.fr"
                       />
                       {state?.errors?.email && (
@@ -250,7 +250,7 @@ export function ContactPageClient({ items }: { items?: BreadcrumbItem[] }) {
                         name="phone"
                         value={formState.phone}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 bg-background border border-white/10 rounded-lg focus:outline-none focus:border-ocean transition-colors"
+                        className="w-full px-4 py-3 bg-background border border-border rounded-lg focus:outline-none focus:border-ocean transition-colors"
                         placeholder="06 00 00 00 00"
                       />
                     </div>
@@ -267,7 +267,7 @@ export function ContactPageClient({ items }: { items?: BreadcrumbItem[] }) {
                         name="company"
                         value={formState.company}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 bg-background border border-white/10 rounded-lg focus:outline-none focus:border-ocean transition-colors"
+                        className="w-full px-4 py-3 bg-background border border-border rounded-lg focus:outline-none focus:border-ocean transition-colors"
                         placeholder="Ma Super Entreprise"
                       />
                     </div>
@@ -284,7 +284,7 @@ export function ContactPageClient({ items }: { items?: BreadcrumbItem[] }) {
                         value={formState.projectType}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 bg-background border border-white/10 rounded-lg focus:outline-none focus:border-ocean transition-colors appearance-none cursor-pointer"
+                        className="w-full px-4 py-3 bg-background border border-border rounded-lg focus:outline-none focus:border-ocean transition-colors appearance-none cursor-pointer"
                       >
                         <option value="">Sélectionnez...</option>
                         {projectTypes.map((type) => (
@@ -306,7 +306,7 @@ export function ContactPageClient({ items }: { items?: BreadcrumbItem[] }) {
                         name="budget"
                         value={formState.budget}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 bg-background border border-white/10 rounded-lg focus:outline-none focus:border-ocean transition-colors appearance-none cursor-pointer"
+                        className="w-full px-4 py-3 bg-background border border-border rounded-lg focus:outline-none focus:border-ocean transition-colors appearance-none cursor-pointer"
                       >
                         <option value="">Sélectionnez...</option>
                         {budgetRanges.map((range) => (
@@ -330,7 +330,7 @@ export function ContactPageClient({ items }: { items?: BreadcrumbItem[] }) {
                         onChange={handleChange}
                         required
                         rows={5}
-                        className="w-full px-4 py-3 bg-background border border-white/10 rounded-lg focus:outline-none focus:border-ocean transition-colors resize-none"
+                        className="w-full px-4 py-3 bg-background border border-border rounded-lg focus:outline-none focus:border-ocean transition-colors resize-none"
                         placeholder="Parlez-nous de votre projet, vos objectifs, vos contraintes..."
                       />
                     </div>
@@ -386,7 +386,7 @@ export function ContactPageClient({ items }: { items?: BreadcrumbItem[] }) {
           </div>
 
           {/* Integrated StoreLocator (Grade A+) */}
-          <div className="rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
+          <div className="rounded-2xl overflow-hidden border border-border shadow-2xl">
              <StoreLocator />
           </div>
         </div>

@@ -61,7 +61,7 @@ export function ServiceFAQ({ faq }: Props) {
               className={`bg-card/50 backdrop-blur-sm rounded-xl border transition-all duration-300 overflow-hidden animate-in ${
                 openFaq === index 
                   ? "border-ocean/30 shadow-[0_0_20px_rgba(14,165,233,0.1)]" 
-                  : "border-white/5 hover:border-ocean/20"
+                  : "border-border hover:border-ocean/20"
               } ${index === 1 ? "delay-100" : index === 2 ? "delay-200" : index === 3 ? "delay-300" : ""}`}
               role="listitem"
             >
@@ -85,7 +85,7 @@ export function ServiceFAQ({ faq }: Props) {
                 <div className={`w-8 h-8 rounded-full flex items-center justify-center border transition-all duration-300 ${
                   openFaq === index 
                     ? "bg-ocean text-white border-ocean rotate-180" 
-                    : "bg-white/5 border-white/10 text-muted-foreground group-hover:border-ocean/30 group-hover:text-ocean"
+                    : "bg-foreground/5 border-border text-muted-foreground group-hover:border-ocean/30 group-hover:text-ocean"
                 }`}>
                   <ChevronDown className="w-4 h-4" />
                 </div>

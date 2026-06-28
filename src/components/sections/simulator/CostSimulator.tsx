@@ -127,7 +127,7 @@ export function CostSimulator() {
              <div 
                 key={idx} 
                 className={`h-1.5 rounded-full transition-all duration-500 ${
-                  idx <= state.currentStepIndex ? "w-8 bg-ocean" : "w-2 bg-white/10"
+                  idx <= state.currentStepIndex ? "w-8 bg-ocean" : "w-2 bg-foreground/10"
                 }`} 
              />
            ))}
@@ -146,7 +146,7 @@ export function CostSimulator() {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -20 }}
                 transition={{ duration: 0.3 }}
-                className="bg-card/30 backdrop-blur-md border border-white/5 rounded-3xl p-8 min-h-[400px]"
+                className="bg-card/30 backdrop-blur-md border border-border rounded-3xl p-8 min-h-[400px]"
               >
                 <div className="mb-8">
                   <h2 className="text-3xl font-bold mb-2">{currentStep?.title}</h2>
@@ -164,11 +164,11 @@ export function CostSimulator() {
                         className={`group relative flex items-center gap-6 p-6 rounded-2xl border text-left transition-all duration-300 ${
                           isSelected 
                             ? "bg-ocean/10 border-ocean shadow-[0_0_30px_-10px_rgba(14,165,233,0.3)]" 
-                            : "bg-background/20 border-white/5 hover:border-white/10 hover:bg-white/5"
+                            : "bg-background/20 border-border hover:border-border hover:bg-foreground/5"
                         }`}
                       >
                         <div className={`p-3 rounded-xl transition-colors ${
-                          isSelected ? "bg-ocean text-white" : "bg-white/5 text-muted-foreground group-hover:text-foreground"
+                          isSelected ? "bg-ocean text-white" : "bg-foreground/5 text-muted-foreground group-hover:text-foreground"
                         }`}>
                           <IconComponent className="w-6 h-6" />
                         </div>
@@ -186,7 +186,7 @@ export function CostSimulator() {
                           <p className="text-sm text-muted-foreground">{option.description}</p>
                         </div>
                         <div className={`w-6 h-6 rounded-full border-2 flex items-center justify-center transition-colors ${
-                           isSelected ? "border-ocean bg-ocean text-white" : "border-white/10"
+                           isSelected ? "border-ocean bg-ocean text-white" : "border-border"
                         }`}>
                           {isSelected && <Check className="w-3 h-3" />}
                         </div>
@@ -199,7 +199,7 @@ export function CostSimulator() {
              <m.div
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
-                className="bg-linear-to-br from-ocean/20 to-accent/10 border border-white/10 rounded-3xl p-10 text-center h-full flex flex-col items-center justify-center"
+                className="bg-linear-to-br from-ocean/20 to-accent/10 border border-border rounded-3xl p-10 text-center h-full flex flex-col items-center justify-center"
               >
                   <div className="w-20 h-20 bg-ocean rounded-full flex items-center justify-center mb-6 shadow-[0_0_40px_-10px_rgba(14,165,233,0.5)]">
                     <Sparkles className="w-10 h-10 text-white" />
@@ -208,7 +208,7 @@ export function CostSimulator() {
                   <p className="text-xl text-muted-foreground mb-8">
                     Votre projet est unique. Discutons-en pour affiner cette estimation.
                   </p>
-                  <Button size="lg" className="w-full max-w-sm text-lg h-14 bg-white text-ocean hover:bg-white/90">
+                  <Button size="lg" className="w-full max-w-sm text-lg h-14 bg-white text-ocean hover:bg-foreground/90">
                     Réserver mon appel stratégique
                   </Button>
                   <p className="mt-4 text-sm text-muted-foreground">Sans engagement. Audit offert (30min).</p>
@@ -248,7 +248,7 @@ export function CostSimulator() {
 
         {/* Sidebar / Summary */}
         <div className="lg:col-span-1">
-          <div className="sticky top-32 bg-card/20 backdrop-blur-md border border-white/5 rounded-3xl p-6">
+          <div className="sticky top-32 bg-card/20 backdrop-blur-md border border-border rounded-3xl p-6">
             <h3 className="text-lg font-semibold mb-6 flex items-center gap-2">
                 <Calculator className="w-5 h-5 text-ocean" />
                 Récapitulatif
@@ -271,7 +271,7 @@ export function CostSimulator() {
                                      </div>
                                  );
                              })}
-                             <div className="h-px bg-white/5 my-2" />
+                             <div className="h-px bg-foreground/5 my-2" />
                         </div>
                     );
                 })}
@@ -280,7 +280,7 @@ export function CostSimulator() {
                 )}
             </div>
 
-            <div className="pt-6 border-t border-white/10">
+            <div className="pt-6 border-t border-border">
                 <div className="flex justify-between items-end mb-2">
                     <span className="text-muted-foreground">Estimation</span>
                     <div className="text-right">

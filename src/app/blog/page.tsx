@@ -36,7 +36,7 @@ export default function BlogPage() {
         </div>
 
         {/* Why Read Our Blog - Content Densification */}
-        <div className="max-w-4xl mx-auto mb-20 p-8 bg-card/30 backdrop-blur-sm rounded-2xl border border-white/5">
+        <div className="max-w-4xl mx-auto mb-20 p-8 bg-card/30 backdrop-blur-sm rounded-2xl border border-border">
           <h2 className="text-2xl font-bold mb-6 text-center">Pourquoi lire le blog WaveIA ?</h2>
           <div className="grid md:grid-cols-2 gap-6">
             <div className="space-y-2">
@@ -78,7 +78,7 @@ export default function BlogPage() {
         {/* Featured Article */}
         {featured && (
           <div className="mb-20">
-            <Link href={`/blog/${featured.slug}`} className="group relative block rounded-3xl overflow-hidden border border-white/10 bg-card/50 hover:border-ocean/30 transition-all duration-500">
+            <Link href={`/blog/${featured.slug}`} className="group relative block rounded-3xl overflow-hidden border border-border bg-card/50 hover:border-ocean/30 transition-all duration-500">
               <div className="grid md:grid-cols-2 gap-0 md:h-[500px]">
                 <div className="relative h-[300px] md:h-full overflow-hidden">
                    {/* Placeholder or Actual Image */}
@@ -111,7 +111,7 @@ export default function BlogPage() {
                     {featured.metadata.description}
                   </p>
                   
-                  <span className="mt-auto flex items-center gap-2 text-sm font-medium text-white group-hover:text-ocean transition-colors">
+                  <span className="mt-auto flex items-center gap-2 text-sm font-medium text-foreground group-hover:text-ocean transition-colors">
                     Lire l&apos;article <MoveRight size={14} />
                   </span>
                 </div>
@@ -123,7 +123,7 @@ export default function BlogPage() {
         {/* Grid of other articles */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {others.map((post) => (
-            <Link key={post.slug} href={`/blog/${post.slug}`} className="group flex flex-col h-full bg-card/30 backdrop-blur-sm border border-white/5 rounded-2xl overflow-hidden hover:border-ocean/30 hover:-translate-y-1 transition-all duration-300">
+            <Link key={post.slug} href={`/blog/${post.slug}`} className="group flex flex-col h-full bg-card/30 backdrop-blur-sm border border-border rounded-2xl overflow-hidden hover:border-ocean/30 hover:-translate-y-1 transition-all duration-300">
                <div className="relative aspect-video overflow-hidden">
                     <div className="absolute inset-0 bg-gray-900" />
                     {post.metadata.image && (
@@ -146,7 +146,7 @@ export default function BlogPage() {
                     <p className="text-sm text-muted-foreground line-clamp-3 mb-6">
                         {post.metadata.description}
                     </p>
-                    <span className="mt-auto flex items-center gap-2 text-sm font-medium text-white group-hover:text-ocean transition-colors">
+                    <span className="mt-auto flex items-center gap-2 text-sm font-medium text-foreground group-hover:text-ocean transition-colors">
                         Lire l&apos;article <MoveRight size={14} />
                     </span>
                </div>

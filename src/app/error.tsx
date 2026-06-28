@@ -31,7 +31,7 @@ export default function Error({
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
-          className="relative bg-card/50 backdrop-blur-xl border border-white/10 p-12 rounded-3xl shadow-2xl"
+          className="relative bg-card/50 backdrop-blur-xl border border-border p-12 rounded-3xl shadow-2xl"
         >
           {/* Animated Icon */}
           <m.div
@@ -90,7 +90,7 @@ export default function Error({
 
             <Link
               href="/"
-              className="group px-8 py-4 bg-white/5 hover:bg-white/10 text-foreground font-semibold rounded-full border border-white/10 hover:border-white/20 transition-all duration-300 flex items-center gap-2"
+              className="group px-8 py-4 bg-foreground/5 hover:bg-foreground/10 text-foreground font-semibold rounded-full border border-border hover:border-border transition-all duration-300 flex items-center gap-2"
             >
               <Home className="w-4 h-4" />
               <span>Retour à l&apos;accueil</span>

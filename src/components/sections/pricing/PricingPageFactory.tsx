@@ -134,7 +134,7 @@ export function PricingPageFactory({
               {trustSignals.map((signal, idx) => (
                 <div
                   key={idx}
-                  className="flex items-center gap-2 px-4 py-2 bg-card/50 backdrop-blur-sm border border-white/5 rounded-full"
+                  className="flex items-center gap-2 px-4 py-2 bg-card/50 backdrop-blur-sm border border-border rounded-full"
                 >
                   <signal.icon className="w-4 h-4 text-ocean" />
                   <span className="text-sm font-bold text-ocean">{signal.value}</span>
@@ -193,7 +193,7 @@ export function PricingPageFactory({
               {addons.map((addon, index) => (
                 <div
                   key={index}
-                  className={`group p-6 bg-card/80 backdrop-blur-sm rounded-2xl border border-white/5 hover:border-ocean/30 hover:shadow-[0_20px_40px_rgba(14,165,233,0.1)] transition-all animate-in ${index === 1 ? "delay-100" : index === 2 ? "delay-200" : index === 3 ? "delay-300" : ""}`}
+                  className={`group p-6 bg-card/80 backdrop-blur-sm rounded-2xl border border-border hover:border-ocean/30 hover:shadow-[0_20px_40px_rgba(14,165,233,0.1)] transition-all animate-in ${index === 1 ? "delay-100" : index === 2 ? "delay-200" : index === 3 ? "delay-300" : ""}`}
                   style={{ willChange: "transform", backfaceVisibility: "hidden" }}
                 >
                   <h3 className="font-semibold mb-2 group-hover:text-ocean transition-colors">{addon.name}</h3>
@@ -232,7 +232,7 @@ export function PricingPageFactory({
             {faqs.map((faq, index) => (
               <div
                 key={index}
-                className="bg-card/80 backdrop-blur-sm rounded-xl border border-white/5 overflow-hidden hover:border-ocean/20 transition-colors animate-in"
+                className="bg-card/80 backdrop-blur-sm rounded-xl border border-border overflow-hidden hover:border-ocean/20 transition-colors animate-in"
                 role="listitem"
               >
                 <button

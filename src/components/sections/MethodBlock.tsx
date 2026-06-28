@@ -68,9 +68,10 @@ export function MethodBlock() {
   ];
 
   return (
-    <section className="relative py-24 overflow-hidden bg-background">
-      {/* Glow Effects */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,var(--ocean)_0%,transparent_70%)] opacity-[0.03]" />
+    <section className="relative py-24 overflow-hidden">
+      {/* Living ambient background */}
+      <div className="absolute inset-0 bg-ambient" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,var(--ocean)_0%,transparent_70%)] opacity-[0.05]" />
       
       <div className="relative max-w-4xl mx-auto px-6 mb-20 text-center">
         <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-ocean/10 border border-ocean/20 rounded-full text-ocean text-sm font-semibold uppercase tracking-wider mb-6">
@@ -78,7 +79,7 @@ export function MethodBlock() {
         </span>
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mt-4 mb-6 leading-tight">
           Un process structuré pour<br className="hidden sm:block" />
-          <span className="italic text-ocean-light font-heading ml-0 sm:ml-3">sécuriser votre investissement.</span>
+          <span className="italic text-gradient-brand font-heading ml-0 sm:ml-3">sécuriser votre investissement.</span>
         </h2>
         <p className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed">
           De l&apos;analyse de votre marché au pilotage de vos performances, notre process élimine le hasard pour garantir un site livré dans les temps et pensé pour la rentabilité.
@@ -148,10 +149,10 @@ export function MethodBlock() {
 
         {/* Final step */}
         <div className="relative flex flex-col items-center text-center mt-8">
-          <div className="w-14 h-14 rounded-full bg-glass-bg border border-ocean/30 flex items-center justify-center z-10 mb-8 shadow-[0_0_20px_rgba(14,165,233,0.3)]">
+          <div className="w-14 h-14 rounded-full bg-glass-bg border border-ocean/30 flex items-center justify-center z-10 mb-8 shadow-glow">
             <CheckCircle2 className="w-7 h-7 text-ocean" />
           </div>
-          <h3 className="text-2xl sm:text-4xl font-bold mb-4 font-heading text-ocean-light">
+          <h3 className="text-2xl sm:text-4xl font-bold mb-4 font-heading text-gradient-brand">
             Le point de départ de votre croissance.
           </h3>
           <p className="text-muted-foreground leading-relaxed max-w-2xl mx-auto text-lg">
@@ -166,7 +167,7 @@ export function MethodBlock() {
           {cards.map((card, i) => (
             <div 
               key={i} 
-              className="flex flex-col p-8 rounded-2xl bg-glass-bg border border-glass-border hover:border-ocean/50 hover:shadow-[0_10px_30px_rgba(14,165,233,0.1)] hover:-translate-y-1 transition-all duration-300"
+              className="flex flex-col p-8 rounded-2xl shadow-card bg-linear-to-b from-white to-sky-50/60 border border-sky-100 dark:bg-glass-bg dark:from-transparent dark:to-transparent dark:border-glass-border hover:border-sky-300 dark:hover:border-ocean/50 hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300"
             >
               <div className="flex items-center gap-4 mb-4">
                 <div className="w-12 h-12 shrink-0 rounded-xl bg-ocean/10 flex items-center justify-center">

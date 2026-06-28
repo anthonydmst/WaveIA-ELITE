@@ -10,7 +10,7 @@ const ArticleHeader = ({ metadata }: { metadata: ResourceMetadata }) => {
         </span>
       </div>
       
-      <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white mb-8 leading-tight">
+      <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-foreground mb-8 leading-tight">
         {metadata.title}
       </h1>
       
@@ -40,7 +40,7 @@ const ArticleHeader = ({ metadata }: { metadata: ResourceMetadata }) => {
       </div>
 
        {/* Separator Gradient */}
-       <div className="h-px w-full max-w-xs mx-auto bg-linear-to-r from-transparent via-white/20 to-transparent mt-12" />
+       <div className="h-px w-full max-w-xs mx-auto bg-linear-to-r from-transparent via-border to-transparent mt-12" />
     </div>
   );
 };

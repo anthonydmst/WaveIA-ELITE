@@ -26,7 +26,7 @@ export function Footer() {
       <div className="absolute top-0 inset-x-0 h-px bg-linear-to-r from-transparent via-ocean/30 to-transparent" />
       
       {/* Newsletter / CTA Section */}
-      <div className="relative border-b border-white/5">
+      <div className="relative border-b border-border">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 py-12 lg:py-16">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
             <div className="text-center lg:text-left">
@@ -54,7 +54,7 @@ export function Footer() {
               </Link>
               <Link
                 href="/tarifs"
-                className="px-8 py-4 text-sm font-medium border border-white/10 rounded-full hover:bg-white/5 hover:border-ocean/30 transition-all"
+                className="px-8 py-4 text-sm font-medium border border-border rounded-full hover:bg-foreground/5 hover:border-ocean/30 transition-all"
               >
                 Voir les tarifs
               </Link>
@@ -86,7 +86,7 @@ export function Footer() {
                 href="https://linkedin.com/company/waveia"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group/social p-3 bg-white/5 border border-white/5 rounded-xl hover:bg-ocean/10 hover:border-ocean/30 transition-all"
+                className="group/social p-3 bg-foreground/5 border border-border rounded-xl hover:bg-ocean/10 hover:border-ocean/30 transition-all"
                 aria-label="LinkedIn"
               >
                 <Linkedin className="w-5 h-5 text-muted-foreground group-hover/social:text-ocean transition-colors" />
@@ -95,7 +95,7 @@ export function Footer() {
                 href="https://instagram.com/waveia.fr"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group/social p-3 bg-white/5 border border-white/5 rounded-xl hover:bg-ocean/10 hover:border-ocean/30 transition-all"
+                className="group/social p-3 bg-foreground/5 border border-border rounded-xl hover:bg-ocean/10 hover:border-ocean/30 transition-all"
                 aria-label="Instagram"
               >
                 <Instagram className="w-5 h-5 text-muted-foreground group-hover/social:text-ocean transition-colors" />
@@ -103,7 +103,7 @@ export function Footer() {
             </div>
 
             {/* Trust Badge */}
-            <div className="inline-flex items-center gap-2 px-3 py-2 bg-white/5 border border-white/5 rounded-lg">
+            <div className="inline-flex items-center gap-2 px-3 py-2 bg-foreground/5 border border-border rounded-lg">
               <div className="flex -space-x-1">
                 {[...Array(5)].map((_, i) => (
                   <span key={i} className="text-ocean text-sm" aria-hidden="true">★</span>
@@ -113,7 +113,7 @@ export function Footer() {
             </div>
 
             {/* Quick Links (Agence & Ressources) */}
-            <div className="grid grid-cols-2 gap-8 mt-10 pt-8 border-t border-white/5">
+            <div className="grid grid-cols-2 gap-8 mt-10 pt-8 border-t border-border">
                 <div>
                     <p className="font-bold text-white mb-4 text-sm font-heading">Agence</p>
                      <ul className="space-y-3 text-sm text-muted-foreground">
@@ -246,7 +246,7 @@ export function Footer() {
       </div>
 
       {/* Bottom Bar */}
-      <div className="relative border-t border-white/5">
+      <div className="relative border-t border-border">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-sm text-muted-foreground">

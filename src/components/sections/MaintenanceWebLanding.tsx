@@ -385,7 +385,7 @@ export function MaintenanceWebLanding() {
               <div key={i} className="glass-card border-border overflow-hidden">
                 <button 
                   onClick={() => toggleFaq(i)}
-                  className="w-full text-left px-6 py-5 flex justify-between items-center bg-transparent hover:bg-white/5 transition-colors"
+                  className="w-full text-left px-6 py-5 flex justify-between items-center bg-transparent hover:bg-foreground/5 transition-colors"
                 >
                   <span className="font-semibold text-foreground">{faq.q}</span>
                   <span className={`text-ocean text-xl transition-transform duration-300 shrink-0 ${openFaq === i ? 'rotate-45' : ''}`}>+</span>
@@ -458,24 +458,24 @@ export function MaintenanceWebLanding() {
                 <div className="grid grid-cols-2 gap-5">
                   <div>
                     <label className="block text-[0.82rem] font-medium text-muted-foreground mb-2">Prénom *</label>
-                    <input type="text" placeholder="Jean" className="w-full bg-white/5 border border-border rounded-lg px-4 py-3 text-sm text-foreground focus:outline-none focus:border-ocean/60 focus:bg-ocean/5 transition-colors" />
+                    <input type="text" placeholder="Jean" className="w-full bg-foreground/5 border border-border rounded-lg px-4 py-3 text-sm text-foreground focus:outline-none focus:border-ocean/60 focus:bg-ocean/5 transition-colors" />
                   </div>
                   <div>
                     <label className="block text-[0.82rem] font-medium text-muted-foreground mb-2">Nom *</label>
-                    <input type="text" placeholder="Dupont" className="w-full bg-white/5 border border-border rounded-lg px-4 py-3 text-sm text-foreground focus:outline-none focus:border-ocean/60 focus:bg-ocean/5 transition-colors" />
+                    <input type="text" placeholder="Dupont" className="w-full bg-foreground/5 border border-border rounded-lg px-4 py-3 text-sm text-foreground focus:outline-none focus:border-ocean/60 focus:bg-ocean/5 transition-colors" />
                   </div>
                 </div>
                 <div>
                   <label className="block text-[0.82rem] font-medium text-muted-foreground mb-2">Email professionnel *</label>
-                  <input type="email" placeholder="jean@entreprise.fr" className="w-full bg-white/5 border border-border rounded-lg px-4 py-3 text-sm text-foreground focus:outline-none focus:border-ocean/60 focus:bg-ocean/5 transition-colors" />
+                  <input type="email" placeholder="jean@entreprise.fr" className="w-full bg-foreground/5 border border-border rounded-lg px-4 py-3 text-sm text-foreground focus:outline-none focus:border-ocean/60 focus:bg-ocean/5 transition-colors" />
                 </div>
                 <div>
                   <label className="block text-[0.82rem] font-medium text-muted-foreground mb-2">Téléphone</label>
-                  <input type="tel" placeholder="+33 6 XX XX XX XX" className="w-full bg-white/5 border border-border rounded-lg px-4 py-3 text-sm text-foreground focus:outline-none focus:border-ocean/60 focus:bg-ocean/5 transition-colors" />
+                  <input type="tel" placeholder="+33 6 XX XX XX XX" className="w-full bg-foreground/5 border border-border rounded-lg px-4 py-3 text-sm text-foreground focus:outline-none focus:border-ocean/60 focus:bg-ocean/5 transition-colors" />
                 </div>
                 <div>
                   <label className="block text-[0.82rem] font-medium text-muted-foreground mb-2">URL de votre site</label>
-                  <input type="url" placeholder="https://monsite.fr" className="w-full bg-white/5 border border-border rounded-lg px-4 py-3 text-sm text-foreground focus:outline-none focus:border-ocean/60 focus:bg-ocean/5 transition-colors" />
+                  <input type="url" placeholder="https://monsite.fr" className="w-full bg-foreground/5 border border-border rounded-lg px-4 py-3 text-sm text-foreground focus:outline-none focus:border-ocean/60 focus:bg-ocean/5 transition-colors" />
                 </div>
                 <div>
                   <label className="block text-[0.82rem] font-medium text-muted-foreground mb-2">Votre ville</label>
@@ -493,7 +493,7 @@ export function MaintenanceWebLanding() {
                 </div>
                 <div>
                   <label className="block text-[0.82rem] font-medium text-muted-foreground mb-2">Votre message</label>
-                  <textarea placeholder="Décrivez brièvement votre site et vos besoins en maintenance…" className="w-full bg-white/5 border border-border rounded-lg px-4 py-3 text-sm text-foreground focus:outline-none focus:border-ocean/60 focus:bg-ocean/5 transition-colors min-h-[110px] resize-y"></textarea>
+                  <textarea placeholder="Décrivez brièvement votre site et vos besoins en maintenance…" className="w-full bg-foreground/5 border border-border rounded-lg px-4 py-3 text-sm text-foreground focus:outline-none focus:border-ocean/60 focus:bg-ocean/5 transition-colors min-h-[110px] resize-y"></textarea>
                 </div>
                 <button type="button" className="w-full bg-ocean text-white font-heading font-bold text-[0.95rem] py-3.5 rounded-lg hover:opacity-90 hover:-translate-y-0.5 transition-all mt-2 shadow-lg shadow-ocean/20">
                   Envoyer ma demande d'audit →

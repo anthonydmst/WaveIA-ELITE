@@ -27,7 +27,7 @@ export function ServiceFeatures({ features }: Props) {
           {features.map((feature, index) => (
             <div
               key={index}
-              className={`group relative p-8 rounded-3xl bg-card/40 backdrop-blur-md border border-white/5 overflow-hidden transition-all duration-500 hover:shadow-[0_0_40px_rgba(14,165,233,0.15)] hover:-translate-y-2 animate-scale-in ${
+              className={`group relative p-8 rounded-3xl bg-card/40 backdrop-blur-md border border-border overflow-hidden transition-all duration-500 hover:shadow-[0_0_40px_rgba(14,165,233,0.15)] hover:-translate-y-2 animate-scale-in ${
                 index === 0 || index === 3 ? "md:col-span-2 bg-linear-to-br from-card/60 to-card/40" : "md:col-span-1"
               } ${delayClasses[index % 6] ?? ""}`}
             >
@@ -35,7 +35,7 @@ export function ServiceFeatures({ features }: Props) {
               <div className="absolute inset-0 bg-linear-to-br from-ocean/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               
               <div className="relative z-10">
-                <div className="w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center mb-6 border border-white/10 group-hover:border-ocean/30 group-hover:bg-ocean/10 transition-all duration-300">
+                <div className="w-14 h-14 bg-foreground/5 rounded-2xl flex items-center justify-center mb-6 border border-border group-hover:border-ocean/30 group-hover:bg-ocean/10 transition-all duration-300">
                   <Sparkles className="w-6 h-6 text-muted-foreground group-hover:text-ocean transition-colors" />
                 </div>
                 

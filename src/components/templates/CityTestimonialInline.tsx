@@ -147,7 +147,7 @@ export function CityTestimonialInline({ cityName }: Props) {
   return (
     <section className="relative py-12 max-w-4xl mx-auto px-6 lg:px-8">
       <div
-        className="relative bg-card/50 backdrop-blur-sm border border-white/5 hover:border-ocean/20 rounded-2xl p-8 overflow-hidden transition-colors animate-in"
+        className="relative bg-card/50 backdrop-blur-sm border border-border hover:border-ocean/20 rounded-2xl p-8 overflow-hidden transition-colors animate-in"
       >
         {/* Background Glow */}
         <div className="absolute -top-10 -right-10 w-40 h-40 bg-ocean/10 blur-[80px] rounded-full pointer-events-none" />

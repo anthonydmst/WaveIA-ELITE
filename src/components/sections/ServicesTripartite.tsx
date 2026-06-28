@@ -42,10 +42,10 @@ export function ServicesTripartite() {
       id="nos-services"
       className="relative py-24 lg:py-32 overflow-hidden"
     >
-      {/* Background Effects */}
-      <div className="absolute inset-0 bg-card/30" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,var(--ocean)_0%,transparent_60%)] opacity-[0.04]" />
-      <div className="absolute bottom-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-ocean/20 to-transparent" />
+      {/* Background Effects — living ambient surface (ocean blooms over sky-tinted base) */}
+      <div className="absolute inset-0 bg-ambient" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,var(--ocean)_0%,transparent_60%)] opacity-[0.06]" />
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-ocean/30 to-transparent" />
 
       <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
         {/* Section Header */}
@@ -56,7 +56,7 @@ export function ServicesTripartite() {
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mt-4 mb-6">
             Trois leviers stratégiques pour
             <br className="hidden sm:block" />
-            <span className="font-heading italic text-ocean-light">
+            <span className="font-heading italic text-gradient-brand">
               structurer votre croissance.
             </span>
           </h2>
@@ -93,7 +93,7 @@ export function ServicesTripartite() {
                 />
 
                 {/* Card */}
-                <div className="relative h-full p-8 lg:p-10 bg-glass-bg backdrop-blur-sm rounded-2xl border border-glass-border overflow-hidden transition-all duration-500 group-hover:border-transparent group-hover:translate-y-[-8px] group-hover:shadow-[0_20px_40px_var(--glass-glow)]">
+                <div className="relative h-full p-8 lg:p-10 rounded-2xl overflow-hidden shadow-card transition-all duration-500 bg-linear-to-b from-white to-sky-50/60 border border-sky-100 dark:bg-glass-bg dark:from-transparent dark:to-transparent dark:border-glass-border dark:backdrop-blur-sm group-hover:-translate-y-2 group-hover:border-sky-300 group-hover:shadow-card-hover dark:group-hover:border-transparent">
                   {/* Corner Glow */}
                   <div
                     className={`absolute top-0 right-0 w-48 h-48 bg-linear-to-br ${service.gradient} opacity-0 group-hover:opacity-[0.12] blur-3xl transition-opacity duration-700`}

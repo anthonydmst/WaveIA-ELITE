@@ -15,14 +15,14 @@ export function ThemeToggle() {
 
   if (!mounted) {
     return (
-      <div className="w-10 h-10 rounded-full bg-white/5 border border-white/5 animate-pulse" />
+      <div className="w-10 h-10 rounded-full bg-foreground/5 border border-border animate-pulse" />
     );
   }
 
   return (
     <button
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-      className="relative w-10 h-10 flex items-center justify-center rounded-full bg-white/5 border border-white/5 hover:border-ocean/30 transition-colors group overflow-hidden"
+      className="relative w-10 h-10 flex items-center justify-center rounded-full bg-foreground/5 border border-border hover:border-ocean/30 transition-colors group overflow-hidden"
       aria-label="Changer de thème"
     >
       <div className="absolute inset-0 bg-ocean/5 opacity-0 group-hover:opacity-100 transition-opacity" />

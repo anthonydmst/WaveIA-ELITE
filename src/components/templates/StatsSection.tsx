@@ -26,7 +26,7 @@ const delayClasses = ["delay-100", "delay-200", "delay-300", "delay-400"];
 export function StatsSection({ title, metrics }: Props) {
   return (
     <section className="relative max-w-7xl mx-auto px-6 lg:px-8 w-full">
-      <div className="bg-card/50 backdrop-blur-sm border border-white/5 rounded-3xl p-8 lg:p-12 overflow-hidden relative">
+      <div className="bg-card/50 backdrop-blur-sm border border-border rounded-3xl p-8 lg:p-12 overflow-hidden relative">
         {/* Background Glow */}
         <div className="absolute -top-20 -right-20 w-80 h-80 bg-ocean/10 blur-[100px] rounded-full pointer-events-none" />
         
@@ -45,7 +45,7 @@ export function StatsSection({ title, metrics }: Props) {
             {metrics.map((metric, idx) => (
               <div
                 key={idx}
-                className={`group text-center p-6 rounded-2xl bg-white/5 border border-white/5 hover:border-ocean/30 transition-all duration-300 animate-in ${delayClasses[idx % 4] ?? ""}`}
+                className={`group text-center p-6 rounded-2xl bg-foreground/5 border border-border hover:border-ocean/30 transition-all duration-300 animate-in ${delayClasses[idx % 4] ?? ""}`}
               >
                 <div className="w-10 h-10 mx-auto mb-4 rounded-xl bg-ocean/10 flex items-center justify-center text-ocean group-hover:scale-110 transition-transform">
                   {iconMap[idx % 4]}

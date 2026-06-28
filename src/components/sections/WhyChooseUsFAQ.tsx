@@ -48,8 +48,9 @@ const faqs = [
 
 export function WhyChooseUsFAQ() {
   return (
-    <section className="relative py-24 lg:py-32 overflow-hidden bg-background">
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,var(--ocean)_0%,transparent_50%)] opacity-[0.03]" />
+    <section className="relative py-24 lg:py-32 overflow-hidden">
+      <div className="absolute inset-0 bg-ambient" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,var(--ocean)_0%,transparent_50%)] opacity-[0.05]" />
       
       <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-start">
@@ -62,7 +63,7 @@ export function WhyChooseUsFAQ() {
             </div>
             <h2 className="text-3xl sm:text-4xl font-bold mt-4 leading-tight">
               Vous avez encore<br />
-              <span className="font-heading italic text-ocean-light">des questions ?</span>
+              <span className="font-heading italic text-gradient-brand">des questions ?</span>
             </h2>
             <p className="text-muted-foreground text-base lg:text-lg leading-relaxed">
               Retrouvez ici les réponses aux interrogations les plus fréquentes concernant notre accompagnement et nos méthodes.
@@ -76,7 +77,7 @@ export function WhyChooseUsFAQ() {
                 <Accordion.Item
                   key={index}
                   value={`item-${index}`}
-                  className="bg-glass-bg backdrop-blur-sm border border-glass-border rounded-xl overflow-hidden hover:border-ocean/30 transition-colors shadow-sm"
+                  className="bg-glass-bg backdrop-blur-sm border border-glass-border rounded-xl overflow-hidden hover:border-ocean/30 transition-colors shadow-card"
                 >
                   <Accordion.Header className="flex">
                     <Accordion.Trigger className="flex flex-1 items-center justify-between py-5 px-6 font-semibold text-left text-foreground hover:text-ocean-light transition-colors group">
