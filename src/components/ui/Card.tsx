@@ -16,7 +16,7 @@ export interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
 
 const variantStyles: Record<CardVariant, string> = {
   elevated:
-    "bg-linear-to-b from-[#fefcf7] to-[#faf3e5] border border-[rgba(61,45,23,0.10)] " +
+    "bg-linear-to-b from-[#fefcf7] to-[#faf3e5] border border-[rgba(61,45,23,0.14)] " +
     "dark:bg-glass-bg dark:from-transparent dark:to-transparent dark:border-glass-border dark:backdrop-blur-sm",
   glass: "bg-glass-bg border border-glass-border backdrop-blur-sm",
   plain: "bg-card border border-border",

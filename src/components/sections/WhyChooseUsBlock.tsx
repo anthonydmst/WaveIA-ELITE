@@ -18,7 +18,7 @@ export function WhyChooseUsBlock() {
         </span>
         <SectionHeader as="h2" size="page" align="center" className="mt-4 mb-6 leading-tight">
           Plus qu&apos;une agence web.<br className="hidden sm:block" />
-          <span className="italic text-gradient-brand font-heading ml-0 sm:ml-3">L&apos;ingénierie de votre croissance.</span>
+          <span className="italic text-ocean-text font-heading ml-0 sm:ml-3">L&apos;ingénierie de votre croissance.</span>
         </SectionHeader>
         <p className="text-muted-foreground text-lg max-w-3xl mx-auto leading-relaxed">
           Nous ne livrons pas de simples &quot;cartes de visite digitales&quot;. Nous concevons des écosystèmes connectés où la technologie, l&apos;Intelligence Artificielle et la stratégie commerciale travaillent ensemble pour votre rentabilité.
@@ -183,17 +183,38 @@ export function WhyChooseUsBlock() {
           
           <div className="relative h-full min-h-[400px] rounded-2xl border border-glass-border bg-glass-bg shadow-card overflow-hidden flex items-center justify-center p-8">
              <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,var(--ocean)_0%,transparent_70%)] opacity-10" />
-             <div className="relative z-10 w-full flex flex-col items-center justify-center text-center">
-                <div className="flex -space-x-6 mb-6">
-                   <div className="w-24 h-24 rounded-full border-4 border-background bg-gradient-to-br from-ocean/20 to-ocean/5 flex items-center justify-center overflow-hidden shadow-lg backdrop-blur-md">
+             <div className="relative z-10 w-full max-w-sm flex flex-col items-center text-center gap-7">
+                <div className="flex -space-x-6">
+                   <div className="w-24 h-24 rounded-full border-4 border-card bg-linear-to-br from-ocean/25 to-ocean/5 flex items-center justify-center shadow-lg">
                      <span className="font-bold text-2xl text-foreground">A</span>
                    </div>
-                   <div className="w-24 h-24 rounded-full border-4 border-background bg-gradient-to-br from-ocean/20 to-ocean/5 flex items-center justify-center overflow-hidden shadow-lg backdrop-blur-md">
+                   <div className="w-24 h-24 rounded-full border-4 border-card bg-linear-to-br from-ocean/25 to-ocean/5 flex items-center justify-center shadow-lg">
                      <span className="font-bold text-2xl text-foreground">J</span>
                    </div>
                 </div>
-                <p className="text-2xl font-bold mb-2">Anthony & Julien</p>
-                <p className="text-ocean-text font-medium text-lg">Fondateurs de WaveIA</p>
+                <div>
+                  <p className="text-2xl font-bold">Anthony &amp; Julien</p>
+                  <p className="text-ocean-text font-medium text-lg">Fondateurs de WaveIA</p>
+                </div>
+                <p className="text-muted-foreground italic leading-relaxed">
+                  &laquo;&nbsp;Vous échangez en direct avec les deux personnes qui conçoivent, codent et pilotent votre croissance. Aucun intermédiaire.&nbsp;&raquo;
+                </p>
+                <div className="flex items-center justify-center gap-5 w-full pt-6 border-t border-glass-border">
+                   <div>
+                     <p className="text-2xl font-bold text-foreground">2</p>
+                     <p className="text-[11px] text-muted-foreground uppercase tracking-wider mt-1">Experts dédiés</p>
+                   </div>
+                   <div className="w-px h-10 bg-glass-border" />
+                   <div>
+                     <p className="text-2xl font-bold text-foreground">0</p>
+                     <p className="text-[11px] text-muted-foreground uppercase tracking-wider mt-1">Intermédiaire</p>
+                   </div>
+                   <div className="w-px h-10 bg-glass-border" />
+                   <div>
+                     <p className="text-2xl font-bold text-foreground">{"<"} 24h</p>
+                     <p className="text-[11px] text-muted-foreground uppercase tracking-wider mt-1">Réponse</p>
+                   </div>
+                </div>
              </div>
           </div>
         </div>

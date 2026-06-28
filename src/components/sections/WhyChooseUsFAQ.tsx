@@ -64,7 +64,7 @@ export function WhyChooseUsFAQ() {
             </div>
             <SectionHeader as="h2" size="section" className="mt-4 leading-tight">
               Vous avez encore<br />
-              <span className="font-heading italic text-gradient-brand">des questions ?</span>
+              <span className="font-heading italic text-ocean-text">des questions ?</span>
             </SectionHeader>
             <p className="text-muted-foreground text-base lg:text-lg leading-relaxed">
               Retrouvez ici les réponses aux interrogations les plus fréquentes concernant notre accompagnement et nos méthodes.

@@ -82,7 +82,7 @@ export function MethodBlock() {
         </span>
         <SectionHeader as="h2" size="page" align="center" className="mt-4 mb-6 leading-tight">
           Un process structuré pour<br className="hidden sm:block" />
-          <span className="italic text-gradient-brand font-heading ml-0 sm:ml-3">sécuriser votre investissement.</span>
+          <span className="italic text-ocean-text font-heading ml-0 sm:ml-3">sécuriser votre investissement.</span>
         </SectionHeader>
         <p className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed">
           De l&apos;analyse de votre marché au pilotage de vos performances, notre process élimine le hasard pour garantir un site livré dans les temps et pensé pour la rentabilité.
@@ -118,11 +118,25 @@ export function MethodBlock() {
                         {step.desc}
                       </p>
                     </div>
-                    <div className="hidden md:block" />
+                    <div className="hidden md:flex items-center justify-center">
+                      <div className="relative flex items-center justify-center">
+                        <span aria-hidden className="text-[9rem] font-black leading-none text-ocean/8 select-none">{String(index + 1).padStart(2, "0")}</span>
+                        <div className="absolute w-16 h-16 rounded-2xl bg-glass-bg border border-glass-border shadow-card flex items-center justify-center">
+                          <step.icon className="w-7 h-7 text-ocean" />
+                        </div>
+                      </div>
+                    </div>
                   </>
                 ) : (
                   <>
-                    <div className="hidden md:block" />
+                    <div className="hidden md:flex items-center justify-center">
+                      <div className="relative flex items-center justify-center">
+                        <span aria-hidden className="text-[9rem] font-black leading-none text-ocean/8 select-none">{String(index + 1).padStart(2, "0")}</span>
+                        <div className="absolute w-16 h-16 rounded-2xl bg-glass-bg border border-glass-border shadow-card flex items-center justify-center">
+                          <step.icon className="w-7 h-7 text-ocean" />
+                        </div>
+                      </div>
+                    </div>
                     <div className="text-center md:text-left">
                       <div className="flex items-center justify-center md:justify-start gap-3 mb-4">
                         <span className="text-[13px] text-muted-foreground uppercase tracking-widest font-medium">Étape</span>
@@ -155,7 +169,7 @@ export function MethodBlock() {
           <div className="w-14 h-14 rounded-full bg-glass-bg border border-ocean/30 flex items-center justify-center z-10 mb-8 shadow-glow">
             <CheckCircle2 className="w-7 h-7 text-ocean" />
           </div>
-          <SectionHeader as="h3" size="section" align="center" className="mb-4 font-heading text-gradient-brand">
+          <SectionHeader as="h3" size="section" align="center" className="mb-4 font-heading text-ocean-text">
             Le point de départ de votre croissance.
           </SectionHeader>
           <p className="text-muted-foreground leading-relaxed max-w-2xl mx-auto text-lg">

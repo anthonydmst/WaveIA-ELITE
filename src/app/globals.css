@@ -124,9 +124,9 @@
   --sidebar-ring: #0ea5e9;
 
   /* Glass & Light Adaptive Tokens - Light Mode */
-  --glass-bg: rgba(251, 246, 236, 0.82);     /* warm ivory glass, matches --card */
-  --glass-bg-hover: rgba(251, 246, 236, 0.93);
-  --glass-border: rgba(14, 165, 233, 0.12);
+  --glass-bg: rgba(251, 246, 236, 0.86);     /* warm ivory glass, matches --card */
+  --glass-bg-hover: rgba(251, 246, 236, 0.95);
+  --glass-border: rgba(14, 165, 233, 0.16);  /* crisper ocean edge on cards */
   --glass-glow: rgba(14, 165, 233, 0.05);
   --hero-gradient-center: var(--ocean-dark);
   --bg-glow-color: #0369a1;
@@ -141,13 +141,13 @@
 
   /* Elevation scale — Light Mode (warm sand-umber depth; ocean glow reserved for CTAs) */
   --e-card:
-    0 1px 2px rgba(61, 45, 23, 0.06),
-    0 10px 28px -8px rgba(61, 45, 23, 0.14),
-    0 0 0 1px rgba(57, 44, 26, 0.07);
+    0 1px 2px rgba(61, 45, 23, 0.07),
+    0 10px 28px -8px rgba(61, 45, 23, 0.15),
+    0 0 0 1px rgba(57, 44, 26, 0.10);
   --e-card-hover:
-    0 2px 6px rgba(61, 45, 23, 0.07),
-    0 22px 48px -10px rgba(61, 45, 23, 0.20),
-    0 0 0 1px rgba(57, 44, 26, 0.08);
+    0 2px 6px rgba(61, 45, 23, 0.08),
+    0 22px 48px -10px rgba(61, 45, 23, 0.22),
+    0 0 0 1px rgba(57, 44, 26, 0.12);
   --e-float:
     0 8px 16px -4px rgba(61, 45, 23, 0.08),
     0 24px 56px -8px rgba(61, 45, 23, 0.16),
