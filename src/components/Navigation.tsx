@@ -156,6 +156,8 @@ export function Navigation() {
         className={`fixed! top-0 left-0 right-0 z-50 transition-all duration-500 ${
           scrolled
             ? "bg-background/80 backdrop-blur-xl border-b border-border shadow-float"
+            : isHomeHero
+            ? "bg-slate-950/95 border-b border-transparent shadow-float"
             : "bg-background/60 backdrop-blur-md border-b border-transparent"
         } animate-slide-down!`}
       >
