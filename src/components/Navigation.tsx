@@ -120,34 +120,22 @@ function MobileAccordionItem({ item, index, onNavigate }: MobileAccordionItemPro
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [isHomeHero, setIsHomeHero] = useState(
-    typeof window !== "undefined"
-      ? window.location.pathname === "/" && window.scrollY < 20
-      : usePathname() === "/"
-  );
   const pathname = usePathname();
 
   const { trigger } = useHaptics();
 
   useEffect(() => {
     const handleScroll = () => {
-      const isScrolled = window.scrollY > 20;
-      setScrolled(isScrolled);
-      setIsHomeHero(window.location.pathname === "/" && !isScrolled);
+      setScrolled(window.scrollY > 20);
     };
 
-    const handleRouteChange = () => {
-      setIsHomeHero(window.location.pathname === "/" && window.scrollY < 20);
-    };
-
-    handleRouteChange();
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [pathname]);
+  }, []);
 
-  const headerText = isHomeHero ? "text-white" : "text-foreground";
-  const headerMuted = isHomeHero ? "text-slate-300" : "text-muted-foreground";
-  const hoverText = isHomeHero ? "hover:text-white/80" : "hover:text-ocean";
+  const headerText = "text-foreground";
+  const headerMuted = "text-muted-foreground";
+  const hoverText = "hover:text-ocean";
 
   return (
     <>
@@ -156,9 +144,7 @@ export function Navigation() {
         className={`fixed! top-0 left-0 right-0 z-50 transition-all duration-500 ${
           scrolled
             ? "bg-background/80 backdrop-blur-xl border-b border-border shadow-float"
-            : isHomeHero
-            ? "bg-slate-950/95 border-b border-transparent shadow-float"
-            : "bg-background/60 backdrop-blur-md border-b border-transparent"
+            : "bg-background/95 backdrop-blur-xl border-b border-border shadow-float"
         } animate-slide-down!`}
       >
         <nav className="max-w-7xl mx-auto px-6 lg:px-8">

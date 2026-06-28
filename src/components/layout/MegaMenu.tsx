@@ -22,16 +22,13 @@ export function MegaMenu({ isHero = false }: MegaMenuProps) {
     setActiveTab(null);
   }, [pathname]);
 
-  const inactiveLinkClass = isHero
-    ? "text-white hover:text-white/80 hover:bg-white/5"
-    : "text-muted-foreground hover:text-foreground hover:bg-foreground/5";
-
-  const panelHeadingClass = isHero ? "text-white" : "text-foreground";
-  const panelTextClass = isHero ? "text-slate-300" : "text-muted-foreground";
-  const panelLinkClass = isHero ? "text-white hover:text-ocean" : "text-foreground hover:text-ocean";
+  const inactiveLinkClass = "text-muted-foreground hover:text-foreground hover:bg-foreground/5";
+  const panelHeadingClass = "text-foreground";
+  const panelTextClass = "text-muted-foreground";
+  const panelLinkClass = "text-foreground hover:text-ocean";
 
   return (
-    <nav className={`hidden lg:flex items-center gap-1 ${isHero ? "text-white" : "text-foreground"}`} onMouseLeave={() => setActiveTab(null)}>
+    <nav className="hidden lg:flex items-center gap-1 text-foreground" onMouseLeave={() => setActiveTab(null)}>
       {MEGA_MENU_ITEMS.map((item, index) => {
         const isActive = isActiveLink(item.href);
 
