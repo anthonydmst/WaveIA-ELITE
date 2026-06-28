@@ -7,7 +7,11 @@ import { m, AnimatePresence } from "framer-motion";
 import { ChevronDown, ArrowRight } from "lucide-react";
 import { MEGA_MENU_ITEMS } from "@/lib/data/site";
 
-export function MegaMenu() {
+interface MegaMenuProps {
+  isHero?: boolean;
+}
+
+export function MegaMenu({ isHero = false }: MegaMenuProps) {
   const [activeTab, setActiveTab] = useState<number | null>(null);
   const pathname = usePathname();
 
@@ -18,8 +22,16 @@ export function MegaMenu() {
     setActiveTab(null);
   }, [pathname]);
 
+  const inactiveLinkClass = isHero
+    ? "text-white hover:text-white/80 hover:bg-white/5"
+    : "text-muted-foreground hover:text-foreground hover:bg-foreground/5";
+
+  const panelHeadingClass = isHero ? "text-white" : "text-foreground";
+  const panelTextClass = isHero ? "text-slate-300" : "text-muted-foreground";
+  const panelLinkClass = isHero ? "text-white hover:text-ocean" : "text-foreground hover:text-ocean";
+
   return (
-    <nav className="hidden lg:flex items-center gap-1" onMouseLeave={() => setActiveTab(null)}>
+    <nav className={`hidden lg:flex items-center gap-1 ${isHero ? "text-white" : ""}`} onMouseLeave={() => setActiveTab(null)}>
       {MEGA_MENU_ITEMS.map((item, index) => {
         const isActive = isActiveLink(item.href);
 
@@ -35,7 +47,7 @@ export function MegaMenu() {
                 relative px-4 py-2 text-[15px] font-medium transition-colors rounded-full flex items-center gap-2
                 ${activeTab === index || isActive 
                   ? "text-ocean bg-ocean/10 shadow-[0_0_15px_rgba(14,165,233,0.15)]" 
-                  : "text-muted-foreground hover:text-foreground hover:bg-foreground/5"
+                  : inactiveLinkClass
                 }
               `}
             >
@@ -55,8 +67,8 @@ export function MegaMenu() {
                   <div className="bg-linear-to-b from-ocean/10 via-card/90 to-card/95 backdrop-blur-3xl border border-ocean/20 rounded-2xl shadow-[0_0_50px_rgba(14,165,233,0.15)] overflow-hidden p-6 grid grid-cols-12 gap-6">
                     <div className="col-span-5 bg-linear-to-br from-ocean/10 to-transparent rounded-xl p-5 flex flex-col justify-between">
                       <div>
-                        <p className="font-bold text-lg text-foreground mb-1">{item.featured.title}</p>
-                        <p className="text-xs text-muted-foreground leading-relaxed">
+                        <p className={`font-bold text-lg mb-1 ${panelHeadingClass}`}>{item.featured.title}</p>
+                        <p className={`text-xs leading-relaxed ${panelTextClass}`}>
                           {item.featured.desc}
                         </p>
                       </div>
@@ -71,7 +83,7 @@ export function MegaMenu() {
                     {/* Links Section (Right - 7 cols) */}
                     <div className="col-span-7 flex flex-col justify-between">
                       <div>
-                        <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-3">
+                        <p className={`text-xs font-semibold uppercase tracking-wider mb-3 ${panelTextClass}`}>
                           Services
                         </p>
                         <ul className="space-y-2">
@@ -79,7 +91,7 @@ export function MegaMenu() {
                             <li key={sublink.href}>
                               <Link 
                                 href={sublink.href}
-                                className="block text-[15px] text-foreground hover:text-ocean transition-colors"
+                                className={`block text-[15px] ${panelLinkClass} transition-colors`}
                               >
                                 {sublink.label}
                               </Link>

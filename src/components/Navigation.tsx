@@ -134,6 +134,9 @@ export function Navigation() {
   }, []);
 
   const isHomeHero = pathname === "/" && !scrolled;
+  const headerText = isHomeHero ? "text-white" : "text-foreground";
+  const headerMuted = isHomeHero ? "text-slate-300" : "text-muted-foreground";
+  const hoverText = isHomeHero ? "hover:text-white/80" : "hover:text-ocean";
 
   return (
     <>
@@ -157,13 +160,13 @@ export function Navigation() {
                 <div className="absolute inset-0 bg-ocean/20 blur-xl rounded-full group-hover:bg-ocean/40 transition-colors" />
                 <Waves className="relative w-8 h-8 text-ocean" />
               </div>
-              <span className="text-2xl font-bold tracking-tight text-foreground dark:text-white">
+              <span className={`text-2xl font-bold tracking-tight ${headerText}`}>
                 wave<span className="text-ocean">IA</span>
               </span>
             </Link>
 
             {/* Desktop Mega Menu */}
-            <MegaMenu />
+            <MegaMenu isHero={isHomeHero} />
 
             {/* CTA Button & Theme Toggle */}
             <div className="hidden lg:flex items-center gap-4">
@@ -183,7 +186,7 @@ export function Navigation() {
               <ThemeToggle />
               <button
                 onClick={() => setIsOpen(true)}
-                className="p-2 text-foreground hover:text-ocean transition-colors"
+                className={`p-2 ${headerText} ${hoverText} transition-colors`}
                 aria-label="Ouvrir le menu"
               >
                 <Menu className="w-6 h-6" />
@@ -223,7 +226,7 @@ export function Navigation() {
                   </Link>
                   <button
                     onClick={() => setIsOpen(false)}
-                    className="p-2 text-muted-foreground hover:text-foreground transition-colors"
+                    className={`p-2 ${headerMuted} ${hoverText} transition-colors`}
                     aria-label="Fermer le menu"
                   >
                     <X className="w-6 h-6" />
