@@ -44,36 +44,8 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
     renderHeroFn = (breadcrumbs) => <SiteVitrineLanding />;
     isStandalone = true;
   } else if (slug === "site-ecommerce") {
-    renderHeroFn = (breadcrumbs) => (
-      <>
-        <SiteEcommerceLanding />
-        {service && <ServiceHero hero={service.hero} breadcrumbItems={breadcrumbs} />}
-      </>
-    );
-    extraContent = (
-      <div className="max-w-4xl mx-auto px-6 lg:px-8 mt-12 relative z-10 mb-20">
-         <TechnoTranslator 
-            title="L'E-commerce sans Stress" 
-            terms={[
-              {
-                tech: "Tunnel de Vente",
-                human: "Route vers l'Achat",
-                description: "On supprime tous les obstacles entre le 'clic' et le 'paiement'. Moins de clics = plus de ventes."
-              },
-              {
-                tech: "Passerelle de Paiement",
-                human: "Caisse Sécurisée",
-                description: "Vos clients paient par Carte ou Apple Pay en toute confiance. L'argent arrive directement sur votre compte."
-              },
-              {
-                tech: "Gestion de Stock",
-                human: "Inventaire Auto",
-                description: "Quand un produit est vendu, le stock baisse tout seul. Vous savez toujours ce qu'il vous reste."
-              }
-            ]}
-         />
-      </div>
-    );
+    renderHeroFn = (breadcrumbs) => <SiteEcommerceLanding />;
+    isStandalone = true;
   } else if (slug === "maintenance-web") {
     renderHeroFn = (breadcrumbs) => (
       <>
