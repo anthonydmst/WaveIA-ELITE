@@ -163,7 +163,7 @@ export function Navigation() {
             </Link>
 
             {/* Desktop Mega Menu */}
-            <MegaMenu isHero={isHomeHero} />
+            <MegaMenu />
 
             {/* CTA Button & Theme Toggle */}
             <div className="hidden lg:flex items-center gap-4">
