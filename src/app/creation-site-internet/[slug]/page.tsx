@@ -48,36 +48,8 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
     renderHeroFn = (breadcrumbs) => <SiteEcommerceLanding />;
     isStandalone = true;
   } else if (slug === "maintenance-web") {
-    renderHeroFn = (breadcrumbs) => (
-      <>
-        <MaintenanceWebLanding />
-        {service && <ServiceHero hero={service.hero} breadcrumbItems={breadcrumbs} />}
-      </>
-    );
-    extraContent = (
-      <div className="max-w-4xl mx-auto px-6 lg:px-8 -mt-8 relative z-10 mb-20">
-         <TechnoTranslator 
-            title="La Sécurité Traduite" 
-            terms={[
-              {
-                tech: "Backups J+1",
-                human: "Machine à Remonter le Temps",
-                description: "Une fausse manip ? On restaure la version d'hier en un clic. Vos données sont invincibles."
-              },
-              {
-                tech: "Monitoring 24/7",
-                human: "Gardien de Nuit",
-                description: "Des robots surveillent votre site chaque minute. S'il ralentit ou plante, on intervient avant même que vous ne le sachiez."
-              },
-              {
-                tech: "Mises à jour de Sécurité",
-                human: "Vaccin Anti-Virus",
-                description: "On bouche les failles de sécurité dès qu'elles sont découvertes pour empêcher les piratages."
-              }
-            ]}
-         />
-      </div>
-    );
+    renderHeroFn = (breadcrumbs) => <MaintenanceWebLanding />;
+    isStandalone = true;
   } else if (slug === "refonte-site-web") {
     renderHeroFn = (breadcrumbs) => <SiteRefonteLanding />;
     isStandalone = true;
