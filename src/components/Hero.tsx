@@ -143,14 +143,12 @@ export function Hero() {
   
   // Mouse parallax effect
   const mouseX = useMotionValue(0);
-  const mouseY = useMotionValue(0);
 
   const handleMouseMove = (e: React.MouseEvent) => {
     if (shouldReduceMotion) return; // Skip mouse tracking if reduced motion
-    const { clientX, clientY } = e;
-    const { innerWidth, innerHeight } = window;
+    const { clientX } = e;
+    const { innerWidth } = window;
     mouseX.set(clientX / innerWidth - 0.5);
-    mouseY.set(clientY / innerHeight - 0.5);
   };
 
   const springConfig = { damping: 25, stiffness: 150 };
