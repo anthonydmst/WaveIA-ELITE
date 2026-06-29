@@ -20,7 +20,7 @@ const nextConfig: NextConfig = {
   reactCompiler: true, // React 19 Compiler - stable in v16
   cacheComponents: true, // S-Tier: Stable in Next.js 16 (successor to PPR)
   experimental: {
-    optimizePackageImports: ['lucide-react', 'framer-motion', '@radix-ui/react-icons'],
+    optimizePackageImports: ['framer-motion', '@radix-ui/react-icons'],
   },
   images: {
     formats: ['image/avif', 'image/webp'], // S-Tier: AVIF first, WebP fallback

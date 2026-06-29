@@ -79,36 +79,8 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
       </div>
     );
   } else if (slug === "refonte-site-web") {
-    renderHeroFn = (breadcrumbs) => (
-      <>
-        <SiteRefonteLanding />
-        {service && <ServiceHero hero={service.hero} breadcrumbItems={breadcrumbs} />}
-      </>
-    );
-    extraContent = (
-      <div className="max-w-4xl mx-auto px-6 lg:px-8 mt-12 relative z-10 mb-20">
-         <TechnoTranslator 
-            title="La Refonte Intelligente" 
-            terms={[
-              {
-                tech: "Migration SEO (301)",
-                human: "Garder sa Réputation",
-                description: "On dit à Google : 'J'ai déménagé ici'. Vous ne perdez pas votre classement actuel en changeant de site."
-              },
-              {
-                tech: "UX (User Experience)",
-                human: "Confort de Visite",
-                description: "On rend la navigation fluide et intuitive. Le visiteur trouve ce qu'il cherche sans réfléchir."
-              },
-              {
-                tech: "Optimisation Core Web Vitals",
-                human: "Coup de Boost",
-                description: "On nettoie le moteur pour que le nouveau site aille 2x plus vite que l'ancien."
-              }
-            ]}
-         />
-      </div>
-    );
+    renderHeroFn = (breadcrumbs) => <SiteRefonteLanding />;
+    isStandalone = true;
   }
 
   return (
