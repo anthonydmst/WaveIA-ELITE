@@ -17,11 +17,18 @@ export function StickyMobileCTA() {
   const { trigger } = useHaptics();
 
   useEffect(() => {
+    let ticking = false;
     const handleScroll = () => {
-      // La barre apparaît après 100px de scroll
-      setIsVisible(window.scrollY > 100);
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          // La barre apparaît après 100px de scroll
+          setIsVisible(window.scrollY > 100);
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
