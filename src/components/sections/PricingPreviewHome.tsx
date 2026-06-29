@@ -130,7 +130,7 @@ export function PricingPreviewHome() {
                     <div className="flex items-center gap-2 text-sm font-semibold text-ocean/70 group-hover:text-ocean transition-all duration-300">
                       <span className="relative">
                         Voir tous les tarifs
-                        <span className="absolute bottom-0 left-0 w-0 h-px bg-ocean group-hover:w-full transition-all duration-300" />
+                        <span className="absolute bottom-0 left-0 w-0 h-px bg-primary group-hover:w-full transition-all duration-300" />
                       </span>
                       <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
                     </div>
@@ -144,7 +144,7 @@ export function PricingPreviewHome() {
         {/* Bottom Note */}
         <p className="text-center text-sm text-muted-foreground animate-in delay-300">
           Prix TTC. Paiement en 3x sans frais disponible à partir de 1000€. 
-          <Link href="/tarifs" className="text-ocean hover:underline ml-1">
+          <Link href="/tarifs" className="text-ocean underline underline-offset-2 decoration-ocean/40 hover:decoration-ocean ml-1">
             Voir la grille tarifaire complète →
           </Link>
         </p>

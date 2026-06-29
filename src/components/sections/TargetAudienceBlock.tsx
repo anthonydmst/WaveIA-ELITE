@@ -27,7 +27,7 @@ export function TargetAudienceBlock() {
       <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16 animate-hero-fade-up">
           <SectionHeader as="h2" size="section">
-            Le projet web est <span className="font-heading italic text-ocean-light">destiné à...</span>
+            Le projet web est <span className="font-heading italic text-ocean-text">destiné à...</span>
           </SectionHeader>
         </div>
 

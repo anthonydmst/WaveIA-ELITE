@@ -124,7 +124,7 @@ export function Footer() {
                 <div>
                      <p className="font-bold text-foreground dark:text-white mb-4 text-sm font-heading">Ressources</p>
                      <ul className="space-y-3 text-sm text-muted-foreground">
-                        <li><Link href="/blog" className="hover:text-ocean transition-colors flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-ocean animate-pulse" /> Le Blog</Link></li>
+                        <li><Link href="/blog" className="hover:text-ocean transition-colors flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" /> Le Blog</Link></li>
                         <li><Link href="/ressources" className="hover:text-ocean transition-colors">Tous les Guides</Link></li>
                         <li><Link href="/ressources/referencement-local-pays-basque" className="hover:text-ocean transition-colors">Guide SEO Local</Link></li>
                      </ul>
@@ -146,7 +146,7 @@ export function Footer() {
                     href={link.href}
                     className="text-sm text-muted-foreground hover:text-ocean transition-colors inline-flex items-center gap-1.5 group"
                   >
-                    <span className="w-1 h-1 rounded-full bg-ocean/50 group-hover:bg-ocean transition-colors" />
+                    <span className="w-1 h-1 rounded-full bg-ocean/50 group-hover:bg-primary transition-colors" />
                     {link.label}
                   </Link>
                 </li>
@@ -168,7 +168,7 @@ export function Footer() {
                     href={link.href}
                     className="text-sm text-muted-foreground hover:text-ocean transition-colors inline-flex items-center gap-1.5 group"
                   >
-                    <span className="w-1 h-1 rounded-full bg-ocean/50 group-hover:bg-ocean transition-colors" />
+                    <span className="w-1 h-1 rounded-full bg-ocean/50 group-hover:bg-primary transition-colors" />
                     {link.label}
                   </Link>
                 </li>
@@ -190,7 +190,7 @@ export function Footer() {
                     href={link.href}
                     className="text-sm text-muted-foreground hover:text-ocean transition-colors inline-flex items-center gap-1.5 group"
                   >
-                    <span className="w-1 h-1 rounded-full bg-ocean/50 group-hover:bg-ocean transition-colors" />
+                    <span className="w-1 h-1 rounded-full bg-ocean/50 group-hover:bg-primary transition-colors" />
                     {link.label}
                   </Link>
                 </li>

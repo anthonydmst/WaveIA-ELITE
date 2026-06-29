@@ -42,7 +42,7 @@ export function AuditSeoLanding() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8 relative w-full">
           <div className="text-center max-w-4xl mx-auto py-24 animate-hero-fade-up">
             <div className="inline-flex items-center gap-2 bg-ocean/10 border border-ocean/25 rounded-full px-4 py-1.5 text-xs font-semibold text-ocean uppercase tracking-widest mb-7">
-              <span className="w-1.5 h-1.5 bg-ocean rounded-full animate-pulse-glow" />
+              <span className="w-1.5 h-1.5 bg-primary rounded-full animate-pulse-glow" />
               Audit SEO intelligent — Pays Basque
             </div>
             
@@ -58,7 +58,7 @@ export function AuditSeoLanding() {
             </p>
             
             <div className="flex flex-wrap justify-center items-center gap-4">
-              <a href="#contact" className="inline-flex items-center gap-2 bg-ocean text-white font-heading font-bold text-[0.95rem] px-8 py-3.5 rounded-full hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(14,165,233,0.35)] transition-all">
+              <a href="#contact" className="inline-flex items-center gap-2 bg-primary text-white font-heading font-bold text-[0.95rem] px-8 py-3.5 rounded-full hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(14,165,233,0.35)] transition-all">
                 Demander mon audit gratuit <ArrowRight className="w-4 h-4" />
               </a>
               <a href="#process" className="inline-flex items-center gap-2 bg-transparent text-muted-foreground text-sm px-7 py-3.5 rounded-full border border-border hover:border-ocean hover:text-ocean transition-all">
@@ -108,7 +108,7 @@ export function AuditSeoLanding() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="max-w-3xl animate-in fade-in slide-in-from-bottom-4 duration-700">
             <span className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-ocean mb-4">
-              <div className="w-5 h-[1.5px] bg-ocean"></div> Signaux d'alerte
+              <div className="w-5 h-[1.5px] bg-primary"></div> Signaux d'alerte
             </span>
             <h2 className="text-3xl md:text-5xl font-extrabold font-heading mb-4 leading-tight">
               Votre site a besoin d'un audit <em className="not-italic text-ocean relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:right-0 after:h-[2px] after:bg-gradient-to-r after:from-ocean after:to-transparent">maintenant</em> si…
@@ -132,7 +132,7 @@ export function AuditSeoLanding() {
           </div>
           
           <div className="mt-12 text-center animate-in fade-in duration-700 delay-500">
-            <a href="#contact" className="bg-ocean text-white hover:shadow-[0_8px_32px_rgba(14,165,233,0.35)] inline-flex items-center gap-2 font-heading font-bold text-[0.95rem] px-8 py-3.5 rounded-full transition-all">
+            <a href="#contact" className="bg-primary text-white hover:shadow-[0_8px_32px_rgba(14,165,233,0.35)] inline-flex items-center gap-2 font-heading font-bold text-[0.95rem] px-8 py-3.5 rounded-full transition-all">
               Diagnostiquer mon site maintenant →
             </a>
           </div>
@@ -144,7 +144,7 @@ export function AuditSeoLanding() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="max-w-3xl animate-in fade-in slide-in-from-bottom-4 duration-700">
              <span className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-ocean mb-4">
-              <div className="w-5 h-[1.5px] bg-ocean"></div> Tarifs & Formules
+              <div className="w-5 h-[1.5px] bg-primary"></div> Tarifs & Formules
             </span>
             <h2 className="text-3xl md:text-5xl font-extrabold font-heading mb-4 leading-tight">
               N'achetez pas un rapport. <em className="not-italic text-ocean relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:right-0 after:h-[2px] after:bg-gradient-to-r after:from-ocean after:to-transparent">Obtenez des résultats.</em>
@@ -164,7 +164,7 @@ export function AuditSeoLanding() {
                   <li key={i} className="flex gap-3 text-sm text-muted-foreground border-b border-border pb-3"><Check className="w-4 h-4 text-emerald-400 shrink-0" /> {item}</li>
                 ))}
               </ul>
-              <a href="#contact" className="bg-ocean text-white hover:shadow-[0_8px_32px_rgba(14,165,233,0.35)] flex w-full justify-center items-center gap-2 font-heading font-bold text-[0.95rem] py-3.5 rounded-full transition-all text-center">Demander l'audit →</a>
+              <a href="#contact" className="bg-primary text-white hover:shadow-[0_8px_32px_rgba(14,165,233,0.35)] flex w-full justify-center items-center gap-2 font-heading font-bold text-[0.95rem] py-3.5 rounded-full transition-all text-center">Demander l'audit →</a>
             </div>
 
             <div className="glass-card border-ocean/40 bg-[linear-gradient(160deg,rgba(14,165,233,0.07)_0%,var(--glass-bg)_60%)] rounded-2xl p-10 relative overflow-hidden">
@@ -179,7 +179,7 @@ export function AuditSeoLanding() {
                   <li key={i} className="flex gap-3 text-sm text-muted-foreground border-b border-border pb-3"><Check className="w-4 h-4 text-emerald-400 shrink-0" /> {item}</li>
                 ))}
               </ul>
-              <a href="#contact" className="bg-ocean text-white hover:shadow-[0_8px_32px_rgba(14,165,233,0.35)] flex w-full justify-center items-center gap-2 font-heading font-bold text-[0.95rem] py-3.5 rounded-full transition-all text-center">Obtenir un devis →</a>
+              <a href="#contact" className="bg-primary text-white hover:shadow-[0_8px_32px_rgba(14,165,233,0.35)] flex w-full justify-center items-center gap-2 font-heading font-bold text-[0.95rem] py-3.5 rounded-full transition-all text-center">Obtenir un devis →</a>
             </div>
           </div>
         </div>
@@ -190,7 +190,7 @@ export function AuditSeoLanding() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
            <div className="max-w-3xl animate-in fade-in slide-in-from-bottom-4 duration-700">
             <span className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-ocean mb-4">
-              <div className="w-5 h-[1.5px] bg-ocean"></div> Périmètre de l'audit
+              <div className="w-5 h-[1.5px] bg-primary"></div> Périmètre de l'audit
             </span>
             <h2 className="text-3xl md:text-5xl font-extrabold font-heading mb-4 leading-tight">
               Une analyse <em className="not-italic text-ocean relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:right-0 after:h-[2px] after:bg-gradient-to-r after:from-ocean after:to-transparent">360°</em> qui ne laisse rien au hasard
@@ -222,7 +222,7 @@ export function AuditSeoLanding() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="max-w-3xl animate-in fade-in slide-in-from-bottom-4 duration-700">
             <span className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-ocean mb-4">
-               <div className="w-5 h-[1.5px] bg-ocean"></div> Avant / Après
+               <div className="w-5 h-[1.5px] bg-primary"></div> Avant / Après
             </span>
             <h2 className="text-3xl md:text-5xl font-extrabold font-heading mb-4 leading-tight">Ce que ça change <em className="not-italic text-ocean relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:right-0 after:h-[2px] after:bg-gradient-to-r after:from-ocean after:to-transparent">concrètement</em></h2>
             <p className="text-lg text-muted-foreground font-light">La différence entre avancer à l'aveugle et piloter votre croissance avec des données précises.</p>
@@ -279,7 +279,7 @@ export function AuditSeoLanding() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="max-w-3xl animate-in fade-in slide-in-from-bottom-4 duration-700">
              <span className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-ocean mb-4">
-               <div className="w-5 h-[1.5px] bg-ocean"></div> Notre méthode
+               <div className="w-5 h-[1.5px] bg-primary"></div> Notre méthode
             </span>
             <h2 className="text-3xl md:text-5xl font-extrabold font-heading mb-4 leading-tight">Comment Waveia réalise <em className="not-italic text-ocean relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:right-0 after:h-[2px] after:bg-gradient-to-r after:from-ocean after:to-transparent">votre audit SEO</em></h2>
             <p className="text-lg text-muted-foreground font-light mb-16">Une méthode en 4 étapes qui combine la puissance de l'IA et l'expertise humaine pour des recommandations actionnables, pas théoriques.</p>
@@ -337,7 +337,7 @@ export function AuditSeoLanding() {
          <div className="max-w-7xl mx-auto px-6 lg:px-8">
            <div className="max-w-3xl animate-in fade-in slide-in-from-bottom-4 duration-700">
              <span className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-ocean mb-4">
-               <div className="w-5 h-[1.5px] bg-ocean"></div> Pourquoi Waveia
+               <div className="w-5 h-[1.5px] bg-primary"></div> Pourquoi Waveia
             </span>
             <h2 className="text-3xl md:text-5xl font-extrabold font-heading mb-4 leading-tight">Ce que les autres agences <em className="not-italic text-ocean relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:right-0 after:h-[2px] after:bg-gradient-to-r after:from-ocean after:to-transparent">ne font pas</em></h2>
             <p className="text-lg text-muted-foreground font-light mb-16">Il existe des centaines d'outils d'audit. Mais un outil ne connaît pas le tissu économique de Bayonne, ni les comportements de recherche des consommateurs basques.</p>
@@ -366,7 +366,7 @@ export function AuditSeoLanding() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="max-w-3xl mb-8">
              <span className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-ocean mb-4">
-               <div className="w-5 h-[1.5px] bg-ocean"></div> Zone d'intervention
+               <div className="w-5 h-[1.5px] bg-primary"></div> Zone d'intervention
             </span>
             <h2 className="text-2xl md:text-3xl font-extrabold font-heading mb-3">Votre agence SEO <em className="not-italic text-ocean relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:right-0 after:h-[2px] after:bg-gradient-to-r after:from-ocean after:to-transparent">au cœur du Pays Basque</em></h2>
             <p className="text-sm text-muted-foreground">Waveia accompagne les entreprises locales sur toute la côte basque et le grand Bayonne.</p>
@@ -420,7 +420,7 @@ export function AuditSeoLanding() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8 grid lg:grid-cols-2 gap-16">
           <div>
              <span className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-ocean mb-4">
-               <div className="w-5 h-[1.5px] bg-ocean"></div> Passons à l'action
+               <div className="w-5 h-[1.5px] bg-primary"></div> Passons à l'action
             </span>
             <h2 className="text-3xl md:text-5xl font-extrabold font-heading mb-6">Lancez votre audit SEO <em className="not-italic text-ocean relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:right-0 after:h-[2px] after:bg-gradient-to-r after:from-ocean after:to-transparent">dès aujourd'hui</em></h2>
             <p className="text-lg text-muted-foreground font-light mb-12 max-w-md">Vous voulez comprendre pourquoi votre site n'attire pas assez de clients à Bayonne, Biarritz ou Anglet ? L'appel est gratuit et sans engagement.</p>
@@ -469,7 +469,7 @@ export function AuditSeoLanding() {
                   <label className="block text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2">URL de votre site</label>
                   <input type="url" placeholder="https://votresite.fr" className="w-full bg-background border border-border rounded-lg px-4 py-3 text-sm text-foreground focus:border-ocean focus:outline-none transition-colors" />
                </div>
-               <button type="button" className="bg-ocean text-white hover:shadow-[0_8px_32px_rgba(14,165,233,0.35)] w-full font-heading font-bold py-3.5 rounded-full mt-4 transition-transform hover:-translate-y-0.5">
+               <button type="button" className="bg-primary text-white hover:shadow-[0_8px_32px_rgba(14,165,233,0.35)] w-full font-heading font-bold py-3.5 rounded-full mt-4 transition-transform hover:-translate-y-0.5">
                   Envoyer ma demande d'audit 🚀
                </button>
                <p className="text-center text-xs text-muted-foreground/70 mt-2">Audit 100% gratuit. Aucune carte bancaire. Réponse sous 24h.</p>

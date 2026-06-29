@@ -104,7 +104,7 @@ export function LegalPageClient() {
             <div className="p-8 bg-card/50 backdrop-blur-sm border border-border rounded-2xl animate-in delay-300">
               <h2 className="text-2xl font-bold mb-4">Cookies et données personnelles</h2>
               <p className="text-muted-foreground mb-4">
-                Pour plus d&apos;informations sur la collecte et le traitement de vos données personnelles, veuillez consulter notre <a href="/privacy" className="text-ocean hover:underline">Politique de Confidentialité</a>.
+                Pour plus d&apos;informations sur la collecte et le traitement de vos données personnelles, veuillez consulter notre <a href="/privacy" className="text-ocean underline underline-offset-2 decoration-ocean/40 hover:decoration-ocean">Politique de Confidentialité</a>.
               </p>
               <p className="text-muted-foreground">
                 Ce site utilise des cookies techniques nécessaires à son fonctionnement. En continuant à naviguer, vous acceptez l&apos;utilisation de ces cookies.

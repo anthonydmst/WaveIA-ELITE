@@ -33,7 +33,7 @@ export function TwoWeeksFramework() {
       <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-20 animate-hero-fade-up">
           <SectionHeader as="h2" size="section" className="mb-6">
-            <span className="font-heading italic text-ocean-light">Vos deux semaines</span>, en bref
+            <span className="font-heading italic text-ocean-text">Vos deux semaines</span>, en bref
           </SectionHeader>
           <div className="w-24 h-1 bg-gradient-to-r from-transparent via-ocean/40 to-transparent mx-auto rounded-full" />
         </div>

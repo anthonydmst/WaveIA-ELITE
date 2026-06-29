@@ -21,7 +21,7 @@ export function SiteRefonteLanding() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8 relative w-full">
           <div className="text-center max-w-4xl mx-auto py-24 animate-hero-fade-up">
             <div className="inline-flex items-center gap-2 bg-ocean/10 border border-ocean/25 rounded-full px-4 py-1.5 text-xs font-semibold text-ocean uppercase tracking-[0.14em] mb-7">
-              <span className="w-1.5 h-1.5 bg-ocean rounded-full animate-pulse-glow" />
+              <span className="w-1.5 h-1.5 bg-primary rounded-full animate-pulse-glow" />
               REFONTE DE SITE WEB | MIGRATION SÉCURISÉE
             </div>
             
@@ -37,7 +37,7 @@ export function SiteRefonteLanding() {
             </p>
             
             <div className="flex flex-wrap justify-center items-center gap-4">
-              <a href="#contact" className="inline-flex items-center gap-2 bg-ocean text-white font-heading font-bold text-[0.95rem] px-8 py-3.5 rounded-full hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(14,165,233,0.35)] transition-all">
+              <a href="#contact" className="inline-flex items-center gap-2 bg-primary text-white font-heading font-bold text-[0.95rem] px-8 py-3.5 rounded-full hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(14,165,233,0.35)] transition-all">
                 Demander l&apos;audit gratuit de mon site <ArrowRight className="w-4 h-4" />
               </a>
               <a href="#pourquoi-refonte" className="inline-flex items-center gap-2 bg-transparent text-muted-foreground text-[0.95rem] font-medium px-7 py-3.5 rounded-full border border-border hover:border-ocean hover:text-ocean transition-all">
@@ -67,7 +67,7 @@ export function SiteRefonteLanding() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="max-w-2xl mb-16 animate-in">
             <div className="inline-flex items-center gap-2 text-xs font-semibold text-ocean uppercase tracking-[0.14em] mb-4">
-              <div className="w-5 h-[1.5px] bg-ocean"></div>
+              <div className="w-5 h-[1.5px] bg-primary"></div>
               Pourquoi refondre ?
             </div>
             <h2 className="text-3xl md:text-5xl font-bold font-heading mb-4 leading-tight">
@@ -104,9 +104,9 @@ export function SiteRefonteLanding() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-16 animate-in">
             <div className="inline-flex items-center justify-center gap-2 text-xs font-semibold text-ocean uppercase tracking-[0.14em] mb-4">
-              <div className="w-5 h-[1.5px] bg-ocean"></div>
+              <div className="w-5 h-[1.5px] bg-primary"></div>
               Ce que nous faisons
-              <div className="w-5 h-[1.5px] bg-ocean"></div>
+              <div className="w-5 h-[1.5px] bg-primary"></div>
             </div>
             <h2 className="text-3xl md:text-5xl font-bold font-heading mb-4 leading-tight">
               Nos services digitaux <span className="text-ocean">360°</span>
@@ -134,7 +134,7 @@ export function SiteRefonteLanding() {
           </div>
 
           <div className="text-center mt-12 animate-in delay-200">
-            <a href="#contact" className="inline-flex items-center gap-2 bg-ocean text-white font-heading font-bold text-[0.95rem] px-8 py-3.5 rounded-full hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(14,165,233,0.35)] transition-all">
+            <a href="#contact" className="inline-flex items-center gap-2 bg-primary text-white font-heading font-bold text-[0.95rem] px-8 py-3.5 rounded-full hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(14,165,233,0.35)] transition-all">
               Obtenir mon devis gratuit <ArrowRight className="w-4 h-4" />
             </a>
           </div>
@@ -146,9 +146,9 @@ export function SiteRefonteLanding() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
            <div className="text-center mb-16 animate-in">
             <div className="inline-flex items-center justify-center gap-2 text-xs font-semibold text-ocean uppercase tracking-[0.14em] mb-4">
-              <div className="w-5 h-[1.5px] bg-ocean"></div>
+              <div className="w-5 h-[1.5px] bg-primary"></div>
               La différence WaveIA
-              <div className="w-5 h-[1.5px] bg-ocean"></div>
+              <div className="w-5 h-[1.5px] bg-primary"></div>
             </div>
             <h2 className="text-3xl md:text-5xl font-bold font-heading mb-4">Votre site stagne ? <span className="text-ocean">Passez à la vitesse IA</span></h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">Découvrez ce qui change concrètement quand votre digital est piloté par l'intelligence artificielle.</p>
@@ -209,9 +209,9 @@ export function SiteRefonteLanding() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="max-w-2xl mx-auto text-center mb-16 animate-in">
             <div className="inline-flex items-center justify-center gap-2 text-xs font-semibold text-ocean uppercase tracking-[0.14em] mb-4">
-              <div className="w-5 h-[1.5px] bg-ocean"></div>
+              <div className="w-5 h-[1.5px] bg-primary"></div>
               Réalisations
-              <div className="w-5 h-[1.5px] bg-ocean"></div>
+              <div className="w-5 h-[1.5px] bg-primary"></div>
             </div>
             <h2 className="text-3xl md:text-5xl font-bold font-heading mb-4 leading-tight">
               Quelques projets <span className="text-ocean">transformés</span>
@@ -263,7 +263,7 @@ export function SiteRefonteLanding() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="max-w-2xl mb-16 animate-in">
             <div className="inline-flex items-center gap-2 text-xs font-semibold text-ocean uppercase tracking-[0.14em] mb-4">
-              <div className="w-5 h-[1.5px] bg-ocean"></div>
+              <div className="w-5 h-[1.5px] bg-primary"></div>
               Notre méthode
             </div>
             <h2 className="text-3xl md:text-5xl font-bold font-heading mb-4 leading-tight">
@@ -319,7 +319,7 @@ export function SiteRefonteLanding() {
            <div className="grid lg:grid-cols-2 gap-16 items-center">
              <div className="animate-in">
                <div className="inline-flex items-center gap-2 text-xs font-semibold text-ocean uppercase tracking-[0.14em] mb-4">
-                  <div className="w-5 h-[1.5px] bg-ocean"></div>
+                  <div className="w-5 h-[1.5px] bg-primary"></div>
                   Pourquoi nous choisir ?
                 </div>
                 <h2 className="text-3xl md:text-5xl font-bold font-heading mb-6 leading-tight">
@@ -338,7 +338,7 @@ export function SiteRefonteLanding() {
                     <span className="text-xs text-muted-foreground">Leads après refonte</span>
                   </div>
                 </div>
-                <a href="#contact" className="inline-flex items-center gap-2 bg-ocean text-white font-heading font-bold text-[0.95rem] px-8 py-3.5 rounded-full hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(14,165,233,0.35)] transition-all">
+                <a href="#contact" className="inline-flex items-center gap-2 bg-primary text-white font-heading font-bold text-[0.95rem] px-8 py-3.5 rounded-full hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(14,165,233,0.35)] transition-all">
                   Parler à un expert WaveIA <ArrowRight className="w-4 h-4" />
                 </a>
              </div>
@@ -397,7 +397,7 @@ export function SiteRefonteLanding() {
             </p>
 
             <div className="flex flex-col gap-6 items-center">
-              <a href="#contact" className="inline-flex items-center justify-center gap-2 bg-ocean text-white font-heading font-bold text-[0.95rem] px-10 py-3.5 rounded-full hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(14,165,233,0.35)] transition-all">
+              <a href="#contact" className="inline-flex items-center justify-center gap-2 bg-primary text-white font-heading font-bold text-[0.95rem] px-10 py-3.5 rounded-full hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(14,165,233,0.35)] transition-all">
                 Obtenir mon audit gratuit <ArrowRight className="w-4 h-4" />
               </a>
               <p className="text-xs text-muted-foreground italic">Réponse garantie sous 24h · Sans engagement · 100% confidentiel</p>

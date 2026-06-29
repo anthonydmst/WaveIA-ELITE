@@ -306,7 +306,7 @@ export function WaveBento() {
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mt-2 mb-4 text-black">
             Un accompagnement expert
             <br className="hidden sm:block" />
-            <span className="font-heading italic text-ocean-light">
+            <span className="font-heading italic text-ocean-text">
               {" "}au service de votre réussite
             </span>
           </h2>

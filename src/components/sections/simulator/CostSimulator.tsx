@@ -127,7 +127,7 @@ export function CostSimulator() {
              <div 
                 key={idx} 
                 className={`h-1.5 rounded-full transition-all duration-500 ${
-                  idx <= state.currentStepIndex ? "w-8 bg-ocean" : "w-2 bg-foreground/10"
+                  idx <= state.currentStepIndex ? "w-8 bg-primary" : "w-2 bg-foreground/10"
                 }`} 
              />
            ))}
@@ -168,7 +168,7 @@ export function CostSimulator() {
                         }`}
                       >
                         <div className={`p-3 rounded-xl transition-colors ${
-                          isSelected ? "bg-ocean text-white" : "bg-foreground/5 text-muted-foreground group-hover:text-foreground"
+                          isSelected ? "bg-primary text-white" : "bg-foreground/5 text-muted-foreground group-hover:text-foreground"
                         }`}>
                           <IconComponent className="w-6 h-6" />
                         </div>
@@ -186,7 +186,7 @@ export function CostSimulator() {
                           <p className="text-sm text-muted-foreground">{option.description}</p>
                         </div>
                         <div className={`w-6 h-6 rounded-full border-2 flex items-center justify-center transition-colors ${
-                           isSelected ? "border-ocean bg-ocean text-white" : "border-border"
+                           isSelected ? "border-ocean bg-primary text-white" : "border-border"
                         }`}>
                           {isSelected && <Check className="w-3 h-3" />}
                         </div>
@@ -201,7 +201,7 @@ export function CostSimulator() {
                 animate={{ opacity: 1, scale: 1 }}
                 className="bg-linear-to-br from-ocean/20 to-accent/10 border border-border rounded-3xl p-10 text-center h-full flex flex-col items-center justify-center"
               >
-                  <div className="w-20 h-20 bg-ocean rounded-full flex items-center justify-center mb-6 shadow-[0_0_40px_-10px_rgba(14,165,233,0.5)]">
+                  <div className="w-20 h-20 bg-primary rounded-full flex items-center justify-center mb-6 shadow-[0_0_40px_-10px_rgba(14,165,233,0.5)]">
                     <Sparkles className="w-10 h-10 text-white" />
                   </div>
                   <h2 className="text-4xl font-bold mb-4">Estimation finalisée !</h2>

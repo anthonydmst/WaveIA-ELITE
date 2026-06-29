@@ -38,7 +38,7 @@ export function HomePageRealisationsBlock() {
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mt-4 mb-8">
             Nos réalisations au service de{" "}
-            <span className="font-heading italic text-ocean-light">
+            <span className="font-heading italic text-ocean-text">
               votre réussite
             </span>
           </h2>
@@ -155,7 +155,7 @@ export function HomePageRealisationsBlock() {
                 <Link
                   href="/realisations"
                   onClick={() => trigger("medium")}
-                  className="px-6 py-3 bg-ocean text-background font-semibold rounded-full hover:bg-ocean-light transition-colors"
+                  className="px-6 py-3 bg-primary text-background font-semibold rounded-full hover:bg-ocean-light transition-colors"
                 >
                   Ouvrir le portfolio
                 </Link>

@@ -41,9 +41,9 @@ export function RefonteApprocheSection() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-20 animate-in">
           <div className="inline-flex items-center justify-center gap-2 text-xs font-semibold text-ocean uppercase tracking-[0.14em] mb-4">
-            <div className="w-5 h-[1.5px] bg-ocean"></div>
+            <div className="w-5 h-[1.5px] bg-primary"></div>
             NOTRE APPROCHE
-            <div className="w-5 h-[1.5px] bg-ocean"></div>
+            <div className="w-5 h-[1.5px] bg-primary"></div>
           </div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold font-heading mb-6 leading-tight">
             Transformer vos faiblesses actuelles en <span className="text-ocean">leviers de rentabilité</span>.
@@ -62,7 +62,7 @@ export function RefonteApprocheSection() {
               </div>
               
               {/* Top Right Rectangle Badge */}
-              <div className="absolute top-4 right-4 md:top-6 md:right-6 z-20 flex items-center justify-center bg-ocean text-white text-[10px] md:text-xs font-bold uppercase tracking-wider px-3 py-1.5 md:px-4 md:py-2 rounded-md shadow-sm">
+              <div className="absolute top-4 right-4 md:top-6 md:right-6 z-20 flex items-center justify-center bg-primary text-white text-[10px] md:text-xs font-bold uppercase tracking-wider px-3 py-1.5 md:px-4 md:py-2 rounded-md shadow-sm">
                 {item.subtitle}
               </div>
               

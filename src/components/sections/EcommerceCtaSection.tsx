@@ -14,9 +14,9 @@ export function EcommerceCtaSection() {
 
       <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center relative z-10 animate-in fade-in slide-in-from-bottom-4 duration-700">
         <div className="inline-flex items-center justify-center gap-2 text-xs font-semibold text-ocean uppercase tracking-[0.14em] mb-4">
-          <div className="w-5 h-[1.5px] bg-ocean"></div>
+          <div className="w-5 h-[1.5px] bg-primary"></div>
           CONSULTATION INITIALE
-          <div className="w-5 h-[1.5px] bg-ocean"></div>
+          <div className="w-5 h-[1.5px] bg-primary"></div>
         </div>
         
         <h2 className="text-3xl md:text-5xl font-extrabold font-heading mb-6 leading-tight">
@@ -28,7 +28,7 @@ export function EcommerceCtaSection() {
         </p>
 
         <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mb-8">
-          <Link href="/contact" className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-ocean text-white font-heading font-bold text-[0.95rem] px-8 py-4 rounded-xl hover:-translate-y-1 hover:shadow-[0_8px_32px_rgba(14,165,233,0.35)] transition-all">
+          <Link href="/contact" className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-primary text-white font-heading font-bold text-[0.95rem] px-8 py-4 rounded-xl hover:-translate-y-1 hover:shadow-[0_8px_32px_rgba(14,165,233,0.35)] transition-all">
             Réserver mon diagnostic E-commerce <ArrowRight className="w-5 h-5" />
           </Link>
           <a href="https://wa.me/33695913669" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-transparent text-foreground hover:text-[#25D366] hover:border-[#25D366] font-heading font-bold text-[0.95rem] px-8 py-4 rounded-xl border border-border transition-all">

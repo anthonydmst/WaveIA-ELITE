@@ -41,7 +41,7 @@ export function PhotographieLanding() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8 relative w-full">
           <div className="text-center max-w-4xl mx-auto py-24 animate-hero-fade-up">
             <div className="inline-flex items-center gap-2 bg-ocean/10 border border-ocean/25 rounded-full px-4 py-1.5 text-xs font-semibold text-ocean uppercase tracking-widest mb-7">
-              <span className="w-1.5 h-1.5 bg-ocean rounded-full animate-pulse-glow" />
+              <span className="w-1.5 h-1.5 bg-primary rounded-full animate-pulse-glow" />
               Direction Photographique — Pays Basque
             </div>
             
@@ -57,7 +57,7 @@ export function PhotographieLanding() {
             </p>
             
             <div className="flex flex-wrap justify-center items-center gap-4">
-              <a href="#contact" className="inline-flex items-center gap-2 bg-ocean text-white font-heading font-bold text-[0.95rem] px-8 py-3.5 rounded-full hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(14,165,233,0.35)] transition-all">
+              <a href="#contact" className="inline-flex items-center gap-2 bg-primary text-white font-heading font-bold text-[0.95rem] px-8 py-3.5 rounded-full hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(14,165,233,0.35)] transition-all">
                 Planifier un Shooting <ArrowRight className="w-4 h-4" />
               </a>
               <a href="#process" className="inline-flex items-center gap-2 bg-transparent text-muted-foreground text-sm px-7 py-3.5 rounded-full border border-border hover:border-ocean hover:text-ocean transition-all">
@@ -107,7 +107,7 @@ export function PhotographieLanding() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="max-w-3xl animate-in fade-in slide-in-from-bottom-4 duration-700">
             <span className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-ocean mb-4">
-              <div className="w-5 h-[1.5px] bg-ocean"></div> Signaux Inquiétants
+              <div className="w-5 h-[1.5px] bg-primary"></div> Signaux Inquiétants
             </span>
             <h2 className="text-3xl md:text-5xl font-extrabold font-heading mb-4 leading-tight">
               Vos visuels vous coûtent de l'argent <em className="not-italic text-ocean relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:right-0 after:h-[2px] after:bg-gradient-to-r after:from-ocean after:to-transparent">quotidiennement</em> si…
@@ -131,7 +131,7 @@ export function PhotographieLanding() {
           </div>
           
           <div className="mt-12 text-center animate-in fade-in duration-700 delay-500">
-            <a href="#contact" className="bg-ocean text-white hover:shadow-[0_8px_32px_rgba(14,165,233,0.35)] inline-flex items-center gap-2 font-heading font-bold text-[0.95rem] px-8 py-3.5 rounded-full transition-all">
+            <a href="#contact" className="bg-primary text-white hover:shadow-[0_8px_32px_rgba(14,165,233,0.35)] inline-flex items-center gap-2 font-heading font-bold text-[0.95rem] px-8 py-3.5 rounded-full transition-all">
               Organiser mon Diagnostic Photo →
             </a>
           </div>
@@ -143,7 +143,7 @@ export function PhotographieLanding() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="max-w-3xl animate-in fade-in slide-in-from-bottom-4 duration-700">
              <span className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-ocean mb-4">
-              <div className="w-5 h-[1.5px] bg-ocean"></div> Formules Photo & Studio
+              <div className="w-5 h-[1.5px] bg-primary"></div> Formules Photo & Studio
             </span>
             <h2 className="text-3xl md:text-5xl font-extrabold font-heading mb-4 leading-tight">
               Investissez dans la <em className="not-italic text-ocean relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:right-0 after:h-[2px] after:bg-gradient-to-r after:from-ocean after:to-transparent">confiance visuelle.</em>
@@ -163,7 +163,7 @@ export function PhotographieLanding() {
                   <li key={i} className="flex gap-3 text-sm text-muted-foreground border-b border-border pb-3"><Check className="w-4 h-4 text-emerald-400 shrink-0" /> {item}</li>
                 ))}
               </ul>
-              <a href="#contact" className="bg-ocean text-white hover:shadow-[0_8px_32px_rgba(14,165,233,0.35)] flex w-full justify-center items-center gap-2 font-heading font-bold text-[0.95rem] py-3.5 rounded-full transition-all text-center">Shooter mes produits →</a>
+              <a href="#contact" className="bg-primary text-white hover:shadow-[0_8px_32px_rgba(14,165,233,0.35)] flex w-full justify-center items-center gap-2 font-heading font-bold text-[0.95rem] py-3.5 rounded-full transition-all text-center">Shooter mes produits →</a>
             </div>
 
             <div className="glass-card border-ocean/40 bg-[linear-gradient(160deg,rgba(14,165,233,0.07)_0%,var(--glass-bg)_60%)] rounded-2xl p-10 relative overflow-hidden">
@@ -178,7 +178,7 @@ export function PhotographieLanding() {
                   <li key={i} className="flex gap-3 text-sm text-muted-foreground border-b border-border pb-3"><Check className="w-4 h-4 text-emerald-400 shrink-0" /> {item}</li>
                 ))}
               </ul>
-              <a href="#contact" className="bg-ocean text-white hover:shadow-[0_8px_32px_rgba(14,165,233,0.35)] flex w-full justify-center items-center gap-2 font-heading font-bold text-[0.95rem] py-3.5 rounded-full transition-all text-center">Planifier un reportage sur site →</a>
+              <a href="#contact" className="bg-primary text-white hover:shadow-[0_8px_32px_rgba(14,165,233,0.35)] flex w-full justify-center items-center gap-2 font-heading font-bold text-[0.95rem] py-3.5 rounded-full transition-all text-center">Planifier un reportage sur site →</a>
             </div>
           </div>
         </div>
@@ -189,7 +189,7 @@ export function PhotographieLanding() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
            <div className="max-w-3xl animate-in fade-in slide-in-from-bottom-4 duration-700">
             <span className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-ocean mb-4">
-              <div className="w-5 h-[1.5px] bg-ocean"></div> Périmètre d'Intervention
+              <div className="w-5 h-[1.5px] bg-primary"></div> Périmètre d'Intervention
             </span>
             <h2 className="text-3xl md:text-5xl font-extrabold font-heading mb-4 leading-tight">
               Une direction photographique <em className="not-italic text-ocean relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:right-0 after:h-[2px] after:bg-gradient-to-r after:from-ocean after:to-transparent">pour tous les secteurs</em>
@@ -219,7 +219,7 @@ export function PhotographieLanding() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="max-w-3xl animate-in fade-in slide-in-from-bottom-4 duration-700">
             <span className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-ocean mb-4">
-               <div className="w-5 h-[1.5px] bg-ocean"></div> Avant / Après
+               <div className="w-5 h-[1.5px] bg-primary"></div> Avant / Après
             </span>
             <h2 className="text-3xl md:text-5xl font-extrabold font-heading mb-4 leading-tight">Le poids visuel dans la <em className="not-italic text-ocean relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:right-0 after:h-[2px] after:bg-gradient-to-r after:from-ocean after:to-transparent">balance décisionnelle</em></h2>
             <p className="text-lg text-muted-foreground font-light">La différence entre transmettre l'amateurisme et sublimer l'excellence réelle de vos produits.</p>
@@ -276,7 +276,7 @@ export function PhotographieLanding() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="max-w-3xl animate-in fade-in slide-in-from-bottom-4 duration-700">
              <span className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-ocean mb-4">
-               <div className="w-5 h-[1.5px] bg-ocean"></div> Notre processus
+               <div className="w-5 h-[1.5px] bg-primary"></div> Notre processus
             </span>
             <h2 className="text-3xl md:text-5xl font-extrabold font-heading mb-4 leading-tight">La logistique derrière la <em className="not-italic text-ocean relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:right-0 after:h-[2px] after:bg-gradient-to-r after:from-ocean after:to-transparent">Photo Parfaite</em></h2>
             <p className="text-lg text-muted-foreground font-light mb-16">Nous rationalisons le shooting pour perturber le moins possible vos équipes. Un workflow en 4 actes qui laisse le hasard à la porte.</p>
@@ -334,7 +334,7 @@ export function PhotographieLanding() {
          <div className="max-w-7xl mx-auto px-6 lg:px-8">
            <div className="max-w-3xl animate-in fade-in slide-in-from-bottom-4 duration-700">
              <span className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-ocean mb-4">
-               <div className="w-5 h-[1.5px] bg-ocean"></div> Différenciation Totale
+               <div className="w-5 h-[1.5px] bg-primary"></div> Différenciation Totale
             </span>
             <h2 className="text-3xl md:text-5xl font-extrabold font-heading mb-4 leading-tight">Ce qui sépare la prise de vue <em className="not-italic text-ocean relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:right-0 after:h-[2px] after:bg-gradient-to-r after:from-ocean after:to-transparent">de la conversion absolue</em></h2>
             <p className="text-lg text-muted-foreground font-light mb-16">Nous ne sommes pas de simples cadreurs. Nous connectons l'acte photographique à l'expérience utilisateur (UX) pour concevoir l'image comme un bouton de vente subliminal.</p>
@@ -363,7 +363,7 @@ export function PhotographieLanding() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="max-w-3xl mb-8">
              <span className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-ocean mb-4">
-               <div className="w-5 h-[1.5px] bg-ocean"></div> Déplacement Photograhe
+               <div className="w-5 h-[1.5px] bg-primary"></div> Déplacement Photograhe
             </span>
             <h2 className="text-2xl md:text-3xl font-extrabold font-heading mb-3">Interventions Corporate & Studio <em className="not-italic text-ocean relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:right-0 after:h-[2px] after:bg-gradient-to-r after:from-ocean after:to-transparent">au Pays Basque</em></h2>
             <p className="text-sm text-muted-foreground">Notre matériel se déploie dans vos murs, ou vos produits voyagent jusqu'à notre studio.</p>
@@ -417,7 +417,7 @@ export function PhotographieLanding() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8 grid lg:grid-cols-2 gap-16">
           <div>
              <span className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-ocean mb-4">
-               <div className="w-5 h-[1.5px] bg-ocean"></div> Passons à l'action
+               <div className="w-5 h-[1.5px] bg-primary"></div> Passons à l'action
             </span>
             <h2 className="text-3xl md:text-5xl font-extrabold font-heading mb-6">Capturez votre véritable identité <em className="not-italic text-ocean relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:right-0 after:h-[2px] after:bg-gradient-to-r after:from-ocean after:to-transparent">dès aujourd'hui</em></h2>
             <p className="text-lg text-muted-foreground font-light mb-12 max-w-md">Réduisez vos invendus et éblouissez vos prospects au premier clic. Notre directeur de création échange avec vous pour comprendre les contraintes techniques du shooting à réaliser.</p>
@@ -471,7 +471,7 @@ export function PhotographieLanding() {
                      <option>Architecture intérieure / extérieure</option>
                   </select>
                </div>
-               <button type="button" className="bg-ocean text-white hover:shadow-[0_8px_32px_rgba(14,165,233,0.35)] w-full font-heading font-bold py-3.5 rounded-full mt-4 transition-transform hover:-translate-y-0.5">
+               <button type="button" className="bg-primary text-white hover:shadow-[0_8px_32px_rgba(14,165,233,0.35)] w-full font-heading font-bold py-3.5 rounded-full mt-4 transition-transform hover:-translate-y-0.5">
                   Organiser ma Prise de vue ✦
                </button>
                <p className="text-center text-xs text-muted-foreground/70 mt-2">Échange logistique et estimation 100% gratuits.</p>

@@ -28,7 +28,7 @@ export default function BlogPage() {
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-4">
             Restez à jour sur les dernières tendances et la vie de l&apos;agence.
           </p>
-          <p className="text-base text-muted-foreground/80 max-w-3xl mx-auto">
+          <p className="text-base text-muted-foreground max-w-3xl mx-auto">
             Depuis Biarritz, nous partageons nos retours d&apos;expérience sur le développement web, 
             le référencement local et les stratégies digitales adaptées aux entreprises du Pays Basque. 
             Artisans, commerçants, restaurateurs : découvrez des conseils pratiques pour booster votre présence en ligne.
@@ -68,8 +68,8 @@ export default function BlogPage() {
               <p className="text-sm text-muted-foreground">
                 Nous partageons nos succès, nos échecs, et les leçons apprises avec nos clients locaux. 
                 Des études de cas concrètes qui vous montrent ce qui fonctionne vraiment pour les TPE et PME 
-                du sud-ouest de la France. Découvrez aussi nos services de <Link href="/referencement-seo/netlinking" className="text-ocean hover:underline">netlinking</Link> et 
-                de <Link href="/agence-communication/strategie-digitale" className="text-ocean hover:underline">stratégie digitale</Link>.
+                du sud-ouest de la France. Découvrez aussi nos services de <Link href="/referencement-seo/netlinking" className="text-ocean underline underline-offset-2 decoration-ocean/40 hover:decoration-ocean">netlinking</Link> et 
+                de <Link href="/agence-communication/strategie-digitale" className="text-ocean underline underline-offset-2 decoration-ocean/40 hover:decoration-ocean">stratégie digitale</Link>.
               </p>
             </div>
           </div>

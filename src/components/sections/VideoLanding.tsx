@@ -42,7 +42,7 @@ export function VideoLanding() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8 relative w-full">
           <div className="text-center max-w-4xl mx-auto py-24 animate-hero-fade-up">
             <div className="inline-flex items-center gap-2 bg-ocean/10 border border-ocean/25 rounded-full px-4 py-1.5 text-xs font-semibold text-ocean uppercase tracking-widest mb-7">
-              <span className="w-1.5 h-1.5 bg-ocean rounded-full animate-pulse-glow" />
+              <span className="w-1.5 h-1.5 bg-primary rounded-full animate-pulse-glow" />
               Production Vidéo & Motion — Pays Basque
             </div>
             
@@ -58,7 +58,7 @@ export function VideoLanding() {
             </p>
             
             <div className="flex flex-wrap justify-center items-center gap-4">
-              <a href="#contact" className="inline-flex items-center gap-2 bg-ocean text-white font-heading font-bold text-[0.95rem] px-8 py-3.5 rounded-full hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(14,165,233,0.35)] transition-all">
+              <a href="#contact" className="inline-flex items-center gap-2 bg-primary text-white font-heading font-bold text-[0.95rem] px-8 py-3.5 rounded-full hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(14,165,233,0.35)] transition-all">
                 Démarrer une production <ArrowRight className="w-4 h-4" />
               </a>
               <a href="#process" className="inline-flex items-center gap-2 bg-transparent text-muted-foreground text-sm px-7 py-3.5 rounded-full border border-border hover:border-ocean hover:text-ocean transition-all">
@@ -108,7 +108,7 @@ export function VideoLanding() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="max-w-3xl animate-in fade-in slide-in-from-bottom-4 duration-700">
             <span className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-ocean mb-4">
-              <div className="w-5 h-[1.5px] bg-ocean"></div> Signaux Inquiétants
+              <div className="w-5 h-[1.5px] bg-primary"></div> Signaux Inquiétants
             </span>
             <h2 className="text-3xl md:text-5xl font-extrabold font-heading mb-4 leading-tight">
               Oublier la vidéo aujourd'hui, c'est <em className="not-italic text-ocean relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:right-0 after:h-[2px] after:bg-gradient-to-r after:from-ocean after:to-transparent">perdre demain</em>
@@ -132,7 +132,7 @@ export function VideoLanding() {
           </div>
           
           <div className="mt-12 text-center animate-in fade-in duration-700 delay-500">
-            <a href="#contact" className="bg-ocean text-white hover:shadow-[0_8px_32px_rgba(14,165,233,0.35)] inline-flex items-center gap-2 font-heading font-bold text-[0.95rem] px-8 py-3.5 rounded-full transition-all">
+            <a href="#contact" className="bg-primary text-white hover:shadow-[0_8px_32px_rgba(14,165,233,0.35)] inline-flex items-center gap-2 font-heading font-bold text-[0.95rem] px-8 py-3.5 rounded-full transition-all">
               Scanner ma stratégie vidéo →
             </a>
           </div>
@@ -144,7 +144,7 @@ export function VideoLanding() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="max-w-3xl animate-in fade-in slide-in-from-bottom-4 duration-700">
              <span className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-ocean mb-4">
-              <div className="w-5 h-[1.5px] bg-ocean"></div> Formules Vidéos & Motion
+              <div className="w-5 h-[1.5px] bg-primary"></div> Formules Vidéos & Motion
             </span>
             <h2 className="text-3xl md:text-5xl font-extrabold font-heading mb-4 leading-tight">
               Des investissements avec un <em className="not-italic text-ocean relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:right-0 after:h-[2px] after:bg-gradient-to-r after:from-ocean after:to-transparent">ROI mesurable.</em>
@@ -164,7 +164,7 @@ export function VideoLanding() {
                   <li key={i} className="flex gap-3 text-sm text-muted-foreground border-b border-border pb-3"><Check className="w-4 h-4 text-emerald-400 shrink-0" /> {item}</li>
                 ))}
               </ul>
-              <a href="#contact" className="bg-ocean text-white hover:shadow-[0_8px_32px_rgba(14,165,233,0.35)] flex w-full justify-center items-center gap-2 font-heading font-bold text-[0.95rem] py-3.5 rounded-full transition-all text-center">Produire du contenu viral →</a>
+              <a href="#contact" className="bg-primary text-white hover:shadow-[0_8px_32px_rgba(14,165,233,0.35)] flex w-full justify-center items-center gap-2 font-heading font-bold text-[0.95rem] py-3.5 rounded-full transition-all text-center">Produire du contenu viral →</a>
             </div>
 
             <div className="glass-card border-ocean/40 bg-[linear-gradient(160deg,rgba(14,165,233,0.07)_0%,var(--glass-bg)_60%)] rounded-2xl p-10 relative overflow-hidden">
@@ -179,7 +179,7 @@ export function VideoLanding() {
                   <li key={i} className="flex gap-3 text-sm text-muted-foreground border-b border-border pb-3"><Check className="w-4 h-4 text-emerald-400 shrink-0" /> {item}</li>
                 ))}
               </ul>
-              <a href="#contact" className="bg-ocean text-white hover:shadow-[0_8px_32px_rgba(14,165,233,0.35)] flex w-full justify-center items-center gap-2 font-heading font-bold text-[0.95rem] py-3.5 rounded-full transition-all text-center">Concrétiser ma vision vidéo →</a>
+              <a href="#contact" className="bg-primary text-white hover:shadow-[0_8px_32px_rgba(14,165,233,0.35)] flex w-full justify-center items-center gap-2 font-heading font-bold text-[0.95rem] py-3.5 rounded-full transition-all text-center">Concrétiser ma vision vidéo →</a>
             </div>
           </div>
         </div>
@@ -190,7 +190,7 @@ export function VideoLanding() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
            <div className="max-w-3xl animate-in fade-in slide-in-from-bottom-4 duration-700">
             <span className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-ocean mb-4">
-              <div className="w-5 h-[1.5px] bg-ocean"></div> Domaines de réalisation
+              <div className="w-5 h-[1.5px] bg-primary"></div> Domaines de réalisation
             </span>
             <h2 className="text-3xl md:text-5xl font-extrabold font-heading mb-4 leading-tight">
               Maîtriser tous les codes <em className="not-italic text-ocean relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:right-0 after:h-[2px] after:bg-gradient-to-r after:from-ocean after:to-transparent">du réel au virtuel</em>
@@ -220,7 +220,7 @@ export function VideoLanding() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="max-w-3xl animate-in fade-in slide-in-from-bottom-4 duration-700">
             <span className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-ocean mb-4">
-               <div className="w-5 h-[1.5px] bg-ocean"></div> Avant / Après
+               <div className="w-5 h-[1.5px] bg-primary"></div> Avant / Après
             </span>
             <h2 className="text-3xl md:text-5xl font-extrabold font-heading mb-4 leading-tight">Le ROI selon la <em className="not-italic text-ocean relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:right-0 after:h-[2px] after:bg-gradient-to-r after:from-ocean after:to-transparent">performance vidéo</em></h2>
             <p className="text-lg text-muted-foreground font-light">Une vidéo n'est pas qu'un loisir esthétique. Sur un écran, c'est votre atout majeur ou votre talon d'Achille algorithmique.</p>
@@ -277,7 +277,7 @@ export function VideoLanding() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="max-w-3xl animate-in fade-in slide-in-from-bottom-4 duration-700">
              <span className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-ocean mb-4">
-               <div className="w-5 h-[1.5px] bg-ocean"></div> Notre processus
+               <div className="w-5 h-[1.5px] bg-primary"></div> Notre processus
             </span>
             <h2 className="text-3xl md:text-5xl font-extrabold font-heading mb-4 leading-tight">De l'idée narrative jusqu'au <em className="not-italic text-ocean relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:right-0 after:h-[2px] after:bg-gradient-to-r after:from-ocean after:to-transparent">Cut final</em></h2>
             <p className="text-lg text-muted-foreground font-light mb-16">Oubliez les improvisations douteuses. Le secret d'une vidéo virale ou corporative réussie, c'est la pré-production millimétrée. En 4 actes.</p>
@@ -335,7 +335,7 @@ export function VideoLanding() {
          <div className="max-w-7xl mx-auto px-6 lg:px-8">
            <div className="max-w-3xl animate-in fade-in slide-in-from-bottom-4 duration-700">
              <span className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-ocean mb-4">
-               <div className="w-5 h-[1.5px] bg-ocean"></div> Différenciation Totale
+               <div className="w-5 h-[1.5px] bg-primary"></div> Différenciation Totale
             </span>
             <h2 className="text-3xl md:text-5xl font-extrabold font-heading mb-4 leading-tight">Il ne suffit plus d'appuyer sur REC. <em className="not-italic text-ocean relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:right-0 after:h-[2px] after:bg-gradient-to-r after:from-ocean after:to-transparent">C'est une science.</em></h2>
             <p className="text-lg text-muted-foreground font-light mb-16">La production s'est drastiquement professionnalisée mais les codes ont changé. Un motion ou un témoignage n'est réussi que s'il est techniquement adapté au support final (Ads, Site, Youtube).</p>
@@ -364,7 +364,7 @@ export function VideoLanding() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="max-w-3xl mb-8">
              <span className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-ocean mb-4">
-               <div className="w-5 h-[1.5px] bg-ocean"></div> Déplacement Tournage
+               <div className="w-5 h-[1.5px] bg-primary"></div> Déplacement Tournage
             </span>
             <h2 className="text-2xl md:text-3xl font-extrabold font-heading mb-3">Réalisation UGC, Corporate & Motion <em className="not-italic text-ocean relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:right-0 after:h-[2px] after:bg-gradient-to-r after:from-ocean after:to-transparent">au Pays Basque</em></h2>
             <p className="text-sm text-muted-foreground">Déploiement de notre équipe cadreur/monteur chez vous, ou production motion/UGC asynchrone totale.</p>
@@ -418,7 +418,7 @@ export function VideoLanding() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8 grid lg:grid-cols-2 gap-16">
           <div>
              <span className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-ocean mb-4">
-               <div className="w-5 h-[1.5px] bg-ocean"></div> Passons à l'action
+               <div className="w-5 h-[1.5px] bg-primary"></div> Passons à l'action
             </span>
             <h2 className="text-3xl md:text-5xl font-extrabold font-heading mb-6">Enclenchez le moteur <em className="not-italic text-ocean relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:right-0 after:h-[2px] after:bg-gradient-to-r after:from-ocean after:to-transparent">Conversion Vidéo</em></h2>
             <p className="text-lg text-muted-foreground font-light mb-12 max-w-md">Que ce soit pour scaler par l'acquisition Ads ou crédibiliser tout le parcours de votre B2B avec des témoignages premium, discutons-en ensemble.</p>
@@ -472,7 +472,7 @@ export function VideoLanding() {
                      <option>Reportage Vidéo Corporate (Marque Employeur)</option>
                   </select>
                </div>
-               <button type="button" className="bg-ocean text-white hover:shadow-[0_8px_32px_rgba(14,165,233,0.35)] w-full font-heading font-bold py-3.5 rounded-full mt-4 transition-transform hover:-translate-y-0.5">
+               <button type="button" className="bg-primary text-white hover:shadow-[0_8px_32px_rgba(14,165,233,0.35)] w-full font-heading font-bold py-3.5 rounded-full mt-4 transition-transform hover:-translate-y-0.5">
                   Réserver un cadrage Vidéo ✦
                </button>
                <p className="text-center text-xs text-muted-foreground/70 mt-2">Étude de faisabilité et conseils 100% gratuits.</p>

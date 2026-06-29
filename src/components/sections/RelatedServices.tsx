@@ -35,7 +35,7 @@ export function RelatedServices({ services }: RelatedServicesProps) {
                 <span className="font-semibold text-foreground group-hover:text-ocean transition-colors">
                     {service.label}
                 </span>
-                <div className="w-8 h-8 rounded-full bg-foreground/5 flex items-center justify-center group-hover:bg-ocean group-hover:text-white transition-all duration-300">
+                <div className="w-8 h-8 rounded-full bg-foreground/5 flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all duration-300">
                     <ArrowRight className="w-4 h-4 -rotate-45 group-hover:rotate-0 transition-transform duration-300" />
                 </div>
              </div>

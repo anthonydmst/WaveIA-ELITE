@@ -150,7 +150,7 @@ export function AProposPageClient({ items }: { items?: BreadcrumbItem[] }) {
             </span>
             <h2 className="text-3xl sm:text-4xl font-bold mt-4 mb-6">
               Pourquoi{" "}
-              <span className="font-heading italic text-ocean-light">
+              <span className="font-heading italic text-ocean-text">
                 Waveia
               </span>{" "}
               ?
@@ -341,7 +341,7 @@ export function AProposPageClient({ items }: { items?: BreadcrumbItem[] }) {
             </span>
             <h2 className="text-3xl sm:text-4xl font-bold mt-4 mb-6">
               L&apos;aventure{" "}
-              <span className="font-heading italic text-ocean-light">
+              <span className="font-heading italic text-ocean-text">
                 Waveia
               </span>
             </h2>
@@ -381,7 +381,7 @@ export function AProposPageClient({ items }: { items?: BreadcrumbItem[] }) {
                       index % 2 === 0 ? "justify-start" : "justify-end lg:order-1"
                     }`}
                   >
-                    <div className="absolute left-1/2 -translate-x-1/2 w-4 h-4 bg-ocean rounded-full border-4 border-background" />
+                    <div className="absolute left-1/2 -translate-x-1/2 w-4 h-4 bg-primary rounded-full border-4 border-background" />
                   </div>
                 </div>
               ))}

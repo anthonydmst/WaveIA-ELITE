@@ -70,7 +70,7 @@ export function AnimatedServices() {
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mt-4 mb-6">
             Des services complets pour<br className="hidden sm:block" />
-            <span className="font-heading italic text-ocean-light">votre réussite digitale</span>
+            <span className="font-heading italic text-ocean-text">votre réussite digitale</span>
           </h2>
         </div>
 
@@ -118,7 +118,7 @@ export function AnimatedServices() {
                     <div className="flex items-center gap-2 text-sm font-semibold text-ocean/70 group-hover:text-ocean transition-all duration-300">
                       <span className="relative">
                         En savoir plus
-                        <span className="absolute bottom-0 left-0 w-0 h-px bg-ocean group-hover:w-full transition-all duration-300" />
+                        <span className="absolute bottom-0 left-0 w-0 h-px bg-primary group-hover:w-full transition-all duration-300" />
                       </span>
                       <ExternalLink className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
                     </div>

@@ -22,7 +22,7 @@ export function AProposLanding() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8 relative w-full">
           <div className="text-center max-w-4xl mx-auto py-24 animate-hero-fade-up">
             <div className="inline-flex items-center gap-2 bg-ocean/10 border border-ocean/25 rounded-full px-4 py-1.5 text-xs font-semibold text-ocean uppercase tracking-widest mb-7">
-              <span className="w-1.5 h-1.5 bg-ocean rounded-full animate-pulse-glow" />
+              <span className="w-1.5 h-1.5 bg-primary rounded-full animate-pulse-glow" />
               Agence Web IA · Pays Basque
             </div>
             
@@ -37,7 +37,7 @@ export function AProposLanding() {
             </p>
             
             <div className="flex flex-wrap justify-center items-center gap-4">
-              <a href="#contact" className="inline-flex items-center gap-2 bg-ocean text-white font-heading font-bold text-[0.95rem] px-8 py-3.5 rounded-full hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(14,165,233,0.35)] transition-all">
+              <a href="#contact" className="inline-flex items-center gap-2 bg-primary text-white font-heading font-bold text-[0.95rem] px-8 py-3.5 rounded-full hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(14,165,233,0.35)] transition-all">
                 Démarrer un projet <ArrowRight className="w-4 h-4" />
               </a>
               <a href="#services" className="inline-flex items-center gap-2 bg-transparent text-muted-foreground text-sm px-7 py-3.5 rounded-full border border-border hover:border-ocean hover:text-ocean transition-all">
@@ -81,7 +81,7 @@ export function AProposLanding() {
             <div className="relative z-10 grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
               <div>
                 <span className="text-ocean text-sm font-bold uppercase tracking-widest mb-4 block flex items-center gap-2">
-                  <div className="w-5 h-[1.5px] bg-ocean"></div> Notre conviction
+                  <div className="w-5 h-[1.5px] bg-primary"></div> Notre conviction
                 </span>
                 <blockquote className="font-heading font-bold text-2xl md:text-3xl lg:text-4xl leading-snug text-white">
                   « Nous ne faisons pas simplement des sites web. Nous <span className="text-ocean">propulsons</span> votre activité grâce au digital augmenté. »
@@ -105,7 +105,7 @@ export function AProposLanding() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="max-w-3xl mb-16 animate-in fade-in slide-in-from-bottom-4 duration-700">
              <span className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-ocean mb-4">
-               <div className="w-5 h-[1.5px] bg-ocean"></div> Notre savoir-faire
+               <div className="w-5 h-[1.5px] bg-primary"></div> Notre savoir-faire
             </span>
             <h2 className="text-3xl md:text-5xl font-bold font-heading mb-4 text-foreground leading-tight">
               Une agence 360° au service<br />de votre croissance digitale.
@@ -173,7 +173,7 @@ export function AProposLanding() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="max-w-3xl mb-16 animate-in fade-in slide-in-from-bottom-4 duration-700">
              <span className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-ocean mb-4">
-               <div className="w-5 h-[1.5px] bg-ocean"></div> Notre méthode
+               <div className="w-5 h-[1.5px] bg-primary"></div> Notre méthode
             </span>
             <h2 className="text-3xl md:text-5xl font-bold font-heading mb-4 text-foreground leading-tight">
               L'IA au service de votre<br />performance digitale.
@@ -192,7 +192,7 @@ export function AProposLanding() {
                  { num: "04", title: "Optimisation Continue", desc: "Le lancement n'est qu'un début. L'analyse algorithmique de vos leads permet d'optimiser en permanence votre conversion." }
                ].map((step, i) => (
                  <div key={i} className="flex gap-5 animate-in fade-in slide-in-from-bottom-4" style={{animationDelay: `${i*100}ms`}}>
-                   <div className="w-10 h-10 bg-ocean text-white rounded-full flex items-center justify-center font-heading font-black text-sm shrink-0 shadow-lg shadow-ocean/30">
+                   <div className="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center font-heading font-black text-sm shrink-0 shadow-lg shadow-ocean/30">
                      {step.num}
                    </div>
                    <div>
@@ -219,7 +219,7 @@ export function AProposLanding() {
                    <div key={i} className="flex items-center gap-4 bg-background/10 backdrop-blur-md border border-border rounded-xl p-4 hover:bg-background/20 transition-colors">
                      <span className="text-xl">{feat.icon}</span>
                      <span className="text-sm text-white/90 font-medium">{feat.text}</span>
-                     <span className="ml-auto text-[10px] font-bold px-2 py-1 bg-ocean text-white rounded uppercase tracking-widest">{feat.tag}</span>
+                     <span className="ml-auto text-[10px] font-bold px-2 py-1 bg-primary text-white rounded uppercase tracking-widest">{feat.tag}</span>
                    </div>
                  ))}
               </div>
@@ -233,7 +233,7 @@ export function AProposLanding() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="max-w-3xl mb-16 animate-in fade-in slide-in-from-bottom-4 duration-700">
             <span className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-ocean mb-4">
-              <div className="w-5 h-[1.5px] bg-ocean"></div> Notre territoire
+              <div className="w-5 h-[1.5px] bg-primary"></div> Notre territoire
             </span>
             <h2 className="text-3xl md:text-5xl font-bold font-heading mb-4 text-foreground leading-tight">
               Ancrés au Pays Basque,<br />connectés au monde.
@@ -259,7 +259,7 @@ export function AProposLanding() {
                 <p className="text-xs text-muted-foreground">{city.desc}</p>
               </div>
             ))}
-             <div className="glass-card bg-ocean border border-ocean rounded-xl p-6 flex flex-col justify-center text-center">
+             <div className="glass-card bg-primary border border-ocean rounded-xl p-6 flex flex-col justify-center text-center">
                 <div className="text-3xl mb-1">🌍</div>
                 <h4 className="text-base font-bold font-heading text-white mb-1">France entière</h4>
                 <p className="text-xs text-white/70">Nous accompagnons aussi en national.</p>
@@ -274,7 +274,7 @@ export function AProposLanding() {
             <div className="flex flex-wrap justify-between items-end gap-6 mb-16">
                <div>
                   <span className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-ocean mb-4">
-                     <div className="w-5 h-[1.5px] bg-ocean"></div> Cas Clients
+                     <div className="w-5 h-[1.5px] bg-primary"></div> Cas Clients
                   </span>
                   <h2 className="text-3xl md:text-5xl font-bold font-heading text-foreground">
                     Ils nous ont fait<br />confiance.

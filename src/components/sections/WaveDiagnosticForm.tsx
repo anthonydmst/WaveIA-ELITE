@@ -337,7 +337,7 @@ export function WaveDiagnosticForm() {
 
         {/* PROGRESS BAR */}
         <div className="h-1 bg-glass-bg rounded-full overflow-hidden mb-8 max-w-md mx-auto">
-          <div className="h-full bg-ocean rounded-full transition-all duration-500 ease-out" style={{ width: `${progress}%` }} />
+          <div className="h-full bg-primary rounded-full transition-all duration-500 ease-out" style={{ width: `${progress}%` }} />
         </div>
 
         {/* CONTAINER */}
@@ -377,7 +377,7 @@ export function WaveDiagnosticForm() {
               </div>
 
               <div className="flex justify-end pt-4 border-t border-glass-border">
-                <button onClick={handleStep1} className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-ocean text-white font-semibold rounded-xl hover:bg-ocean/90 transition-all hover:-translate-y-0.5">
+                <button onClick={handleStep1} className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-primary text-white font-semibold rounded-xl hover:bg-ocean/90 transition-all hover:-translate-y-0.5">
                   Lancer l&apos;analyse <ArrowRight size={16} />
                 </button>
               </div>
@@ -433,7 +433,7 @@ export function WaveDiagnosticForm() {
                 <button onClick={() => setStep(1)} className="inline-flex items-center gap-2 px-4 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
                   <ChevronLeft size={16} /> Retour
                 </button>
-                <button onClick={handleStep2} className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-ocean text-white font-semibold rounded-xl hover:bg-ocean/90 transition-all">
+                <button onClick={handleStep2} className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-primary text-white font-semibold rounded-xl hover:bg-ocean/90 transition-all">
                   Continuer <ArrowRight size={16} />
                 </button>
               </div>
@@ -479,7 +479,7 @@ export function WaveDiagnosticForm() {
                   <button 
                     onClick={nextQuestion} 
                     disabled={!answers[q.id]}
-                    className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-ocean text-white font-semibold rounded-xl hover:bg-ocean/90 transition-all disabled:opacity-40 disabled:hover:translate-y-0"
+                    className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-primary text-white font-semibold rounded-xl hover:bg-ocean/90 transition-all disabled:opacity-40 disabled:hover:translate-y-0"
                   >
                     {currentQ === qs.length - 1 ? 'Terminer le diagnostic' : 'Suivant'} <ArrowRight size={16} />
                   </button>
@@ -531,7 +531,7 @@ export function WaveDiagnosticForm() {
                 <button onClick={() => setStep(3)} className="inline-flex items-center gap-2 px-4 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
                   <ChevronLeft size={16} /> Retour
                 </button>
-                <button onClick={handleStep4} className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-ocean text-white font-semibold rounded-xl hover:bg-ocean/90 transition-all">
+                <button onClick={handleStep4} className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-primary text-white font-semibold rounded-xl hover:bg-ocean/90 transition-all">
                   Continuer <ArrowRight size={16} />
                 </button>
               </div>
@@ -594,7 +594,7 @@ export function WaveDiagnosticForm() {
                 <button onClick={() => setStep(4)} className="inline-flex items-center gap-2 px-4 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
                   <ChevronLeft size={16} /> Retour
                 </button>
-                <button onClick={handleStep5} disabled={isSubmitting} className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-ocean text-white font-semibold rounded-xl hover:bg-ocean/90 transition-all disabled:opacity-50">
+                <button onClick={handleStep5} disabled={isSubmitting} className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-primary text-white font-semibold rounded-xl hover:bg-ocean/90 transition-all disabled:opacity-50">
                   {isSubmitting ? 'Analyse en cours...' : 'Recevoir mon diagnostic'} {!isSubmitting && <ArrowRight size={16} />}
                 </button>
               </div>
@@ -633,7 +633,7 @@ export function WaveDiagnosticForm() {
                       <div key={k} className="flex items-center gap-4 py-2 border-b border-glass-border/50 last:border-0 last:pb-0">
                         <div className="w-[150px] text-xs text-muted-foreground truncate" title={DIM_LABELS[k]}>{DIM_LABELS[k]}</div>
                         <div className="flex-1 h-1.5 bg-glass-bg rounded-full overflow-hidden">
-                          <div className="h-full bg-ocean rounded-full" style={{ width: `${(sc / 10) * 100}%` }} />
+                          <div className="h-full bg-primary rounded-full" style={{ width: `${(sc / 10) * 100}%` }} />
                         </div>
                         <div className="text-xs font-semibold text-foreground w-[32px] text-right">{sc}/10</div>
                       </div>
@@ -657,7 +657,7 @@ export function WaveDiagnosticForm() {
                   href="https://calendly.com/wavia" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 w-full px-6 py-4 border-2 border-ocean text-ocean font-bold rounded-xl hover:bg-ocean hover:text-white transition-all shadow-sm shadow-ocean/10"
+                  className="flex items-center justify-center gap-2 w-full px-6 py-4 border-2 border-ocean text-ocean font-bold rounded-xl hover:bg-primary hover:text-white transition-all shadow-sm shadow-ocean/10"
                 >
                   Prendre rendez-vous avec un expert WaveIA <ArrowRight size={18} />
                 </a>

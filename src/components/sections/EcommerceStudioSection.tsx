@@ -56,9 +56,9 @@ export function EcommerceStudioSection() {
       <div className="max-w-4xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-16 animate-in">
           <div className="inline-flex items-center justify-center gap-2 text-xs font-semibold text-ocean uppercase tracking-[0.14em] mb-4">
-            <div className="w-5 h-[1.5px] bg-ocean"></div>
+            <div className="w-5 h-[1.5px] bg-primary"></div>
             IMAGE DE MARQUE
-            <div className="w-5 h-[1.5px] bg-ocean"></div>
+            <div className="w-5 h-[1.5px] bg-primary"></div>
           </div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold font-heading mb-6 leading-tight">
             Donner une voix unique et une force de frappe scalable à votre marque.

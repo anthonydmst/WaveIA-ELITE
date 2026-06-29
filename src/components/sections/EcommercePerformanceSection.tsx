@@ -19,21 +19,21 @@ export function EcommercePerformanceSection() {
           <div className="mt-6">
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
-                <div className="w-1.5 h-1.5 rounded-full bg-ocean mt-2 shrink-0"></div>
+                <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0"></div>
                 <div>
                   <strong className="text-foreground text-sm block">Search & Shopping (Google Ads, Bing)</strong>
                   <span className="text-muted-foreground text-sm">Capture de la demande intentionniste chaude au moment précis de la recherche.</span>
                 </div>
               </li>
               <li className="flex items-start gap-3">
-                <div className="w-1.5 h-1.5 rounded-full bg-ocean mt-2 shrink-0"></div>
+                <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0"></div>
                 <div>
                   <strong className="text-foreground text-sm block">Social & Entertainment Ads (Meta, TikTok, Pinterest, Snapchat, YouTube)</strong>
                   <span className="text-muted-foreground text-sm">Création du besoin, ciblage comportemental et enrichissement continu de votre haut de funnel.</span>
                 </div>
               </li>
               <li className="flex items-start gap-3">
-                <div className="w-1.5 h-1.5 rounded-full bg-ocean mt-2 shrink-0"></div>
+                <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0"></div>
                 <div>
                   <strong className="text-foreground text-sm block">Audio Proximité</strong>
                   <span className="text-muted-foreground text-sm">Intégration de campagnes immersives via Spotify Ads pour émerger au cœur du quotidien de vos prospects.</span>
@@ -77,7 +77,7 @@ export function EcommercePerformanceSection() {
               </div>
               <div className="bg-background/50 border border-border/50 rounded-xl p-5">
                 <h5 className="font-heading font-bold text-foreground text-sm mb-2">Maillage Interne</h5>
-                <p className="text-muted-foreground text-sm leading-relaxed">Maximisez l&apos;efficacité de vos bases de données en lisant notre guide sur le <a href="#" className="text-ocean hover:underline font-medium">CRM et Marketing Automation</a>.</p>
+                <p className="text-muted-foreground text-sm leading-relaxed">Maximisez l&apos;efficacité de vos bases de données en lisant notre guide sur le <a href="#" className="text-ocean underline underline-offset-2 decoration-ocean/40 hover:decoration-ocean font-medium">CRM et Marketing Automation</a>.</p>
               </div>
             </div>
           </div>
@@ -91,9 +91,9 @@ export function EcommercePerformanceSection() {
       <div className="max-w-4xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-16 animate-in">
           <div className="inline-flex items-center justify-center gap-2 text-xs font-semibold text-ocean uppercase tracking-[0.14em] mb-4">
-            <div className="w-5 h-[1.5px] bg-ocean"></div>
+            <div className="w-5 h-[1.5px] bg-primary"></div>
             LA PERFORMANCE
-            <div className="w-5 h-[1.5px] bg-ocean"></div>
+            <div className="w-5 h-[1.5px] bg-primary"></div>
           </div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold font-heading mb-6 leading-tight">
             Le design de la performance publicitaire et de la rétention.

@@ -75,7 +75,7 @@ export default async function ResourcePage(props: { params: Promise<{ slug: stri
             <div className="bg-linear-to-r from-ocean/10 to-transparent p-8 rounded-2xl border border-ocean/20">
                 <h3 className="text-2xl font-bold font-heading text-foreground mb-2">Besoin d&apos;aide pour appliquer ces conseils ?</h3>
                 <p className="text-muted-foreground mb-6">Nos experts sont spécialisés sur le marché local du Pays Basque.</p>
-                <Link href="/contact" className="inline-flex justify-center items-center px-6 py-3 bg-ocean text-white font-bold rounded-full hover:bg-ocean-light transition-colors">
+                <Link href="/contact" className="inline-flex justify-center items-center px-6 py-3 bg-primary text-white font-bold rounded-full hover:bg-ocean-light transition-colors">
                     Prendre rendez-vous
                 </Link>
             </div>

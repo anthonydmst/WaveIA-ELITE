@@ -25,7 +25,7 @@ export function AnimatedLocalSection() {
             
             <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
               Votre agence web<br />
-              <span className="font-heading italic text-ocean-light">du Pays Basque</span>
+              <span className="font-heading italic text-ocean-text">du Pays Basque</span>
             </h2>
             
             <p className="text-muted-foreground leading-relaxed mb-6 text-lg">

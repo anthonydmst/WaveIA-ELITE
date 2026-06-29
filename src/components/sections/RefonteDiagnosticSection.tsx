@@ -84,7 +84,7 @@ export function RefonteDiagnosticSection() {
                       <h3 className={`font-heading font-bold text-lg md:text-xl transition-colors duration-300 ${isOpen ? 'text-foreground' : 'text-foreground/80 group-hover:text-foreground'}`}>
                         {signal.title}
                       </h3>
-                      <span className={`text-xs md:text-sm transition-colors duration-300 ${isOpen ? 'text-red-400 font-medium' : 'text-muted-foreground group-hover:text-muted-foreground/80'}`}>
+                      <span className={`text-xs md:text-sm transition-colors duration-300 ${isOpen ? 'text-red-400 font-medium' : 'text-muted-foreground group-hover:text-muted-foreground'}`}>
                         {signal.subtitle}
                       </span>
                     </div>

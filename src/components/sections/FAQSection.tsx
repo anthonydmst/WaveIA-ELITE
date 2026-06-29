@@ -57,7 +57,7 @@ export function FAQSection() {
               <span>FAQ</span>
             </div>
             <h2 className="text-3xl sm:text-4xl font-bold mt-4">
-              Questions <span className="font-heading italic text-ocean-light">fréquentes</span>
+              Questions <span className="font-heading italic text-ocean-text">fréquentes</span>
             </h2>
             <p className="text-muted-foreground text-base lg:text-lg leading-relaxed">
               Tout ce que vous devez savoir avant de démarrer votre projet avec nous. Si vous ne trouvez pas la réponse à votre question, n&apos;hésitez pas à nous contacter directement.

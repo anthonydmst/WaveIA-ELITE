@@ -64,9 +64,9 @@ export function EcommerceFaqSection() {
       <div className="max-w-4xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-16 animate-in">
           <div className="inline-flex items-center justify-center gap-2 text-xs font-semibold text-ocean uppercase tracking-[0.14em] mb-4">
-            <div className="w-5 h-[1.5px] bg-ocean"></div>
+            <div className="w-5 h-[1.5px] bg-primary"></div>
             TRANSPARENCE TOTALE
-            <div className="w-5 h-[1.5px] bg-ocean"></div>
+            <div className="w-5 h-[1.5px] bg-primary"></div>
           </div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold font-heading mb-6 leading-tight">
             Vos dernières questions avant notre échange de cadrage.
@@ -87,7 +87,7 @@ export function EcommerceFaqSection() {
                   <span className="text-ocean opacity-50 mr-3 font-mono text-sm">0{idx + 1}.</span> 
                   {faq.q}
                 </h3>
-                <div className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-colors ${openIndex === idx ? 'bg-ocean text-white' : 'bg-ocean/10 text-ocean group-hover:bg-ocean/20'}`}>
+                <div className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-colors ${openIndex === idx ? 'bg-primary text-white' : 'bg-ocean/10 text-ocean group-hover:bg-ocean/20'}`}>
                   {openIndex === idx ? <X className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
                 </div>
               </button>

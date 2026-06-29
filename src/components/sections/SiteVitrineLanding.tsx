@@ -15,7 +15,7 @@ export function SiteVitrineLanding() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8 relative w-full">
           <div className="text-center max-w-4xl mx-auto py-24 animate-hero-fade-up">
             <div className="inline-flex items-center gap-2 bg-ocean/10 border border-ocean/25 rounded-full px-4 py-1.5 text-xs font-semibold text-ocean uppercase tracking-widest mb-7">
-              <span className="w-1.5 h-1.5 bg-ocean rounded-full animate-pulse-glow" />
+              <span className="w-1.5 h-1.5 bg-primary rounded-full animate-pulse-glow" />
               DÉVELOPPEMENT WEB SUR-MESURE
             </div>
             
@@ -28,7 +28,7 @@ export function SiteVitrineLanding() {
             </p>
             
             <div className="flex flex-wrap justify-center items-center gap-4">
-              <a href="#contact" className="inline-flex items-center gap-2 bg-ocean text-white font-heading font-bold text-[0.95rem] px-8 py-3.5 rounded-full hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(14,165,233,0.35)] transition-all">
+              <a href="#contact" className="inline-flex items-center gap-2 bg-primary text-white font-heading font-bold text-[0.95rem] px-8 py-3.5 rounded-full hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(14,165,233,0.35)] transition-all">
                 Analyser mon site actuel <ArrowRight className="w-4 h-4" />
               </a>
               <a href="/realisations" className="inline-flex items-center gap-2 bg-transparent text-muted-foreground text-sm px-7 py-3.5 rounded-full border border-border hover:border-ocean hover:text-ocean transition-all">
@@ -86,7 +86,7 @@ export function SiteVitrineLanding() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="max-w-3xl mb-16 animate-in">
              <span className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-ocean mb-4">
-               <div className="w-5 h-[1.5px] bg-ocean"></div> INGÉNIERIE DE CONVERSION
+               <div className="w-5 h-[1.5px] bg-primary"></div> INGÉNIERIE DE CONVERSION
             </span>
             <h2 className="text-3xl md:text-5xl font-extrabold font-heading mb-6 leading-tight">
               L'anatomie d'un site vitrine conçu <em className="not-italic text-ocean relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:right-0 after:h-[2px] after:bg-gradient-to-r after:from-ocean after:to-transparent">pour signer des contrats.</em>
@@ -123,7 +123,7 @@ export function SiteVitrineLanding() {
          <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="max-w-3xl animate-in mb-16">
              <span className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-ocean mb-4">
-               <div className="w-5 h-[1.5px] bg-ocean"></div> PROCESSUS D'INGÉNIERIE
+               <div className="w-5 h-[1.5px] bg-primary"></div> PROCESSUS D'INGÉNIERIE
             </span>
             <h2 className="text-3xl md:text-5xl font-extrabold font-heading mb-6 leading-tight">
               De l'audit à la mise en ligne : un <em className="not-italic text-ocean relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:right-0 after:h-[2px] after:bg-gradient-to-r after:from-ocean after:to-transparent">déploiement sans friction.</em>
@@ -165,7 +165,7 @@ export function SiteVitrineLanding() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="max-w-3xl mb-16 animate-in">
              <span className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-ocean mb-4">
-               <div className="w-5 h-[1.5px] bg-ocean"></div> ÉCOSYSTÈME DIGITAL
+               <div className="w-5 h-[1.5px] bg-primary"></div> ÉCOSYSTÈME DIGITAL
             </span>
             <h2 className="text-3xl md:text-5xl font-extrabold font-heading mb-6 leading-tight">
               L'infrastructure de votre <em className="not-italic text-ocean relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:right-0 after:h-[2px] after:bg-gradient-to-r after:from-ocean after:to-transparent">écosystème de vente.</em>
@@ -412,7 +412,7 @@ export function SiteVitrineLanding() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="max-w-3xl mb-16 animate-in">
              <span className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-ocean mb-4">
-               <div className="w-5 h-[1.5px] bg-ocean"></div> EXCELLENCE OPÉRATIONNELLE
+               <div className="w-5 h-[1.5px] bg-primary"></div> EXCELLENCE OPÉRATIONNELLE
             </span>
             <h2 className="text-3xl md:text-5xl font-extrabold font-heading mb-6 leading-tight">
               Où intervient l'IA dans la conception de <em className="not-italic text-ocean relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:right-0 after:h-[2px] after:bg-gradient-to-r after:from-ocean after:to-transparent">votre plateforme ?</em>
@@ -455,7 +455,7 @@ export function SiteVitrineLanding() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="max-w-3xl mb-16 animate-in">
              <span className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-ocean mb-4">
-               <div className="w-5 h-[1.5px] bg-ocean"></div> VOTRE ACCOMPAGNEMENT POST-LANCEMENT
+               <div className="w-5 h-[1.5px] bg-primary"></div> VOTRE ACCOMPAGNEMENT POST-LANCEMENT
             </span>
             <h2 className="text-3xl md:text-5xl font-bold font-heading mb-6 leading-tight">
               La mise en ligne n'est pas une fin. C'est <em className="not-italic text-ocean relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:right-0 after:h-[2px] after:bg-gradient-to-r after:from-ocean after:to-transparent">le début de votre acquisition.</em>
@@ -500,7 +500,7 @@ export function SiteVitrineLanding() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
            <div className="max-w-3xl mb-16 animate-in text-center mx-auto">
              <span className="flex items-center justify-center gap-2 text-xs font-bold uppercase tracking-widest text-ocean mb-4">
-               <div className="w-5 h-[1.5px] bg-ocean"></div> DIAGNOSTIC EXPRESS (45 SECONDES) <div className="w-5 h-[1.5px] bg-ocean"></div>
+               <div className="w-5 h-[1.5px] bg-primary"></div> DIAGNOSTIC EXPRESS (45 SECONDES) <div className="w-5 h-[1.5px] bg-primary"></div>
             </span>
             <h2 className="text-3xl md:text-5xl font-extrabold font-heading mb-6 leading-tight">
               Identifiez votre faille digitale et <em className="not-italic text-ocean relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:right-0 after:h-[2px] after:bg-gradient-to-r after:from-ocean after:to-transparent">vos priorités d'investissement.</em>
@@ -517,7 +517,7 @@ export function SiteVitrineLanding() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-16 animate-in">
              <span className="flex items-center justify-center gap-2 text-xs font-bold uppercase tracking-widest text-ocean mb-4">
-               <div className="w-5 h-[1.5px] bg-ocean"></div> IMPACT COMMERCIAL
+               <div className="w-5 h-[1.5px] bg-primary"></div> IMPACT COMMERCIAL
             </span>
             <h2 className="text-3xl md:text-5xl font-extrabold font-heading mb-6 leading-tight">
               Des résultats mesurés sur <em className="not-italic text-ocean relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:right-0 after:h-[2px] after:bg-gradient-to-r after:from-ocean after:to-transparent">votre volume de contacts.</em>
@@ -556,7 +556,7 @@ export function SiteVitrineLanding() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="max-w-3xl mx-auto mb-16 animate-in text-center">
              <span className="flex items-center justify-center gap-2 text-xs font-bold uppercase tracking-widest text-ocean mb-4">
-               <div className="w-5 h-[1.5px] bg-ocean"></div> TRANSPARENCE TOTALE <div className="w-5 h-[1.5px] bg-ocean"></div>
+               <div className="w-5 h-[1.5px] bg-primary"></div> TRANSPARENCE TOTALE <div className="w-5 h-[1.5px] bg-primary"></div>
             </span>
             <h2 className="text-3xl md:text-5xl font-extrabold font-heading mb-6 leading-tight">
               Vos dernières questions avant de <em className="not-italic text-ocean relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:right-0 after:h-[2px] after:bg-gradient-to-r after:from-ocean after:to-transparent">nous confier votre projet.</em>
@@ -631,7 +631,7 @@ export function SiteVitrineLanding() {
               </p>
               
               <div className="flex flex-col sm:flex-row flex-wrap justify-center items-center gap-4">
-                <a href="#rdv" className="inline-flex items-center justify-center w-full sm:w-auto gap-2 bg-ocean text-white font-heading font-bold text-[0.95rem] px-8 py-3.5 rounded-full hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(14,165,233,0.35)] transition-all">
+                <a href="#rdv" className="inline-flex items-center justify-center w-full sm:w-auto gap-2 bg-primary text-white font-heading font-bold text-[0.95rem] px-8 py-3.5 rounded-full hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(14,165,233,0.35)] transition-all">
                   Réserver un échange de 15min <ArrowRight className="w-4 h-4" />
                 </a>
                 <a href="#devis" className="inline-flex items-center justify-center w-full sm:w-auto gap-2 bg-transparent text-foreground font-heading font-bold text-[0.95rem] px-8 py-3.5 rounded-full border border-border hover:border-ocean hover:text-ocean hover:-translate-y-0.5 transition-all">

@@ -47,7 +47,7 @@ export function EcommerceTimelineSection() {
        <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="max-w-3xl mb-16 animate-in fade-in slide-in-from-bottom-4 duration-700">
            <span className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-ocean mb-4">
-             <div className="w-5 h-[1.5px] bg-ocean"></div> MÉTHODOLOGIE D&apos;INGÉNIERIE
+             <div className="w-5 h-[1.5px] bg-primary"></div> MÉTHODOLOGIE D&apos;INGÉNIERIE
           </span>
           <h2 className="text-3xl md:text-5xl font-extrabold font-heading mb-6 leading-tight">
             De l&apos;audit initial à la scalabilité : un déploiement maîtrisé.

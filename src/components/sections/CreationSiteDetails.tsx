@@ -43,7 +43,7 @@ export function SuccessStepsBlock() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-16 animate-hero-fade-up">
           <SectionHeader as="h2" size="section">
-            On détaille les <span className="font-heading italic text-ocean-light">étapes de votre succès</span>
+            On détaille les <span className="font-heading italic text-ocean-text">étapes de votre succès</span>
           </SectionHeader>
         </div>
         <div className="grid lg:grid-cols-3 gap-8">
@@ -52,7 +52,7 @@ export function SuccessStepsBlock() {
               <div className="text-6xl font-black text-foreground/[0.03] absolute top-4 right-6 pointer-events-none group-hover:text-ocean/[0.05] transition-colors">
                 0{idx + 1}
               </div>
-              <div className="w-14 h-14 rounded-xl bg-ocean/10 flex items-center justify-center mb-6 text-ocean-light group-hover:bg-ocean group-hover:text-white transition-colors">
+              <div className="w-14 h-14 rounded-xl bg-ocean/10 flex items-center justify-center mb-6 text-ocean-light group-hover:bg-primary group-hover:text-white transition-colors">
                 <step.icon className="w-6 h-6" />
               </div>
               <div className="text-sm font-bold tracking-wider text-ocean mb-2 uppercase">{step.title}</div>
@@ -74,7 +74,7 @@ export function LocalExpertsBlock() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-16 animate-hero-fade-up">
           <SectionHeader as="h2" size="section">
-            Vos <span className="font-heading italic text-ocean-light">Experts Locaux</span> de Proximité
+            Vos <span className="font-heading italic text-ocean-text">Experts Locaux</span> de Proximité
           </SectionHeader>
         </div>
         
@@ -132,7 +132,7 @@ export function TrustTestimonialsBlock() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-16 animate-hero-fade-up">
           <SectionHeader as="h2" size="section">
-            Ils nous ont fait confiance <span className="font-heading italic text-ocean-light">et ont aimé...</span>
+            Ils nous ont fait confiance <span className="font-heading italic text-ocean-text">et ont aimé...</span>
           </SectionHeader>
         </div>
         
@@ -170,7 +170,7 @@ export function RevolutionCTABlock() {
             Proposition tarifaires : différentes formules suivant le type d'accompagnement. Des sites premiums à moins de 1000€ grâce à la puissance de l'Intelligence Artificielle.
           </p>
           
-          <Button asChild size="lg" className="rounded-full bg-ocean text-white hover:bg-ocean-dark shadow-lg px-8 h-14 text-base relative z-10 group">
+          <Button asChild size="lg" className="rounded-full bg-primary text-white hover:bg-ocean-dark shadow-lg px-8 h-14 text-base relative z-10 group">
             <Link href="/tarifs">
               Voir nos formules d'accompagnement
               <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
@@ -206,7 +206,7 @@ export function AgencyHowItWorksBlock() {
         <div className="mb-24">
           <div className="text-center mb-16">
             <SectionHeader as="h2" size="section">
-              <span className="font-heading italic text-ocean-light">Comment</span> ça marche
+              <span className="font-heading italic text-ocean-text">Comment</span> ça marche
             </SectionHeader>
           </div>
           <div className="grid lg:grid-cols-3 gap-8">

@@ -113,7 +113,7 @@ export function LandingLeadForm({ formName, focusOptions, buttonText }: LandingL
       <button 
         type="submit" 
         disabled={status === 'loading'}
-        className="bg-ocean text-white hover:shadow-[0_8px_32px_rgba(14,165,233,0.35)] w-full font-heading font-bold py-3.5 rounded-full mt-4 transition-transform hover:-translate-y-0.5 disabled:opacity-50 flex items-center justify-center gap-2"
+        className="bg-primary text-white hover:shadow-[0_8px_32px_rgba(14,165,233,0.35)] w-full font-heading font-bold py-3.5 rounded-full mt-4 transition-transform hover:-translate-y-0.5 disabled:opacity-50 flex items-center justify-center gap-2"
       >
         {status === 'loading' ? 'Envoi en cours...' : buttonText}
         {status !== 'loading' && <ArrowRight className="w-4 h-4" />}

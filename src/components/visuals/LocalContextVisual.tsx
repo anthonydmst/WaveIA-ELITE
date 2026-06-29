@@ -108,8 +108,8 @@ export function LocalContextVisual() {
                       className="mb-auto animate-in delay-700"
                    >
                      <span className="relative inline-flex">
-                        <span className="flex rounded-full bg-ocean h-2 w-2 absolute -top-1 -right-1 animate-ping opacity-75"></span>
-                        <span className="px-2 py-0.5 bg-ocean text-white text-[10px] font-bold rounded-full shadow-[0_4px_15px_rgba(14,165,233,0.5)] border border-border">
+                        <span className="flex rounded-full bg-primary h-2 w-2 absolute -top-1 -right-1 animate-ping opacity-75"></span>
+                        <span className="px-2 py-0.5 bg-primary text-white text-[10px] font-bold rounded-full shadow-[0_4px_15px_rgba(14,165,233,0.5)] border border-border">
                           CIBLE
                         </span>
                      </span>

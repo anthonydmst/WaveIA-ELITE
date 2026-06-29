@@ -117,7 +117,7 @@ export function ServicesTripartite() {
                     <div className="flex items-center gap-2 text-sm font-semibold text-ocean-text/80 group-hover:text-ocean-text transition-all duration-300 mt-auto">
                       <span className="relative">
                         Découvrir
-                        <span className="absolute bottom-0 left-0 w-0 h-px bg-ocean group-hover:w-full transition-all duration-300" />
+                        <span className="absolute bottom-0 left-0 w-0 h-px bg-primary group-hover:w-full transition-all duration-300" />
                       </span>
                       <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
                     </div>

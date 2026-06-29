@@ -99,7 +99,7 @@ export default function RootLayout({
               {/* Skip link for keyboard navigation */}
               <a
                 href="#main-content"
-                className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-100 focus:px-4 focus:py-2 focus:bg-ocean focus:text-background focus:rounded-lg focus:outline-none"
+                className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-100 focus:px-4 focus:py-2 focus:bg-primary focus:text-background focus:rounded-lg focus:outline-none"
               >
                 Aller au contenu principal
               </a>

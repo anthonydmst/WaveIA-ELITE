@@ -36,7 +36,7 @@ export function CustomHeroCreationSite({ breadcrumbItems }: Props) {
             Création de Site Internet au Pays Basque{" "}
             <span className="text-3xl md:text-4xl text-muted-foreground font-normal tracking-normal">(Bayonne, Biarritz, Anglet)</span> :{" "}
             <br className="hidden lg:block"/>
-            <span className="font-heading italic text-ocean-light">La Technologie "Next-Gen" à votre service</span>
+            <span className="font-heading italic text-ocean-text">La Technologie "Next-Gen" à votre service</span>
           </SectionHeader>
 
           <p className="text-xl lg:text-2xl font-medium text-foreground mb-8 leading-snug">
@@ -52,7 +52,7 @@ export function CustomHeroCreationSite({ breadcrumbItems }: Props) {
             </p>
           </div>
 
-          <Button asChild size="lg" className="rounded-full bg-ocean text-white hover:bg-ocean-dark shadow-lg shadow-ocean/30 text-base px-8 h-14 transition-all hover:scale-105 active:scale-95 group">
+          <Button asChild size="lg" className="rounded-full bg-primary text-white hover:bg-ocean-dark shadow-lg shadow-ocean/30 text-base px-8 h-14 transition-all hover:scale-105 active:scale-95 group">
             <Link href="/contact">
               Discuter de mon projet web avec un expert local
               <ArrowRight className="ml-2 w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />

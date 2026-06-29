@@ -35,7 +35,7 @@ export function EcommerceImpactSection() {
           {/* Left Column : Texts & Metrics */}
           <div className="animate-in fade-in slide-in-from-left-8 duration-700">
             <div className="inline-flex items-center gap-2 text-xs font-semibold text-ocean uppercase tracking-[0.14em] mb-4">
-              <div className="w-5 h-[1.5px] bg-ocean"></div>
+              <div className="w-5 h-[1.5px] bg-primary"></div>
               IMPACT MESURÉ
             </div>
             <h2 className="text-3xl md:text-5xl font-bold font-heading mb-6 leading-tight text-foreground">

@@ -103,7 +103,7 @@ export function TarifsHubClient({ items }: { items?: BreadcrumbItem[] }) {
                       <div className="text-sm font-medium text-ocean">
                         {cat.price}
                       </div>
-                      <div className="w-10 h-10 rounded-full bg-muted/50 flex items-center justify-center group-hover:bg-ocean group-hover:text-white transition-all duration-300">
+                      <div className="w-10 h-10 rounded-full bg-muted/50 flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all duration-300">
                         <ArrowRight className="w-5 h-5" />
                       </div>
                     </div>

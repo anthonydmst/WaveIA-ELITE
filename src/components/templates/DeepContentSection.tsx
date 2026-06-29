@@ -145,7 +145,7 @@ export function DeepContentSection({ content }: Props) {
                   </div>
                   
                   {/* Connector Dot */}
-                  <div className="absolute top-12 left-1/2 -translate-x-1/2 w-2 h-2 bg-ocean rounded-full opacity-50 blur-[2px]" />
+                  <div className="absolute top-12 left-1/2 -translate-x-1/2 w-2 h-2 bg-primary rounded-full opacity-50 blur-[2px]" />
 
                   <div className="mt-8 text-center">
                      <SectionHeader as="h3" size="subsection" align="center" className="mb-3 group-hover:text-ocean transition-colors">
@@ -177,7 +177,7 @@ export function DeepContentSection({ content }: Props) {
                     <ul className="space-y-2">
                        {step.deliverables.map((item, i) => (
                           <li key={i} className="text-sm text-muted-foreground flex items-center gap-2">
-                             <div className="w-1 h-1 rounded-full bg-ocean" />
+                             <div className="w-1 h-1 rounded-full bg-primary" />
                              {item}
                           </li>
                        ))}

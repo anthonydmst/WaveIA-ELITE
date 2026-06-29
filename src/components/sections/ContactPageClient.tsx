@@ -87,7 +87,7 @@ export function ContactPageClient({ items }: { items?: BreadcrumbItem[] }) {
               Vous avez une idée, un projet ou simplement une question ?
               Contactez-nous et obtenez une réponse sous 24h.
             </p>
-            <p className="text-base text-muted-foreground/80 leading-relaxed">
+            <p className="text-base text-muted-foreground leading-relaxed">
               Basés à Biarritz, nous accompagnons les entreprises du Pays Basque et de la Côte Landaise 
               dans leur transformation digitale. Site internet, référencement SEO ou stratégie de communication : 
               chaque projet débute par un échange pour comprendre vos besoins et vos objectifs.
@@ -151,7 +151,7 @@ export function ContactPageClient({ items }: { items?: BreadcrumbItem[] }) {
                   Réservez un appel de 30 minutes pour discuter de votre projet
                   et obtenir des conseils personnalisés.
                 </p>
-                <button className="w-full px-4 py-3 bg-ocean text-background font-bold rounded-lg hover:bg-ocean/90 transition-all hover:scale-[1.02] shadow-lg shadow-ocean/20">
+                <button className="w-full px-4 py-3 bg-primary text-background font-bold rounded-lg hover:bg-ocean/90 transition-all hover:scale-[1.02] shadow-lg shadow-ocean/20">
                   Réserver un créneau
                 </button>
               </div>
@@ -375,7 +375,7 @@ export function ContactPageClient({ items }: { items?: BreadcrumbItem[] }) {
           <div className="text-center mb-12 animate-in">
             <SectionHeader as="h2" size="section" align="center" className="mb-4">
               Retrouvez-nous sur la{" "}
-              <span className="font-heading italic text-ocean-light">
+              <span className="font-heading italic text-ocean-text">
                 Côte Basque
               </span>
             </SectionHeader>

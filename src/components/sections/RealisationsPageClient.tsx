@@ -80,7 +80,7 @@ export function RealisationsPageClient({ items }: { items?: BreadcrumbItem[] }) 
                 onClick={() => setActiveCategory(category.id)}
                 className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all ${
                   activeCategory === category.id
-                    ? "bg-ocean text-background"
+                    ? "bg-primary text-background"
                     : "bg-foreground/5 text-muted-foreground hover:bg-foreground/10 hover:text-foreground"
                 }`}
               >

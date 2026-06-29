@@ -55,21 +55,21 @@ export function EcommerceConceptionSection() {
             <h4 className="font-heading font-bold text-foreground mb-4 text-sm">Le choix de votre infrastructure :</h4>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
-                <div className="w-1.5 h-1.5 rounded-full bg-ocean mt-2 shrink-0"></div>
+                <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0"></div>
                 <div>
                   <strong className="text-foreground text-sm block">Shopify / Shopify Plus</strong>
                   <span className="text-muted-foreground text-sm">La solution reine pour les PME et DNVB. Idéal pour un déploiement rapide, une scalabilité infinie (encaisse les forts pics de trafic) et une maintenance technique proche de zéro.</span>
                 </div>
               </li>
               <li className="flex items-start gap-3">
-                <div className="w-1.5 h-1.5 rounded-full bg-ocean mt-2 shrink-0"></div>
+                <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0"></div>
                 <div>
                   <strong className="text-foreground text-sm block">PrestaShop & WooCommerce</strong>
                   <span className="text-muted-foreground text-sm">Les standards Open-Source. Recommandés si vous avez besoin d&apos;une très grande flexibilité sur la gestion d&apos;un catalogue complexe, tout en maîtrisant vos coûts d&apos;hébergement.</span>
                 </div>
               </li>
               <li className="flex items-start gap-3">
-                <div className="w-1.5 h-1.5 rounded-full bg-ocean mt-2 shrink-0"></div>
+                <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0"></div>
                 <div>
                   <strong className="text-foreground text-sm block">Sylius & Headless Commerce</strong>
                   <span className="text-muted-foreground text-sm">L&apos;ingénierie sur-mesure. Réservé aux architectures complexes (Marketplaces, B2B volumineux) nécessitant une séparation totale entre la base de données et le design pour des performances de vitesse extrêmes.</span>
@@ -151,9 +151,9 @@ export function EcommerceConceptionSection() {
       <div className="max-w-4xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-16 animate-in">
           <div className="inline-flex items-center justify-center gap-2 text-xs font-semibold text-ocean uppercase tracking-[0.14em] mb-4">
-            <div className="w-5 h-[1.5px] bg-ocean"></div>
+            <div className="w-5 h-[1.5px] bg-primary"></div>
             LE DÉVELOPPEMENT
-            <div className="w-5 h-[1.5px] bg-ocean"></div>
+            <div className="w-5 h-[1.5px] bg-primary"></div>
           </div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold font-heading mb-6 leading-tight">
             De l&apos;ergonomie à la logistique : la mécanique d&apos;une plateforme performante.

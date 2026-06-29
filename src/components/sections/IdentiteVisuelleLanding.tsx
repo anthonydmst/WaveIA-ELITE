@@ -42,7 +42,7 @@ export function IdentiteVisuelleLanding() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8 relative w-full">
           <div className="text-center max-w-4xl mx-auto py-24 animate-hero-fade-up">
             <div className="inline-flex items-center gap-2 bg-ocean/10 border border-ocean/25 rounded-full px-4 py-1.5 text-xs font-semibold text-ocean uppercase tracking-widest mb-7">
-              <span className="w-1.5 h-1.5 bg-ocean rounded-full animate-pulse-glow" />
+              <span className="w-1.5 h-1.5 bg-primary rounded-full animate-pulse-glow" />
               Direction Artistique & Design — Pays Basque
             </div>
             
@@ -58,7 +58,7 @@ export function IdentiteVisuelleLanding() {
             </p>
             
             <div className="flex flex-wrap justify-center items-center gap-4">
-              <a href="#contact" className="inline-flex items-center gap-2 bg-ocean text-white font-heading font-bold text-[0.95rem] px-8 py-3.5 rounded-full hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(14,165,233,0.35)] transition-all">
+              <a href="#contact" className="inline-flex items-center gap-2 bg-primary text-white font-heading font-bold text-[0.95rem] px-8 py-3.5 rounded-full hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(14,165,233,0.35)] transition-all">
                 Démarrer mon projet <ArrowRight className="w-4 h-4" />
               </a>
               <a href="#process" className="inline-flex items-center gap-2 bg-transparent text-muted-foreground text-sm px-7 py-3.5 rounded-full border border-border hover:border-ocean hover:text-ocean transition-all">
@@ -108,7 +108,7 @@ export function IdentiteVisuelleLanding() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="max-w-3xl animate-in fade-in slide-in-from-bottom-4 duration-700">
             <span className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-ocean mb-4">
-              <div className="w-5 h-[1.5px] bg-ocean"></div> Signes de vieillissement
+              <div className="w-5 h-[1.5px] bg-primary"></div> Signes de vieillissement
             </span>
             <h2 className="text-3xl md:text-5xl font-extrabold font-heading mb-4 leading-tight">
               Votre identité a besoin d'une refonte <em className="not-italic text-ocean relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:right-0 after:h-[2px] after:bg-gradient-to-r after:from-ocean after:to-transparent">maintenant</em> si…
@@ -132,7 +132,7 @@ export function IdentiteVisuelleLanding() {
           </div>
           
           <div className="mt-12 text-center animate-in fade-in duration-700 delay-500">
-            <a href="#contact" className="bg-ocean text-white hover:shadow-[0_8px_32px_rgba(14,165,233,0.35)] inline-flex items-center gap-2 font-heading font-bold text-[0.95rem] px-8 py-3.5 rounded-full transition-all">
+            <a href="#contact" className="bg-primary text-white hover:shadow-[0_8px_32px_rgba(14,165,233,0.35)] inline-flex items-center gap-2 font-heading font-bold text-[0.95rem] px-8 py-3.5 rounded-full transition-all">
               Repenser mon identité avec Wave IA →
             </a>
           </div>
@@ -144,7 +144,7 @@ export function IdentiteVisuelleLanding() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="max-w-3xl animate-in fade-in slide-in-from-bottom-4 duration-700">
              <span className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-ocean mb-4">
-              <div className="w-5 h-[1.5px] bg-ocean"></div> Formules Branding
+              <div className="w-5 h-[1.5px] bg-primary"></div> Formules Branding
             </span>
             <h2 className="text-3xl md:text-5xl font-extrabold font-heading mb-4 leading-tight">
               Ne commandez pas juste "un dessin". <em className="not-italic text-ocean relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:right-0 after:h-[2px] after:bg-gradient-to-r after:from-ocean after:to-transparent">Bâtissez une Marque.</em>
@@ -164,7 +164,7 @@ export function IdentiteVisuelleLanding() {
                   <li key={i} className="flex gap-3 text-sm text-muted-foreground border-b border-border pb-3"><Check className="w-4 h-4 text-emerald-400 shrink-0" /> {item}</li>
                 ))}
               </ul>
-              <a href="#contact" className="bg-ocean text-white hover:shadow-[0_8px_32px_rgba(14,165,233,0.35)] flex w-full justify-center items-center gap-2 font-heading font-bold text-[0.95rem] py-3.5 rounded-full transition-all text-center">Demander ce pack →</a>
+              <a href="#contact" className="bg-primary text-white hover:shadow-[0_8px_32px_rgba(14,165,233,0.35)] flex w-full justify-center items-center gap-2 font-heading font-bold text-[0.95rem] py-3.5 rounded-full transition-all text-center">Demander ce pack →</a>
             </div>
 
             <div className="glass-card border-ocean/40 bg-[linear-gradient(160deg,rgba(14,165,233,0.07)_0%,var(--glass-bg)_60%)] rounded-2xl p-10 relative overflow-hidden">
@@ -179,7 +179,7 @@ export function IdentiteVisuelleLanding() {
                   <li key={i} className="flex gap-3 text-sm text-muted-foreground border-b border-border pb-3"><Check className="w-4 h-4 text-emerald-400 shrink-0" /> {item}</li>
                 ))}
               </ul>
-              <a href="#contact" className="bg-ocean text-white hover:shadow-[0_8px_32px_rgba(14,165,233,0.35)] flex w-full justify-center items-center gap-2 font-heading font-bold text-[0.95rem] py-3.5 rounded-full transition-all text-center">Planifier ma transformation complète →</a>
+              <a href="#contact" className="bg-primary text-white hover:shadow-[0_8px_32px_rgba(14,165,233,0.35)] flex w-full justify-center items-center gap-2 font-heading font-bold text-[0.95rem] py-3.5 rounded-full transition-all text-center">Planifier ma transformation complète →</a>
             </div>
           </div>
         </div>
@@ -190,7 +190,7 @@ export function IdentiteVisuelleLanding() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
            <div className="max-w-3xl animate-in fade-in slide-in-from-bottom-4 duration-700">
             <span className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-ocean mb-4">
-              <div className="w-5 h-[1.5px] bg-ocean"></div> Périmètre Créatif
+              <div className="w-5 h-[1.5px] bg-primary"></div> Périmètre Créatif
             </span>
             <h2 className="text-3xl md:text-5xl font-extrabold font-heading mb-4 leading-tight">
               Une conception <em className="not-italic text-ocean relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:right-0 after:h-[2px] after:bg-gradient-to-r after:from-ocean after:to-transparent">exhaustive</em>, du print au code
@@ -222,7 +222,7 @@ export function IdentiteVisuelleLanding() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="max-w-3xl animate-in fade-in slide-in-from-bottom-4 duration-700">
             <span className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-ocean mb-4">
-               <div className="w-5 h-[1.5px] bg-ocean"></div> Avant / Après
+               <div className="w-5 h-[1.5px] bg-primary"></div> Avant / Après
             </span>
             <h2 className="text-3xl md:text-5xl font-extrabold font-heading mb-4 leading-tight">L'impact psychologique <em className="not-italic text-ocean relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:right-0 after:h-[2px] after:bg-gradient-to-r after:from-ocean after:to-transparent">du rebranding</em></h2>
             <p className="text-lg text-muted-foreground font-light">La différence entre transmettre l'amateurisme et asseoir son autorité sectorielle.</p>
@@ -279,7 +279,7 @@ export function IdentiteVisuelleLanding() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="max-w-3xl animate-in fade-in slide-in-from-bottom-4 duration-700">
              <span className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-ocean mb-4">
-               <div className="w-5 h-[1.5px] bg-ocean"></div> Notre processus
+               <div className="w-5 h-[1.5px] bg-primary"></div> Notre processus
             </span>
             <h2 className="text-3xl md:text-5xl font-extrabold font-heading mb-4 leading-tight">Comment nous forgeons l'âme de <em className="not-italic text-ocean relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:right-0 after:h-[2px] after:bg-gradient-to-r after:from-ocean after:to-transparent">votre Marque</em></h2>
             <p className="text-lg text-muted-foreground font-light mb-16">Oubliez les allers-retours interminables. Une méthode en 4 étapes structurées qui met le business et la neuroesthétique au centre.</p>
@@ -337,7 +337,7 @@ export function IdentiteVisuelleLanding() {
          <div className="max-w-7xl mx-auto px-6 lg:px-8">
            <div className="max-w-3xl animate-in fade-in slide-in-from-bottom-4 duration-700">
              <span className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-ocean mb-4">
-               <div className="w-5 h-[1.5px] bg-ocean"></div> Différenciation Totale
+               <div className="w-5 h-[1.5px] bg-primary"></div> Différenciation Totale
             </span>
             <h2 className="text-3xl md:text-5xl font-extrabold font-heading mb-4 leading-tight">Ce que la concurrence <em className="not-italic text-ocean relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:right-0 after:h-[2px] after:bg-gradient-to-r after:from-ocean after:to-transparent">oublie souvent</em></h2>
             <p className="text-lg text-muted-foreground font-light mb-16">Le branding n'est pas uniquement un acte artistique. C'est surtout un outil commercial soumis à une ergonomie algorithmique (Web).</p>
@@ -366,7 +366,7 @@ export function IdentiteVisuelleLanding() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="max-w-3xl mb-8">
              <span className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-ocean mb-4">
-               <div className="w-5 h-[1.5px] bg-ocean"></div> Zone d'intervention Visuelle
+               <div className="w-5 h-[1.5px] bg-primary"></div> Zone d'intervention Visuelle
             </span>
             <h2 className="text-2xl md:text-3xl font-extrabold font-heading mb-3">Votre Agence Créative <em className="not-italic text-ocean relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:right-0 after:h-[2px] after:bg-gradient-to-r after:from-ocean after:to-transparent">au pays basque</em></h2>
             <p className="text-sm text-muted-foreground">Repensez votre communication de marque sur la côte ou en développement national.</p>
@@ -420,7 +420,7 @@ export function IdentiteVisuelleLanding() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8 grid lg:grid-cols-2 gap-16">
           <div>
              <span className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-ocean mb-4">
-               <div className="w-5 h-[1.5px] bg-ocean"></div> Passons à l'action
+               <div className="w-5 h-[1.5px] bg-primary"></div> Passons à l'action
             </span>
             <h2 className="text-3xl md:text-5xl font-extrabold font-heading mb-6">Incarnez pleinement votre valeur <em className="not-italic text-ocean relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:right-0 after:h-[2px] after:bg-gradient-to-r after:from-ocean after:to-transparent">dès aujourd'hui</em></h2>
             <p className="text-lg text-muted-foreground font-light mb-12 max-w-md">L'image bâclée coûte des prospects chaque jour. Discutons de votre vision créative et concevons une direction artistique qui fidélise votre audience. Diagnostic de marque offert.</p>
@@ -474,7 +474,7 @@ export function IdentiteVisuelleLanding() {
                      <option>Autre prestation créative</option>
                   </select>
                </div>
-               <button type="button" className="bg-ocean text-white hover:shadow-[0_8px_32px_rgba(14,165,233,0.35)] w-full font-heading font-bold py-3.5 rounded-full mt-4 transition-transform hover:-translate-y-0.5">
+               <button type="button" className="bg-primary text-white hover:shadow-[0_8px_32px_rgba(14,165,233,0.35)] w-full font-heading font-bold py-3.5 rounded-full mt-4 transition-transform hover:-translate-y-0.5">
                   Demander un entretien créatif ✦
                </button>
                <p className="text-center text-xs text-muted-foreground/70 mt-2">Échange de pré-qualification 100% gratuit.</p>

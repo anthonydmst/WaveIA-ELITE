@@ -62,7 +62,7 @@ export function ReferencementVisibiliteBlock() {
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mt-4 mb-8">
             Référencement &amp;{" "}
-            <span className="font-heading italic text-ocean-light">
+            <span className="font-heading italic text-ocean-text">
               Visibilité
             </span>
           </h2>
@@ -140,7 +140,7 @@ export function ReferencementVisibiliteBlock() {
                       <div className="flex items-center gap-2 text-sm font-semibold text-ocean/70 group-hover:text-ocean transition-all duration-300 mt-auto pt-4 border-t border-glass-border group-hover:border-transparent">
                         <span className="relative">
                           Découvrir le service
-                          <span className="absolute bottom-0 left-0 w-0 h-px bg-ocean group-hover:w-full transition-all duration-300" />
+                          <span className="absolute bottom-0 left-0 w-0 h-px bg-primary group-hover:w-full transition-all duration-300" />
                         </span>
                         <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
                       </div>

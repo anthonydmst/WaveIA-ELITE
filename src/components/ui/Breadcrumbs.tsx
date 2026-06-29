@@ -22,7 +22,7 @@ export function Breadcrumbs({ items: manualItems }: BreadcrumbsProps) {
       aria-label="Breadcrumb" 
       className="mb-8 overflow-x-auto min-h-[20px] animate-hero-fade-up-rapid"
     >
-      <ol className="flex items-center whitespace-nowrap text-sm text-muted-foreground/80">
+      <ol className="flex items-center whitespace-nowrap text-sm text-muted-foreground">
         {items.map((item, index) => {
           const isLast = index === items.length - 1;
           const isFirst = index === 0;

@@ -48,7 +48,7 @@ export function ServiceFAQ({ faq }: Props) {
         <div className="text-center mb-12 animate-in">
           <SectionHeader size="section" align="center" className="mb-4">
             Questions{" "}
-            <span className="font-heading italic text-ocean-light">
+            <span className="font-heading italic text-ocean-text">
               fréquentes
             </span>
           </SectionHeader>
@@ -84,7 +84,7 @@ export function ServiceFAQ({ faq }: Props) {
                 </span>
                 <div className={`w-8 h-8 rounded-full flex items-center justify-center border transition-all duration-300 ${
                   openFaq === index 
-                    ? "bg-ocean text-white border-ocean rotate-180" 
+                    ? "bg-primary text-white border-ocean rotate-180" 
                     : "bg-foreground/5 border-border text-muted-foreground group-hover:border-ocean/30 group-hover:text-ocean"
                 }`}>
                   <ChevronDown className="w-4 h-4" />

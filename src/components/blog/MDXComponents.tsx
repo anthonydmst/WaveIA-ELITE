@@ -53,7 +53,7 @@ const CTABlock = ({ title, description, label, href }: { title: string; descript
     
     <Link 
       href={href} 
-      className="inline-flex items-center gap-2 px-6 py-3 bg-white text-black rounded-full font-bold hover:bg-ocean hover:text-white transition-all duration-300 relative z-10"
+      className="inline-flex items-center gap-2 px-6 py-3 bg-white text-black rounded-full font-bold hover:bg-primary hover:text-white transition-all duration-300 relative z-10"
     >
       {label}
       <MoveRight className="w-4 h-4" />

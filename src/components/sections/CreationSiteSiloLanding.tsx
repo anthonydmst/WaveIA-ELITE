@@ -111,7 +111,7 @@ export function CreationSiteSiloLanding() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8 relative w-full">
           <div className="text-center max-w-4xl mx-auto py-24 animate-hero-fade-up">
             <div className="inline-flex items-center gap-2 bg-ocean/10 border border-ocean/25 rounded-full px-4 py-1.5 text-xs font-semibold text-ocean uppercase tracking-widest mb-7">
-              <span className="w-1.5 h-1.5 bg-ocean rounded-full animate-pulse-glow" />
+              <span className="w-1.5 h-1.5 bg-primary rounded-full animate-pulse-glow" />
               EXPERTISE STRATÉGIQUE
             </div>
             
@@ -127,7 +127,7 @@ export function CreationSiteSiloLanding() {
             </p>
             
             <div className="flex flex-wrap justify-center items-center gap-4">
-              <a href="#contact-final" className="inline-flex items-center gap-2 bg-ocean text-white font-heading font-bold text-[0.95rem] px-8 py-3.5 rounded-full hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(14,165,233,0.35)] transition-all">
+              <a href="#contact-final" className="inline-flex items-center gap-2 bg-primary text-white font-heading font-bold text-[0.95rem] px-8 py-3.5 rounded-full hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(14,165,233,0.35)] transition-all">
                 Obtenir un chiffrage de mon projet <ArrowRight className="w-4 h-4" />
               </a>
               <a href="#solutions" className="inline-flex items-center gap-2 bg-transparent text-muted-foreground text-sm px-7 py-3.5 rounded-full border border-border hover:border-ocean hover:text-ocean transition-all">
@@ -244,7 +244,7 @@ export function CreationSiteSiloLanding() {
                         <div className="flex items-center justify-between w-full text-sm font-semibold text-ocean/70 group-hover:text-ocean transition-all duration-300 mt-auto pt-4 border-t border-glass-border group-hover:border-transparent">
                           <span className="relative">
                             Découvrir la méthode
-                            <span className="absolute bottom-0 left-0 w-0 h-px bg-ocean group-hover:w-full transition-all duration-300" />
+                            <span className="absolute bottom-0 left-0 w-0 h-px bg-primary group-hover:w-full transition-all duration-300" />
                           </span>
                           <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
                         </div>
@@ -266,7 +266,7 @@ export function CreationSiteSiloLanding() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl animate-in fade-in slide-in-from-bottom-4 duration-700">
             <span className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-ocean mb-4">
-              <div className="w-5 h-[1.5px] bg-ocean"></div> L'INGÉNIERIE WAVEIA
+              <div className="w-5 h-[1.5px] bg-primary"></div> L'INGÉNIERIE WAVEIA
             </span>
             <h2 className="text-3xl md:text-5xl font-extrabold font-heading mb-4 leading-tight">
               L'alliance de l'expertise humaine et de la <em className="not-italic text-ocean relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:right-0 after:h-[2px] after:bg-gradient-to-r after:from-ocean after:to-transparent">puissance IA.</em>
@@ -335,7 +335,7 @@ export function CreationSiteSiloLanding() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="max-w-3xl animate-in fade-in slide-in-from-bottom-4 duration-700">
             <span className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-ocean mb-4">
-              <div className="w-5 h-[1.5px] bg-ocean"></div> LE STANDARD QUALITÉ
+              <div className="w-5 h-[1.5px] bg-primary"></div> LE STANDARD QUALITÉ
             </span>
             <h2 className="text-3xl md:text-5xl font-extrabold font-heading mb-4 leading-tight">
               Un socle technique infaillible, <em className="not-italic text-ocean relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:right-0 after:h-[2px] after:bg-gradient-to-r after:from-ocean after:to-transparent">sans coûts cachés.</em>
@@ -407,7 +407,7 @@ export function CreationSiteSiloLanding() {
          <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="max-w-3xl animate-in fade-in slide-in-from-bottom-4 duration-700">
              <span className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-ocean mb-4">
-               <div className="w-5 h-[1.5px] bg-ocean"></div> NOTRE MÉTHODOLOGIE
+               <div className="w-5 h-[1.5px] bg-primary"></div> NOTRE MÉTHODOLOGIE
             </span>
             <h2 className="text-3xl md:text-5xl font-extrabold font-heading mb-4 leading-tight">
               De l'audit initial au lancement : <em className="not-italic text-ocean relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:right-0 after:h-[2px] after:bg-gradient-to-r after:from-ocean after:to-transparent">un pilotage transparent.</em>
@@ -447,7 +447,7 @@ export function CreationSiteSiloLanding() {
          <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <div className="max-w-3xl animate-in fade-in slide-in-from-bottom-4 duration-700 mx-auto text-center mb-16">
                <span className="inline-flex items-center justify-center gap-2 text-xs font-bold uppercase tracking-widest text-ocean mb-4">
-                 <div className="w-5 h-[1.5px] bg-ocean"></div> PREUVE PAR LE RÉSULTAT <div className="w-5 h-[1.5px] bg-ocean"></div>
+                 <div className="w-5 h-[1.5px] bg-primary"></div> PREUVE PAR LE RÉSULTAT <div className="w-5 h-[1.5px] bg-primary"></div>
               </span>
               <h2 className="text-3xl md:text-5xl font-extrabold font-heading leading-tight mb-6">
                 La performance validée par <em className="not-italic text-ocean relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:right-0 after:h-[2px] after:bg-gradient-to-r after:from-ocean after:to-transparent">nos clients.</em>
@@ -504,7 +504,7 @@ export function CreationSiteSiloLanding() {
             </div>
             
             <div className="text-center">
-              <Link href="/business-cases" className="inline-flex items-center justify-center gap-2 bg-foreground text-background px-8 py-4 rounded-xl font-bold hover:bg-ocean hover:text-white transition-colors duration-300 shadow-lg group">
+              <Link href="/business-cases" className="inline-flex items-center justify-center gap-2 bg-foreground text-background px-8 py-4 rounded-xl font-bold hover:bg-primary hover:text-white transition-colors duration-300 shadow-lg group">
                 Voir nos dernières réalisations
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
@@ -596,7 +596,7 @@ export function CreationSiteSiloLanding() {
           </div>
 
           <div className="flex justify-center">
-             <Link href="/contact" className="bg-ocean text-white hover:shadow-[0_8px_32px_rgba(14,165,233,0.35)] font-heading font-bold text-lg px-10 py-5 rounded-xl transition-all hover:-translate-y-1 flex items-center gap-3 group">
+             <Link href="/contact" className="bg-primary text-white hover:shadow-[0_8px_32px_rgba(14,165,233,0.35)] font-heading font-bold text-lg px-10 py-5 rounded-xl transition-all hover:-translate-y-1 flex items-center gap-3 group">
                 Réserver mon appel de cadrage
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
              </Link>

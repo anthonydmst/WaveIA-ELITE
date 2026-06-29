@@ -56,7 +56,7 @@ export function WhyChooseUsBlock() {
               ))}
             </ul>
             <div className="pt-4">
-              <Link href="#modules" className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-ocean hover:bg-ocean-dark text-white font-semibold transition-all shadow-glow">
+              <Link href="#modules" className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-primary hover:bg-ocean-dark text-white font-semibold transition-all shadow-glow">
                 Découvrir nos modules sur-mesure
                 <ArrowRight className="w-4 h-4" />
               </Link>
@@ -174,7 +174,7 @@ export function WhyChooseUsBlock() {
             </div>
 
             <div className="pt-4">
-              <Link href="#contact" className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-ocean hover:bg-ocean-dark text-white font-semibold transition-all shadow-glow">
+              <Link href="#contact" className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-primary hover:bg-ocean-dark text-white font-semibold transition-all shadow-glow">
                 Faire connaissance avec l&apos;équipe
                 <ArrowRight className="w-4 h-4" />
               </Link>

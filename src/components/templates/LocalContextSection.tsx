@@ -168,7 +168,7 @@ export function LocalContextSection({ city, silo = "service" }: Props) {
           {/* Quartiers */}
           <div className="p-8 bg-card/50 backdrop-blur-sm border border-border rounded-2xl animate-in-left">
             <h4 className="text-lg font-bold mb-6 flex items-center gap-2">
-              <span className="w-2 h-2 bg-ocean rounded-full" />
+              <span className="w-2 h-2 bg-primary rounded-full" />
               Quartiers de {city.name}
             </h4>
             <div className="flex flex-wrap gap-2">

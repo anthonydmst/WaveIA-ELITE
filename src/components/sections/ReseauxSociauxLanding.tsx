@@ -42,7 +42,7 @@ export function ReseauxSociauxLanding() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8 relative w-full">
           <div className="text-center max-w-4xl mx-auto py-24 animate-hero-fade-up">
             <div className="inline-flex items-center gap-2 bg-ocean/10 border border-ocean/25 rounded-full px-4 py-1.5 text-xs font-semibold text-ocean uppercase tracking-widest mb-7">
-              <span className="w-1.5 h-1.5 bg-ocean rounded-full animate-pulse-glow" />
+              <span className="w-1.5 h-1.5 bg-primary rounded-full animate-pulse-glow" />
               Social Media & Ads — Pays Basque
             </div>
             
@@ -58,7 +58,7 @@ export function ReseauxSociauxLanding() {
             </p>
             
             <div className="flex flex-wrap justify-center items-center gap-4">
-              <a href="#contact" className="inline-flex items-center gap-2 bg-ocean text-white font-heading font-bold text-[0.95rem] px-8 py-3.5 rounded-full hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(14,165,233,0.35)] transition-all">
+              <a href="#contact" className="inline-flex items-center gap-2 bg-primary text-white font-heading font-bold text-[0.95rem] px-8 py-3.5 rounded-full hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(14,165,233,0.35)] transition-all">
                 Auditer mes Réseaux <ArrowRight className="w-4 h-4" />
               </a>
               <a href="#process" className="inline-flex items-center gap-2 bg-transparent text-muted-foreground text-sm px-7 py-3.5 rounded-full border border-border hover:border-ocean hover:text-ocean transition-all">
@@ -108,7 +108,7 @@ export function ReseauxSociauxLanding() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="max-w-3xl animate-in fade-in slide-in-from-bottom-4 duration-700">
             <span className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-ocean mb-4">
-              <div className="w-5 h-[1.5px] bg-ocean"></div> Signes d'opportunités manquées
+              <div className="w-5 h-[1.5px] bg-primary"></div> Signes d'opportunités manquées
             </span>
             <h2 className="text-3xl md:text-5xl font-extrabold font-heading mb-4 leading-tight">
               Votre stratégie Social Media est <em className="not-italic text-ocean relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:right-0 after:h-[2px] after:bg-gradient-to-r after:from-ocean after:to-transparent">inefficace</em> si…
@@ -132,7 +132,7 @@ export function ReseauxSociauxLanding() {
           </div>
           
           <div className="mt-12 text-center animate-in fade-in duration-700 delay-500">
-            <a href="#contact" className="bg-ocean text-white hover:shadow-[0_8px_32px_rgba(14,165,233,0.35)] inline-flex items-center gap-2 font-heading font-bold text-[0.95rem] px-8 py-3.5 rounded-full transition-all">
+            <a href="#contact" className="bg-primary text-white hover:shadow-[0_8px_32px_rgba(14,165,233,0.35)] inline-flex items-center gap-2 font-heading font-bold text-[0.95rem] px-8 py-3.5 rounded-full transition-all">
               Diagnostiquer mes réseaux maintenant →
             </a>
           </div>
@@ -144,7 +144,7 @@ export function ReseauxSociauxLanding() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="max-w-3xl animate-in fade-in slide-in-from-bottom-4 duration-700">
              <span className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-ocean mb-4">
-              <div className="w-5 h-[1.5px] bg-ocean"></div> Formules Social Media
+              <div className="w-5 h-[1.5px] bg-primary"></div> Formules Social Media
             </span>
             <h2 className="text-3xl md:text-5xl font-extrabold font-heading mb-4 leading-tight">
               Achetez l'attention de <em className="not-italic text-ocean relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:right-0 after:h-[2px] after:bg-gradient-to-r after:from-ocean after:to-transparent">ceux qui achèteront.</em>
@@ -164,7 +164,7 @@ export function ReseauxSociauxLanding() {
                   <li key={i} className="flex gap-3 text-sm text-muted-foreground border-b border-border pb-3"><Check className="w-4 h-4 text-emerald-400 shrink-0" /> {item}</li>
                 ))}
               </ul>
-              <a href="#contact" className="bg-ocean text-white hover:shadow-[0_8px_32px_rgba(14,165,233,0.35)] flex w-full justify-center items-center gap-2 font-heading font-bold text-[0.95rem] py-3.5 rounded-full transition-all text-center">Définir ma stratégie →</a>
+              <a href="#contact" className="bg-primary text-white hover:shadow-[0_8px_32px_rgba(14,165,233,0.35)] flex w-full justify-center items-center gap-2 font-heading font-bold text-[0.95rem] py-3.5 rounded-full transition-all text-center">Définir ma stratégie →</a>
             </div>
 
             <div className="glass-card border-ocean/40 bg-[linear-gradient(160deg,rgba(14,165,233,0.07)_0%,var(--glass-bg)_60%)] rounded-2xl p-10 relative overflow-hidden">
@@ -179,7 +179,7 @@ export function ReseauxSociauxLanding() {
                   <li key={i} className="flex gap-3 text-sm text-muted-foreground border-b border-border pb-3"><Check className="w-4 h-4 text-emerald-400 shrink-0" /> {item}</li>
                 ))}
               </ul>
-              <a href="#contact" className="bg-ocean text-white hover:shadow-[0_8px_32px_rgba(14,165,233,0.35)] flex w-full justify-center items-center gap-2 font-heading font-bold text-[0.95rem] py-3.5 rounded-full transition-all text-center">Déléguer ma croissance →</a>
+              <a href="#contact" className="bg-primary text-white hover:shadow-[0_8px_32px_rgba(14,165,233,0.35)] flex w-full justify-center items-center gap-2 font-heading font-bold text-[0.95rem] py-3.5 rounded-full transition-all text-center">Déléguer ma croissance →</a>
             </div>
           </div>
         </div>
@@ -190,7 +190,7 @@ export function ReseauxSociauxLanding() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
            <div className="max-w-3xl animate-in fade-in slide-in-from-bottom-4 duration-700">
             <span className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-ocean mb-4">
-              <div className="w-5 h-[1.5px] bg-ocean"></div> Périmètre d'Action
+              <div className="w-5 h-[1.5px] bg-primary"></div> Périmètre d'Action
             </span>
             <h2 className="text-3xl md:text-5xl font-extrabold font-heading mb-4 leading-tight">
               Une présence omnicanale <em className="not-italic text-ocean relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:right-0 after:h-[2px] after:bg-gradient-to-r after:from-ocean after:to-transparent">maîtrisée de A à Z</em>
@@ -220,7 +220,7 @@ export function ReseauxSociauxLanding() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="max-w-3xl animate-in fade-in slide-in-from-bottom-4 duration-700">
             <span className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-ocean mb-4">
-               <div className="w-5 h-[1.5px] bg-ocean"></div> Avant / Après
+               <div className="w-5 h-[1.5px] bg-primary"></div> Avant / Après
             </span>
             <h2 className="text-3xl md:text-5xl font-extrabold font-heading mb-4 leading-tight">Ce que l'expertise <em className="not-italic text-ocean relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:right-0 after:h-[2px] after:bg-gradient-to-r after:from-ocean after:to-transparent">change réellement</em></h2>
             <p className="text-lg text-muted-foreground font-light">La différence entre utiliser les réseaux comme hobby, et les maîtriser comme un levier d'acquisition central.</p>
@@ -277,7 +277,7 @@ export function ReseauxSociauxLanding() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="max-w-3xl animate-in fade-in slide-in-from-bottom-4 duration-700">
              <span className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-ocean mb-4">
-               <div className="w-5 h-[1.5px] bg-ocean"></div> Notre processus
+               <div className="w-5 h-[1.5px] bg-primary"></div> Notre processus
             </span>
             <h2 className="text-3xl md:text-5xl font-extrabold font-heading mb-4 leading-tight">L'implémentation de votre <em className="not-italic text-ocean relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:right-0 after:h-[2px] after:bg-gradient-to-r after:from-ocean after:to-transparent">Social Growth</em></h2>
             <p className="text-lg text-muted-foreground font-light mb-16">Nous ne faisons pas du "community management" à l'ancienne. Nous déployons un funnel algorithmique de capture mathématique et créatif.</p>
@@ -335,7 +335,7 @@ export function ReseauxSociauxLanding() {
          <div className="max-w-7xl mx-auto px-6 lg:px-8">
            <div className="max-w-3xl animate-in fade-in slide-in-from-bottom-4 duration-700">
              <span className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-ocean mb-4">
-               <div className="w-5 h-[1.5px] bg-ocean"></div> Différenciation Totale
+               <div className="w-5 h-[1.5px] bg-primary"></div> Différenciation Totale
             </span>
             <h2 className="text-3xl md:text-5xl font-extrabold font-heading mb-4 leading-tight">L'ère des "petits posts mignons" <em className="not-italic text-ocean relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:right-0 after:h-[2px] after:bg-gradient-to-r after:from-ocean after:to-transparent">est révolue</em></h2>
             <p className="text-lg text-muted-foreground font-light mb-16">Le Social Media Marketing est devenu impitoyablement algorithmique. Wave IA fusionne créativité percutante et précision mathématique.</p>
@@ -364,7 +364,7 @@ export function ReseauxSociauxLanding() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="max-w-3xl mb-8">
              <span className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-ocean mb-4">
-               <div className="w-5 h-[1.5px] bg-ocean"></div> Zone d'intervention Visuelle
+               <div className="w-5 h-[1.5px] bg-primary"></div> Zone d'intervention Visuelle
             </span>
             <h2 className="text-2xl md:text-3xl font-extrabold font-heading mb-3">Votre Agence Social Media <em className="not-italic text-ocean relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:right-0 after:h-[2px] after:bg-gradient-to-r after:from-ocean after:to-transparent">au pays basque</em></h2>
             <p className="text-sm text-muted-foreground">Rayonnement local via des campagnes géolocalisées ou déploiement national.</p>
@@ -418,7 +418,7 @@ export function ReseauxSociauxLanding() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8 grid lg:grid-cols-2 gap-16">
           <div>
              <span className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-ocean mb-4">
-               <div className="w-5 h-[1.5px] bg-ocean"></div> Passons à l'action
+               <div className="w-5 h-[1.5px] bg-primary"></div> Passons à l'action
             </span>
             <h2 className="text-3xl md:text-5xl font-extrabold font-heading mb-6">Capturez votre part de marché <em className="not-italic text-ocean relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:right-0 after:h-[2px] after:bg-gradient-to-r after:from-ocean after:to-transparent">dès aujourd'hui</em></h2>
             <p className="text-lg text-muted-foreground font-light mb-12 max-w-md">De la stratégie de contenu macro au réglage final de votre campagne publicitaire, Wave IA configure votre machinerie marketing.</p>
@@ -472,7 +472,7 @@ export function ReseauxSociauxLanding() {
                      <option>Gestion complète & Modération</option>
                   </select>
                </div>
-               <button type="button" className="bg-ocean text-white hover:shadow-[0_8px_32px_rgba(14,165,233,0.35)] w-full font-heading font-bold py-3.5 rounded-full mt-4 transition-transform hover:-translate-y-0.5">
+               <button type="button" className="bg-primary text-white hover:shadow-[0_8px_32px_rgba(14,165,233,0.35)] w-full font-heading font-bold py-3.5 rounded-full mt-4 transition-transform hover:-translate-y-0.5">
                   Demander un Audit & Preco ✦
                </button>
                <p className="text-center text-xs text-muted-foreground/70 mt-2">Échange et estimation 100% gratuits.</p>

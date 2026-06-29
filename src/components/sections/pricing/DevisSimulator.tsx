@@ -198,7 +198,7 @@ export function DevisSimulator() {
           <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
             {/* Progress */}
             <div className="flex gap-2 mb-8 pt-8">
-              <div className="h-1.5 rounded-full bg-ocean flex-[2] transition-all duration-500" />
+              <div className="h-1.5 rounded-full bg-primary flex-[2] transition-all duration-500" />
               <div className="h-1.5 rounded-full bg-muted flex-[1] transition-all duration-500" />
             </div>
 
@@ -234,7 +234,7 @@ export function DevisSimulator() {
                           }`}
                         >
                           {isSelected && (
-                            <div className="absolute top-2.5 right-2.5 w-6 h-6 rounded-full bg-ocean flex items-center justify-center text-white shadow-lg animate-scale-in" data-in-view="true">
+                            <div className="absolute top-2.5 right-2.5 w-6 h-6 rounded-full bg-primary flex items-center justify-center text-white shadow-lg animate-scale-in" data-in-view="true">
                               <Check className="w-4 h-4" strokeWidth={3} />
                             </div>
                           )}
@@ -276,7 +276,7 @@ export function DevisSimulator() {
                 </div>
                 <button
                   onClick={handleDevis}
-                  className="bg-ocean hover:bg-ocean-dark text-white font-heading font-semibold py-4 md:py-5 px-8 rounded-xl flex items-center justify-center gap-2 transition-all transform active:scale-95 shadow-lg shadow-ocean/20 w-full md:w-auto whitespace-nowrap"
+                  className="bg-primary hover:bg-ocean-dark text-white font-heading font-semibold py-4 md:py-5 px-8 rounded-xl flex items-center justify-center gap-2 transition-all transform active:scale-95 shadow-lg shadow-ocean/20 w-full md:w-auto whitespace-nowrap"
                 >
                   Suivant : Mon Devis
                   <ArrowRight className="w-5 h-5 flex-shrink-0 group-hover:translate-x-1 transition-transform" />
@@ -293,8 +293,8 @@ export function DevisSimulator() {
           <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
             {/* Progress */}
             <div className="flex gap-2 mb-8 pt-8">
-              <div className="h-1.5 rounded-full bg-ocean flex-[1] transition-all duration-500 cursor-pointer" onClick={() => setCurrentStep(1)} />
-              <div className="h-1.5 rounded-full bg-ocean flex-[2] transition-all duration-500" />
+              <div className="h-1.5 rounded-full bg-primary flex-[1] transition-all duration-500 cursor-pointer" onClick={() => setCurrentStep(1)} />
+              <div className="h-1.5 rounded-full bg-primary flex-[2] transition-all duration-500" />
             </div>
 
             <div className="flex items-center gap-2 text-xs font-bold tracking-widest uppercase text-ocean mb-3">
@@ -465,7 +465,7 @@ export function DevisSimulator() {
               <button 
                 onClick={submitDevis}
                 disabled={isSubmitting}
-                className="w-full bg-ocean hover:bg-ocean-dark text-white font-heading font-semibold py-4 rounded-xl flex items-center justify-center gap-2 transition-all transform active:scale-95 shadow-lg shadow-ocean/20 text-lg disabled:opacity-50"
+                className="w-full bg-primary hover:bg-ocean-dark text-white font-heading font-semibold py-4 rounded-xl flex items-center justify-center gap-2 transition-all transform active:scale-95 shadow-lg shadow-ocean/20 text-lg disabled:opacity-50"
               >
                 {isSubmitting ? 'Envoi en cours...' : 'Envoyer ma demande de devis'}
                 {!isSubmitting && <ArrowRight className="w-5 h-5" />}

@@ -40,7 +40,7 @@ export function SeoGmbLanding() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8 relative w-full">
           <div className="text-center max-w-4xl mx-auto py-24 animate-hero-fade-up">
             <div className="inline-flex items-center gap-2 bg-ocean/10 border border-ocean/25 rounded-full px-4 py-1.5 text-xs font-semibold text-ocean uppercase tracking-widest mb-7">
-              <span className="w-1.5 h-1.5 bg-ocean rounded-full animate-pulse-glow" />
+              <span className="w-1.5 h-1.5 bg-primary rounded-full animate-pulse-glow" />
               Agence Google My Business · Pays Basque
             </div>
             
@@ -55,7 +55,7 @@ export function SeoGmbLanding() {
             </p>
             
             <div className="flex flex-wrap justify-center items-center gap-4">
-              <a href="#audit" className="inline-flex items-center gap-2 bg-ocean text-white font-heading font-bold text-[0.95rem] px-8 py-3.5 rounded-full hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(14,165,233,0.35)] transition-all">
+              <a href="#audit" className="inline-flex items-center gap-2 bg-primary text-white font-heading font-bold text-[0.95rem] px-8 py-3.5 rounded-full hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(14,165,233,0.35)] transition-all">
                 Audit gratuit de ma fiche <ArrowRight className="w-4 h-4" />
               </a>
               <a href="#tarifs" className="inline-flex items-center gap-2 bg-transparent text-muted-foreground text-sm px-7 py-3.5 rounded-full border border-border hover:border-ocean hover:text-ocean transition-all">
@@ -82,7 +82,7 @@ export function SeoGmbLanding() {
       </section>
 
       {/* ─── AUDIT BAND ─── */}
-      <div id="audit" className="bg-ocean py-14 px-6 relative z-20">
+      <div id="audit" className="bg-primary py-14 px-6 relative z-20">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="font-heading text-2xl md:text-3xl font-bold text-white mb-3">🔍 Audit Google My Business offert</h2>
           <p className="text-white/80 mb-8">Entrez l'URL Google Maps de votre fiche pour lancer l'analyse IA gratuite.</p>
@@ -109,7 +109,7 @@ export function SeoGmbLanding() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="max-w-2xl mb-16 animate-in fade-in slide-in-from-bottom-4 duration-700">
             <span className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-ocean mb-4">
-              <div className="w-5 h-[1.5px] bg-ocean"></div> Pourquoi agir maintenant ?
+              <div className="w-5 h-[1.5px] bg-primary"></div> Pourquoi agir maintenant ?
             </span>
             <h2 className="text-3xl md:text-5xl font-bold font-heading mb-4 text-foreground leading-tight">
               Google favorise les fiches<br />bien optimisées — profitez-en.
@@ -125,7 +125,7 @@ export function SeoGmbLanding() {
               
               <div className="bg-background/50 border border-border rounded-xl p-5 relative z-10 backdrop-blur-sm">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 bg-ocean flex items-center justify-center rounded-lg text-xl">🏄</div>
+                  <div className="w-12 h-12 bg-primary flex items-center justify-center rounded-lg text-xl">🏄</div>
                   <div>
                     <div className="font-heading font-bold text-foreground">Votre Entreprise · Biarritz</div>
                     <div className="text-xs text-muted-foreground">Optimisé par Waveia · IA</div>
@@ -142,19 +142,19 @@ export function SeoGmbLanding() {
                   <div>
                     <div className="text-xs text-muted-foreground mb-1.5 flex justify-between"><span>Visibilité locale ce mois-ci</span><span className="text-ocean font-bold">+87%</span></div>
                     <div className="h-1.5 bg-muted/20 rounded-full overflow-hidden">
-                      <div className="h-full bg-ocean rounded-full w-[87%]"></div>
+                      <div className="h-full bg-primary rounded-full w-[87%]"></div>
                     </div>
                   </div>
                   <div>
                     <div className="text-xs text-muted-foreground mb-1.5 flex justify-between"><span>Clics vers le site web</span><span className="text-ocean font-bold">+73%</span></div>
                     <div className="h-1.5 bg-muted/20 rounded-full overflow-hidden">
-                      <div className="h-full bg-ocean rounded-full w-[73%]"></div>
+                      <div className="h-full bg-primary rounded-full w-[73%]"></div>
                     </div>
                   </div>
                   <div>
                     <div className="text-xs text-muted-foreground mb-1.5 flex justify-between"><span>Appels téléphoniques</span><span className="text-ocean font-bold">+65%</span></div>
                     <div className="h-1.5 bg-muted/20 rounded-full overflow-hidden">
-                      <div className="h-full bg-ocean rounded-full w-[65%]"></div>
+                      <div className="h-full bg-primary rounded-full w-[65%]"></div>
                     </div>
                   </div>
                 </div>
@@ -189,7 +189,7 @@ export function SeoGmbLanding() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-16 animate-in fade-in slide-in-from-bottom-4 duration-700">
             <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-ocean mb-4">
-              <div className="w-5 h-[1.5px] bg-ocean"></div> Investissement <div className="w-5 h-[1.5px] bg-ocean"></div>
+              <div className="w-5 h-[1.5px] bg-primary"></div> Investissement <div className="w-5 h-[1.5px] bg-primary"></div>
             </span>
             <h2 className="text-3xl md:text-5xl font-bold font-heading mb-4 text-foreground">
               Des offres claires,<br />des résultats mesurables.
@@ -202,7 +202,7 @@ export function SeoGmbLanding() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {/* OPTIMISATION */}
             <div className="glass-card p-10 hover:-translate-y-1 transition-transform border-ocean/40 bg-[linear-gradient(160deg,rgba(14,165,233,0.07)_0%,var(--glass-bg)_60%)] relative overflow-hidden animate-in fade-in slide-in-from-bottom-4">
-              <div className="absolute top-5 -right-9 bg-ocean text-white font-heading text-[0.65rem] font-bold tracking-[0.1em] px-9 py-1 rotate-45">
+              <div className="absolute top-5 -right-9 bg-primary text-white font-heading text-[0.65rem] font-bold tracking-[0.1em] px-9 py-1 rotate-45">
                 POPULAIRE
               </div>
               <h3 className="text-xl font-bold font-heading text-foreground mb-2">Création & Optimisation GMB</h3>
@@ -221,7 +221,7 @@ export function SeoGmbLanding() {
                   </li>
                 ))}
               </ul>
-              <a href="#contact" className="flex items-center justify-center gap-2 bg-ocean text-white font-heading font-bold text-[0.95rem] py-3.5 rounded-full hover:shadow-[0_8px_32px_rgba(14,165,233,0.35)] transition-all w-full mt-auto">
+              <a href="#contact" className="flex items-center justify-center gap-2 bg-primary text-white font-heading font-bold text-[0.95rem] py-3.5 rounded-full hover:shadow-[0_8px_32px_rgba(14,165,233,0.35)] transition-all w-full mt-auto">
                 Démarrer ce projet
               </a>
             </div>
@@ -261,7 +261,7 @@ export function SeoGmbLanding() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="max-w-2xl mb-16 animate-in fade-in slide-in-from-bottom-4 duration-700">
             <span className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-ocean mb-4">
-              <div className="w-5 h-[1.5px] bg-ocean"></div> Ce que nous faisons concrètement
+              <div className="w-5 h-[1.5px] bg-primary"></div> Ce que nous faisons concrètement
             </span>
             <h2 className="text-3xl md:text-5xl font-bold font-heading mb-4 text-foreground leading-tight">
               Nos 9 piliers d'optimisation<br />Google My Business.
@@ -295,7 +295,7 @@ export function SeoGmbLanding() {
           </div>
           
           <div className="mt-14 text-center">
-            <a href="#contact" className="inline-flex items-center gap-2 bg-ocean text-white font-heading font-bold text-[0.95rem] px-8 py-3.5 rounded-full hover:shadow-[0_8px_32px_rgba(14,165,233,0.35)] transition-all">
+            <a href="#contact" className="inline-flex items-center gap-2 bg-primary text-white font-heading font-bold text-[0.95rem] px-8 py-3.5 rounded-full hover:shadow-[0_8px_32px_rgba(14,165,233,0.35)] transition-all">
               Recevoir mon devis gratuit <ArrowRight className="w-4 h-4" />
             </a>
           </div>
@@ -307,7 +307,7 @@ export function SeoGmbLanding() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-16 animate-in fade-in slide-in-from-bottom-4 duration-700">
             <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-ocean mb-4">
-              <div className="w-5 h-[1.5px] bg-ocean"></div> Avant / Après Waveia <div className="w-5 h-[1.5px] bg-ocean"></div>
+              <div className="w-5 h-[1.5px] bg-primary"></div> Avant / Après Waveia <div className="w-5 h-[1.5px] bg-primary"></div>
             </span>
             <h2 className="text-3xl md:text-5xl font-bold font-heading mb-4 text-foreground">
               La différence est visible<br />dès les premières semaines.
@@ -372,7 +372,7 @@ export function SeoGmbLanding() {
           
           <div className="grid md:grid-cols-4 gap-8 relative mt-16">
             <div className="hidden md:block absolute top-[36px] left-[10%] right-[10%] h-[2px] bg-border z-0">
-               <div className="h-full bg-ocean w-0 animate-[growBar_2s_ease_forwards]"></div>
+               <div className="h-full bg-primary w-0 animate-[growBar_2s_ease_forwards]"></div>
             </div>
             
             {[
@@ -398,7 +398,7 @@ export function SeoGmbLanding() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="max-w-3xl mb-16 animate-in fade-in slide-in-from-bottom-4 duration-700">
             <span className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-ocean mb-4">
-              <div className="w-5 h-[1.5px] bg-ocean"></div> Couverture géographique
+              <div className="w-5 h-[1.5px] bg-primary"></div> Couverture géographique
             </span>
             <h2 className="text-3xl md:text-5xl font-bold font-heading mb-4 text-foreground leading-tight">
               Présents sur tout le<br />Pays Basque.
@@ -424,7 +424,7 @@ export function SeoGmbLanding() {
                 <p className="text-xs text-muted-foreground">{city.desc}</p>
               </div>
             ))}
-             <div className="glass-card bg-ocean border border-ocean rounded-xl p-5 flex flex-col justify-center text-center">
+             <div className="glass-card bg-primary border border-ocean rounded-xl p-5 flex flex-col justify-center text-center">
                 <div className="text-3xl mb-1">📍</div>
                 <h4 className="text-base font-bold font-heading text-white mb-1">Votre ville ?</h4>
                 <p className="text-xs text-white/70">Nous couvrons tout le Pays Basque et Landes.</p>
@@ -438,7 +438,7 @@ export function SeoGmbLanding() {
          <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="max-w-3xl mb-16 animate-in fade-in slide-in-from-bottom-4 duration-700">
              <span className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-ocean mb-4">
-               <div className="w-5 h-[1.5px] bg-ocean"></div> Pourquoi Waveia ?
+               <div className="w-5 h-[1.5px] bg-primary"></div> Pourquoi Waveia ?
             </span>
             <h2 className="text-3xl md:text-5xl font-bold font-heading mb-4 text-foreground leading-tight">
               L'agence qui va plus loin<br />que l'optimisation basique.
@@ -546,7 +546,7 @@ export function SeoGmbLanding() {
               <p className="text-muted-foreground max-w-2xl mx-auto mb-10">En 48h, nos systèmes IA analysent votre fiche Google Maps, identifient vos opportunités locales et vous livrent un diagnostic clair — gratuitement.</p>
               
               <div className="flex flex-wrap justify-center gap-4 mb-6">
-                <a href="#audit" className="inline-flex items-center gap-2 bg-ocean text-white font-heading font-bold text-[0.95rem] px-8 py-3.5 rounded-full hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(14,165,233,0.35)] transition-all">
+                <a href="#audit" className="inline-flex items-center gap-2 bg-primary text-white font-heading font-bold text-[0.95rem] px-8 py-3.5 rounded-full hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(14,165,233,0.35)] transition-all">
                   Lancer mon diagnostic Google Maps <ArrowRight className="w-4 h-4" />
                 </a>
               </div>
@@ -560,7 +560,7 @@ export function SeoGmbLanding() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8 grid lg:grid-cols-2 gap-16">
           <div>
              <span className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-ocean mb-4">
-               <div className="w-5 h-[1.5px] bg-ocean"></div> Démarrer maintenant
+               <div className="w-5 h-[1.5px] bg-primary"></div> Démarrer maintenant
             </span>
             <h2 className="text-3xl md:text-5xl font-bold font-heading mb-6 text-foreground">Une question ?<br />Un projet ? Échangeons.</h2>
             <p className="text-lg text-muted-foreground font-light mb-12 max-w-md">Décrivez votre situation et votre zone cible. Notre équipe vous recontacte avec une analyse personnalisée sous 24 heures ouvrées.</p>
@@ -632,7 +632,7 @@ export function SeoGmbLanding() {
                <div>
                   <textarea placeholder="Décrivez votre activité et vos objectifs GMB…" className="w-full bg-background border border-border rounded-lg px-4 py-3 text-sm text-foreground focus:border-ocean focus:outline-none transition-colors min-h-[100px] resize-y"></textarea>
                </div>
-               <button type="button" className="bg-ocean text-white hover:shadow-[0_8px_32px_rgba(14,165,233,0.35)] w-full font-heading font-bold py-3.5 rounded-full mt-4 transition-transform hover:-translate-y-0.5">
+               <button type="button" className="bg-primary text-white hover:shadow-[0_8px_32px_rgba(14,165,233,0.35)] w-full font-heading font-bold py-3.5 rounded-full mt-4 transition-transform hover:-translate-y-0.5">
                   Envoyer ma demande →
                </button>
             </form>

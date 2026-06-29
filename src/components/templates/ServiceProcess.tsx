@@ -19,7 +19,7 @@ export function ServiceProcess({ process }: Props) {
       <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-20 lg:mb-32 animate-in">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-ocean/5 border border-ocean/10 text-ocean text-sm font-semibold uppercase tracking-wider mb-6">
-            <span className="w-2 h-2 rounded-full bg-ocean animate-pulse" />
+            <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
             Notre Méthode
           </div>
           <SectionHeader as="h2" size="page" align="center" className="mb-6 font-heading">

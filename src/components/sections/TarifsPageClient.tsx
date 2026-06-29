@@ -112,7 +112,7 @@ export function TarifsPageClient() {
               Nous construisons des sites web comme nos maisons : robustes, durables et faits pour traverser le temps. 
               Pas de location, pas de superflu. Juste l&apos;excellence technique au service de votre image.
             </p>
-            <p className="text-base text-muted-foreground/80 leading-relaxed mb-8">
+            <p className="text-base text-muted-foreground leading-relaxed mb-8">
               Basés à Biarritz, nous accompagnons les entreprises du Pays Basque et de la Côte Landaise dans leur transformation digitale. 
               Artisans, commerçants, professions libérales ou PME : nos tarifs sont pensés pour maximiser votre retour sur investissement, 
               avec une transparence totale sur les coûts et les livrables.
@@ -291,13 +291,13 @@ export function TarifsPageClient() {
               </p>
               <p className="text-muted-foreground mb-4">
                 Notre approche combine expertise technique de haut niveau et accompagnement humain de proximité. 
-                Chaque projet bénéficie d&apos;une <Link href="/agence-communication/strategie-digitale" className="text-ocean hover:underline">stratégie digitale personnalisée</Link> adaptée 
+                Chaque projet bénéficie d&apos;une <Link href="/agence-communication/strategie-digitale" className="text-ocean underline underline-offset-2 decoration-ocean/40 hover:decoration-ocean">stratégie digitale personnalisée</Link> adaptée 
                 à vos objectifs commerciaux. Nous ne livrons pas des sites, nous construisons des outils de croissance.
               </p>
               <p className="text-muted-foreground mb-4">
                 Le référencement naturel est au cœur de notre méthodologie. Chaque site inclut une base SEO solide, 
-                et nous proposons des <Link href="/referencement-seo/netlinking" className="text-ocean hover:underline">campagnes de netlinking</Link> pour 
-                les entreprises souhaitant dominer leur marché local. Consultez notre <Link href="/blog" className="text-ocean hover:underline">blog</Link> pour 
+                et nous proposons des <Link href="/referencement-seo/netlinking" className="text-ocean underline underline-offset-2 decoration-ocean/40 hover:decoration-ocean">campagnes de netlinking</Link> pour 
+                les entreprises souhaitant dominer leur marché local. Consultez notre <Link href="/blog" className="text-ocean underline underline-offset-2 decoration-ocean/40 hover:decoration-ocean">blog</Link> pour 
                 découvrir nos conseils SEO et nos études de cas.
               </p>
               <div className="grid md:grid-cols-3 gap-4 mt-6 not-prose">
@@ -462,7 +462,7 @@ export function TarifsPageClient() {
             </div>
             <SectionHeader as="h2" size="section" align="center" className="mb-4">
               Questions{" "}
-              <span className="font-heading italic text-ocean-light">
+              <span className="font-heading italic text-ocean-text">
                 fréquentes
               </span>
             </SectionHeader>

@@ -29,7 +29,7 @@ export default function ResourcesPage() {
             Décryptez les stratégies digitales qui fonctionnent au Pays Basque.
             Conseils pratiques pour votre visibilité locale.
           </p>
-          <p className="text-base text-muted-foreground/80 max-w-3xl mx-auto">
+          <p className="text-base text-muted-foreground max-w-3xl mx-auto">
             Nos guides sont rédigés par des experts du référencement local à Bayonne, Biarritz et Anglet. 
             Que vous soyez restaurateur, artisan ou profession libérale, vous trouverez ici des ressources 
             concrètes pour optimiser votre fiche Google Business Profile, améliorer votre positionnement SEO 
