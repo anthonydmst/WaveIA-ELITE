@@ -94,7 +94,7 @@ export default function RootLayout({
           />
         </head>
         <body className="antialiased font-sans">
-          <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
+          <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
             <MotionProvider>
               {/* Skip link for keyboard navigation */}
               <a

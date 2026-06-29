@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef, useState, useEffect } from "react";
-import { m, useScroll, useTransform, useSpring, useMotionValue, useAnimationFrame, useReducedMotion } from "framer-motion";
+import { m, useScroll, useTransform, useSpring, useMotionValue, useAnimationFrame, useReducedMotion, useInView } from "framer-motion";
 import { Link } from "next-view-transitions";
 import { ArrowRight, Play } from "lucide-react";
 import Image from "next/image";
@@ -17,16 +17,18 @@ function Wave({
   yOffset = 0,
   className = "",
   points = 20, // Reduced resolution by default for perf, can be bumped for quality
-  complexity = 2 // Harmonics count
-}: { 
-  fill?: string; 
-  speed?: number; 
-  amplitude?: number; 
-  frequency?: number; 
+  complexity = 2, // Harmonics count
+  active = true // Pause the rAF loop when the hero is off-screen
+}: {
+  fill?: string;
+  speed?: number;
+  amplitude?: number;
+  frequency?: number;
   yOffset?: number;
   className?: string;
   points?: number;
   complexity?: number;
+  active?: boolean;
 }) {
   const pathRef = useRef<SVGPathElement>(null);
   const width = 1920; // Assume a base width, viewbox will handle scaling
@@ -35,7 +37,7 @@ function Wave({
   const lastTimeRef = useRef(0);
 
   useAnimationFrame((t) => {
-    if (!pathRef.current) return;
+    if (!active || !pathRef.current) return;
     
     // Throttle to ~30fps (33ms) for older devices
     if (t - lastTimeRef.current < 33) return;
@@ -132,6 +134,9 @@ function AIParticles() {
 export function Hero() {
   const containerRef = useRef<HTMLDivElement>(null);
   const shouldReduceMotion = useReducedMotion();
+  // Only run the continuous wave/particle animations while the hero is on-screen
+  const heroInView = useInView(containerRef, { amount: 0.1 });
+  const waveActive = heroInView && !shouldReduceMotion;
   const { trigger } = useHaptics();
   const { scrollY } = useScroll();
   const y1 = useTransform(scrollY, [0, 500], [0, shouldReduceMotion ? 0 : 200]);
@@ -202,7 +207,7 @@ export function Hero() {
             </defs>
 
             {/* Ambient Blur Layer for Depth */}
-            <Wave 
+            <Wave active={waveActive}
               fill="url(#waveGrad1)" 
               speed={0.2} 
               amplitude={120} 
@@ -214,7 +219,7 @@ export function Hero() {
             />
             
             {/* Deep Background Layer */}
-            <Wave 
+            <Wave active={waveActive}
               fill="url(#waveGrad2)" 
               speed={0.5} 
               amplitude={80} 
@@ -226,7 +231,7 @@ export function Hero() {
             />
             
             {/* Mid Layer */}
-            <Wave 
+            <Wave active={waveActive}
               fill="url(#waveGrad3)" 
               speed={0.8} 
               amplitude={110} 
@@ -238,7 +243,7 @@ export function Hero() {
             />
             
             {/* Highlight/Foam Layer */}
-            <Wave 
+            <Wave active={waveActive}
               fill="url(#waveGrad4)" 
               speed={1.1} 
               amplitude={60} 
@@ -254,7 +259,7 @@ export function Hero() {
           <div className="absolute bottom-0 left-0 right-0 h-48 bg-linear-to-t from-background via-background/90 to-transparent" />
         </div>
 
-        <AIParticles />
+        {heroInView && <AIParticles />}
       </div>
 
       {/* Content */}
