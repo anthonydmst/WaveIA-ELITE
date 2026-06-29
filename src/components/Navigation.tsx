@@ -120,7 +120,22 @@ function MobileAccordionItem({ item, index, onNavigate }: MobileAccordionItemPro
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isNavigating, setIsNavigating] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+
+  const handleOpen = () => {
+    setIsNavigating(false);
+    setIsOpen(true);
+  };
+
+  const handleClose = () => {
+    setIsOpen(false);
+  };
+
+  const handleNavigate = () => {
+    setIsNavigating(true);
+    setIsOpen(false);
+  };
   const pathname = usePathname();
 
   const { trigger } = useHaptics();
@@ -190,7 +205,7 @@ export function Navigation() {
             <div className="flex items-center gap-2 lg:hidden">
               <ThemeToggle />
               <button
-                onClick={() => setIsOpen(true)}
+                onClick={handleOpen}
                 className={`p-2 ${headerText} ${hoverText} transition-colors`}
                 aria-label="Ouvrir le menu"
               >
@@ -210,26 +225,26 @@ export function Navigation() {
                 variants={backdropFade}
                 initial="hidden"
                 animate="visible"
-                exit="exit"
+                exit={isNavigating ? undefined : "exit"}
                 className="absolute inset-0 bg-background/90 backdrop-blur-md"
-                onClick={() => setIsOpen(false)}
+                onClick={handleClose}
               />
               <m.nav
                 variants={mobileMenuSlide}
                 initial="closed"
                 animate="open"
-                exit="closed"
+                exit={isNavigating ? undefined : "closed"}
                 className="absolute right-0 top-0 bottom-0 w-full max-w-sm bg-card border-l border-border p-8 flex flex-col z-10"
               >
                 <div className="flex items-center justify-between mb-12">
-                  <Link href="/" className="flex items-center gap-3" onClick={() => setIsOpen(false)}>
+                  <Link href="/" className="flex items-center gap-3" onClick={handleNavigate}>
                     <Waves className="w-8 h-8 text-ocean" />
                     <span className="text-2xl font-bold">
                       wave<span className="text-ocean">IA</span>
                     </span>
                   </Link>
                   <button
-                    onClick={() => setIsOpen(false)}
+                    onClick={handleClose}
                     className={`p-2 ${headerMuted} ${hoverText} transition-colors`}
                     aria-label="Fermer le menu"
                   >
@@ -245,7 +260,7 @@ export function Navigation() {
                         key={item.href}
                         item={item}
                         index={index}
-                        onNavigate={() => setIsOpen(false)}
+                        onNavigate={handleNavigate}
                       />
                     ))}
                   </div>
@@ -255,9 +270,7 @@ export function Navigation() {
                   <Button asChild size="lg" className="w-full h-auto py-3.5 text-base font-semibold shadow-glow">
                     <Link
                       href="/contact"
-                      onClick={() => {
-                        setIsOpen(false);
-                      }}
+                      onClick={handleNavigate}
                     >
                       Planifier un échange
                     </Link>
