@@ -1,5 +1,9 @@
 import { Metadata } from "next";
-import { CostSimulator } from "@/components/sections/simulator/CostSimulator";
+import dynamic from "next/dynamic";
+
+const CostSimulator = dynamic(
+  () => import("@/components/sections/simulator/CostSimulator").then((mod) => mod.CostSimulator)
+);
 import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import { generateBreadcrumbs } from "@/lib/breadcrumbs";
 import { PedagogicBlock } from "@/components/sections/pedagogic/PedagogicBlock";

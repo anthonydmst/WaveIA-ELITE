@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;1,9..40,300&display=swap');
   .wave-section { font-family: 'DM Sans', sans-serif; padding: 2rem 0; }
   .wave-eyebrow { font-family: 'Bricolage Grotesque', sans-serif; font-size: 13px; font-weight: 500; color: var(--color-text-secondary); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 0.5rem; }
   .wave-title { font-family: 'Bricolage Grotesque', sans-serif; font-size: 26px; font-weight: 600; color: var(--color-text-primary); margin: 0 0 1.75rem; line-height: 1.2; }

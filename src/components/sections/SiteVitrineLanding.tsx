@@ -1,7 +1,11 @@
 import React from "react";
 import { Link } from "next-view-transitions";
 import { ArrowRight, Check, X, MonitorSmartphone, Share2, ArrowUp, Search, Mail, MapPin, ArrowLeft, Building, Database, Code2, Bot, Plus, Minus } from "lucide-react";
-import { DiagnosticExpress } from "@/components/ui/DiagnosticExpress";
+import dynamic from "next/dynamic";
+
+const DiagnosticExpress = dynamic(
+  () => import("@/components/ui/DiagnosticExpress").then((mod) => mod.DiagnosticExpress)
+);
 
 export function SiteVitrineLanding() {
   return (
@@ -177,7 +181,6 @@ export function SiteVitrineLanding() {
 
           <div className="w-full overflow-hidden rounded-3xl border border-border mt-10">
             <style dangerouslySetInnerHTML={{__html: `
-              @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap');
               
               .eco-hub {
                 --bg: #05070a;

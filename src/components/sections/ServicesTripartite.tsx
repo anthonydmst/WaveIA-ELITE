@@ -1,8 +1,5 @@
-"use client";
-
-import { Link } from "next-view-transitions";
 import { Globe, Search, Palette, ArrowRight } from "lucide-react";
-import { useHaptics } from "@/hooks/use-haptics";
+import { HapticLink } from "@/components/ui/HapticLink";
 import { Card } from "@/components/ui/Card";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 
@@ -37,7 +34,6 @@ const services = [
 ];
 
 export function ServicesTripartite() {
-  const { trigger } = useHaptics();
 
   return (
     <section
@@ -85,10 +81,10 @@ export function ServicesTripartite() {
                 backfaceVisibility: "hidden",
               }}
             >
-              <Link 
+              <HapticLink 
                 href={service.href} 
                 className="block h-full"
-                onClick={() => trigger("light")}
+                pattern="light"
               >
                 {/* Gradient Border Glow on Hover */}
                 <div
@@ -123,7 +119,7 @@ export function ServicesTripartite() {
                     </div>
                   </div>
                 </Card>
-              </Link>
+              </HapticLink>
             </div>
           ))}
         </div>

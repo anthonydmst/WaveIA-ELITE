@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400&display=swap');
 .wv-wrap{font-family:'DM Sans',sans-serif;padding:2rem 0 1.5rem;}
 .wv-title{font-family:'Bricolage Grotesque',sans-serif;font-size:28px;font-weight:600;color:var(--color-text-primary);line-height:1.2;margin:0 0 1.75rem;max-width:480px;}
 .wv-slider-outer{overflow:hidden;width:100%;}

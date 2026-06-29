@@ -119,9 +119,11 @@ const Card1 = () => (
         justifyContent: "center"
       }}>
         <div style={{ position: "relative", display: "inline-flex", height: "100%" }}>
-          <img 
+          <Image 
             src="/wireframe-perf.jpg" 
             alt="Wireframe" 
+            width={300}
+            height={200}
             style={{ 
               height: "100%", 
               width: "auto",
@@ -153,9 +155,11 @@ const Card2 = () => (
     <p style={{ fontSize: 12, fontStyle: "italic", color: "#0ea5e9", margin: "0 0 12px", fontFamily: "'Poppins', sans-serif", fontWeight: 500 }}>Côte Basque & au-delà</p>
     {/* Globe illustration */}
     <div style={{ position: "relative", display: "flex", alignItems: "flex-end", justifyContent: "center", marginTop: "auto", flex: 1 }}>
-      <img 
+      <Image 
         src="/seo-local-globe.png" 
         alt="SEO Local Globe" 
+        width={140}
+        height={140}
         style={{ 
           maxWidth: "100%", 
           maxHeight: "140px", 
@@ -245,9 +249,11 @@ const Card4 = () => (
     <p style={{ fontSize: 12, fontStyle: "italic", color: "#0ea5e9", margin: "0 0 14px", fontFamily: "'Poppins', sans-serif", fontWeight: 500 }}>Code, SEO & Tests accélérés par l'IA</p>
     {/* Dashboard image replacement */}
     <div style={{ background: "#0c4a6e", borderRadius: 12, padding: 8, position: "relative", overflow: "hidden", flex: 1, display: "flex", alignItems: "center", justifyContent: "center" }}>
-      <img 
+      <Image 
         src="/eval-presence-screen.png" 
         alt="Évaluation présence en ligne" 
+        width={300}
+        height={180}
         style={{ 
           maxWidth: "100%", 
           maxHeight: "100%", 
@@ -275,9 +281,11 @@ const Card5 = () => (
     <p style={{ fontSize: 12, fontStyle: "italic", color: "#0ea5e9", margin: "0 0 12px", fontFamily: "'Poppins', sans-serif", fontWeight: 500 }}>Boutiques Shopify optimisées</p>
     {/* Mascot with cart image */}
     <div style={{ position: "relative", marginTop: "auto", height: 110, display: "flex", alignItems: "center", justifyContent: "center", paddingBottom: 10 }}>
-      <img 
+      <Image 
         src="/ecommerce-mascot.png" 
         alt="Wave Mascot E-commerce" 
+        width={110}
+        height={110}
         style={{ 
           maxWidth: "100%", 
           maxHeight: "110px", 
@@ -295,8 +303,6 @@ export function WaveBento() {
     <section style={{ background: "white", padding: "80px 0" }}>
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div style={{ fontFamily: "'Poppins', 'Montserrat', sans-serif" }}>
-        {/* Google Fonts */}
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
 
         {/* Header */}
         <div className="text-left mb-10 lg:mb-12">

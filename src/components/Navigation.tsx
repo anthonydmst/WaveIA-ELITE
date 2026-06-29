@@ -12,6 +12,7 @@ import { MegaMenu } from "./layout/MegaMenu";
 import { ThemeToggle } from "./ThemeToggle";
 import { useHaptics } from "@/hooks/use-haptics";
 import { Button } from "@/components/ui/Button";
+import { accordionContent, backdropFade, mobileMenuSlide } from "@/lib/animation-variants";
 
 // Mobile Accordion Item Component
 interface MobileAccordionItemProps {
@@ -71,10 +72,10 @@ function MobileAccordionItem({ item, index, onNavigate }: MobileAccordionItemPro
       <AnimatePresence>
         {isExpanded && (
           <m.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.2 }}
+            variants={accordionContent}
+            initial="collapsed"
+            animate="expanded"
+            exit="collapsed"
             className="overflow-hidden"
           >
             <div className="pl-4 pr-2 py-2 space-y-1">
@@ -125,11 +126,18 @@ export function Navigation() {
   const { trigger } = useHaptics();
 
   useEffect(() => {
+    let ticking = false;
     const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          setScrolled(window.scrollY > 20);
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -196,23 +204,22 @@ export function Navigation() {
       <AnimatePresence>
         {isOpen && (
           <FocusTrap active={isOpen}>
-            <m.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.3 }}
-              className="fixed inset-0 z-100 lg:hidden"
-            >
-              <div
-                className="absolute inset-0 bg-background/95 backdrop-blur-xl"
+            <div className="fixed inset-0 z-100 lg:hidden">
+              {/* Sibling Backdrop to prevent nested opacity/transform composite layouts */}
+              <m.div
+                variants={backdropFade}
+                initial="hidden"
+                animate="visible"
+                exit="exit"
+                className="absolute inset-0 bg-background/90 backdrop-blur-md"
                 onClick={() => setIsOpen(false)}
               />
               <m.nav
-                initial={{ x: "100%" }}
-                animate={{ x: 0 }}
-                exit={{ x: "100%" }}
-                transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-                className="absolute right-0 top-0 bottom-0 w-full max-w-sm bg-card border-l border-border p-8 flex flex-col"
+                variants={mobileMenuSlide}
+                initial="closed"
+                animate="open"
+                exit="closed"
+                className="absolute right-0 top-0 bottom-0 w-full max-w-sm bg-card border-l border-border p-8 flex flex-col z-10"
               >
                 <div className="flex items-center justify-between mb-12">
                   <Link href="/" className="flex items-center gap-3" onClick={() => setIsOpen(false)}>
@@ -261,7 +268,7 @@ export function Navigation() {
                   </p>
                 </div>
               </m.nav>
-            </m.div>
+            </div>
           </FocusTrap>
         )}
       </AnimatePresence>

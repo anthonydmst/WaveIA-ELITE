@@ -21,17 +21,7 @@ import { MethodBlock } from "@/components/sections/MethodBlock";
 import { WhyChooseUsBlock } from "@/components/sections/WhyChooseUsBlock";
 import { WhyChooseUsFAQ } from "@/components/sections/WhyChooseUsFAQ";
 import { WhyChooseUsCTA } from "@/components/sections/WhyChooseUsCTA";
-import { AnimatedLocalSection } from "@/components/sections/AnimatedLocalSection";
 import { ServicesTripartite } from "@/components/sections/ServicesTripartite";
-import { LocalExpertsBlock } from "@/components/sections/CreationSiteDetails";
-import { WaveDiagnosticForm } from "@/components/sections/WaveDiagnosticForm";
-import { CreationRefonteBlock } from "@/components/sections/CreationRefonteBlock";
-import { ReferencementVisibiliteBlock } from "@/components/sections/ReferencementVisibiliteBlock";
-import { CommunicationIdentiteBlock } from "@/components/sections/CommunicationIdentiteBlock";
-import { HomePageRealisationsBlock } from "@/components/sections/HomePageRealisationsBlock";
-import {
-  LocalSectionSkeleton,
-} from "@/components/skeletons/HomepageSkeletons";
 
 export default function Home() {
   return (
