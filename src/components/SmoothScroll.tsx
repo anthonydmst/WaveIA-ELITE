@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
-import Lenis from "lenis";
+import type Lenis from "lenis";
 import "lenis/dist/lenis.css";
 
 export function SmoothScroll() {
@@ -12,29 +12,45 @@ export function SmoothScroll() {
     ).matches;
 
     if (prefersReducedMotion) {
-      // Skip smooth scrolling for users who prefer reduced motion
       return;
     }
 
-    const lenis = new Lenis({
-      duration: 1.2,
-      easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      orientation: "vertical",
-      gestureOrientation: "vertical",
-      smoothWheel: true,
-      wheelMultiplier: 1,
-      touchMultiplier: 2,
-    });
+    let lenisInstance: Lenis | null = null;
+    let animationFrameId: number;
 
-    function raf(time: number) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
+    const initLenis = async () => {
+      // Lazy load Lenis client-side only
+      const { default: Lenis } = await import("lenis");
 
-    requestAnimationFrame(raf);
+      lenisInstance = new Lenis({
+        duration: 1.2,
+        easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        orientation: "vertical",
+        gestureOrientation: "vertical",
+        smoothWheel: true,
+        wheelMultiplier: 1,
+        touchMultiplier: 2,
+      });
+
+      const raf = (time: number) => {
+        if (lenisInstance) {
+          lenisInstance.raf(time);
+        }
+        animationFrameId = requestAnimationFrame(raf);
+      };
+
+      animationFrameId = requestAnimationFrame(raf);
+    };
+
+    initLenis();
 
     return () => {
-      lenis.destroy();
+      if (lenisInstance) {
+        lenisInstance.destroy();
+      }
+      if (animationFrameId) {
+        cancelAnimationFrame(animationFrameId);
+      }
     };
   }, []);
 
