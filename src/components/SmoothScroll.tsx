@@ -1,10 +1,14 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
+import { usePathname } from "next/navigation";
 import type Lenis from "lenis";
 import "lenis/dist/lenis.css";
 
 export function SmoothScroll() {
+  const pathname = usePathname();
+  const lenisRef = useRef<Lenis | null>(null);
+
   useEffect(() => {
     // Respect reduced motion preference
     const prefersReducedMotion = window.matchMedia(
@@ -15,14 +19,13 @@ export function SmoothScroll() {
       return;
     }
 
-    let lenisInstance: Lenis | null = null;
     let animationFrameId: number;
 
     const initLenis = async () => {
       // Lazy load Lenis client-side only
       const { default: Lenis } = await import("lenis");
 
-      lenisInstance = new Lenis({
+      const lenis = new Lenis({
         duration: 1.2,
         easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
         orientation: "vertical",
@@ -32,9 +35,11 @@ export function SmoothScroll() {
         touchMultiplier: 2,
       });
 
+      lenisRef.current = lenis;
+
       const raf = (time: number) => {
-        if (lenisInstance) {
-          lenisInstance.raf(time);
+        if (lenisRef.current) {
+          lenisRef.current.raf(time);
         }
         animationFrameId = requestAnimationFrame(raf);
       };
@@ -45,8 +50,9 @@ export function SmoothScroll() {
     initLenis();
 
     return () => {
-      if (lenisInstance) {
-        lenisInstance.destroy();
+      if (lenisRef.current) {
+        lenisRef.current.destroy();
+        lenisRef.current = null;
       }
       if (animationFrameId) {
         cancelAnimationFrame(animationFrameId);
@@ -54,5 +60,13 @@ export function SmoothScroll() {
     };
   }, []);
 
+  // Reset scroll on SPA route changes
+  useEffect(() => {
+    if (lenisRef.current) {
+      lenisRef.current.scrollTo(0, { immediate: true });
+    }
+  }, [pathname]);
+
   return null;
 }
+

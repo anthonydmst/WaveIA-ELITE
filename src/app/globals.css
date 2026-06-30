@@ -567,7 +567,6 @@
     transform: translateY(20px);
     animation: fadeInUp 0.5s ease-out forwards;
     animation-play-state: paused;
-    will-change: transform, opacity;
   }
   .animate-in[data-in-view="true"] {
     animation-play-state: running;
@@ -578,7 +577,6 @@
     transform: translateX(-20px);
     animation: fadeInLeft 0.5s ease-out forwards;
     animation-play-state: paused;
-    will-change: transform, opacity;
   }
   .animate-in-left[data-in-view="true"] {
     animation-play-state: running;
@@ -589,7 +587,6 @@
     transform: translateX(20px);
     animation: fadeInRight 0.5s ease-out forwards;
     animation-play-state: paused;
-    will-change: transform, opacity;
   }
   .animate-in-right[data-in-view="true"] {
     animation-play-state: running;

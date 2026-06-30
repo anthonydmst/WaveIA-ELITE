@@ -156,6 +156,18 @@ export function Navigation() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Lock body scroll when mobile menu is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isOpen]);
+
   const headerText = "text-foreground";
   const headerMuted = "text-muted-foreground";
   const hoverText = "hover:text-ocean";
@@ -225,7 +237,7 @@ export function Navigation() {
                 variants={backdropFade}
                 initial="hidden"
                 animate="visible"
-                exit={isNavigating ? undefined : "exit"}
+                exit="exit"
                 className="absolute inset-0 bg-background/90 backdrop-blur-md"
                 onClick={handleClose}
               />
@@ -233,7 +245,7 @@ export function Navigation() {
                 variants={mobileMenuSlide}
                 initial="closed"
                 animate="open"
-                exit={isNavigating ? undefined : "closed"}
+                exit="closed"
                 className="absolute right-0 top-0 bottom-0 w-full max-w-sm bg-card border-l border-border p-8 flex flex-col z-10"
               >
                 <div className="flex items-center justify-between mb-12">
