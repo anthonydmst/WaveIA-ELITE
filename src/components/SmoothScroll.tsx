@@ -3,7 +3,8 @@
 import { useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
 import type Lenis from "lenis";
-import "lenis/dist/lenis.css";
+// Lenis CSS is inlined into globals.css to avoid a separate render-blocking
+// stylesheet request (Lenis itself is lazy-loaded below).
 
 export function SmoothScroll() {
   const pathname = usePathname();
