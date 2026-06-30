@@ -54,22 +54,20 @@ export default function Error({
             </SectionHeader>
           </m.div>
 
-          <m.div
+          <m.p
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
             className="text-lg text-muted-foreground mb-10 max-w-md mx-auto leading-relaxed"
           >
-            <h1 className="text-2xl md:text-3xl font-bold mb-4">
-              Une erreur est survenue
-            </h1>
-            <p className="text-muted-foreground mb-8">
-              {error?.message || "Erreur inconnue"}
-            </p>
-            <pre className="text-left text-xs text-red-400 bg-black/50 p-4 rounded mb-8 overflow-auto max-w-full">
-              {error?.stack}
-            </pre>
-          </m.div>
+            Une difficulté technique est survenue de notre côté. Vous pouvez
+            réessayer ou revenir à l&apos;accueil — nos équipes ont été notifiées.
+            {error?.digest && (
+              <span className="block mt-4 text-xs text-muted-foreground/60">
+                Code d&apos;erreur : {error.digest}
+              </span>
+            )}
+          </m.p>
 
           <m.div
             initial={{ opacity: 0, y: 20 }}

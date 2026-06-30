@@ -12,11 +12,12 @@ import { DollarSign } from "lucide-react";
 export const metadata: Metadata = {
   title: "Simulateur de Devis en Ligne | WaveIA",
   description: "Estimez le coût de votre projet web, SEO ou communication en quelques clics. Transparence totale, prix garantis.",
+  alternates: { canonical: "/simulateur-devis" },
 };
 
 export default function SimulatorPage() {
   return (
-    <main className="min-h-screen pt-32 pb-20">
+    <div className="min-h-screen pt-32 pb-20">
       <BreadcrumbSchema items={generateBreadcrumbs("/simulateur-devis")} />
       
       <div className="container mx-auto px-4 mb-12 text-center">
@@ -45,6 +46,6 @@ export default function SimulatorPage() {
           ]}
         />
       </div>
-    </main>
+    </div>
   );
 }

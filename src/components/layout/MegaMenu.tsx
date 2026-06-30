@@ -37,13 +37,29 @@ export function MegaMenu({ isHero = false }: MegaMenuProps) {
             key={item.href}
             className="relative"
             onMouseEnter={() => setActiveTab(index)}
+            // Keyboard parity with hover: open the panel when focus enters the
+            // group, close it when focus leaves (tab-out) — WCAG 2.1.1.
+            onFocus={() => setActiveTab(index)}
+            onBlur={(e) => {
+              if (!e.currentTarget.contains(e.relatedTarget as Node)) setActiveTab(null);
+            }}
+            // Escape dismisses the panel and restores focus to its trigger —
+            // WCAG 1.4.13 (Content on Hover or Focus, dismissable).
+            onKeyDown={(e) => {
+              if (e.key === "Escape" && activeTab === index) {
+                setActiveTab(null);
+                e.currentTarget.querySelector<HTMLAnchorElement>("a")?.focus();
+              }
+            }}
           >
             <Link
               href={item.href}
+              aria-haspopup="true"
+              aria-expanded={activeTab === index}
               className={`
                 relative px-4 py-2 text-[15px] font-medium transition-colors rounded-full flex items-center gap-2
-                ${activeTab === index || isActive 
-                  ? "text-ocean bg-ocean/10 shadow-[0_0_15px_rgba(14,165,233,0.15)]" 
+                ${activeTab === index || isActive
+                  ? "text-ocean bg-ocean/10 shadow-[0_0_15px_rgba(14,165,233,0.15)]"
                   : inactiveLinkClass
                 }
               `}

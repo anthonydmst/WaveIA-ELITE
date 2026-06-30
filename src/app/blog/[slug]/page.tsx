@@ -18,6 +18,7 @@ export async function generateMetadata(props: { params: Promise<{ slug: string }
   return {
     title: `${post.metadata.title} | Blog WaveIA`,
     description: post.metadata.description,
+    alternates: { canonical: `/blog/${params.slug}` },
     openGraph: {
         title: post.metadata.title,
         description: post.metadata.description,
@@ -57,7 +58,7 @@ export default async function BlogPostPage(props: { params: Promise<{ slug: stri
   };
 
   return (
-    <main className="min-h-screen bg-background pt-32 pb-20">
+    <div className="min-h-screen bg-background pt-32 pb-20">
         <Script
             id="article-schema"
             type="application/ld+json"
@@ -99,6 +100,6 @@ export default async function BlogPostPage(props: { params: Promise<{ slug: stri
                 </Link>
             </div>
         </div>
-    </main>
+    </div>
   );
 }

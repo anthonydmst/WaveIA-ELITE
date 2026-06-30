@@ -91,9 +91,21 @@ export async function generateMetadataForCombo(
     return { title: "Page introuvable" };
   }
 
+  // Self-referencing canonical (silo → root path mirrors sitemap.ts)
+  const siloToRootPath: Record<string, string> = {
+    web: "/creation-site-internet",
+    local: "/creation-site-internet",
+    service: "/creation-site-internet",
+    seo: "/referencement-seo",
+    agence: "/agence-communication",
+    metier: "/solutions",
+  };
+  const rootPath = siloToRootPath[silo] ?? "";
+
   return {
     title: `${combo.title} - WaveIA`,
     description: combo.description,
+    alternates: { canonical: `${rootPath}/${slug}/${city}` },
   };
 }
 
@@ -143,7 +155,7 @@ export async function ComboPageFactory({ params, silo, rootPath }: Props) {
     provider: {
       "@type": "LocalBusiness",
       name: "WaveIA",
-      image: "https://waveia.com/logo.png",
+      image: `${COMPANY_CONFIG.url}/icon-512.png`,
       telephone: COMPANY_CONFIG.telephone,
       address: {
         "@type": "PostalAddress",
@@ -178,7 +190,7 @@ export async function ComboPageFactory({ params, silo, rootPath }: Props) {
       <BreadcrumbSchema items={breadcrumbItems} />
       <StructuredData data={serviceSchema} />
       <StructuredData data={faqSchema} />
-      <main id="main-content">
+      <div>
         <ServiceHero hero={combo.hero} />
         
         <ServiceFeatures features={combo.features} />
@@ -214,7 +226,7 @@ export async function ComboPageFactory({ params, silo, rootPath }: Props) {
         )}
         
         <ServiceFAQ faq={combo.faq} />
-      </main>
+      </div>
     </>
   );
 }

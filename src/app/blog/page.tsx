@@ -6,7 +6,8 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Le Blog de l'Agence | WaveIA Pays Basque",
-  description: "Actualités, vie de l&apos;agence et brèves sur le digital au Pays Basque.",
+  description: "Actualités, vie de l'agence et brèves sur le digital au Pays Basque.",
+  alternates: { canonical: "/blog" },
 };
 
 export default function BlogPage() {
@@ -17,7 +18,7 @@ export default function BlogPage() {
   const others = posts.slice(1);
 
   return (
-    <main className="min-h-screen bg-background pt-32 pb-20">
+    <div className="min-h-screen bg-background pt-32 pb-20">
       <div className="container mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16">
@@ -154,6 +155,6 @@ export default function BlogPage() {
           ))}
         </div>
       </div>
-    </main>
+    </div>
   );
 }

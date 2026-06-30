@@ -906,3 +906,55 @@ html.lenis body {
   transition-duration: 1ms;
   transition-behavior: allow-discrete;
 }
+
+/* ============================================================
+   REDUCED MOTION — global, comprehensive (WCAG 2.2.2 / 2.3.3, AA checklist §7)
+   Framer Motion is already handled by <MotionConfig reducedMotion="user">,
+   but that does NOT cover CSS animations. This block neutralises every CSS
+   animation/transition the app ships: the entrance utilities, the *infinite*
+   ambient ones (.animate-wave/float/pulse-glow/gradient), Radix accordion,
+   Tailwind animate-ping/pulse/spin and tw-animate-css.
+   Kept UNLAYERED + !important on purpose: the infinite utilities below are
+   declared outside @layer, so a layered rule could not override them.
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  /* Entrance animations: snap to the visible end-state so nothing is left
+     stuck at opacity:0 / translated off-position. */
+  .animate-in,
+  .animate-in-left,
+  .animate-in-right,
+  .animate-scale-in,
+  .animate-hero-fade-up,
+  .animate-hero-fade-up-rapid,
+  .animate-appear,
+  .animate-zoom-in,
+  .animate-slide-down,
+  .animate-slide-up {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  /* Looping / ambient motion: stop entirely. */
+  .animate-wave,
+  .animate-float,
+  .animate-pulse-glow,
+  .animate-gradient,
+  .animate-accordion-down,
+  .animate-accordion-up {
+    animation: none !important;
+  }
+
+  /* Catch-all safety net for anything not named above (Tailwind
+     animate-ping/pulse/spin, tw-animate-css, injected widgets). Using a tiny
+     non-zero duration preserves `forwards` end-states (e.g. .animate-bar-grow
+     reaches its target height instead of staying at 0). */
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

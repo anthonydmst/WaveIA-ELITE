@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   title: "Mentions Légales | WaveIA - Agence Web Pays Basque",
   description: "Mentions légales de WaveIA, agence web basée au Pays Basque. Informations sur l'éditeur, l'hébergeur et les conditions d'utilisation du site.",
   robots: { index: true, follow: true },
+  alternates: { canonical: "/legal" },
 };
 
 export default function LegalPage() {
@@ -16,11 +17,9 @@ export default function LegalPage() {
   return (
     <>
       <BreadcrumbSchema items={breadcrumbItems} />
-      <main id="main-content">
-        <Suspense fallback={<div className="min-h-screen" />}>
-          <LegalPageClient />
-        </Suspense>
-      </main>
+      <Suspense fallback={<div className="min-h-screen" />}>
+        <LegalPageClient />
+      </Suspense>
     </>
   );
 }

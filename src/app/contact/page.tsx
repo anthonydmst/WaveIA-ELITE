@@ -10,6 +10,7 @@ export function generateMetadata() {
   return {
     title: "Contact | WaveIA",
     description: "Contactez notre agence web pour discuter de votre projet digital.",
+    alternates: { canonical: "/contact" },
   };
 }
 

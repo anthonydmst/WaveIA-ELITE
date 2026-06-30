@@ -151,9 +151,12 @@ export function ContactPageClient({ items }: { items?: BreadcrumbItem[] }) {
                   Réservez un appel de 30 minutes pour discuter de votre projet
                   et obtenir des conseils personnalisés.
                 </p>
-                <button className="w-full px-4 py-3 bg-primary text-background font-bold rounded-lg hover:bg-ocean/90 transition-all hover:scale-[1.02] shadow-lg shadow-ocean/20">
+                <a
+                  href="tel:+33695913669"
+                  className="block w-full px-4 py-3 bg-primary text-background font-bold rounded-lg hover:bg-ocean/90 transition-all hover:scale-[1.02] shadow-lg shadow-ocean/20 text-center"
+                >
                   Réserver un créneau
-                </button>
+                </a>
               </div>
             </div>
 
@@ -161,7 +164,7 @@ export function ContactPageClient({ items }: { items?: BreadcrumbItem[] }) {
             <div className="lg:col-span-2">
 
               {state?.success ? (
-                <div className="h-full flex flex-col items-center justify-center text-center p-12 bg-card/50 backdrop-blur-sm rounded-2xl border border-border">
+                <div role="status" className="h-full flex flex-col items-center justify-center text-center p-12 bg-card/50 backdrop-blur-sm rounded-2xl border border-border">
                   <div className="w-16 h-16 flex items-center justify-center bg-ocean/20 rounded-full mb-6 ring-4 ring-ocean/10">
                     <CheckCircle className="w-8 h-8 text-ocean" />
                   </div>
@@ -182,17 +185,37 @@ export function ContactPageClient({ items }: { items?: BreadcrumbItem[] }) {
                       projectType: formData.get("projectType") as string,
                       budget: formData.get("budget") as string,
                       message: formData.get("message") as string,
+                      _hp: (formData.get("_hp") as string) || "",
                     };
-                    formAction(data as ContactFormData); // Assuming validation happens in action
+                    formAction(data as ContactFormData); // Validation + honeypot handled in action
                   }}
                   className="p-8 bg-card/50 backdrop-blur-sm rounded-2xl border border-border shadow-2xl"
                 >
+                  {/* Honeypot anti-spam — hidden from real users */}
+                  <input
+                    type="text"
+                    name="_hp"
+                    tabIndex={-1}
+                    autoComplete="off"
+                    aria-hidden="true"
+                    className="hidden"
+                  />
                   <div className="flex items-center gap-2 mb-6">
                     <Sparkles className="w-5 h-5 text-ocean" />
                     <span className="font-semibold">
                       Décrivez votre projet
                     </span>
                   </div>
+
+                  {state && !state.success && state.message && (
+                    <div
+                      role="alert"
+                      className="mb-6 flex items-start gap-2 rounded-lg border border-red-500/30 bg-red-500/10 px-4 py-3 text-sm text-red-400"
+                    >
+                      <span aria-hidden>⚠️</span>
+                      <span>{state.message}</span>
+                    </div>
+                  )}
 
                   <div className="grid sm:grid-cols-2 gap-6">
                     <div>
@@ -209,11 +232,13 @@ export function ContactPageClient({ items }: { items?: BreadcrumbItem[] }) {
                         value={formState.name}
                         onChange={handleChange}
                         required
+                        aria-invalid={state?.errors?.name ? true : undefined}
+                        aria-describedby={state?.errors?.name ? "name-error" : undefined}
                         className="w-full px-4 py-3 bg-background border border-border rounded-lg focus:outline-none focus:border-ocean transition-colors"
                         placeholder="Jean Dupont"
                       />
                       {state?.errors?.name && (
-                        <p className="mt-1 text-sm text-red-400">{state.errors.name}</p>
+                        <p id="name-error" className="mt-1 text-sm text-red-400">{state.errors.name}</p>
                       )}
                     </div>
                     <div>
@@ -230,11 +255,13 @@ export function ContactPageClient({ items }: { items?: BreadcrumbItem[] }) {
                         value={formState.email}
                         onChange={handleChange}
                         required
+                        aria-invalid={state?.errors?.email ? true : undefined}
+                        aria-describedby={state?.errors?.email ? "email-error" : undefined}
                         className="w-full px-4 py-3 bg-background border border-border rounded-lg focus:outline-none focus:border-ocean transition-colors"
                         placeholder="jean@entreprise.fr"
                       />
                       {state?.errors?.email && (
-                        <p className="mt-1 text-sm text-red-400">{state.errors.email}</p>
+                        <p id="email-error" className="mt-1 text-sm text-red-400">{state.errors.email}</p>
                       )}
                     </div>
                     <div>
@@ -362,6 +389,19 @@ export function ContactPageClient({ items }: { items?: BreadcrumbItem[] }) {
                       </span>
                     </button>
                   </div>
+
+                  <p className="mt-6 text-xs text-muted-foreground leading-relaxed">
+                    Les informations saisies sont utilisées uniquement pour traiter
+                    votre demande. Pour en savoir plus sur la gestion de vos données
+                    et vos droits, consultez notre{" "}
+                    <a
+                      href="/privacy"
+                      className="text-ocean underline underline-offset-2 decoration-ocean/40 hover:decoration-ocean"
+                    >
+                      politique de confidentialité
+                    </a>
+                    .
+                  </p>
                 </form>
               )}
             </div>

@@ -9,6 +9,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "À Propos | Agence Web WaveIA",
   description: "Découvrez WaveIA, l'agence web premium du Pays Basque. Notre mission : rendre le web d'excellence accessible aux entreprises locales.",
+  alternates: { canonical: "/a-propos" },
 };
 
 export default function AProposPage() {

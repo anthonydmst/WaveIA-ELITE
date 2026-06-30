@@ -15,8 +15,14 @@ const resend = new Resend(process.env.RESEND_API_KEY!);
 
 export async function submitContactForm(
   prevState: ContactActionResult | null,
-  data: ContactFormData
+  data: ContactFormData & { _hp?: string }
 ): Promise<ContactActionResult> {
+  // 0. Honeypot anti-spam: a real user never fills this hidden field.
+  // Pretend success so bots don't learn they were filtered.
+  if (data._hp && data._hp.trim() !== "") {
+    return { success: true, message: "Message envoyé avec succès ! Nous vous répondrons très vite." };
+  }
+
   // 1. Validate on the server
   const validation = validateContactForm(data);
   

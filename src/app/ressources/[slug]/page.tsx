@@ -17,6 +17,7 @@ export async function generateMetadata(props: { params: Promise<{ slug: string }
   return {
     title: `${resource.metadata.title} | WaveIA Pays Basque`,
     description: resource.metadata.description,
+    alternates: { canonical: `/ressources/${params.slug}` },
     openGraph: {
         title: resource.metadata.title,
         description: resource.metadata.description,
@@ -42,7 +43,7 @@ export default async function ResourcePage(props: { params: Promise<{ slug: stri
   }
 
   return (
-    <main className="min-h-screen bg-background pt-32 pb-20">
+    <div className="min-h-screen bg-background pt-32 pb-20">
       <div className="container mx-auto px-4 md:px-6">
         
         {/* Back Link */}
@@ -81,6 +82,6 @@ export default async function ResourcePage(props: { params: Promise<{ slug: stri
             </div>
         </div>
       </div>
-    </main>
+    </div>
   );
 }

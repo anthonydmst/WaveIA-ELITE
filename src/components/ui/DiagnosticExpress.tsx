@@ -170,6 +170,21 @@ export function DiagnosticExpress() {
   var stage = root.querySelector('#wvStage');
   var fill = root.querySelector('#wvFill');
   var readout = root.querySelector('#wvReadout');
+  var live = root.querySelector('#wvLive');
+  var hasStarted = false;
+
+  // a11y: polite announcements for screen readers (WCAG 4.1.3)
+  function announce(msg){ if(live) live.textContent = msg; }
+
+  // a11y: move focus to the new step's heading on each transition so keyboard /
+  // screen-reader users follow the flow (WCAG 2.4.3). Skipped on first paint to
+  // avoid stealing focus on page load.
+  function focusStepHeading(){
+    if(!stage) return;
+    var h = stage.querySelector('.wv-q, .wv-report-title');
+    if(h){ h.setAttribute('tabindex','-1'); if(hasStarted) h.focus(); }
+    hasStarted = true;
+  }
 
   function setProgress(pct, label){
     if(fill) fill.style.width = pct + "%";
@@ -200,6 +215,7 @@ export function DiagnosticExpress() {
       var backBtn = root.querySelector('#' + 'wvBackBtn');
       if(backBtn) backBtn.addEventListener('click', backFn);
     }
+    focusStepHeading();
   }
 
   function renderStep1(){
@@ -245,18 +261,18 @@ export function DiagnosticExpress() {
         '<form class="wv-form" id="wvForm" novalidate>'+
           '<div class="wv-field" id="fName">'+
             '<label for="wvName">Prénom et nom</label>'+
-            '<input type="text" id="wvName" name="name" autocomplete="name" required>'+
-            '<span class="wv-field-msg">Merci d\\'indiquer votre nom.</span>'+
+            '<input type="text" id="wvName" name="name" autocomplete="name" required aria-describedby="wvNameMsg">'+
+            '<span class="wv-field-msg" id="wvNameMsg">Merci d\\'indiquer votre nom.</span>'+
           '</div>'+
           '<div class="wv-field" id="fPhone">'+
             '<label for="wvPhone">Téléphone professionnel</label>'+
-            '<input type="tel" id="wvPhone" name="phone" autocomplete="tel" required>'+
-            '<span class="wv-field-msg">Merci d\\'indiquer un numéro de téléphone.</span>'+
+            '<input type="tel" id="wvPhone" name="phone" autocomplete="tel" required aria-describedby="wvPhoneMsg">'+
+            '<span class="wv-field-msg" id="wvPhoneMsg">Merci d\\'indiquer un numéro de téléphone.</span>'+
           '</div>'+
           '<div class="wv-field" id="fEmail">'+
             '<label for="wvEmail">E-mail professionnel</label>'+
-            '<input type="email" id="wvEmail" name="email" autocomplete="email" required>'+
-            '<span class="wv-field-msg">Merci d\\'indiquer un e-mail valide.</span>'+
+            '<input type="email" id="wvEmail" name="email" autocomplete="email" required aria-describedby="wvEmailMsg">'+
+            '<span class="wv-field-msg" id="wvEmailMsg">Merci d\\'indiquer un e-mail valide.</span>'+
           '</div>'+
           '<button type="submit" class="wv-submit">Découvrir mes priorités</button>'+
           '<p class="wv-disclaimer">Vos données servent uniquement à vous transmettre votre diagnostic et à être recontacté par un consultant Waveia.</p>'+
@@ -268,14 +284,19 @@ export function DiagnosticExpress() {
 
     var backBtn = root.querySelector('#' + 'wvBackBtn');
     if(backBtn) backBtn.addEventListener('click', renderStep3);
-    
+
     var form = root.querySelector('#' + 'wvForm');
     if(form) form.addEventListener('submit', handleSubmit);
+    focusStepHeading();
   }
 
   function validateField(id, isValid){
     var field = root.querySelector('#' + id);
-    if(field) field.classList.toggle('wv-error', !isValid);
+    if(field){
+      field.classList.toggle('wv-error', !isValid);
+      var input = field.querySelector('input');
+      if(input) input.setAttribute('aria-invalid', String(!isValid));
+    }
     return isValid;
   }
 
@@ -301,15 +322,29 @@ export function DiagnosticExpress() {
     var okPhone = validateField('fPhone', phone.length > 5);
     var okEmail = validateField('fEmail', /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email));
 
-    if (!(okName && okPhone && okEmail)) return;
+    if (!(okName && okPhone && okEmail)) {
+      // a11y: send focus to the first field in error (WCAG 3.3.1)
+      var firstInvalid = root.querySelector('.wv-field.wv-error input');
+      if (firstInvalid) firstInvalid.focus();
+      return;
+    }
 
     var leadScore = computeLeadScore(state);
-    console.log("Diagnostic Waveia — nouveau lead", {
-      name: name, phone: phone, email: email,
-      answers: state,
-      lead_tag: leadScore.tag,
-      lead_score: leadScore.score
-    });
+
+    // Send the lead to the email backend (fire-and-forget; results show regardless)
+    fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        _source: 'Diagnostic Express',
+        Nom: name,
+        Téléphone: phone,
+        Email: email,
+        'Réponses': state,
+        'Lead Tag': leadScore.tag,
+        'Lead Score': leadScore.score
+      })
+    }).catch(function () { /* silencieux : ne pas bloquer l'affichage du résultat */ });
 
     renderLoading();
   }
@@ -322,6 +357,7 @@ export function DiagnosticExpress() {
           '<p class="wv-loading-readout">Calcul de vos priorités en cours…</p>'+
         '</div>';
     }
+    announce('Calcul de vos priorités en cours.');
     setTimeout(renderResults, 1400);
   }
 
@@ -383,6 +419,8 @@ export function DiagnosticExpress() {
         renderStep1();
       });
     }
+    announce('Diagnostic terminé. Vos 3 chantiers prioritaires sont affichés ci-dessous.');
+    focusStepHeading();
   }
 
   // Ensure DOM is ready (in Next.js, useEffect guarantees this, but just in case)
@@ -414,6 +452,9 @@ export function DiagnosticExpress() {
     <!-- ZONE DYNAMIQUE -->
     <div class="wv-stage" id="wvStage"></div>
 
+    <!-- a11y: live region for screen-reader status announcements (WCAG 4.1.3) -->
+    <p class="wv-sr-live" id="wvLive" role="status" aria-live="polite"></p>
+
   </div>
 </div>
 
@@ -438,6 +479,7 @@ export function DiagnosticExpress() {
   }
   .wv-diag *{box-sizing:border-box;}
   .wv-diag :focus-visible{outline:2px solid var(--accent-deep);outline-offset:2px;}
+  .wv-sr-live{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
 
   .wv-card{
     max-width:700px;

@@ -1,10 +1,10 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "next-view-transitions";
 import { usePathname } from "next/navigation";
 import { m, AnimatePresence } from "framer-motion";
-import { Menu, X, Waves } from "lucide-react";
+import { Waves } from "lucide-react";
 import FocusTrap from "focus-trap-react";
 
 import { MEGA_MENU_ITEMS } from "@/lib/data";
@@ -28,8 +28,9 @@ interface MobileAccordionItemProps {
 function MobileAccordionItem({ item, index, onNavigate }: MobileAccordionItemProps) {
   const [isExpanded, setIsExpanded] = useState(false);
   const pathname = usePathname();
-  const isActive = pathname.startsWith(item.href);
+  const isActive = pathname === item.href || pathname.startsWith(`${item.href}/`);
   const { trigger } = useHaptics();
+  const panelId = `mobile-acc-panel-${index}`;
 
   const handleToggle = () => {
     trigger("light");
@@ -42,45 +43,51 @@ function MobileAccordionItem({ item, index, onNavigate }: MobileAccordionItemPro
   };
 
   return (
-    <m.div
+    <m.li
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.15 + index * 0.05 }}
       className="overflow-hidden"
     >
       <button
+        type="button"
         onClick={handleToggle}
+        aria-expanded={isExpanded}
+        aria-controls={panelId}
         className={`
           w-full flex items-center justify-between px-4 py-3 text-sm font-medium rounded-lg transition-all
-          ${isActive 
-            ? "text-ocean bg-ocean/10 border border-ocean/20" 
+          ${isActive
+            ? "text-ocean bg-ocean/10 border border-ocean/20"
             : "text-foreground hover:bg-foreground/5"
           }
         `}
       >
         <span>{item.label}</span>
-        <m.div
+        <m.span
+          aria-hidden="true"
+          className="flex"
           animate={{ rotate: isExpanded ? 180 : 0 }}
           transition={{ duration: 0.2 }}
         >
           <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
           </svg>
-        </m.div>
+        </m.span>
       </button>
-      
+
       <AnimatePresence>
         {isExpanded && (
           <m.div
+            id={panelId}
             variants={accordionContent}
             initial="collapsed"
             animate="expanded"
             exit="collapsed"
             className="overflow-hidden"
           >
-            <div className="pl-4 pr-2 py-2 space-y-1">
+            <ul className="list-none pl-4 pr-2 py-2 space-y-1">
               {/* Primary Link: "Tout voir" */}
-              <m.div
+              <m.li
                 initial={{ opacity: 0, x: -10 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0 }}
@@ -88,14 +95,15 @@ function MobileAccordionItem({ item, index, onNavigate }: MobileAccordionItemPro
                 <Link
                   href={item.href}
                   onClick={handleLinkClick}
-                  className="block px-3 py-2 text-sm font-medium text-ocean bg-ocean/5 border border-ocean/10 rounded-lg hover:bg-ocean/10 transition-colors"
+                  aria-current={pathname === item.href ? "page" : undefined}
+                  className="flex min-h-11 items-center px-3 py-2 text-sm font-medium text-ocean bg-ocean/5 border border-ocean/10 rounded-lg hover:bg-ocean/10 transition-colors"
                 >
                  Tout voir
                 </Link>
-              </m.div>
+              </m.li>
 
               {item.links?.map((sublink, idx) => (
-                <m.div
+                <m.li
                   key={sublink.href}
                   initial={{ opacity: 0, x: -10 }}
                   animate={{ opacity: 1, x: 0 }}
@@ -104,41 +112,28 @@ function MobileAccordionItem({ item, index, onNavigate }: MobileAccordionItemPro
                   <Link
                     href={sublink.href}
                     onClick={handleLinkClick}
-                    className="block px-3 py-2 text-sm text-muted-foreground hover:text-ocean hover:bg-ocean/5 rounded-lg transition-colors"
+                    aria-current={pathname === sublink.href ? "page" : undefined}
+                    className="flex min-h-11 items-center px-3 py-2 text-sm text-muted-foreground hover:text-ocean hover:bg-ocean/5 rounded-lg transition-colors"
                   >
                     {sublink.label}
                   </Link>
-                </m.div>
+                </m.li>
               ))}
-            </div>
+            </ul>
           </m.div>
         )}
       </AnimatePresence>
-    </m.div>
+    </m.li>
   );
 }
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isNavigating, setIsNavigating] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
-  const handleOpen = () => {
-    setIsNavigating(false);
-    setIsOpen(true);
-  };
-
-  const handleClose = () => {
-    setIsOpen(false);
-  };
-
-  const handleNavigate = () => {
-    setIsNavigating(true);
-    setIsOpen(false);
-  };
-  const pathname = usePathname();
-
-  const { trigger } = useHaptics();
+  const handleOpen = () => setIsOpen(true);
+  const handleClose = () => setIsOpen(false);
+  const handleNavigate = () => setIsOpen(false);
 
   useEffect(() => {
     let ticking = false;
@@ -154,6 +149,18 @@ export function Navigation() {
 
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // Close the mobile menu when crossing into the desktop (lg) breakpoint —
+  // otherwise `isOpen` stays true off-screen: body scroll stays locked and the
+  // FocusTrap is left mounted on a `display:none` (lg:hidden) container.
+  useEffect(() => {
+    const desktop = window.matchMedia("(min-width: 1024px)");
+    const handleChange = (e: MediaQueryListEvent) => {
+      if (e.matches) setIsOpen(false);
+    };
+    desktop.addEventListener("change", handleChange);
+    return () => desktop.removeEventListener("change", handleChange);
   }, []);
 
   // Lock body scroll when mobile menu is open
@@ -217,9 +224,12 @@ export function Navigation() {
             <div className="flex items-center gap-2 lg:hidden">
               <ThemeToggle />
               <button
+                type="button"
                 onClick={isOpen ? handleClose : handleOpen}
-                className={`relative w-10 h-10 flex flex-col items-center justify-center rounded-full bg-foreground/5 border border-border hover:border-ocean/30 transition-colors group overflow-hidden ${headerText} ${hoverText}`}
+                aria-expanded={isOpen}
+                aria-controls="mobile-menu"
                 aria-label={isOpen ? "Fermer le menu" : "Ouvrir le menu"}
+                className={`relative w-11 h-11 flex flex-col items-center justify-center rounded-full bg-foreground/5 border border-border hover:border-ocean/30 transition-colors group overflow-hidden ${headerText} ${hoverText}`}
               >
                 <div className="absolute inset-0 bg-ocean/5 opacity-0 group-hover:opacity-100 transition-opacity" />
                 <div className="relative w-5 h-4 flex flex-col justify-between">
@@ -235,7 +245,16 @@ export function Navigation() {
 
       <AnimatePresence>
         {isOpen && (
-          <FocusTrap active={isOpen}>
+          <FocusTrap
+            active={isOpen}
+            focusTrapOptions={{
+              // Esc + click outside both close the menu via state, which keeps
+              // body-scroll-lock and AnimatePresence exit in sync. focus-trap
+              // returns focus to the burger on deactivate by default.
+              onDeactivate: handleClose,
+              clickOutsideDeactivates: true,
+            }}
+          >
             <div className="fixed inset-0 z-100 lg:hidden">
               {/* Sibling Backdrop to prevent nested opacity/transform composite layouts */}
               <m.div
@@ -247,6 +266,8 @@ export function Navigation() {
                 onClick={handleClose}
               />
               <m.nav
+                id="mobile-menu"
+                aria-label="Menu principal"
                 variants={mobileMenuSlide}
                 initial="closed"
                 animate="open"
@@ -261,8 +282,9 @@ export function Navigation() {
                     </span>
                   </Link>
                   <button
+                    type="button"
                     onClick={handleClose}
-                    className={`relative w-10 h-10 flex flex-col items-center justify-center rounded-full bg-foreground/5 border border-border hover:border-ocean/30 transition-colors group overflow-hidden ${headerMuted} ${hoverText}`}
+                    className={`relative w-11 h-11 flex flex-col items-center justify-center rounded-full bg-foreground/5 border border-border hover:border-ocean/30 transition-colors group overflow-hidden ${headerMuted} ${hoverText}`}
                     aria-label="Fermer le menu"
                   >
                     <div className="absolute inset-0 bg-ocean/5 opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -276,7 +298,7 @@ export function Navigation() {
 
                 <div className="flex-1 overflow-y-auto">
                   {/* Hub Services with Accordion */}
-                  <div className="space-y-2 mb-6 pt-4">
+                  <ul className="list-none space-y-2 mb-6 pt-4">
                     {MEGA_MENU_ITEMS.map((item, index) => (
                       <MobileAccordionItem
                         key={item.href}
@@ -285,7 +307,7 @@ export function Navigation() {
                         onNavigate={handleNavigate}
                       />
                     ))}
-                  </div>
+                  </ul>
                 </div>
 
                 <div className="mt-auto pt-6 border-t border-border">

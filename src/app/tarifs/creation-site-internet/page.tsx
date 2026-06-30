@@ -8,6 +8,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Tarifs Création Site Internet Biarritz | WaveIA",
   description: "Découvrez nos offres pour la création de sites internet performants, vitrines ou e-commerce. À partir de 990€. Agence Web Pays Basque.",
+  alternates: { canonical: "/tarifs/creation-site-internet" },
 };
 
 export default function PricingWebPage() {

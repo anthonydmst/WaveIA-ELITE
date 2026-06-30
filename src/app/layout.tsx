@@ -106,7 +106,9 @@ export default function RootLayout({
               <SmoothScroll />
               <ScrollObserver />
               <Navigation />
-              <main id="main-content">{children}</main>
+              {/* tabIndex=-1 lets the skip link move *focus* (not just scroll)
+                  into the main region for keyboard/SR users — WCAG 2.4.1 */}
+              <main id="main-content" tabIndex={-1} className="outline-none">{children}</main>
               <StickyMobileCTA />
               <Footer />
               <Analytics />

@@ -1,17 +1,20 @@
 "use client";
 
-import { LazyMotion, domAnimation } from "framer-motion";
+import { LazyMotion, MotionConfig, domAnimation } from "framer-motion";
 
 /**
  * S-Tier Motion Provider (God Mode+)
- * 
- * Enforces LazyMotion globally to reduce bundle size.
- * Uses 'm' component instead of 'motion'.
+ *
+ * - LazyMotion + domAnimation + strict: forces the lightweight `m` component
+ *   everywhere (no full `motion` bundle).
+ * - MotionConfig reducedMotion="user": every Framer animation in the app
+ *   (mobile menu slide, stagger, accordion, chevron…) automatically respects
+ *   `prefers-reduced-motion` without per-component plumbing.
  */
 export function MotionProvider({ children }: { children: React.ReactNode }) {
   return (
     <LazyMotion features={domAnimation} strict>
-      {children}
+      <MotionConfig reducedMotion="user">{children}</MotionConfig>
     </LazyMotion>
   );
 }

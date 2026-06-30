@@ -10,10 +10,12 @@ import 'server-only';
 
 export const COMPANY_CONFIG = {
   name: "Waveia",
-  legalName: "Waveia SAS",
+  legalName: "WaveIA",
+  siret: "753 348 010 00053",
+  publicationDirector: "Anthony Damestoy",
   description: "Agence de communication digitale experte en stratégie de marque, web design et marketing d'influence.",
-  url: "https://waveia.com",
-  logo: "https://waveia.com/logo.png", // TODO: Replace with actual logo URL
+  url: "https://waveia.fr",
+  logo: "https://waveia.fr/icon-512.png", // TODO: replace with a dedicated brand logo asset if available
   
   // Contact
   email: "contact@waveia.fr",

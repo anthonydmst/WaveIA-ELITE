@@ -7,6 +7,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Centre de Ressources & Guides SEO | WaveIA Pays Basque",
   description: "Guides experts, articles de blog et outils pour booster votre visibilité à Bayonne, Biarritz et Anglet.",
+  alternates: { canonical: "/ressources" },
 };
 
 export default function ResourcesPage() {
@@ -17,7 +18,7 @@ export default function ResourcesPage() {
   const others = resources.slice(1);
 
   return (
-    <main className="min-h-screen bg-background pt-32 pb-20">
+    <div className="min-h-screen bg-background pt-32 pb-20">
       <div className="container mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16">
@@ -156,6 +157,6 @@ export default function ResourcesPage() {
           ))}
         </div>
       </div>
-    </main>
+    </div>
   );
 }

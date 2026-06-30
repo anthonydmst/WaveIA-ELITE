@@ -25,14 +25,16 @@ const nextConfig: NextConfig = {
   images: {
     formats: ['image/avif', 'image/webp'], // S-Tier: AVIF first, WebP fallback
     qualities: [25, 50, 75, 80, 90, 100],
+    // Restricted to the hosts actually used (avoids an open optimization proxy).
+    // Add a host here when you start serving images from a new domain/CDN.
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: '**',
+        hostname: 'images.unsplash.com',
       },
       {
-        protocol: 'http',
-        hostname: '**',
+        protocol: 'https',
+        hostname: '**.googleusercontent.com',
       },
     ],
   },
@@ -87,6 +89,8 @@ const nextConfig: NextConfig = {
           { key: 'X-Content-Type-Options', value: 'nosniff' },
           { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
           { key: 'Strict-Transport-Security', value: 'max-age=31536000; includeSubDomains; preload' },
+          { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=(), browsing-topics=()' },
+          { key: 'X-DNS-Prefetch-Control', value: 'on' },
         ],
       },
       {

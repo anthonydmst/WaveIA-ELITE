@@ -51,9 +51,21 @@ export async function generateMetadataForSilo(
     };
   }
 
+  // Self-referencing canonical (silo → root path mirrors sitemap.ts)
+  const siloToRootPath: Record<string, string> = {
+    web: "/creation-site-internet",
+    local: "/creation-site-internet",
+    service: "/creation-site-internet",
+    seo: "/referencement-seo",
+    agence: "/agence-communication",
+    metier: "/solutions",
+  };
+  const rootPath = siloToRootPath[silo] ?? "";
+
   return {
     title: `${service.title} - Agence Web WaveIA`,
     description: service.description,
+    alternates: { canonical: `${rootPath}/${service.slug}` },
   };
 }
 
@@ -122,7 +134,7 @@ export async function ServicePageFactory({
     "provider": {
       "@type": "LocalBusiness",
       "name": "WaveIA",
-      "image": "https://waveia.com/logo.png",
+      "image": `${COMPANY_CONFIG.url}/icon-512.png`,
       "address": {
         "@type": "PostalAddress",
         "streetAddress": COMPANY_CONFIG.address.street,
@@ -169,8 +181,8 @@ export async function ServicePageFactory({
         />
       )}
       <StructuredData data={faqSchema} />
-      <main id="main-content">
-        {renderHero 
+      <div>
+        {renderHero
           ? renderHero(breadcrumbItems) 
           : <ServiceHero hero={service.hero} breadcrumbItems={breadcrumbItems} />
         }
@@ -229,7 +241,7 @@ export async function ServicePageFactory({
             <ServiceFAQ faq={service.faq} />
           </>
         )}
-      </main>
+      </div>
     </>
   );
 }

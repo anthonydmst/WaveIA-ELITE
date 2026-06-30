@@ -52,11 +52,12 @@ export function LegalPageClient() {
               </div>
               <div className="space-y-2 text-muted-foreground">
                 <p className="m-0"><strong className="text-foreground">Raison sociale :</strong> WaveIA</p>
-                <p className="m-0"><strong className="text-foreground">Forme juridique :</strong> Micro-entreprise</p>
+                <p className="m-0"><strong className="text-foreground">Forme juridique :</strong> Micro-entreprise (entrepreneur individuel)</p>
+                <p className="m-0"><strong className="text-foreground">SIRET :</strong> 753 348 010 00053</p>
                 <p className="m-0"><strong className="text-foreground">Adresse :</strong> Technopôle Izarbel, 64210 Bidart, France</p>
                 <p className="m-0"><strong className="text-foreground">Email :</strong> contact@waveia.fr</p>
                 <p className="m-0"><strong className="text-foreground">Téléphone :</strong> 06 95 91 36 69</p>
-                <p className="m-0"><strong className="text-foreground">Directeur de la publication :</strong> Le gérant de WaveIA</p>
+                <p className="m-0"><strong className="text-foreground">Directeur de la publication :</strong> Anthony Damestoy</p>
               </div>
             </div>
 
@@ -107,7 +108,7 @@ export function LegalPageClient() {
                 Pour plus d&apos;informations sur la collecte et le traitement de vos données personnelles, veuillez consulter notre <a href="/privacy" className="text-ocean underline underline-offset-2 decoration-ocean/40 hover:decoration-ocean">Politique de Confidentialité</a>.
               </p>
               <p className="text-muted-foreground">
-                Ce site utilise des cookies techniques nécessaires à son fonctionnement. En continuant à naviguer, vous acceptez l&apos;utilisation de ces cookies.
+                Ce site n&apos;utilise que des cookies strictement nécessaires à son bon fonctionnement, ainsi qu&apos;une mesure d&apos;audience respectueuse de la vie privée, sans cookie publicitaire ni traceur tiers. Ces usages ne requièrent pas votre consentement préalable.
               </p>
             </div>
 

@@ -9,7 +9,7 @@ export default function LocalBusinessSchema() {
     "name": COMPANY_CONFIG.name,
     "alternateName": `${COMPANY_CONFIG.name} - Agence Web Pays Basque`,
     "description": COMPANY_CONFIG.description,
-    "image": `${COMPANY_CONFIG.url}/opengraph-image.png`,
+    "image": `${COMPANY_CONFIG.url}/icon-512.png`,
     "logo": COMPANY_CONFIG.logo,
     "url": COMPANY_CONFIG.url,
     "telephone": COMPANY_CONFIG.telephone,

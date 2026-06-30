@@ -8,6 +8,14 @@ const resend = new Resend(process.env.RESEND_API_KEY || "re_dummy");
 export async function POST(request: Request) {
   try {
     const payload = await request.json();
+
+    // Honeypot anti-spam: a real user never fills this hidden field.
+    // Respond 200 so bots don't learn they were filtered, but send nothing.
+    if (typeof payload._hp === 'string' && payload._hp.trim() !== '') {
+      return NextResponse.json({ success: true });
+    }
+    delete payload._hp;
+
     const sourceName = payload._source || 'Nouveau formulaire contact';
     delete payload._source; // Ne pas afficher ça dans la liste finale
 

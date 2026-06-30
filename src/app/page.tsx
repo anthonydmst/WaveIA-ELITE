@@ -5,6 +5,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Agence Web Biarritz | Création Site Internet Côte Basque - WaveIA",
   description: "Agence web locale spécialisée en création de sites internet, SEO et communication digitale. Tarifs transparents dès 790€. Biarritz, Bayonne, Anglet.",
+  alternates: { canonical: "/" },
   openGraph: {
     title: "WaveIA | Agence Web Premium Pays Basque",
     description: "Sites web sur-mesure à partir de 790€. Score PageSpeed 100/100. Support local 24/7.",

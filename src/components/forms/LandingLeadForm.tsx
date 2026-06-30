@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useId, useState } from 'react';
 import { ArrowRight, CheckCircle2 } from 'lucide-react';
 
 interface LandingLeadFormProps {
@@ -19,19 +19,24 @@ export function LandingLeadForm({ formName, focusOptions, buttonText }: LandingL
   });
   
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+  const uid = useId();
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!formData.prenom || !formData.nom || !formData.email || !formData.tel) return;
-    
+
+    // Honeypot anti-spam — read the hidden field straight from the DOM
+    const hp = (e.currentTarget.elements.namedItem('_hp') as HTMLInputElement | null)?.value ?? '';
+
     setStatus('loading');
-    
+
     try {
       await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           _source: formName,
+          _hp: hp,
           Prénom: formData.prenom,
           Nom: formData.nom,
           "Email Professionnel": formData.email,
@@ -48,7 +53,7 @@ export function LandingLeadForm({ formName, focusOptions, buttonText }: LandingL
 
   if (status === 'success') {
     return (
-      <div className="flex flex-col items-center justify-center py-10 px-4 text-center border border-emerald-500/30 rounded-2xl bg-emerald-500/5 animate-in fade-in zoom-in-95 duration-500">
+      <div role="status" className="flex flex-col items-center justify-center py-10 px-4 text-center border border-emerald-500/30 rounded-2xl bg-emerald-500/5 animate-in fade-in zoom-in-95 duration-500">
         <CheckCircle2 className="w-12 h-12 text-emerald-500 mb-4" />
         <h3 className="text-xl font-bold text-foreground mb-2">Demande envoyée avec succès</h3>
         <p className="text-sm text-muted-foreground">Un expert de chez WaveIA va prendre contact avec vous très rapidement.</p>
@@ -58,45 +63,54 @@ export function LandingLeadForm({ formName, focusOptions, buttonText }: LandingL
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
+      {/* Honeypot anti-spam — hidden from real users */}
+      <input
+        type="text"
+        name="_hp"
+        tabIndex={-1}
+        autoComplete="off"
+        aria-hidden="true"
+        className="hidden"
+      />
       <div className="grid grid-cols-2 gap-4">
         <div>
-          <label className="block text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2">Prénom</label>
-          <input 
-            required type="text" placeholder="Sarah" 
+          <label htmlFor={`${uid}-prenom`} className="block text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2">Prénom</label>
+          <input
+            id={`${uid}-prenom`} required type="text" placeholder="Sarah" autoComplete="given-name"
             value={formData.prenom} onChange={e => setFormData({...formData, prenom: e.target.value})}
-            className="w-full bg-background border border-border rounded-lg px-4 py-3 text-sm text-foreground focus:border-ocean focus:outline-none transition-colors" 
+            className="w-full bg-background border border-border rounded-lg px-4 py-3 text-sm text-foreground focus:border-ocean focus:outline-none transition-colors"
           />
         </div>
         <div>
-          <label className="block text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2">Nom</label>
-          <input 
-            required type="text" placeholder="Lenoir" 
+          <label htmlFor={`${uid}-nom`} className="block text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2">Nom</label>
+          <input
+            id={`${uid}-nom`} required type="text" placeholder="Lenoir" autoComplete="family-name"
             value={formData.nom} onChange={e => setFormData({...formData, nom: e.target.value})}
-            className="w-full bg-background border border-border rounded-lg px-4 py-3 text-sm text-foreground focus:border-ocean focus:outline-none transition-colors" 
+            className="w-full bg-background border border-border rounded-lg px-4 py-3 text-sm text-foreground focus:border-ocean focus:outline-none transition-colors"
           />
         </div>
       </div>
       <div>
-        <label className="block text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2">Email professionnel</label>
-        <input 
-          required type="email" placeholder="sarah@startup.fr" 
+        <label htmlFor={`${uid}-email`} className="block text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2">Email professionnel</label>
+        <input
+          id={`${uid}-email`} required type="email" placeholder="sarah@startup.fr" autoComplete="email"
           value={formData.email} onChange={e => setFormData({...formData, email: e.target.value})}
-          className="w-full bg-background border border-border rounded-lg px-4 py-3 text-sm text-foreground focus:border-ocean focus:outline-none transition-colors" 
+          className="w-full bg-background border border-border rounded-lg px-4 py-3 text-sm text-foreground focus:border-ocean focus:outline-none transition-colors"
         />
       </div>
       <div>
-        <label className="block text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2">Téléphone</label>
-        <input 
-          required type="tel" placeholder="06 00 00 00 00" 
+        <label htmlFor={`${uid}-tel`} className="block text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2">Téléphone</label>
+        <input
+          id={`${uid}-tel`} required type="tel" placeholder="06 00 00 00 00" autoComplete="tel"
           value={formData.tel} onChange={e => setFormData({...formData, tel: e.target.value})}
-          className="w-full bg-background border border-border rounded-lg px-4 py-3 text-sm text-foreground focus:border-ocean focus:outline-none transition-colors" 
+          className="w-full bg-background border border-border rounded-lg px-4 py-3 text-sm text-foreground focus:border-ocean focus:outline-none transition-colors"
         />
       </div>
       {focusOptions.length > 0 && (
         <div>
-          <label className="block text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2">Principal Focus Stratégique</label>
-          <select 
-            required value={formData.focus} onChange={e => setFormData({...formData, focus: e.target.value})}
+          <label htmlFor={`${uid}-focus`} className="block text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2">Principal Focus Stratégique</label>
+          <select
+            id={`${uid}-focus`} required value={formData.focus} onChange={e => setFormData({...formData, focus: e.target.value})}
             className="w-full bg-background border border-border rounded-lg px-4 py-3 text-sm text-foreground focus:border-ocean focus:outline-none transition-colors"
           >
             {focusOptions.map((opt, i) => (
@@ -107,7 +121,7 @@ export function LandingLeadForm({ formName, focusOptions, buttonText }: LandingL
       )}
       
       {status === 'error' && (
-        <p className="text-red-500 text-xs font-semibold text-center mt-2">Une erreur est survenue, veuillez réessayer.</p>
+        <p role="alert" className="text-red-500 text-xs font-semibold text-center mt-2">Une erreur est survenue, veuillez réessayer.</p>
       )}
 
       <button 

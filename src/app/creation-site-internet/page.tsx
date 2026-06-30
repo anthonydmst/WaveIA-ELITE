@@ -18,6 +18,7 @@ export function generateMetadata() {
   return {
     title: `${service.title} - WaveIA`,
     description: service.description,
+    alternates: { canonical: "/creation-site-internet" },
   };
 }
 

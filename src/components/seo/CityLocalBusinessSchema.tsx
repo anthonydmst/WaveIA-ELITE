@@ -92,11 +92,11 @@ export function CityLocalBusinessSchema({ city, silo, serviceName }: LocalBusine
       "ratingValue": "4.9",
       "reviewCount": "47"
     },
-    "image": "https://waveia.fr/og-image.jpg",
-    "logo": "https://waveia.fr/logo.png",
+    "image": `${COMPANY_CONFIG.url}/icon-512.png`,
+    "logo": COMPANY_CONFIG.logo,
     "sameAs": [
-      "https://www.linkedin.com/company/waveia",
-      "https://www.facebook.com/waveia"
+      COMPANY_CONFIG.socials.linkedin,
+      COMPANY_CONFIG.socials.instagram,
     ]
   };
 

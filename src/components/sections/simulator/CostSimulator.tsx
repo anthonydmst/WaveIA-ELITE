@@ -122,7 +122,7 @@ export function CostSimulator() {
           <Calculator className="w-3 h-3" />
           <span>Simulateur de Devis</span>
         </div>
-        <div className="flex justify-center items-center gap-2 mb-4">
+        <div className="flex justify-center items-center gap-2 mb-4" aria-hidden="true">
            {SIMULATOR_STEPS.map((_, idx) => (
              <div 
                 key={idx} 
@@ -161,6 +161,7 @@ export function CostSimulator() {
                       <button
                         key={option.id}
                         onClick={() => handleSelection(option)}
+                        aria-pressed={isSelected}
                         className={`group relative flex items-center gap-6 p-6 rounded-2xl border text-left transition-all duration-300 ${
                           isSelected 
                             ? "bg-ocean/10 border-ocean shadow-[0_0_30px_-10px_rgba(14,165,233,0.3)]" 
@@ -281,7 +282,8 @@ export function CostSimulator() {
             </div>
 
             <div className="pt-6 border-t border-border">
-                <div className="flex justify-between items-end mb-2">
+                <div className="flex justify-between items-end mb-2" aria-live="polite">
+                    <span className="sr-only">Estimation mise à jour&nbsp;: {state.totalPrice} euros hors TVA.</span>
                     <span className="text-muted-foreground">Estimation</span>
                     <div className="text-right">
                          <span className="block text-4xl font-bold text-white tracking-tight">
