@@ -217,11 +217,16 @@ export function Navigation() {
             <div className="flex items-center gap-2 lg:hidden">
               <ThemeToggle />
               <button
-                onClick={handleOpen}
-                className={`p-2 ${headerText} ${hoverText} transition-colors`}
-                aria-label="Ouvrir le menu"
+                onClick={isOpen ? handleClose : handleOpen}
+                className={`relative w-10 h-10 flex flex-col items-center justify-center rounded-full bg-foreground/5 border border-border hover:border-ocean/30 transition-colors group overflow-hidden ${headerText} ${hoverText}`}
+                aria-label={isOpen ? "Fermer le menu" : "Ouvrir le menu"}
               >
-                <Menu className="w-6 h-6" />
+                <div className="absolute inset-0 bg-ocean/5 opacity-0 group-hover:opacity-100 transition-opacity" />
+                <div className="relative w-5 h-4 flex flex-col justify-between">
+                  <span className={`w-5 h-0.5 bg-current rounded-full transition-all duration-300 ${isOpen ? "rotate-45 translate-y-1.5" : ""}`} />
+                  <span className={`w-5 h-0.5 bg-current rounded-full transition-all duration-300 ${isOpen ? "opacity-0 scale-x-0" : ""}`} />
+                  <span className={`w-5 h-0.5 bg-current rounded-full transition-all duration-300 ${isOpen ? "-rotate-45 -translate-y-1.5" : ""}`} />
+                </div>
               </button>
             </div>
           </div>
@@ -257,10 +262,15 @@ export function Navigation() {
                   </Link>
                   <button
                     onClick={handleClose}
-                    className={`p-2 ${headerMuted} ${hoverText} transition-colors`}
+                    className={`relative w-10 h-10 flex flex-col items-center justify-center rounded-full bg-foreground/5 border border-border hover:border-ocean/30 transition-colors group overflow-hidden ${headerMuted} ${hoverText}`}
                     aria-label="Fermer le menu"
                   >
-                    <X className="w-6 h-6" />
+                    <div className="absolute inset-0 bg-ocean/5 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    <div className="relative w-5 h-4 flex flex-col justify-between">
+                      <span className="w-5 h-0.5 bg-current rounded-full rotate-45 translate-y-1.5" />
+                      <span className="w-5 h-0.5 bg-current rounded-full opacity-0 scale-x-0" />
+                      <span className="w-5 h-0.5 bg-current rounded-full -rotate-45 -translate-y-1.5" />
+                    </div>
                   </button>
                 </div>
 

@@ -78,12 +78,12 @@ export function HomePageRealisationsBlock() {
             style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
           >
             {PROJECTS_SHOWCASE.map((project) => (
-              <div
+              <Link
                 key={project.id}
-                className="w-[85vw] md:w-[45vw] lg:w-[30vw] shrink-0 snap-center lg:snap-start group cursor-pointer"
-                onClick={() => trigger("light")}
+                href="/realisations"
+                className="w-[85vw] md:w-[45vw] lg:w-[30vw] shrink-0 snap-center lg:snap-start group cursor-pointer block focus-visible:outline-none"
               >
-                <article className="relative h-full bg-card rounded-2xl border border-glass-border overflow-hidden transition-all duration-300 hover:border-ocean/30 hover:shadow-[0_20px_40px_rgba(14,165,233,0.1)] flex flex-col">
+                <article className="relative h-full bg-card rounded-2xl border border-glass-border overflow-hidden transition-all duration-300 hover:border-ocean/30 hover:shadow-[0_20px_40px_rgba(14,165,233,0.1)] flex flex-col focus-visible:ring-2 focus-visible:ring-ring">
                   {/* Image Container */}
                   <div className="relative aspect-video lg:aspect-4/3 overflow-hidden">
                     <Image
@@ -141,7 +141,7 @@ export function HomePageRealisationsBlock() {
                     </div>
                   </div>
                 </article>
-              </div>
+              </Link>
             ))}
             
             {/* View All Card */}
