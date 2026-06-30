@@ -32,39 +32,17 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
   
   let extraContent = null;
   let renderHeroFn: ((breadcrumbs: BreadcrumbItem[]) => React.ReactNode) | undefined = undefined;
+  let isStandalone = false;
 
   if (slug === "audit-seo-gratuit") {
+    isStandalone = true;
     renderHeroFn = (breadcrumbs) => (
       <>
         <AuditSeoLanding />
-        {service && <ServiceHero hero={service.hero} breadcrumbItems={breadcrumbs} />}
       </>
     );
-    extraContent = (
-      <div className="max-w-4xl mx-auto px-6 lg:px-8 -mt-8 relative z-10 mb-20">
-         <TechnoTranslator 
-            title="Comprendre l'Audit SEO" 
-            terms={[
-              {
-                tech: "Crawlabilité & Indexation",
-                human: "Lecture par Google",
-                description: "Si Google ne peut pas lire vos pages, il ne peut pas les classer. C'est comme imprimer un livre avec de l'encre invisible."
-              },
-              {
-                tech: "Core Web Vitals",
-                human: "Expérience Utilisateur",
-                description: "La vitesse et la stabilité visuelle. Un site lent frustre les visiteurs et est pénalisé par Google."
-              },
-              {
-                tech: "Maillage Interne",
-                human: "Guidage du Visiteur",
-                description: "L'art de relier vos pages entre elles pour que le visiteur (et Google) navigue sans effort."
-              }
-            ]}
-         />
-      </div>
-    );
   } else if (slug === "local") {
+
     renderHeroFn = (breadcrumbs) => (
       <>
         <SeoLocalLanding />
@@ -164,6 +142,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
       rootPath="/referencement-seo"
       extraContent={extraContent}
       renderHero={renderHeroFn}
+      standaloneHeroOnly={isStandalone}
     />
   );
 }
