@@ -12,6 +12,7 @@ import { MegaMenu } from "./layout/MegaMenu";
 import { ThemeToggle } from "./ThemeToggle";
 import { useHaptics } from "@/hooks/use-haptics";
 import { Button } from "@/components/ui/Button";
+import { accordionContent, backdropFade, mobileMenuSlide } from "@/lib/animation-variants";
 
 // Mobile Accordion Item Component
 interface MobileAccordionItemProps {
@@ -71,10 +72,10 @@ function MobileAccordionItem({ item, index, onNavigate }: MobileAccordionItemPro
       <AnimatePresence>
         {isExpanded && (
           <m.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.2 }}
+            variants={accordionContent}
+            initial="collapsed"
+            animate="expanded"
+            exit="collapsed"
             className="overflow-hidden"
           >
             <div className="pl-4 pr-2 py-2 space-y-1">
@@ -119,17 +120,39 @@ function MobileAccordionItem({ item, index, onNavigate }: MobileAccordionItemPro
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isNavigating, setIsNavigating] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+
+  const handleOpen = () => {
+    setIsNavigating(false);
+    setIsOpen(true);
+  };
+
+  const handleClose = () => {
+    setIsOpen(false);
+  };
+
+  const handleNavigate = () => {
+    setIsNavigating(true);
+    setIsOpen(false);
+  };
   const pathname = usePathname();
 
   const { trigger } = useHaptics();
 
   useEffect(() => {
+    let ticking = false;
     const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          setScrolled(window.scrollY > 20);
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -182,7 +205,7 @@ export function Navigation() {
             <div className="flex items-center gap-2 lg:hidden">
               <ThemeToggle />
               <button
-                onClick={() => setIsOpen(true)}
+                onClick={handleOpen}
                 className={`p-2 ${headerText} ${hoverText} transition-colors`}
                 aria-label="Ouvrir le menu"
               >
@@ -196,33 +219,32 @@ export function Navigation() {
       <AnimatePresence>
         {isOpen && (
           <FocusTrap active={isOpen}>
-            <m.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.3 }}
-              className="fixed inset-0 z-100 lg:hidden"
-            >
-              <div
-                className="absolute inset-0 bg-background/95 backdrop-blur-xl"
-                onClick={() => setIsOpen(false)}
+            <div className="fixed inset-0 z-100 lg:hidden">
+              {/* Sibling Backdrop to prevent nested opacity/transform composite layouts */}
+              <m.div
+                variants={backdropFade}
+                initial="hidden"
+                animate="visible"
+                exit={isNavigating ? undefined : "exit"}
+                className="absolute inset-0 bg-background/90 backdrop-blur-md"
+                onClick={handleClose}
               />
               <m.nav
-                initial={{ x: "100%" }}
-                animate={{ x: 0 }}
-                exit={{ x: "100%" }}
-                transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-                className="absolute right-0 top-0 bottom-0 w-full max-w-sm bg-card border-l border-border p-8 flex flex-col"
+                variants={mobileMenuSlide}
+                initial="closed"
+                animate="open"
+                exit={isNavigating ? undefined : "closed"}
+                className="absolute right-0 top-0 bottom-0 w-full max-w-sm bg-card border-l border-border p-8 flex flex-col z-10"
               >
                 <div className="flex items-center justify-between mb-12">
-                  <Link href="/" className="flex items-center gap-3" onClick={() => setIsOpen(false)}>
+                  <Link href="/" className="flex items-center gap-3" onClick={handleNavigate}>
                     <Waves className="w-8 h-8 text-ocean" />
                     <span className="text-2xl font-bold">
                       wave<span className="text-ocean">IA</span>
                     </span>
                   </Link>
                   <button
-                    onClick={() => setIsOpen(false)}
+                    onClick={handleClose}
                     className={`p-2 ${headerMuted} ${hoverText} transition-colors`}
                     aria-label="Fermer le menu"
                   >
@@ -238,7 +260,7 @@ export function Navigation() {
                         key={item.href}
                         item={item}
                         index={index}
-                        onNavigate={() => setIsOpen(false)}
+                        onNavigate={handleNavigate}
                       />
                     ))}
                   </div>
@@ -248,9 +270,7 @@ export function Navigation() {
                   <Button asChild size="lg" className="w-full h-auto py-3.5 text-base font-semibold shadow-glow">
                     <Link
                       href="/contact"
-                      onClick={() => {
-                        setIsOpen(false);
-                      }}
+                      onClick={handleNavigate}
                     >
                       Planifier un échange
                     </Link>
@@ -261,7 +281,7 @@ export function Navigation() {
                   </p>
                 </div>
               </m.nav>
-            </m.div>
+            </div>
           </FocusTrap>
         )}
       </AnimatePresence>

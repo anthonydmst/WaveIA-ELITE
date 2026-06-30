@@ -1,25 +1,10 @@
 "use client";
 import './PlatformCarouselBlock.css';
-import { useState, useRef, useEffect, useCallback } from 'react';
+import { useState } from 'react';
 
 export function PlatformCarouselBlock() {
   const total = 4;
   const [cur, setCur] = useState(0);
-  const trackRef = useRef<HTMLDivElement>(null);
-
-  const render = useCallback(() => {
-    if (!trackRef.current || !trackRef.current.parentElement) return;
-    const outer = trackRef.current.parentElement.offsetWidth;
-    const cardW = (outer - 3 * 14) / 4;
-    const offset = cur * (cardW + 14);
-    trackRef.current.style.transform = `translateX(-${offset}px)`;
-  }, [cur]);
-
-  useEffect(() => {
-    render();
-    window.addEventListener('resize', render);
-    return () => window.removeEventListener('resize', render);
-  }, [render]);
 
   const goTo = (i: number) => {
     setCur(Math.max(0, Math.min(total - 1, i)));
@@ -37,7 +22,7 @@ export function PlatformCarouselBlock() {
   <p className="wv-title">Une seule agence pour gérer votre présence web et votre activité</p>
 
   <div className="wv-slider-outer">
-    <div className="wv-track" id="wvTrack" ref={trackRef}>
+    <div className="wv-track" id="wvTrack" style={{ transform: `translateX(calc(-${cur} * (25% + 3.5px)))` }}>
 
       <div className="wv-card">
         <div className="wv-card-visual" style={{"background":"#1a1a2e"}}>

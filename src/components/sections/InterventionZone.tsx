@@ -96,6 +96,15 @@ export function InterventionZone() {
   const [citiesCount, setCitiesCount] = useState(0);
   const [clientsCount, setClientsCount] = useState(0);
   const [kmCount, setKmCount] = useState(0);
+  const clickTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+
+  useEffect(() => {
+    return () => {
+      if (clickTimeoutRef.current) {
+        clearTimeout(clickTimeoutRef.current);
+      }
+    };
+  }, []);
 
   useEffect(() => {
     let waveT = 0;
@@ -122,6 +131,8 @@ export function InterventionZone() {
   }, []);
 
   useEffect(() => {
+    const activeTimers: NodeJS.Timeout[] = [];
+
     // Animate counters on load
     const animateCounter = (
       setFn: React.Dispatch<React.SetStateAction<number>>,
@@ -138,13 +149,19 @@ export function InterventionZone() {
         }
         setFn(Math.round(start));
       }, 16);
+      activeTimers.push(timer);
     };
 
-    setTimeout(() => {
+    const timeoutId = setTimeout(() => {
       animateCounter(setCitiesCount, 12, 1200);
       animateCounter(setClientsCount, 38, 1600);
       animateCounter(setKmCount, 150, 1400);
     }, 400);
+
+    return () => {
+      clearTimeout(timeoutId);
+      activeTimers.forEach((timer) => clearInterval(timer));
+    };
   }, []);
 
   const handleMarkerEnter = (cityKey: string, e: React.MouseEvent) => {
@@ -201,7 +218,10 @@ export function InterventionZone() {
   const handleCityListClick = (cityKey: string) => {
     setActiveCity(cityKey);
     setShowConnections(true);
-    setTimeout(() => {
+    if (clickTimeoutRef.current) {
+      clearTimeout(clickTimeoutRef.current);
+    }
+    clickTimeoutRef.current = setTimeout(() => {
       setShowConnections(false);
     }, 2500);
   };

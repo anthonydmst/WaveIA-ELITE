@@ -30,7 +30,6 @@ export function ProcessBlock() {
   }, []);
 
   const css = `
-    @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;700&family=Inter:wght@400;500&display=swap');
 
     .wp-wrapper {
       --color-background-primary: var(--background, #ffffff);

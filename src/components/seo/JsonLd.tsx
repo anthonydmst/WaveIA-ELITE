@@ -41,6 +41,16 @@ export function JsonLd({ data }: JsonLdProps) {
           addressCountry: COMPANY_CONFIG.address.country,
         },
       },
+      // S-Tier: Automatically inject WebPage linked to the Organization
+      {
+        '@type': 'WebPage',
+        '@id': `${COMPANY_CONFIG.url}/#webpage`,
+        url: COMPANY_CONFIG.url,
+        name: COMPANY_CONFIG.name,
+        isPartOf: {
+          '@id': `${COMPANY_CONFIG.url}/#organization`
+        }
+      },
       // The specific data passed to the component
       ...(Array.isArray(data) ? data : [data]),
     ],

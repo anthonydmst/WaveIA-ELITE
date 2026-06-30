@@ -156,7 +156,6 @@ export function ArchitectureBlock() {
   const tabs = ["Entête", "Navigation", "Services", "Barre latérale"];
 
   const css = `
-    @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;700&family=Inter:wght@400;500&display=swap');
     
     /* Provide default fallback colors just in case CSS vars aren't defined identically in global context */
     .wa-block-wrapper {

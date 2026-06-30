@@ -1,11 +1,12 @@
 "use client";
 
 import { Link } from "next-view-transitions";
-import { m } from "framer-motion";
+import { m, useReducedMotion } from "framer-motion";
 import { Home, ArrowRight, Compass } from "lucide-react";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 
 export default function NotFound() {
+  const shouldReduceMotion = useReducedMotion();
   return (
     <div className="relative min-h-screen flex items-center justify-center p-6 overflow-hidden bg-background">
       {/* Background Effects */}
@@ -15,33 +16,35 @@ export default function NotFound() {
       </div>
 
       {/* Floating Elements */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <m.div
-          animate={{
-            y: [0, -20, 0],
-            opacity: [0.3, 0.6, 0.3],
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-          className="absolute top-1/4 left-1/4 w-64 h-64 bg-ocean/20 rounded-full blur-3xl"
-        />
-        <m.div
-          animate={{
-            y: [0, 20, 0],
-            opacity: [0.2, 0.5, 0.2],
-          }}
-          transition={{
-            duration: 10,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 1,
-          }}
-          className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent/10 rounded-full blur-3xl"
-        />
-      </div>
+      {!shouldReduceMotion && (
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <m.div
+            animate={{
+              y: [0, -20, 0],
+              opacity: [0.3, 0.6, 0.3],
+            }}
+            transition={{
+              duration: 8,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+            className="absolute top-1/4 left-1/4 w-64 h-64 bg-ocean/20 rounded-full blur-3xl"
+          />
+          <m.div
+            animate={{
+              y: [0, 20, 0],
+              opacity: [0.2, 0.5, 0.2],
+            }}
+            transition={{
+              duration: 10,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 1,
+            }}
+            className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent/10 rounded-full blur-3xl"
+          />
+        </div>
+      )}
 
       <div className="relative max-w-2xl w-full text-center">
         <m.div
@@ -62,7 +65,7 @@ export default function NotFound() {
                 404
               </span>
               <m.div
-                animate={{ rotate: 360 }}
+                animate={shouldReduceMotion ? {} : { rotate: 360 }}
                 transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
                 className="absolute top-0 right-0 -mt-4 -mr-4 text-ocean opacity-50"
               >

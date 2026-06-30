@@ -1,19 +1,23 @@
 import React from "react";
 import { Link } from "next-view-transitions";
 import { ArrowRight, Check, X, MonitorSmartphone, Share2, ArrowUp, Search, Mail, MapPin, ArrowLeft, Building, Database, Code2, Bot, Plus, Minus } from "lucide-react";
-import { DiagnosticExpress } from "@/components/ui/DiagnosticExpress";
+import dynamic from "next/dynamic";
+
+const DiagnosticExpress = dynamic(
+  () => import("@/components/ui/DiagnosticExpress").then((mod) => mod.DiagnosticExpress)
+);
 
 export function SiteVitrineLanding() {
   return (
     <div className="w-full relative z-10 pt-20">
       {/* ─── HERO ─── */}
-      <section id="hero-landing" className="min-h-[90vh] flex items-center relative overflow-hidden pt-[70px]">
+      <section id="hero-landing" className="min-h-[90vh] flex items-center relative overflow-hidden">
         {/* Glow & Grid Backgrounds matching WaveIA theme */}
         <div className="absolute -top-[100px] left-1/2 -translate-x-1/2 w-[900px] h-[600px] bg-[radial-gradient(ellipse,rgba(14,165,233,0.12)_0%,transparent_70%)] pointer-events-none" />
         <div className="absolute inset-0 bg-[linear-gradient(rgba(14,165,233,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(14,165,233,0.04)_1px,transparent_1px)] bg-[size:60px_60px] [mask-image:radial-gradient(ellipse_80%_60%_at_50%_0%,black_40%,transparent_100%)] pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-6 lg:px-8 relative w-full">
-          <div className="text-center max-w-4xl mx-auto py-24 animate-hero-fade-up">
+          <div className="text-center max-w-4xl mx-auto py-12 md:py-24 animate-hero-fade-up">
             <div className="inline-flex items-center gap-2 bg-ocean/10 border border-ocean/25 rounded-full px-4 py-1.5 text-xs font-semibold text-ocean uppercase tracking-widest mb-7">
               <span className="w-1.5 h-1.5 bg-primary rounded-full animate-pulse-glow" />
               DÉVELOPPEMENT WEB SUR-MESURE
@@ -177,7 +181,6 @@ export function SiteVitrineLanding() {
 
           <div className="w-full overflow-hidden rounded-3xl border border-border mt-10">
             <style dangerouslySetInnerHTML={{__html: `
-              @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap');
               
               .eco-hub {
                 --bg: #05070a;

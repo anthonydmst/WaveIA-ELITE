@@ -1,4 +1,3 @@
-"use client";
 
 import { CheckCircle2, Calculator, Calendar, MousePointerClick, Lock, Bot, Sparkles, LineChart, Cpu, BarChart, MapPin, ArrowRight, Database } from "lucide-react";
 import { Link } from "next-view-transitions";
