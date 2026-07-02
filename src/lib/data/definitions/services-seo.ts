@@ -85,8 +85,8 @@ export const SEO_SERVICES: Service[] = [
   {
     slug: "local",
     silo: "seo",
-    title: "Référencement Local",
-    description: "Stratégie SEO Local pour PME. Soyez le premier sur 'Activité + Ville'.",
+    title: "Agence SEO Local | Devenez le n°1 sur Google Maps – Wave",
+    description: "Générez plus d'appels et de clients grâce au SEO Local. Fiche Google, avis, site web : l'agence Wave optimise votre visibilité locale. Audit gratuit.",
     hero: {
       title: "SEO Local",
       subtitle: "Soyez le Roi du Quartier",

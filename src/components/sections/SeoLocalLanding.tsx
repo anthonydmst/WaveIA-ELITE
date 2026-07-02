@@ -2,6 +2,16 @@
 
 import React, { useState, useEffect } from 'react';
 import { ArrowRight, Check, X, MapPin, Search, Bot, Zap, TrendingUp, Navigation, Radar } from 'lucide-react';
+import { SeoLocalProblemSection } from './local-seo/SeoLocalProblemSection';
+import { SeoLocalSolutionSection } from './local-seo/SeoLocalSolutionSection';
+import { SeoLocalMethodologySection } from './local-seo/SeoLocalMethodologySection';
+import { SeoLocalStatsSection } from './local-seo/SeoLocalStatsSection';
+import { SeoLocalProofSection } from './local-seo/SeoLocalProofSection';
+import { SeoLocalDiffSection } from './local-seo/SeoLocalDiffSection';
+import { SeoLocalOfferSection } from './local-seo/SeoLocalOfferSection';
+import { SeoLocalLexiconSection } from './local-seo/SeoLocalLexiconSection';
+import { SeoLocalFaqSection } from './local-seo/SeoLocalFaqSection';
+import { SeoLocalCtaSection } from './local-seo/SeoLocalCtaSection';
 
 export function SeoLocalLanding() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
@@ -43,46 +53,35 @@ export function SeoLocalLanding() {
           <div className="text-center max-w-4xl mx-auto py-12 md:py-24 animate-hero-fade-up">
             <div className="inline-flex items-center gap-2 bg-ocean/10 border border-ocean/25 rounded-full px-4 py-1.5 text-xs font-semibold text-ocean uppercase tracking-widest mb-7">
               <span className="w-1.5 h-1.5 bg-primary rounded-full animate-pulse-glow" />
-              Référencement Local augmenté par l'IA · Pays Basque
+              Offre : SEO Local pour TPE/PME
             </div>
             
             {/* User requested pas de dégradé dans les titres */}
             <h1 className="text-5xl md:text-6xl lg:text-[4.2rem] font-bold font-heading mb-6 text-foreground leading-[1.1] tracking-tight">
-              Dominez Google<br />
-              dans votre <em className="not-italic text-ocean relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:right-0 after:h-[2px] after:bg-gradient-to-r after:from-ocean after:to-transparent">zone locale</em><br />
-              grâce à l'IA.
+              Devenez l'entreprise que<br />
+              vos clients trouvent <em className="not-italic text-ocean relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:right-0 after:h-[2px] after:bg-gradient-to-r after:from-ocean after:to-transparent">en premier</em><br />
+              sur Google
             </h1>
             
             <p className="text-lg md:text-xl text-muted-foreground font-light max-w-2xl mx-auto mb-10 leading-relaxed">
-              Waveia combine SEO prédictif, automatisation intelligente et stratégie 360° pour vous rendre incontournable à Bayonne, Biarritz, Anglet et partout au Pays Basque — avant même que vos concurrents comprennent ce qui se passe.
+              Le <strong>SEO Local</strong> transforme les recherches "près de chez moi" en appels, devis et clients en magasin. Wave optimise votre présence Google pour capter ce trafic — sans dépenser un centime en publicité.
             </p>
             
+            <div className="mt-8 mb-12 flex justify-center gap-6 flex-wrap text-sm text-foreground">
+              <span className="flex items-center gap-2"><MapPin className="w-4 h-4 text-ocean" /> Top 3 du Pack Local = 75 % des clics</span>
+              <span className="hidden md:inline text-border">•</span>
+              <span className="flex items-center gap-2"><Check className="w-4 h-4 text-ocean" /> 92 % consultent les avis Google</span>
+              <span className="hidden md:inline text-border">•</span>
+              <span className="flex items-center gap-2"><Navigation className="w-4 h-4 text-ocean" /> 76 % visitent en magasin sous 24h</span>
+            </div>
+
             <div className="flex flex-wrap justify-center items-center gap-4">
               <a href="#contact" className="inline-flex items-center gap-2 bg-primary text-white font-heading font-bold text-[0.95rem] px-8 py-3.5 rounded-full hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(14,165,233,0.35)] transition-all">
-                Obtenir mon audit SEO gratuit <ArrowRight className="w-4 h-4" />
+                🎯 Recevoir mon audit SEO local gratuit <ArrowRight className="w-4 h-4 ml-1" />
               </a>
               <a href="#methode" className="inline-flex items-center gap-2 bg-transparent text-muted-foreground text-sm px-7 py-3.5 rounded-full border border-border hover:border-ocean hover:text-ocean transition-all">
-                Voir la méthode IA
+                Voir comment ça fonctionne ↓
               </a>
-            </div>
-            
-            <div className="mt-14 flex justify-center gap-8 md:gap-12 flex-wrap">
-              <div className="text-center">
-                <strong className="block font-heading text-3xl font-bold text-ocean">+380%</strong>
-                <span className="text-xs text-muted-foreground uppercase tracking-wider">Trafic généré</span>
-              </div>
-              <div className="text-center">
-                <strong className="block font-heading text-3xl font-bold text-ocean">3×</strong>
-                <span className="text-xs text-muted-foreground uppercase tracking-wider">Plus rapide</span>
-              </div>
-              <div className="text-center">
-                <strong className="block font-heading text-3xl font-bold text-ocean">Top 3</strong>
-                <span className="text-xs text-muted-foreground uppercase tracking-wider">Visé localement</span>
-              </div>
-              <div className="text-center">
-                <strong className="block font-heading text-3xl font-bold text-ocean">7+</strong>
-                <span className="text-xs text-muted-foreground uppercase tracking-wider">Villes couvertes</span>
-              </div>
             </div>
             
             <p className="mt-9 text-xs text-muted-foreground/70 tracking-wider">
@@ -91,6 +90,17 @@ export function SeoLocalLanding() {
           </div>
         </div>
       </section>
+
+      <SeoLocalProblemSection />
+      <SeoLocalSolutionSection />
+      <SeoLocalMethodologySection />
+      <SeoLocalStatsSection />
+      <SeoLocalProofSection />
+      <SeoLocalDiffSection />
+      <SeoLocalOfferSection />
+      <SeoLocalLexiconSection />
+      <SeoLocalFaqSection />
+      <SeoLocalCtaSection />
 
       {/* ─── CITIES STRIP ─── */}
       <div className="bg-background border-y border-border py-4 overflow-hidden flex">
