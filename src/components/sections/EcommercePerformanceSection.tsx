@@ -77,7 +77,7 @@ export function EcommercePerformanceSection() {
               </div>
               <div className="bg-background/50 border border-border/50 rounded-xl p-5">
                 <h5 className="font-heading font-bold text-foreground text-sm mb-2">Maillage Interne</h5>
-                <p className="text-muted-foreground text-sm leading-relaxed">Maximisez l&apos;efficacité de vos bases de données en lisant notre guide sur le <a href="#" className="text-ocean underline underline-offset-2 decoration-ocean/40 hover:decoration-ocean font-medium">CRM et Marketing Automation</a>.</p>
+                <p className="text-muted-foreground text-sm leading-relaxed">Nous structurons vos parcours emailing (CRM et Marketing Automation) pour maximiser l&apos;efficacité de vos bases de données.</p>
               </div>
             </div>
           </div>
