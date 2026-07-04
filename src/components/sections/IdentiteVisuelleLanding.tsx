@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { ArrowRight, Check, X, Palette, Image as ImageIcon, BookOpen, PenTool, Layout, Monitor } from 'lucide-react';
+import { LandingLeadForm } from '@/components/forms/LandingLeadForm';
 
 export function IdentiteVisuelleLanding() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
@@ -446,39 +447,16 @@ export function IdentiteVisuelleLanding() {
             <h3 className="font-heading text-xl font-bold text-foreground mb-2">Décrivez-nous votre projet branding</h3>
             <p className="text-sm text-muted-foreground mb-6">Précisez vos attentes visuelles, notre bureau créatif vous recontacte rapidement.</p>
             
-            <form className="space-y-4">
-               <div className="grid grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2">Prénom</label>
-                    <input type="text" placeholder="Alex" className="w-full bg-background border border-border rounded-lg px-4 py-3 text-sm text-foreground focus:border-ocean focus:outline-none transition-colors" />
-                  </div>
-                  <div>
-                    <label className="block text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2">Nom</label>
-                    <input type="text" placeholder="Dupont" className="w-full bg-background border border-border rounded-lg px-4 py-3 text-sm text-foreground focus:border-ocean focus:outline-none transition-colors" />
-                  </div>
-               </div>
-               <div>
-                  <label className="block text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2">Email professionnel</label>
-                  <input type="email" placeholder="alex@entreprise.fr" className="w-full bg-background border border-border rounded-lg px-4 py-3 text-sm text-foreground focus:border-ocean focus:outline-none transition-colors" />
-               </div>
-               <div>
-                  <label className="block text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2">Téléphone</label>
-                  <input type="tel" placeholder="06 00 00 00 00" className="w-full bg-background border border-border rounded-lg px-4 py-3 text-sm text-foreground focus:border-ocean focus:outline-none transition-colors" />
-               </div>
-               <div>
-                  <label className="block text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2">Besoins précis</label>
-                  <select className="w-full bg-background border border-border rounded-lg px-4 py-3 text-sm text-foreground focus:border-ocean focus:outline-none transition-colors">
-                     <option>Logo & Identité complète</option>
-                     <option>Refonte de marque existante</option>
-                     <option>Charte Graphique /UI Web seule</option>
-                     <option>Autre prestation créative</option>
-                  </select>
-               </div>
-               <button type="button" className="bg-primary text-white hover:shadow-[0_8px_32px_rgba(14,165,233,0.35)] w-full font-heading font-bold py-3.5 rounded-full mt-4 transition-transform hover:-translate-y-0.5">
-                  Demander un entretien créatif ✦
-               </button>
-               <p className="text-center text-xs text-muted-foreground/70 mt-2">Échange de pré-qualification 100% gratuit.</p>
-            </form>
+            <LandingLeadForm
+              formName="Identité Visuelle"
+              focusOptions={[
+                "Logo & Identité complète",
+                "Refonte de marque existante",
+                "Charte Graphique / UI Web seule",
+                "Autre prestation créative"
+              ]}
+              buttonText="Demander un entretien créatif"
+            />
           </div>
         </div>
       </section>

@@ -12,22 +12,14 @@ import { SeoLocalOfferSection } from './local-seo/SeoLocalOfferSection';
 import { SeoLocalLexiconSection } from './local-seo/SeoLocalLexiconSection';
 import { SeoLocalFaqSection } from './local-seo/SeoLocalFaqSection';
 import { SeoLocalCtaSection } from './local-seo/SeoLocalCtaSection';
+import { LandingLeadForm } from '@/components/forms/LandingLeadForm';
 
 export function SeoLocalLanding() {
-  const [openFaq, setOpenFaq] = useState<number | null>(null);
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
     setIsMounted(true);
   }, []);
-
-  const toggleFaq = (index: number) => {
-    if (openFaq === index) {
-      setOpenFaq(null);
-    } else {
-      setOpenFaq(index);
-    }
-  };
 
   return (
     <div className="w-full relative z-10 pt-20">
@@ -387,42 +379,6 @@ export function SeoLocalLanding() {
         </div>
       </section>
 
-      {/* ─── FAQ ─── */}
-      <section id="faq" className="py-24 bg-card border-t border-border">
-        <div className="max-w-4xl mx-auto px-6 lg:px-8">
-          <div className="max-w-3xl mb-14 text-center mx-auto">
-             <span className="inline-flex items-center justify-center gap-2 text-xs font-bold uppercase tracking-widest text-ocean mb-4">
-               Questions fréquentes
-            </span>
-            <h2 className="text-3xl md:text-5xl font-bold font-heading mb-4 text-foreground">Tout ce que vous voulez savoir<br />sur notre approche SEO local.</h2>
-          </div>
-          
-          <div className="space-y-3">
-            {[
-              { q: "En quoi le SEO local de Waveia est-il différent d'une agence classique ?", a: "Alors qu'une agence classique travaille de façon artisanale et linéaire, Waveia déploie des systèmes IA qui analysent votre marché local en temps réel, automatisent la production de contenu et détectent les opportunités avant vos concurrents. Des délais divisés par 3." },
-              { q: "Combien de temps avant de voir des résultats concrets ?", a: "Grâce à nos \"Quick Wins\" IA, vous observez des premières améliorations dès 4 à 8 semaines. Pour une domination stable sur l'ensemble de vos villes cibles au Pays Basque, comptez 3 à 5 mois." },
-              { q: "Travaillez-vous sur toutes les villes du Pays Basque simultanément ?", a: "Oui, c'est l'un de nos avantages clés. Notre architecture sémantique multi-villes (Bayonne, Biarritz, Anglet...) permet de construire une autorité locale croisée." },
-              { q: "Est-ce que l'IA remplace vraiment les humains dans votre processus ?", a: "Non — l'IA démultiplie la capacité et la précision de nos experts. L'IA s'occupe de l'analyse de masse et du monitoring ; l'humain s'occupe du sens, de la vision et de la relation client." },
-              { q: "Puis-je commencer avec un petit budget et faire évoluer ?", a: "Absolument. Notre formule DÉCOLLAGE est conçue pour les entreprises qui souhaitent valider la méthode avant de scaler. Vous basculez sur DOMINATION une fois les premiers résultats visibles." },
-              { q: "Quels outils et technologies utilisez-vous ?", a: "Nous combinons les standards professionnels (Search Console, SEMrush) avec nos propres pipelines IA propriétaires pour l'analyse prédictive et la génération de contenu." }
-            ].map((faq, i) => (
-              <div key={i} className="glass-card border border-border rounded-2xl overflow-hidden hover:border-ocean/30 transition-colors">
-                <button 
-                  onClick={() => toggleFaq(i)}
-                  className="w-full px-6 py-5 flex justify-between font-heading font-bold text-foreground text-left items-center group"
-                >
-                  <span className="text-[0.95rem]">{faq.q}</span>
-                  <span className={`text-ocean text-xl transition-transform duration-300 ${openFaq === i ? 'rotate-45' : 'group-hover:scale-110'}`}>+</span>
-                </button>
-                <div className={`px-6 text-sm text-muted-foreground leading-relaxed overflow-hidden transition-all duration-300 ${openFaq === i ? 'max-h-96 pb-5' : 'max-h-0'}`}>
-                  {faq.a}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* ─── CTA BAND ─── */}
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -478,54 +434,12 @@ export function SeoLocalLanding() {
           <div className="glass-card border border-border rounded-2xl p-8 relative overflow-hidden">
             <h3 className="font-heading text-xl font-bold text-foreground mb-2">Demandez votre audit gratuit</h3>
             <p className="text-sm text-muted-foreground mb-6">Complétez ce formulaire, notre équipe vous recontacte sous 24h.</p>
-            
-            <form className="space-y-4">
-               <div className="grid grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2">Prénom</label>
-                    <input type="text" placeholder="Jean" className="w-full bg-background border border-border rounded-lg px-4 py-3 text-sm text-foreground focus:border-ocean focus:outline-none transition-colors" />
-                  </div>
-                  <div>
-                    <label className="block text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2">Nom</label>
-                    <input type="text" placeholder="Dupont" className="w-full bg-background border border-border rounded-lg px-4 py-3 text-sm text-foreground focus:border-ocean focus:outline-none transition-colors" />
-                  </div>
-               </div>
-               <div className="grid grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2">Email</label>
-                    <input type="email" placeholder="jean@entreprise.fr" className="w-full bg-background border border-border rounded-lg px-4 py-3 text-sm text-foreground focus:border-ocean focus:outline-none transition-colors" />
-                  </div>
-                  <div>
-                    <label className="block text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2">Téléphone</label>
-                    <input type="tel" placeholder="06 00 00 00 00" className="w-full bg-background border border-border rounded-lg px-4 py-3 text-sm text-foreground focus:border-ocean focus:outline-none transition-colors" />
-                  </div>
-               </div>
-               <div>
-                  <label className="block text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2">Votre ville cible</label>
-                  <select className="w-full bg-background border border-border rounded-lg px-4 py-3 text-sm text-foreground focus:border-ocean focus:outline-none transition-colors appearance-none">
-                    <option value="">Sélectionnez une zone</option>
-                    <option>Bayonne</option>
-                    <option>Biarritz</option>
-                    <option>Anglet</option>
-                    <option>Bidart</option>
-                    <option>Hossegor</option>
-                    <option>Saint-Jean-de-Luz</option>
-                    <option>Boucau</option>
-                    <option>Tout le Pays Basque</option>
-                  </select>
-               </div>
-               <div>
-                  <label className="block text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2">URL de votre site</label>
-                  <input type="url" placeholder="https://votre-site.fr" className="w-full bg-background border border-border rounded-lg px-4 py-3 text-sm text-foreground focus:border-ocean focus:outline-none transition-colors" />
-               </div>
-               <div>
-                  <label className="block text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2">Votre message</label>
-                  <textarea placeholder="Décrivez votre activité et vos objectifs de visibilité locale…" className="w-full bg-background border border-border rounded-lg px-4 py-3 text-sm text-foreground focus:border-ocean focus:outline-none transition-colors min-h-[120px] resize-y"></textarea>
-               </div>
-               <button type="button" className="bg-primary text-white hover:shadow-[0_8px_32px_rgba(14,165,233,0.35)] w-full font-heading font-bold py-3.5 rounded-full mt-4 transition-transform hover:-translate-y-0.5">
-                  Envoyer ma demande →
-               </button>
-            </form>
+
+            <LandingLeadForm
+              formName="SEO Local"
+              focusOptions={["SEO Local / Fiche Google", "Pages géolocalisées multi-villes", "Netlinking local", "Autre"]}
+              buttonText="Envoyer ma demande"
+            />
           </div>
         </div>
       </section>

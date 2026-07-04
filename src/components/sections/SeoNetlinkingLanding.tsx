@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { ArrowRight, Check, X, Link as LinkIcon, Search, Bot, Zap, TrendingUp, ShieldCheck, Newspaper } from 'lucide-react';
+import { LandingLeadForm } from '@/components/forms/LandingLeadForm';
 
 export function SeoNetlinkingLanding() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
@@ -465,39 +466,11 @@ export function SeoNetlinkingLanding() {
             <h3 className="font-heading text-xl font-bold text-foreground mb-2">Demandez votre audit gratuit</h3>
             <p className="text-sm text-muted-foreground mb-6">Complétez ce formulaire, un expert de l'équipe vous contacte sous 24h.</p>
             
-            <form className="space-y-4">
-               <div className="grid grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2">Prénom</label>
-                    <input type="text" placeholder="Jean" className="w-full bg-background border border-border rounded-lg px-4 py-3 text-sm text-foreground focus:border-ocean focus:outline-none transition-colors" />
-                  </div>
-                  <div>
-                    <label className="block text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2">Nom</label>
-                    <input type="text" placeholder="Dupont" className="w-full bg-background border border-border rounded-lg px-4 py-3 text-sm text-foreground focus:border-ocean focus:outline-none transition-colors" />
-                  </div>
-               </div>
-               <div className="grid grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2">Email pro</label>
-                    <input type="email" placeholder="jean@entreprise.fr" className="w-full bg-background border border-border rounded-lg px-4 py-3 text-sm text-foreground focus:border-ocean focus:outline-none transition-colors" />
-                  </div>
-                  <div>
-                    <label className="block text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2">Téléphone</label>
-                    <input type="tel" placeholder="06 00 00 00 00" className="w-full bg-background border border-border rounded-lg px-4 py-3 text-sm text-foreground focus:border-ocean focus:outline-none transition-colors" />
-                  </div>
-               </div>
-               <div>
-                  <label className="block text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2">URL de votre site web à auditer</label>
-                  <input type="url" placeholder="https://votre-site.fr" className="w-full bg-background border border-border rounded-lg px-4 py-3 text-sm text-foreground focus:border-ocean focus:outline-none transition-colors" />
-               </div>
-               <div>
-                  <label className="block text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2">Vos enjeux (optionnel)</label>
-                  <textarea placeholder="Décrivez la ou les pages que vous aimeriez pousser..." className="w-full bg-background border border-border rounded-lg px-4 py-3 text-sm text-foreground focus:border-ocean focus:outline-none transition-colors min-h-[120px] resize-y"></textarea>
-               </div>
-               <button type="button" className="bg-primary text-white hover:shadow-[0_8px_32px_rgba(14,165,233,0.35)] w-full font-heading font-bold py-3.5 rounded-full mt-4 transition-transform hover:-translate-y-0.5">
-                  Lancer la procédure →
-               </button>
-            </form>
+            <LandingLeadForm
+              formName="Netlinking"
+              focusOptions={["Netlinking / Autorité de domaine", "Audit de profil de liens", "Stratégie de contenu à pousser", "Autre"]}
+              buttonText="Lancer la procédure"
+            />
           </div>
         </div>
       </section>

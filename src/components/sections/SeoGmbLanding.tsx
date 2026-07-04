@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { ArrowRight, Check, X, MapPin, Search, Bot, Zap, TrendingUp, Star, Camera, BarChart3, Navigation, PenTool, LayoutDashboard, Radar } from 'lucide-react';
+import { LandingLeadForm } from '@/components/forms/LandingLeadForm';
 
 export function SeoGmbLanding() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
@@ -593,49 +594,11 @@ export function SeoGmbLanding() {
           <div className="glass-card border border-border rounded-2xl p-8 relative overflow-hidden">
             <h3 className="font-heading text-xl font-bold text-foreground mb-6">Demandez votre devis gratuit</h3>
             
-            <form className="space-y-4">
-               <div className="grid grid-cols-2 gap-4">
-                  <div>
-                    <input type="text" placeholder="Prénom" className="w-full bg-background border border-border rounded-lg px-4 py-3 text-sm text-foreground focus:border-ocean focus:outline-none transition-colors" />
-                  </div>
-                  <div>
-                    <input type="text" placeholder="Nom" className="w-full bg-background border border-border rounded-lg px-4 py-3 text-sm text-foreground focus:border-ocean focus:outline-none transition-colors" />
-                  </div>
-               </div>
-               <div className="grid grid-cols-2 gap-4">
-                  <div>
-                    <input type="email" placeholder="Email professionnel" className="w-full bg-background border border-border rounded-lg px-4 py-3 text-sm text-foreground focus:border-ocean focus:outline-none transition-colors" />
-                  </div>
-                  <div>
-                    <input type="tel" placeholder="Téléphone" className="w-full bg-background border border-border rounded-lg px-4 py-3 text-sm text-foreground focus:border-ocean focus:outline-none transition-colors" />
-                  </div>
-               </div>
-               <div>
-                  <input type="text" placeholder="Nom de l'entreprise" className="w-full bg-background border border-border rounded-lg px-4 py-3 text-sm text-foreground focus:border-ocean focus:outline-none transition-colors" />
-               </div>
-               <div>
-                  <input type="url" placeholder="URL Google Maps (optionnel)" className="w-full bg-background border border-border rounded-lg px-4 py-3 text-sm text-foreground focus:border-ocean focus:outline-none transition-colors" />
-               </div>
-               <div>
-                  <select className="w-full bg-background border border-border rounded-lg px-4 py-3 text-sm text-foreground focus:border-ocean focus:outline-none transition-colors appearance-none text-muted-foreground">
-                    <option value="" disabled selected>Ville concernée</option>
-                    <option value="bayonne">Bayonne</option>
-                    <option value="biarritz">Biarritz</option>
-                    <option value="anglet">Anglet</option>
-                    <option value="bidart">Bidart</option>
-                    <option value="hossegor">Hossegor</option>
-                    <option value="stjean">Saint-Jean-de-Luz</option>
-                    <option value="boucau">Boucau</option>
-                    <option value="autre">Autre</option>
-                  </select>
-               </div>
-               <div>
-                  <textarea placeholder="Décrivez votre activité et vos objectifs GMB…" className="w-full bg-background border border-border rounded-lg px-4 py-3 text-sm text-foreground focus:border-ocean focus:outline-none transition-colors min-h-[100px] resize-y"></textarea>
-               </div>
-               <button type="button" className="bg-primary text-white hover:shadow-[0_8px_32px_rgba(14,165,233,0.35)] w-full font-heading font-bold py-3.5 rounded-full mt-4 transition-transform hover:-translate-y-0.5">
-                  Envoyer ma demande →
-               </button>
-            </form>
+            <LandingLeadForm
+              formName="Google Business Profile"
+              focusOptions={["Optimisation fiche Google Business Profile", "Stratégie d'avis clients", "Pages géolocalisées multi-villes", "Autre"]}
+              buttonText="Envoyer ma demande"
+            />
           </div>
         </div>
       </section>

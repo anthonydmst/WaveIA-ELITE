@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { ArrowRight, Check, X, Video, Film, PlayCircle, Users, MessagesSquare, Tv } from 'lucide-react';
+import { LandingLeadForm } from '@/components/forms/LandingLeadForm';
 
 export function VideoLanding() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
@@ -444,39 +445,16 @@ export function VideoLanding() {
             <h3 className="font-heading text-xl font-bold text-foreground mb-2">Décrivez votre enjeu visuel</h3>
             <p className="text-sm text-muted-foreground mb-6">Briefez notre direction, nous dimensionnerons une équipe en fonction de l'échelle du projet.</p>
             
-            <form className="space-y-4">
-               <div className="grid grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2">Prénom</label>
-                    <input type="text" placeholder="Sarah" className="w-full bg-background border border-border rounded-lg px-4 py-3 text-sm text-foreground focus:border-ocean focus:outline-none transition-colors" />
-                  </div>
-                  <div>
-                    <label className="block text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2">Nom</label>
-                    <input type="text" placeholder="Lenoir" className="w-full bg-background border border-border rounded-lg px-4 py-3 text-sm text-foreground focus:border-ocean focus:outline-none transition-colors" />
-                  </div>
-               </div>
-               <div>
-                  <label className="block text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2">Email professionnel</label>
-                  <input type="email" placeholder="sarah@startup.fr" className="w-full bg-background border border-border rounded-lg px-4 py-3 text-sm text-foreground focus:border-ocean focus:outline-none transition-colors" />
-               </div>
-               <div>
-                  <label className="block text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2">Téléphone</label>
-                  <input type="tel" placeholder="06 00 00 00 00" className="w-full bg-background border border-border rounded-lg px-4 py-3 text-sm text-foreground focus:border-ocean focus:outline-none transition-colors" />
-               </div>
-               <div>
-                  <label className="block text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2">Principal Focus Stratégique</label>
-                  <select className="w-full bg-background border border-border rounded-lg px-4 py-3 text-sm text-foreground focus:border-ocean focus:outline-none transition-colors">
-                     <option>Pack UGC & Snack Content pour Publicité Ads</option>
-                     <option>Explication pédagogique 2D (Motion Design)</option>
-                     <option>Création pure d'Interviews / Études de cas</option>
-                     <option>Reportage Vidéo Corporate (Marque Employeur)</option>
-                  </select>
-               </div>
-               <button type="button" className="bg-primary text-white hover:shadow-[0_8px_32px_rgba(14,165,233,0.35)] w-full font-heading font-bold py-3.5 rounded-full mt-4 transition-transform hover:-translate-y-0.5">
-                  Réserver un cadrage Vidéo ✦
-               </button>
-               <p className="text-center text-xs text-muted-foreground/70 mt-2">Étude de faisabilité et conseils 100% gratuits.</p>
-            </form>
+            <LandingLeadForm
+              formName="Vidéo"
+              focusOptions={[
+                "Pack UGC & Snack Content pour Publicité Ads",
+                "Explication pédagogique 2D (Motion Design)",
+                "Création pure d'Interviews / Études de cas",
+                "Reportage Vidéo Corporate (Marque Employeur)"
+              ]}
+              buttonText="Réserver un cadrage Vidéo"
+            />
           </div>
         </div>
       </section>

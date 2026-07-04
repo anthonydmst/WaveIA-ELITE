@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { ArrowRight, Check, X, Camera, Box, UserCheck, Briefcase, Building2, Image as ImageIcon, Sparkles } from 'lucide-react';
+import { LandingLeadForm } from '@/components/forms/LandingLeadForm';
 
 export function PhotographieLanding() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
@@ -443,39 +444,16 @@ export function PhotographieLanding() {
             <h3 className="font-heading text-xl font-bold text-foreground mb-2">Décrivez-nous votre shooting photo</h3>
             <p className="text-sm text-muted-foreground mb-6">Soyez précis sur la volumétrie (nombre d'articles ou d'employés) et la localisation.</p>
             
-            <form className="space-y-4">
-               <div className="grid grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2">Prénom</label>
-                    <input type="text" placeholder="Eric" className="w-full bg-background border border-border rounded-lg px-4 py-3 text-sm text-foreground focus:border-ocean focus:outline-none transition-colors" />
-                  </div>
-                  <div>
-                    <label className="block text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2">Nom</label>
-                    <input type="text" placeholder="Martin" className="w-full bg-background border border-border rounded-lg px-4 py-3 text-sm text-foreground focus:border-ocean focus:outline-none transition-colors" />
-                  </div>
-               </div>
-               <div>
-                  <label className="block text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2">Email professionnel</label>
-                  <input type="email" placeholder="eric@entreprise.fr" className="w-full bg-background border border-border rounded-lg px-4 py-3 text-sm text-foreground focus:border-ocean focus:outline-none transition-colors" />
-               </div>
-               <div>
-                  <label className="block text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2">Téléphone</label>
-                  <input type="tel" placeholder="06 00 00 00 00" className="w-full bg-background border border-border rounded-lg px-4 py-3 text-sm text-foreground focus:border-ocean focus:outline-none transition-colors" />
-               </div>
-               <div>
-                  <label className="block text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2">Type de prestation ciblée</label>
-                  <select className="w-full bg-background border border-border rounded-lg px-4 py-3 text-sm text-foreground focus:border-ocean focus:outline-none transition-colors">
-                     <option>Packshot / Fiches Produits E-commerce</option>
-                     <option>Portraits Équipe & Trombinoscope</option>
-                     <option>Reportage Métier Instutionnel</option>
-                     <option>Architecture intérieure / extérieure</option>
-                  </select>
-               </div>
-               <button type="button" className="bg-primary text-white hover:shadow-[0_8px_32px_rgba(14,165,233,0.35)] w-full font-heading font-bold py-3.5 rounded-full mt-4 transition-transform hover:-translate-y-0.5">
-                  Organiser ma Prise de vue ✦
-               </button>
-               <p className="text-center text-xs text-muted-foreground/70 mt-2">Échange logistique et estimation 100% gratuits.</p>
-            </form>
+            <LandingLeadForm
+              formName="Photographie"
+              focusOptions={[
+                "Packshot / Fiches Produits E-commerce",
+                "Portraits Équipe & Trombinoscope",
+                "Reportage Métier Institutionnel",
+                "Architecture intérieure / extérieure"
+              ]}
+              buttonText="Organiser ma Prise de vue"
+            />
           </div>
         </div>
       </section>

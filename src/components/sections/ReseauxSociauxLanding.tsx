@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { ArrowRight, Check, X, Share2, MessageCircle, BarChart, Users, Camera, TrendingUp } from 'lucide-react';
+import { LandingLeadForm } from '@/components/forms/LandingLeadForm';
 
 export function ReseauxSociauxLanding() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
@@ -444,39 +445,16 @@ export function ReseauxSociauxLanding() {
             <h3 className="font-heading text-xl font-bold text-foreground mb-2">Lancez votre stratégie Social Media</h3>
             <p className="text-sm text-muted-foreground mb-6">Indiquez-nous votre niveau d'urgence, notre trafic manager vous contacte rapidement.</p>
             
-            <form className="space-y-4">
-               <div className="grid grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2">Prénom</label>
-                    <input type="text" placeholder="Sophie" className="w-full bg-background border border-border rounded-lg px-4 py-3 text-sm text-foreground focus:border-ocean focus:outline-none transition-colors" />
-                  </div>
-                  <div>
-                    <label className="block text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2">Nom</label>
-                    <input type="text" placeholder="Martinez" className="w-full bg-background border border-border rounded-lg px-4 py-3 text-sm text-foreground focus:border-ocean focus:outline-none transition-colors" />
-                  </div>
-               </div>
-               <div>
-                  <label className="block text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2">Email professionnel</label>
-                  <input type="email" placeholder="sophie@entreprise.fr" className="w-full bg-background border border-border rounded-lg px-4 py-3 text-sm text-foreground focus:border-ocean focus:outline-none transition-colors" />
-               </div>
-               <div>
-                  <label className="block text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2">Téléphone</label>
-                  <input type="tel" placeholder="06 00 00 00 00" className="w-full bg-background border border-border rounded-lg px-4 py-3 text-sm text-foreground focus:border-ocean focus:outline-none transition-colors" />
-               </div>
-               <div>
-                  <label className="block text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2">Objectifs priorisés</label>
-                  <select className="w-full bg-background border border-border rounded-lg px-4 py-3 text-sm text-foreground focus:border-ocean focus:outline-none transition-colors">
-                     <option>Lancement de campagnes Social Ads</option>
-                     <option>Création de ligne éditoriale (Content)</option>
-                     <option>Stratégie LinkedIn B2B</option>
-                     <option>Gestion complète & Modération</option>
-                  </select>
-               </div>
-               <button type="button" className="bg-primary text-white hover:shadow-[0_8px_32px_rgba(14,165,233,0.35)] w-full font-heading font-bold py-3.5 rounded-full mt-4 transition-transform hover:-translate-y-0.5">
-                  Demander un Audit & Preco ✦
-               </button>
-               <p className="text-center text-xs text-muted-foreground/70 mt-2">Échange et estimation 100% gratuits.</p>
-            </form>
+            <LandingLeadForm
+              formName="Réseaux Sociaux"
+              focusOptions={[
+                "Lancement de campagnes Social Ads",
+                "Création de ligne éditoriale (Content)",
+                "Stratégie LinkedIn B2B",
+                "Gestion complète & Modération"
+              ]}
+              buttonText="Demander un Audit & Preco"
+            />
           </div>
         </div>
       </section>
