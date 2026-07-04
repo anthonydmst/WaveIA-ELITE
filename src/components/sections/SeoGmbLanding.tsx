@@ -206,16 +206,16 @@ export function SeoGmbLanding() {
               <div className="absolute top-5 -right-9 bg-primary text-white font-heading text-[0.65rem] font-bold tracking-[0.1em] px-9 py-1 rotate-45">
                 POPULAIRE
               </div>
-              <h3 className="text-xl font-bold font-heading text-foreground mb-2">Création & Optimisation GMB</h3>
-              
+              <h3 className="text-xl font-bold font-heading text-foreground mb-2">Setup GMB</h3>
+
               <div className="flex items-baseline gap-1.5 mb-2 mt-4">
                 <span className="text-2xl font-bold text-muted-foreground">€</span>
-                <strong className="text-4xl font-extrabold font-heading text-foreground">290</strong>
+                <strong className="text-4xl font-extrabold font-heading text-foreground">190</strong>
               </div>
-              <div className="text-sm text-muted-foreground mb-7">paiement unique · livraison sous 5 jours</div>
-              
+              <div className="text-sm text-muted-foreground mb-7">paiement unique</div>
+
               <ul className="space-y-4 mb-9">
-                {['Audit complet de visibilité locale', 'Création ou refonte de la fiche', 'Optimisation SEO local pilotée par IA', 'Rédaction des descriptions & services', 'Analyse concurrentielle Pays Basque', 'Sélection des catégories stratégiques', 'Rapport de lancement inclus'].map((f,i) => (
+                {['Création Fiche Google Business', 'Validation Propriétaire', 'Optimisation Infos & Catégories', 'Intégration Photos HD'].map((f,i) => (
                   <li key={i} className="flex items-start gap-3 text-sm text-foreground font-medium">
                     <Check className="w-4 h-4 text-ocean shrink-0 mt-0.5" />
                     <span>{f}</span>
@@ -229,16 +229,16 @@ export function SeoGmbLanding() {
 
             {/* GESTION MENSUELLE */}
             <div className="glass-card p-10 hover:-translate-y-1 transition-transform animate-in fade-in slide-in-from-bottom-4 delay-100">
-              <h3 className="text-xl font-bold font-heading text-foreground mb-2">Gestion Mensuelle GMB</h3>
-              
+              <h3 className="text-xl font-bold font-heading text-foreground mb-2">Domination Locale</h3>
+
               <div className="flex items-baseline gap-1.5 mb-2 mt-4">
                 <span className="text-2xl font-bold text-muted-foreground">€</span>
-                <strong className="text-4xl font-extrabold font-heading text-foreground">79</strong>
+                <strong className="text-4xl font-extrabold font-heading text-foreground">390</strong>
               </div>
-              <p className="text-sm text-muted-foreground mb-7">/mois · engagement 6 mois minimum</p>
-              
+              <p className="text-sm text-muted-foreground mb-7">/mois</p>
+
               <ul className="space-y-4 mb-9">
-                {['Publications hebdomadaires IA', 'Gestion & réponse aux avis clients', 'Mise à jour continue des infos', 'Veille concurrentielle mensuelle', 'Ajustements produits & services', 'Reporting trimestriel détaillé', 'Conseils stratégiques personnalisés'].map((f,i) => (
+                {['Gestion des avis clients', 'Posts Google Business Hebdo', 'Inscriptions Annuaires Locaux', 'Rapport de visibilité maps'].map((f,i) => (
                   <li key={i} className="flex items-start gap-3 text-sm text-muted-foreground">
                     <Check className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
                     <span>{f}</span>

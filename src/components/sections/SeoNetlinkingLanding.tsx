@@ -150,18 +150,18 @@ export function SeoNetlinkingLanding() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            {/* FONDATIONS */}
+            {/* PACK ACCÉLÉRATION */}
             <div className="glass-card p-10 hover:-translate-y-1 transition-transform animate-in fade-in slide-in-from-bottom-4">
-              <div className="text-xs uppercase tracking-widest text-ocean font-semibold mb-3">Formule FONDATIONS</div>
-              <p className="text-sm text-muted-foreground mb-7">Initier l'autorité et débloquer vos premières requêtes.</p>
-              
+              <div className="text-xs uppercase tracking-widest text-ocean font-semibold mb-3">Pack Accélération</div>
+              <p className="text-sm text-muted-foreground mb-7">Pour un site existant qui stagne. Débloquez la croissance.</p>
+
               <div className="flex items-baseline gap-1.5 mb-8">
-                <strong className="text-4xl font-extrabold font-heading text-foreground">790 €</strong>
+                <strong className="text-4xl font-extrabold font-heading text-foreground">590 €</strong>
                 <span className="text-sm text-muted-foreground">/ mois</span>
               </div>
-              
+
               <ul className="space-y-4 mb-9">
-                {['Audit complet du profil de liens existant', 'Identification du gap d\'autorité concurrentiel', 'Sélection IA de spots thématiques pertinents', 'Acquisition mensuelle de liens garantis', 'Rédaction VIP des articles sponsorisés', 'Stratégie d\'ancrage naturel'].map((f,i) => (
+                {['10 Backlinks Puissants', 'Sites à Trafic Réel (DA 20-30)', 'Rédaction Premium (800 mots)', 'Optimisation On-Page incluse', 'Audit Sémantique & Technique', 'Planning éditorial mensuel', 'Support prioritaire 7/7', 'Suivi ROI & Conversions'].map((f,i) => (
                   <li key={i} className="flex items-start gap-3 text-sm text-muted-foreground">
                     <Check className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
                     <span>{f}</span>
@@ -169,25 +169,25 @@ export function SeoNetlinkingLanding() {
                 ))}
               </ul>
               <a href="#contact" className="flex items-center justify-center gap-2 bg-transparent border border-border text-foreground font-heading font-bold text-[0.95rem] py-3.5 rounded-full hover:border-ocean hover:text-ocean transition-all w-full mt-auto">
-                Démarrer →
+                Accélérer mes ventes →
               </a>
             </div>
 
-            {/* PUISSANCE */}
+            {/* PACK DOMINANCE */}
             <div className="glass-card p-10 hover:-translate-y-1 transition-transform border-ocean/40 bg-[linear-gradient(160deg,rgba(14,165,233,0.07)_0%,var(--glass-bg)_60%)] relative overflow-hidden animate-in fade-in slide-in-from-bottom-4 delay-100">
                <div className="absolute top-5 -right-9 bg-primary text-white font-heading text-[0.65rem] font-bold tracking-[0.1em] px-9 py-1 rotate-45">
                 RECOMMANDÉ
               </div>
-              <div className="text-xs uppercase tracking-widest text-ocean font-semibold mb-3">Formule PUISSANCE</div>
-              <p className="text-sm text-muted-foreground mb-7">L'arsenal massif pour dominer les SERP et construire un E-E-A-T invincible.</p>
-              
+              <div className="text-xs uppercase tracking-widest text-ocean font-semibold mb-3">Pack Dominance</div>
+              <p className="text-sm text-muted-foreground mb-7">Pour les leaders et le E-commerce. Visibilité maximale.</p>
+
               <div className="flex items-baseline gap-1.5 mb-8">
-                <strong className="text-4xl font-extrabold font-heading text-foreground">1 490 €</strong>
+                <strong className="text-4xl font-extrabold font-heading text-foreground">1 190 €</strong>
                 <span className="text-sm text-muted-foreground">/ mois</span>
               </div>
-              
+
               <ul className="space-y-4 mb-9">
-                {['Tout ce qu\'il y a dans FONDATIONS', 'Acquisition agressive de backlinks Premium', 'Liens positionnés sur des gros Médias', 'Relations presse digitales (Digital PR)', 'Stratégie netlinking multi-silos', 'Monitoring anti-pénalité algorithmique', 'Suivi de l\'évolution TrustFlow mensuel', 'Accompagnement expert dédié'].map((f,i) => (
+                {['15 Backlinks Haute Autorité (DA 40+)', 'Partenariats Sites Presse / Médias', 'Stratégie de Contenu \'Cluster\'', 'Netlinking International (Option)', 'Optimisation UX/CRO & A/B Testing', 'Accès Dashboard Live', 'Réunions stratégiques mensuelles', 'Protection Anti-SEO Négatif'].map((f,i) => (
                   <li key={i} className="flex items-start gap-3 text-foreground text-sm font-medium">
                     <Check className="w-4 h-4 text-ocean shrink-0 mt-0.5" />
                     <span>{f}</span>
@@ -195,7 +195,7 @@ export function SeoNetlinkingLanding() {
                 ))}
               </ul>
               <a href="#contact" className="flex items-center justify-center gap-2 bg-primary text-white font-heading font-bold text-[0.95rem] py-3.5 rounded-full hover:shadow-[0_8px_32px_rgba(14,165,233,0.35)] transition-all w-full">
-                Choisir PUISSANCE →
+                Dominer Google →
               </a>
             </div>
           </div>

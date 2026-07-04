@@ -155,18 +155,18 @@ export function SeoLocalLanding() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            {/* DÉCOLLAGE */}
+            {/* SETUP GMB */}
             <div className="glass-card p-10 hover:-translate-y-1 transition-transform animate-in fade-in slide-in-from-bottom-4">
-              <div className="text-xs uppercase tracking-widest text-ocean font-semibold mb-3">Formule DÉCOLLAGE</div>
-              <p className="text-sm text-muted-foreground mb-7">L'entrée en matière pour conquérir votre visibilité locale.</p>
-              
+              <div className="text-xs uppercase tracking-widest text-ocean font-semibold mb-3">Setup GMB</div>
+              <p className="text-sm text-muted-foreground mb-7">Création et optimisation fiche.</p>
+
               <div className="flex items-baseline gap-1.5 mb-8">
-                <strong className="text-4xl font-extrabold font-heading text-foreground">590 €</strong>
-                <span className="text-sm text-muted-foreground">/ mois</span>
+                <strong className="text-4xl font-extrabold font-heading text-foreground">190 €</strong>
+                <span className="text-sm text-muted-foreground">paiement unique</span>
               </div>
-              
+
               <ul className="space-y-4 mb-9">
-                {['Audit technique IA complet', 'Optimisation fiche Google Business Profile', 'Recherche de mots-clés locaux "Quick Wins"', '4 contenus SEO stratégiques / mois', 'Optimisation pages géolocalisées (2 villes)', 'Rapport mensuel de performance'].map((f,i) => (
+                {['Création Fiche Google Business', 'Validation Propriétaire', 'Optimisation Infos & Catégories', 'Intégration Photos HD'].map((f,i) => (
                   <li key={i} className="flex items-start gap-3 text-sm text-muted-foreground">
                     <Check className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
                     <span>{f}</span>
@@ -174,25 +174,25 @@ export function SeoLocalLanding() {
                 ))}
               </ul>
               <a href="#contact" className="flex items-center justify-center gap-2 bg-transparent border border-border text-foreground font-heading font-bold text-[0.95rem] py-3.5 rounded-full hover:border-ocean hover:text-ocean transition-all w-full mt-auto">
-                Démarrer →
+                Être visible localement →
               </a>
             </div>
 
-            {/* DOMINATION */}
+            {/* DOMINATION LOCALE */}
             <div className="glass-card p-10 hover:-translate-y-1 transition-transform border-ocean/40 bg-[linear-gradient(160deg,rgba(14,165,233,0.07)_0%,var(--glass-bg)_60%)] relative overflow-hidden animate-in fade-in slide-in-from-bottom-4 delay-100">
                <div className="absolute top-5 -right-9 bg-primary text-white font-heading text-[0.65rem] font-bold tracking-[0.1em] px-9 py-1 rotate-45">
                 RECOMMANDÉ
               </div>
-              <div className="text-xs uppercase tracking-widest text-ocean font-semibold mb-3">Formule DOMINATION</div>
-              <p className="text-sm text-muted-foreground mb-7">L'arsenal complet pour écraser la concurrence locale au Pays Basque.</p>
-              
+              <div className="text-xs uppercase tracking-widest text-ocean font-semibold mb-3">Domination Locale</div>
+              <p className="text-sm text-muted-foreground mb-7">Soyez le n°1 dans votre ville.</p>
+
               <div className="flex items-baseline gap-1.5 mb-8">
-                <strong className="text-4xl font-extrabold font-heading text-foreground">1 190 €</strong>
+                <strong className="text-4xl font-extrabold font-heading text-foreground">390 €</strong>
                 <span className="text-sm text-muted-foreground">/ mois</span>
               </div>
-              
+
               <ul className="space-y-4 mb-9">
-                {['Tout ce qu\'il y a dans DÉCOLLAGE', '12 contenus stratégiques / mois', 'Netlinking IA & acquisition d\'autorité', 'Couverture multi-villes (tout le Pays Basque)', 'Optimisation taux de conversion (CRO)', 'Automatisations de notoriété locale', 'Veille concurrentielle IA en temps réel', 'Accompagnement prioritaire'].map((f,i) => (
+                {['Gestion des avis clients', 'Posts Google Business Hebdo', 'Inscriptions Annuaires Locaux', 'Rapport de visibilité maps'].map((f,i) => (
                   <li key={i} className="flex items-start gap-3 text-foreground text-sm font-medium">
                     <Check className="w-4 h-4 text-ocean shrink-0 mt-0.5" />
                     <span>{f}</span>
@@ -200,7 +200,7 @@ export function SeoLocalLanding() {
                 ))}
               </ul>
               <a href="#contact" className="flex items-center justify-center gap-2 bg-primary text-white font-heading font-bold text-[0.95rem] py-3.5 rounded-full hover:shadow-[0_8px_32px_rgba(14,165,233,0.35)] transition-all w-full">
-                Choisir DOMINATION →
+                Dominer ma ville →
               </a>
             </div>
           </div>
