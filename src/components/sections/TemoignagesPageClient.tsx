@@ -1,10 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import { Star, Quote, TrendingUp, Users, MapPin, Award } from "lucide-react";
+import { Star, Quote, TrendingUp, Users, MapPin } from "lucide-react";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { AgencyStatsBlock } from "@/components/templates/AgencyStatsBlock";
-import { AGENCY_TESTIMONIALS, AGENCY_STATS } from "@/lib/data";
+import { AGENCY_TESTIMONIALS, AGENCY_STATS, AGENCY_PROJECT_COUNT } from "@/lib/data";
 
 // Unified testimonial interface
 interface Testimonial {
@@ -18,54 +18,15 @@ interface Testimonial {
   image?: string;
 }
 
-// Extended testimonials with more details
-const allTestimonials: Testimonial[] = [
-  ...AGENCY_TESTIMONIALS.map(t => ({
-    ...t,
-    city: undefined,
-    image: undefined,
-  })),
-  {
-    quote: "Un site à l'image de notre établissement : élégant et efficace. Les réservations en ligne ont augmenté de 60%.",
-    author: "Jean-Pierre Lacoste",
-    role: "Directeur",
-    company: "Hôtel du Phare",
-    city: "Biarritz",
-    rating: 5,
-    results: "+60% réservations",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face"
-  },
-  {
-    quote: "Leur connaissance du marché local fait toute la différence. Notre visibilité sur Bayonne a explosé.",
-    author: "Marie Etcheverry",
-    role: "Gérante",
-    company: "Maison Basque",
-    city: "Bayonne",
-    rating: 5,
-    results: "Page 1 Google",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=face"
-  },
-  {
-    quote: "Site trilingue parfait pour notre clientèle internationale. L'équipe a parfaitement compris nos besoins.",
-    author: "Thomas Aguirre",
-    role: "Chef",
-    company: "Restaurant Kaiku",
-    city: "Saint-Jean-de-Luz",
-    rating: 5,
-    results: "Clientèle internationale +40%",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face"
-  },
-  {
-    quote: "Notre e-commerce piment AOP livre maintenant dans toute la France. CA multiplié par 3 !",
-    author: "Beñat Bipertegia",
-    role: "Producteur",
-    company: "Piment d'Espelette AOP",
-    city: "Espelette",
-    rating: 5,
-    results: "CA x3",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face"
-  },
-];
+// Previously hardcoded 4 additional fabricated testimonials here (fake authors
+// reused, with contradictory details, elsewhere in the codebase). Removed:
+// only AGENCY_TESTIMONIALS (real, client-approved quotes once populated) feeds
+// this page now.
+const allTestimonials: Testimonial[] = AGENCY_TESTIMONIALS.map((t) => ({
+  ...t,
+  city: undefined,
+  image: undefined,
+}));
 
 export function TemoignagesPageClient() {
   return (
@@ -100,26 +61,10 @@ export function TemoignagesPageClient() {
             className="flex flex-wrap justify-center gap-8 mt-12 animate-appear"
             style={{ animationDelay: '300ms' }}
           >
-            <div className="flex items-center gap-3">
-              <div className="flex">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                ))}
-              </div>
-              <span className="font-bold">5.0/5</span>
-              <span className="text-muted-foreground text-sm">sur Google</span>
-            </div>
-            <div className="h-6 w-px bg-foreground/10" />
             <div className="flex items-center gap-2">
               <Users className="w-5 h-5 text-ocean" />
-              <span className="font-bold">150+</span>
+              <span className="font-bold">{AGENCY_PROJECT_COUNT}+</span>
               <span className="text-muted-foreground text-sm">projets livrés</span>
-            </div>
-            <div className="h-6 w-px bg-foreground/10" />
-            <div className="flex items-center gap-2">
-              <TrendingUp className="w-5 h-5 text-ocean" />
-              <span className="font-bold">98%</span>
-              <span className="text-muted-foreground text-sm">satisfaction</span>
             </div>
           </div>
         </div>
@@ -128,6 +73,14 @@ export function TemoignagesPageClient() {
       {/* Testimonials Grid */}
       <section className="relative py-20 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          {allTestimonials.length === 0 ? (
+            <div className="text-center max-w-xl mx-auto py-12">
+              <Quote className="w-10 h-10 text-ocean/40 mx-auto mb-4" />
+              <p className="text-lg text-muted-foreground">
+                Nous rassemblons les retours de nos premiers clients. Les témoignages seront publiés ici dès qu&apos;ils seront disponibles.
+              </p>
+            </div>
+          ) : (
           <div className="grid md:grid-cols-2 gap-8">
             {allTestimonials.map((testimonial, index) => (
               <div
@@ -207,44 +160,15 @@ export function TemoignagesPageClient() {
               </div>
             ))}
           </div>
+          )}
         </div>
       </section>
 
       {/* Stats Section */}
-      <AgencyStatsBlock 
+      <AgencyStatsBlock
         title={AGENCY_STATS.title}
         metrics={AGENCY_STATS.metrics}
       />
-
-      {/* Featured Review */}
-      <section className="relative py-20 lg:py-32">
-        <div className="max-w-4xl mx-auto px-6 lg:px-8">
-          <div
-            className="relative bg-card/50 backdrop-blur-sm border border-border rounded-3xl p-12 text-center overflow-hidden animate-scale-in"
-          >
-            {/* Background Glows */}
-            <div className="absolute -top-20 -left-20 w-60 h-60 bg-ocean/10 blur-[100px] rounded-full" />
-            <div className="absolute -bottom-20 -right-20 w-60 h-60 bg-accent/10 blur-[100px] rounded-full" />
-            
-            <div className="relative">
-              <Award className="w-16 h-16 mx-auto text-ocean mb-6" />
-              <div className="flex justify-center gap-1 mb-6">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-8 h-8 fill-yellow-400 text-yellow-400" />
-                ))}
-              </div>
-              <blockquote className="text-2xl md:text-3xl font-bold mb-8 leading-relaxed">
-                &ldquo;Le meilleur investissement digital que nous ayons fait. ROI visible dès le premier mois.&rdquo;
-              </blockquote>
-              <p className="text-muted-foreground mb-8">
-                — Sophie Mendiburu, Fondatrice d&apos;une agence immobilière à Anglet
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-
     </div>
   );
 }

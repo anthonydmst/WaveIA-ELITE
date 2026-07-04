@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useRef, useCallback, KeyboardEvent } from "react";
-import { m, AnimatePresence } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { FAQItem } from "@/lib/data/types";
 import { SectionHeader } from "@/components/ui/SectionHeader";
@@ -90,26 +89,25 @@ export function ServiceFAQ({ faq }: Props) {
                   <ChevronDown className="w-4 h-4" />
                 </div>
               </button>
-              <AnimatePresence>
-                {openFaq === index && (
-                  <m.div
-                    id={`faq-answer-${index}`}
-                    role="region"
-                    aria-labelledby={`faq-trigger-${index}`}
-                    initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: "auto", opacity: 1 }}
-                    exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.3 }}
-                    className="overflow-hidden"
-                  >
-                    <div className="px-6 pb-6 pt-0">
-                      <p className="text-muted-foreground leading-relaxed pl-1 border-l-2 border-ocean/20 ml-1">
-                        {item.answer}
-                      </p>
-                    </div>
-                  </m.div>
-                )}
-              </AnimatePresence>
+              {/* Always rendered in the DOM (CSS-only collapse) so the answer
+                  stays crawlable and matches the FAQPage JSON-LD emitted
+                  alongside this component, instead of being unmounted. */}
+              <div
+                id={`faq-answer-${index}`}
+                role="region"
+                aria-labelledby={`faq-trigger-${index}`}
+                className={`overflow-hidden transition-[grid-template-rows] duration-300 ease-in-out grid ${
+                  openFaq === index ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
+                }`}
+              >
+                <div className="min-h-0">
+                  <div className="px-6 pb-6 pt-0">
+                    <p className="text-muted-foreground leading-relaxed pl-1 border-l-2 border-ocean/20 ml-1">
+                      {item.answer}
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           ))}
         </div>

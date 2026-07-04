@@ -16,8 +16,8 @@ export function generateMetadata() {
   if (!service) return { title: "Page introuvable" };
   
   return {
-    title: `${service.title} - WaveIA`,
-    description: service.description,
+    title: "Création Site Internet à Bayonne, Biarritz | WaveIA",
+    description: "Agence web locale au Pays Basque : création de sites internet sur-mesure, rapides et optimisés SEO, pour les entreprises de Bayonne, Biarritz, Anglet et Hossegor.",
     alternates: { canonical: "/creation-site-internet" },
   };
 }

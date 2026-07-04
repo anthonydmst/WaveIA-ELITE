@@ -12,6 +12,11 @@ import { POWER_5_CITIES } from "../whitelist";
 // PART 1: AGENCY-WIDE SIGNALS
 // ============================================
 
+// Single source of truth for the "projets accompagnés" figure. Previously
+// hardcoded inconsistently as 42 (StatsBand), 60 (AProposLanding) and 150
+// (TemoignagesPageClient) — every component must read from here instead.
+export const AGENCY_PROJECT_COUNT = 60;
+
 export const AGENCY_STATS = {
   title: "L'Excellence en Chiffres",
   metrics: [
@@ -22,40 +27,19 @@ export const AGENCY_STATS = {
   ]
 };
 
-export const AGENCY_TESTIMONIALS = [
-  {
-    quote: "WaveIA a réduit notre temps de chargement de 4s à 0.3s. Notre taux de rebond a chuté de 60% et nos ventes ont doublé. C'est de l'ingénierie de haute précision, pas du bricolage.",
-    author: "Sophie Etcheverry",
-    role: "CTO",
-    company: "Boulangerie Le Fournil - Tech Division",
-    rating: 5,
-    results: "+280% de trafic"
-  },
-  {
-    quote: "On pensait avoir besoin d'une refonte design, on avait besoin d'une refonte infrastructure. WaveIA a migré notre stack sur Next.js 15. Le résultat est bluffant.",
-    author: "Thomas Lacoste",
-    role: "Fondateur",
-    company: "Surf Camp Biarritz",
-    rating: 5,
-    results: "+180% réservations"
-  },
-  {
-    quote: "Le code est propre, documenté et modulaire. En tant que dev moi-même, j'apprécie la qualité technique. C'est rare de voir une agence aussi rigoureuse.",
-    author: "Marc Dubos",
-    role: "Lead Dev",
-    company: "Startup Fintech Anglet",
-    rating: 5,
-    results: "Code Quality A+"
-  },
-  {
-    quote: "Notre site e-commerce a vu ses ventes doubler dès le premier mois après la migration sur Vercel. La vitesse est le facteur clé.",
-    author: "Jean-Michel Berger",
-    role: "Gérant",
-    company: "Cave Irouléguy",
-    rating: 5,
-    results: "+112% de CA"
-  }
-];
+// Emptied: previously contained fabricated named testimonials (fake authors,
+// companies and results, some reused elsewhere with contradictory stories).
+// Populate with real, client-approved testimonials before showing this
+// section again — consumers (TestimonialsGrid, /temoignages) already handle
+// an empty array gracefully.
+export const AGENCY_TESTIMONIALS: {
+  quote: string;
+  author: string;
+  role: string;
+  company: string;
+  rating: number;
+  results?: string;
+}[] = [];
 
 export const AGENCY_COMPARISON = {
   title: "Engineering vs Agence Classique",

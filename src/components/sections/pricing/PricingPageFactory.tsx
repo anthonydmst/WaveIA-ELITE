@@ -208,12 +208,14 @@ export function PricingPageFactory({
         </section>
       )}
 
-      {/* Testimonials */}
-      <TestimonialsGrid 
-        testimonials={AGENCY_TESTIMONIALS.slice(0, 2)}
-        title="Ils ont fait le bon choix"
-        showCTA={false}
-      />
+      {/* Testimonials: only rendered once real, client-approved quotes exist */}
+      {AGENCY_TESTIMONIALS.length > 0 && (
+        <TestimonialsGrid
+          testimonials={AGENCY_TESTIMONIALS.slice(0, 2)}
+          title="Ils ont fait le bon choix"
+          showCTA={false}
+        />
+      )}
 
       {/* FAQ Section */}
       <section className="relative py-20 lg:py-32">

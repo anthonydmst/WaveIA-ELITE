@@ -10,8 +10,8 @@ export function generateMetadata() {
   if (!service) return { title: "Page introuvable" };
   
   return {
-    title: `${service.title} - WaveIA`,
-    description: service.description,
+    title: "Agence de Communication 360° au Pays Basque | WaveIA",
+    description: "Agence de communication au Pays Basque : identité visuelle, stratégie de marque, réseaux sociaux et photographie pour donner une image forte à votre entreprise.",
     alternates: { canonical: "/agence-communication" },
   };
 }

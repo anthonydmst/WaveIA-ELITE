@@ -6,6 +6,9 @@ import { notFound } from "next/navigation";
 import { Metadata } from "next";
 import { Link } from "next-view-transitions";
 import { ArrowLeft } from "lucide-react";
+import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
+import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
+import { generateBreadcrumbs } from "@/lib/breadcrumbs";
 
 // Generate Metadata
 export async function generateMetadata(props: { params: Promise<{ slug: string }> }): Promise<Metadata> {
@@ -42,10 +45,17 @@ export default async function ResourcePage(props: { params: Promise<{ slug: stri
     notFound();
   }
 
+  const breadcrumbItems = generateBreadcrumbs(`/ressources/${params.slug}`);
+
   return (
     <div className="min-h-screen bg-background pt-32 pb-20">
+      <BreadcrumbSchema items={breadcrumbItems} />
       <div className="container mx-auto px-4 md:px-6">
-        
+
+        <div className="max-w-4xl mx-auto mb-4">
+            <Breadcrumbs items={breadcrumbItems} />
+        </div>
+
         {/* Back Link */}
         <div className="max-w-4xl mx-auto mb-8">
             <Link href="/ressources" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-ocean transition-colors">

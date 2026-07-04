@@ -191,7 +191,7 @@ export async function ComboPageFactory({ params, silo, rootPath }: Props) {
       <StructuredData data={serviceSchema} />
       <StructuredData data={faqSchema} />
       <div>
-        <ServiceHero hero={combo.hero} />
+        <ServiceHero hero={combo.hero} breadcrumbItems={breadcrumbItems} />
         
         <ServiceFeatures features={combo.features} />
         

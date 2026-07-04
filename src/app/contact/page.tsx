@@ -8,8 +8,8 @@ import { generateBreadcrumbs } from "@/lib/breadcrumbs";
 
 export function generateMetadata() {
   return {
-    title: "Contact | WaveIA",
-    description: "Contactez notre agence web pour discuter de votre projet digital.",
+    title: "Contact | Agence Web WaveIA - Devis Gratuit Pays Basque",
+    description: "Contactez WaveIA pour discuter de votre projet de site internet, SEO ou communication digitale. Réponse sous 24h, devis gratuit et sans engagement.",
     alternates: { canonical: "/contact" },
   };
 }

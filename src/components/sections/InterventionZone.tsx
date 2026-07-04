@@ -13,10 +13,10 @@ interface TooltipData {
 
 const cityData: Record<string, TooltipData> = {
   bidart: {
-    name: "Bayonne — QG WaveIA",
+    name: "Bidart — QG WaveIA",
     tag: "QG · WaveIA",
     tagClass: "hq",
-    stat: "<strong>48 chemin de Saint-Bernard</strong><br>64100 Bayonne — Notre quartier général. Architecture Next.js 15, IA intégrée, 100% code propriétaire.",
+    stat: "<strong>Technopôle Izarbel</strong><br>64210 Bidart — Notre quartier général. Architecture Next.js 15, IA intégrée, 100% code propriétaire.",
     cta: "Visiter nos locaux",
   },
   biarritz: {
@@ -492,8 +492,8 @@ export function InterventionZone() {
               </g>
 
               {/* City name labels */}
-              <text x="300" y="345" className="font-heading" fontSize="9.5" fontWeight="700" fill="#f0c060" textAnchor="middle">Bayonne</text>
-              <text x="300" y="355" className="font-sans" fontSize="7.5" fill="rgba(240,192,96,0.6)" textAnchor="middle">Ch. St-Bernard</text>
+              <text x="300" y="345" className="font-heading" fontSize="9.5" fontWeight="700" fill="#f0c060" textAnchor="middle">Bidart</text>
+              <text x="300" y="355" className="font-sans" fontSize="7.5" fill="rgba(240,192,96,0.6)" textAnchor="middle">Izarbel</text>
 
               <text x="247" y="289" className="font-heading" fontSize="9" fontWeight="600" fill="rgba(56,189,248,0.9)" textAnchor="end">Biarritz</text>
               <text x="320" y="230" className="font-heading" fontSize="9" fontWeight="600" fill="rgba(6,182,212,0.9)" textAnchor="start">Bayonne</text>
@@ -547,7 +547,7 @@ export function InterventionZone() {
         <div className="iz-panel-side">
           <div>
             <h2 className="iz-panel-title">Notre terrain,<br/><em>la Côte Basque</em></h2>
-            <p className="iz-panel-subtitle">WaveIA est basé au 48 chemin de Saint-Bernard à Bayonne (64100). Nous accompagnons les acteurs locaux du Pays Basque au Sud-Ouest, de Bayonne à Bordeaux, des Pyrénées à l'Atlantique.</p>
+            <p className="iz-panel-subtitle">WaveIA est basé au Technopôle Izarbel à Bidart (64210). Nous accompagnons les acteurs locaux du Pays Basque au Sud-Ouest, de Bayonne à Bordeaux, des Pyrénées à l'Atlantique.</p>
           </div>
 
           <div className="iz-stats-row">
@@ -573,7 +573,7 @@ export function InterventionZone() {
             <p style={{fontSize: "11px", fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--muted)", marginBottom: "8px"}}>Cliquez sur une ville</p>
             <div className="iz-city-list">
               {[
-                { key: "bidart", name: "Bayonne — QG WaveIA", desc: "48 ch. de Saint-Bernard · 64100", type: "hq", badge: "QG" },
+                { key: "bidart", name: "Bidart — QG WaveIA", desc: "Technopôle Izarbel · 64210", type: "hq", badge: "QG" },
                 { key: "biarritz", name: "Biarritz", desc: "Surf, tourisme, hôtellerie", type: "web", badge: "Web" },
                 { key: "bayonne", name: "Bayonne", desc: "Commerce, restauration, PME", type: "seo", badge: "SEO" },
                 { key: "anglet", name: "Anglet", desc: "Services, immobilier local", type: "brand", badge: "Brand" },

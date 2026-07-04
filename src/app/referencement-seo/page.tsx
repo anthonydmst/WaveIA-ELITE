@@ -10,8 +10,8 @@ export function generateMetadata() {
   if (!service) return { title: "Page introuvable" };
   
   return {
-    title: `${service.title} - WaveIA`,
-    description: service.description,
+    title: "Référencement SEO Pays Basque | Audit & Stratégie - WaveIA",
+    description: "Expert en référencement naturel Google au Pays Basque : audit technique, stratégie de contenu et netlinking pour propulser votre site en 1ère page durablement.",
     alternates: { canonical: "/referencement-seo" },
   };
 }

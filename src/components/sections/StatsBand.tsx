@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import { useInView, animate } from "framer-motion";
+import { AGENCY_PROJECT_COUNT } from "@/lib/data";
 
 function AnimatedCounter({ 
   target, 
@@ -60,10 +61,10 @@ export function StatsBand() {
     <section className="w-full bg-card/40 backdrop-blur-md py-4 sm:py-5 border-b border-border relative z-20">
       <div className="max-w-[1200px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
         {/* Item 1 */}
-        <AnimatedCounter 
-          target={42} 
-          suffix="+" 
-          label="Projets accompagnés" 
+        <AnimatedCounter
+          target={AGENCY_PROJECT_COUNT}
+          suffix="+"
+          label="Projets accompagnés"
           className="py-3.5 sm:py-4 lg:py-0" 
         />
         {/* Item 2 */}

@@ -1,4 +1,3 @@
-import { Suspense } from "react";
 import type { Metadata } from "next";
 
 // SEO Metadata (Grade A+)
@@ -23,8 +22,23 @@ import { WhyChooseUsBlock } from "@/components/sections/WhyChooseUsBlock";
 import { WhyChooseUsFAQ } from "@/components/sections/WhyChooseUsFAQ";
 import { WhyChooseUsCTA } from "@/components/sections/WhyChooseUsCTA";
 import { ServicesTripartite } from "@/components/sections/ServicesTripartite";
+import StructuredData from "@/components/seo/StructuredData";
+import { WHY_CHOOSE_US_FAQS } from "@/lib/data/definitions/faq-master";
 
 export default function Home() {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: WHY_CHOOSE_US_FAQS.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.answer,
+      },
+    })),
+  } as const;
+
   return (
     <div className="relative overflow-hidden">
       {/* AIDA: ATTENTION - Hero */}
@@ -41,6 +55,7 @@ export default function Home() {
 
       {/* POURQUOI NOUS CHOISIR */}
       <WhyChooseUsBlock />
+      <StructuredData data={faqSchema} />
       <WhyChooseUsFAQ />
       <WhyChooseUsCTA />
 

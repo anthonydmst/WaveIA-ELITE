@@ -206,9 +206,10 @@ export function DevisSimulator() {
               <div className="w-5 h-0.5 bg-ocean/50 rounded-full" />
               Étape 1 / 2
             </div>
-            <h1 className="font-heading text-4xl md:text-5xl font-bold mb-4 text-foreground">
+            {/* h2: the page's single h1 is rendered by TarifsHubClient below */}
+            <h2 className="font-heading text-4xl md:text-5xl font-bold mb-4 text-foreground">
               Simulateur tarifaire
-            </h1>
+            </h2>
             <p className="text-muted-foreground mb-10 text-lg">
               Sélectionnez vos prestations pour obtenir une première approche budgétaire instantanée.
             </p>

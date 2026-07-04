@@ -70,11 +70,12 @@ export function AProposPageClient({ items }: { items?: BreadcrumbItem[] }) {
               <span className="text-ocean text-sm font-semibold uppercase tracking-wider">
                 À propos
               </span>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mt-4 mb-6">
+              {/* h2: the page's single h1 is rendered by AProposLanding above */}
+              <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mt-4 mb-6">
                 L&apos;agence web qui
                 <br />
                 <span className="text-gradient">réinvente les règles</span>
-              </h1>
+              </h2>
               <p className="text-lg text-muted-foreground leading-relaxed mb-8">
                 Waveia est née d&apos;une conviction : les entreprises de la
                 Côte Basque méritent l&apos;excellence technique des géants de la Tech,
@@ -324,13 +325,15 @@ export function AProposPageClient({ items }: { items?: BreadcrumbItem[] }) {
         </div>
       </section>
 
-      {/* GRADE A++ TESTIMONIALS */}
-      <section className="bg-card/50">
-        <TestimonialsGrid 
-          testimonials={AGENCY_TESTIMONIALS}
-          title="Ce que disent nos clients"
-        />
-      </section>
+      {/* Testimonials: only rendered once real, client-approved quotes exist */}
+      {AGENCY_TESTIMONIALS.length > 0 && (
+        <section className="bg-card/50">
+          <TestimonialsGrid
+            testimonials={AGENCY_TESTIMONIALS}
+            title="Ce que disent nos clients"
+          />
+        </section>
+      )}
 
       {/* Timeline Section */}
       <section className="relative py-20 lg:py-32">

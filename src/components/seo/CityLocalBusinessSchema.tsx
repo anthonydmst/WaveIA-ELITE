@@ -13,22 +13,10 @@ interface LocalBusinessSchemaProps {
  * Structured data for each city page to boost local SEO
  */
 export function CityLocalBusinessSchema({ city, silo, serviceName }: LocalBusinessSchemaProps) {
-  const getSiloBusinessType = (): string => {
-    switch (silo) {
-      case "web":
-      case "service":
-      case "local":
-        return "WebDesignStudio";
-      case "seo":
-        return "SEOAgency";
-      case "agence":
-        return "AdvertisingAgency";
-      case "metier":
-        return "ProfessionalService";
-      default:
-        return "WebDesignStudio";
-    }
-  };
+  // schema.org has no registered "WebDesignStudio"/"SEOAgency" types: Google Rich
+  // Results would ignore or mis-parse them. ProfessionalService is the closest
+  // valid LocalBusiness subtype for all our silos.
+  const getSiloBusinessType = (): string => "ProfessionalService";
 
   const getSiloDescription = (): string => {
     switch (silo) {
@@ -56,17 +44,13 @@ export function CityLocalBusinessSchema({ city, silo, serviceName }: LocalBusine
     "@type": getSiloBusinessType(),
     "name": `WaveIA - ${serviceName} ${city.name}`,
     "description": getSiloDescription(),
-    "url": `https://waveia.fr/${silo === "local" ? "creation-site-internet" : silo}/${city.slug}`,
-    "telephone": "+33695913669",
-    "email": "contact@waveia.fr",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": COMPANY_CONFIG.address.street, // Consistent corporate address
-      "addressLocality": city.name,
-      "postalCode": city.zipCode,
-      "addressRegion": city.department === "64" ? "Pyrénées-Atlantiques" : "Landes",
-      "addressCountry": "FR"
-    },
+    "url": `${COMPANY_CONFIG.url}/${silo === "local" ? "creation-site-internet" : silo}/${city.slug}`,
+    "telephone": COMPANY_CONFIG.telephone,
+    "email": COMPANY_CONFIG.email,
+    // No PostalAddress here: the business has a single real address (see
+    // LocalBusinessSchema), it is not physically located in every service city.
+    // Combining the real street with the target city fabricated addresses that
+    // don't exist. areaServed below correctly represents the service zone.
     "areaServed": {
       "@type": "City",
       "name": city.name,
@@ -87,11 +71,7 @@ export function CityLocalBusinessSchema({ city, silo, serviceName }: LocalBusine
     }),
     "priceRange": "€€",
     "openingHours": "Mo-Fr 09:00-18:00",
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.9",
-      "reviewCount": "47"
-    },
+    // No aggregateRating: only inject once a real, verifiable review source exists.
     "image": `${COMPANY_CONFIG.url}/icon-512.png`,
     "logo": COMPANY_CONFIG.logo,
     "sameAs": [

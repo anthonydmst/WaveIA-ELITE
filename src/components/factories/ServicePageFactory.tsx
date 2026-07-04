@@ -14,7 +14,6 @@ import { SmartLinker } from "@/components/sections/SmartLinker";
 import { SubServicesGrid } from "@/components/sections/SubServicesGrid";
 import { ServiceZoneLinks } from "@/components/sections/ServiceZoneLinks";
 import { DeepContentSection } from "@/components/templates/DeepContentSection";
-import { CityTestimonialInline } from "@/components/templates/CityTestimonialInline";
 import { CITIES } from "@/lib/data/definitions/cities";
 import { CityLocalBusinessSchema } from "@/components/seo/CityLocalBusinessSchema";
 import { COMPANY_CONFIG } from "@/lib/seo/company";
@@ -29,9 +28,14 @@ import { LocalContextSection } from "@/components/templates/LocalContextSection"
 // Helper for Static Params
 export async function generateStaticParamsForSilo(silo: ServiceSilo) {
   const services = getServicesBySilo(silo);
-  
+
   return services
     .filter((service) => service.type !== "hub") // S-Tier: Automated Hub Exclusion via Type
+    // Exclude composite slugs like "site-web-restaurant/biarritz" (metier city
+    // combos): this route has a single [slug] segment, a slash here would
+    // produce an invalid static param. Those combos are served by the
+    // dedicated [slug]/[city] combo route instead.
+    .filter((service) => !service.slug.includes('/'))
     .map((service) => ({
       slug: service.slug,
     }));
@@ -216,10 +220,7 @@ export async function ServicePageFactory({
             {enrichedCity && (
                 <LocalContextSection city={enrichedCity} silo={service.silo} />
             )}
-            
-            {/* GRADE A++ CITY TESTIMONIAL (AIDA Desire) */}
-            {service.localContext?.city && <CityTestimonialInline cityName={service.localContext.city} />}
-            
+
             {/* DEEP CONTENT INJECTION (Grade A+) */}
             {service.content && <DeepContentSection content={service.content} />}
 

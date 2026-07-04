@@ -1,6 +1,6 @@
 "use client";
 
-import { Shield, Award, Star, Lock, Zap, Globe } from "lucide-react";
+import { Lock } from "lucide-react";
 
 interface Badge {
   icon: React.ReactNode;
@@ -8,36 +8,17 @@ interface Badge {
   description?: string;
 }
 
+// Only list badges that are actually true and verifiable. Previously included
+// "Next.js Partner", "Vercel Certified", "Google Partner", "Stripe Partner" and
+// a "5.0/5 Google" rating: none of these correspond to a real, checkable
+// certification program or a live review source, so they were removed rather
+// than left as unverifiable claims. Add real ones back (with a link to the
+// proof) as they're obtained.
 const CERTIFICATIONS: Badge[] = [
-  {
-    icon: <Zap className="w-5 h-5" />,
-    label: "Next.js Partner",
-    description: "Architecture React moderne",
-  },
-  {
-    icon: <Globe className="w-5 h-5" />,
-    label: "Vercel Certified",
-    description: "Déploiement edge optimisé",
-  },
-  {
-    icon: <Award className="w-5 h-5" />,
-    label: "Google Partner",
-    description: "Expertise SEO certifiée",
-  },
   {
     icon: <Lock className="w-5 h-5" />,
     label: "RGPD Compliant",
     description: "Protection des données",
-  },
-  {
-    icon: <Shield className="w-5 h-5" />,
-    label: "Stripe Partner",
-    description: "Paiements sécurisés",
-  },
-  {
-    icon: <Star className="w-5 h-5" />,
-    label: "5.0/5 Google",
-    description: "50+ avis clients",
   },
 ];
 

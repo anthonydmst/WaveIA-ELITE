@@ -7,8 +7,8 @@ export function generateMetadata() {
   if (!service) return { title: "Page introuvable" };
   
   return {
-    title: `${service.title} - WaveIA`,
-    description: service.description,
+    title: "Solutions Web par Métier : Restaurant, Hôtel, Immo | WaveIA",
+    description: "Sites web spécialisés par secteur d'activité : restaurant, hôtel, immobilier, artisan, santé. Fonctionnalités sur-mesure pensées pour votre métier.",
     alternates: { canonical: "/solutions" },
   };
 }

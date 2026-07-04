@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { ArrowRight, Check, X, MapPin, Search, Bot, Zap, TrendingUp, Brush, Settings, Briefcase, Globe, BarChart } from 'lucide-react';
+import { AGENCY_PROJECT_COUNT } from '@/lib/data';
 
 export function AProposLanding() {
   const [isMounted, setIsMounted] = useState(false);
@@ -47,7 +48,7 @@ export function AProposLanding() {
             
             <div className="mt-14 flex justify-center gap-8 md:gap-12 flex-wrap">
               <div className="text-center">
-                <strong className="block font-heading text-3xl font-bold text-ocean">+60</strong>
+                <strong className="block font-heading text-3xl font-bold text-ocean">+{AGENCY_PROJECT_COUNT}</strong>
                 <span className="text-xs text-muted-foreground uppercase tracking-wider">Projets accompagnés</span>
               </div>
               <div className="text-center">
@@ -153,7 +154,7 @@ export function AProposLanding() {
 
              <div className="grid grid-cols-2 md:grid-cols-4 gap-0 border border-border rounded-2xl overflow-hidden glass-card relative z-10">
                {[
-                 { val: "+60", label: "Projets accompagnés au Pays Basque" },
+                 { val: `+${AGENCY_PROJECT_COUNT}`, label: "Projets accompagnés au Pays Basque" },
                  { val: "x3", label: "Trafic organique en moyenne sur 6 mois" },
                  { val: "98%", label: "Clients satisfaits de notre accompagnement" },
                  { val: "72h", label: "Délai moyen de livraison maquette" }

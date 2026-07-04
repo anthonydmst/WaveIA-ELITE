@@ -1,5 +1,5 @@
+import dynamic from "next/dynamic";
 import { TarifsHubClient } from "@/components/sections/pricing/TarifsHubClient";
-import { DevisSimulator } from "@/components/sections/pricing/DevisSimulator";
 
 import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import { generateBreadcrumbs } from "@/lib/breadcrumbs";
@@ -10,6 +10,10 @@ export const metadata: Metadata = {
   description: "Découvrez nos offres transparentes : Création de site internet, Référencement SEO et Stratégie de Communication. Devis gratuit sous 24h.",
   alternates: { canonical: "/tarifs" },
 };
+
+const DevisSimulator = dynamic(() =>
+  import("@/components/sections/pricing/DevisSimulator").then((mod) => mod.DevisSimulator)
+);
 
 export default function TarifsPage() {
   const items = generateBreadcrumbs("/tarifs");

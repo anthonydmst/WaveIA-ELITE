@@ -21,7 +21,7 @@ export function SeoLocalProofSection() {
               <TrendingUp className="w-6 h-6 text-emerald-400" />
             </div>
             <strong className="block text-4xl font-extrabold font-heading text-emerald-400 mb-4">+670 %</strong>
-            <h4 className="text-lg font-bold text-foreground mb-2">d'appels en 4 mois</h4>
+            <p className="text-lg font-bold text-foreground mb-2">d'appels en 4 mois</p>
             <p className="text-sm text-muted-foreground leading-relaxed">
               Après optimisation de sa fiche Google et création de pages locales, un artisan est passé de quelques appels par mois à plus de 30 appels mensuels qualifiés.
             </p>
@@ -33,7 +33,7 @@ export function SeoLocalProofSection() {
               <TrendingUp className="w-6 h-6 text-emerald-400" />
             </div>
             <strong className="block text-4xl font-extrabold font-heading text-emerald-400 mb-4">+125 %</strong>
-            <h4 className="text-lg font-bold text-foreground mb-2">de résultats en 3 mois</h4>
+            <p className="text-lg font-bold text-foreground mb-2">de résultats en 3 mois</p>
             <p className="text-sm text-muted-foreground leading-relaxed">
               Preuve qu'une stratégie locale bien exécutée ne nécessite pas un budget publicitaire important pour générer une croissance mesurable.
             </p>

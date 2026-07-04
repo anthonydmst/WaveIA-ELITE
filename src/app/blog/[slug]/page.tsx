@@ -6,6 +6,9 @@ import ArticleHeader from "@/components/blog/ArticleHeader";
 import { ArrowLeft } from "lucide-react";
 import { Link } from "next-view-transitions";
 import Script from "next/script";
+import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
+import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
+import { generateBreadcrumbs } from "@/lib/breadcrumbs";
 
 
 
@@ -43,6 +46,8 @@ export default async function BlogPostPage(props: { params: Promise<{ slug: stri
     notFound();
   }
 
+  const breadcrumbItems = generateBreadcrumbs(`/blog/${params.slug}`);
+
   // Schema.org Article
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -59,12 +64,17 @@ export default async function BlogPostPage(props: { params: Promise<{ slug: stri
 
   return (
     <div className="min-h-screen bg-background pt-32 pb-20">
+        <BreadcrumbSchema items={breadcrumbItems} />
         <Script
             id="article-schema"
             type="application/ld+json"
             dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-        
+
+        <div className="max-w-4xl mx-auto mb-4">
+            <Breadcrumbs items={breadcrumbItems} />
+        </div>
+
         {/* Back Link */}
         <div className="max-w-4xl mx-auto mb-8">
             <Link href="/blog" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-ocean transition-colors">

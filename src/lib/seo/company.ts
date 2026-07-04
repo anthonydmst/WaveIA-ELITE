@@ -41,12 +41,9 @@ export const COMPANY_CONFIG = {
   },
 
   // SEO & Schema
-  foundingDate: "2024",
+  foundingDate: "2023",
   priceRange: "€€-€€€",
-  
-  // Aggregate Rating (Required for S-Tier SEO)
-  aggregateRating: {
-    ratingValue: "4.9",
-    reviewCount: "84",
-  }
+
+  // No aggregateRating/review here: do not inject avis/notes in JSON-LD or on-page
+  // until a real, verifiable source (Google Business Profile, Trustpilot...) is wired in.
 } as const;

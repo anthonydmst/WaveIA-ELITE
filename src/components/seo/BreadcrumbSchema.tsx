@@ -13,7 +13,7 @@ export default function BreadcrumbSchema({ items }: BreadcrumbSchemaProps) {
       "@type": "ListItem",
       position: index + 1,
       name: item.label,
-      item: `${process.env.NEXT_PUBLIC_BASE_URL || "https://waveia.fr"}${item.href}`,
+      item: `${process.env.NEXT_PUBLIC_SITE_URL || "https://waveia.fr"}${item.href}`,
     })),
   };
 

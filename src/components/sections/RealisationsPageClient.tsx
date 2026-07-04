@@ -218,12 +218,14 @@ export function RealisationsPageClient({ items }: { items?: BreadcrumbItem[] }) 
         </div>
       </section>
 
-      {/* GRADE A++ TESTIMONIALS */}
-      <TestimonialsGrid 
-        testimonials={AGENCY_TESTIMONIALS.slice(0, 2)}
-        title="Ils nous font confiance"
-        showCTA={false}
-      />
+      {/* Testimonials: only rendered once real, client-approved quotes exist */}
+      {AGENCY_TESTIMONIALS.length > 0 && (
+        <TestimonialsGrid
+          testimonials={AGENCY_TESTIMONIALS.slice(0, 2)}
+          title="Ils nous font confiance"
+          showCTA={false}
+        />
+      )}
 
       {/* Stats Section */}
       <AgencyStatsBlock 

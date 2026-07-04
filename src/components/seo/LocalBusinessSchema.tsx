@@ -110,29 +110,9 @@ export default function LocalBusinessSchema() {
         "closes": "18:00"
       }
     ],
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": COMPANY_CONFIG.aggregateRating.ratingValue,
-      "reviewCount": COMPANY_CONFIG.aggregateRating.reviewCount,
-      "bestRating": "5",
-      "worstRating": "1"
-    },
-    "review": [
-      {
-        "@type": "Review",
-        "author": { "@type": "Person", "name": "Sophie Mendiburu" },
-        "reviewRating": { "@type": "Rating", "ratingValue": "5" },
-        "reviewBody": "WaveIA a transformé notre présence digitale. Site livré en 3 semaines, résultats immédiats sur Google.",
-        "datePublished": "2024-10-15"
-      },
-      {
-        "@type": "Review",
-        "author": { "@type": "Person", "name": "Thomas Aguirre" },
-        "reviewRating": { "@type": "Rating", "ratingValue": "5" },
-        "reviewBody": "Équipe réactive et professionnelle. Notre e-commerce génère maintenant 40% de notre chiffre d'affaires.",
-        "datePublished": "2024-09-20"
-      }
-    ],
+    // No aggregateRating/review: only inject these once a real, verifiable review
+    // source (Google Business Profile, Trustpilot...) is connected. Fabricated
+    // ratings/reviews violate Google's structured data guidelines.
     "knowsAbout": [
       "Création de sites internet",
       "Développement web",
@@ -151,8 +131,8 @@ export default function LocalBusinessSchema() {
     ],
     "founder": {
       "@type": "Person",
-      "name": "WaveIA Team",
-      "jobTitle": "Fondateurs"
+      "name": COMPANY_CONFIG.publicationDirector,
+      "jobTitle": "Fondateur"
     },
     "foundingDate": COMPANY_CONFIG.foundingDate,
     "slogan": "Votre vague digitale commence ici"
