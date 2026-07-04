@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react';
-import { Star, TrendingUp, ShoppingCart, Target } from 'lucide-react';
+import { TrendingUp, ShoppingCart, Target } from 'lucide-react';
 
 export function EcommerceImpactSection() {
   const metrics = [
@@ -67,33 +67,18 @@ export function EcommerceImpactSection() {
             </div>
           </div>
 
-          {/* Right Column : Testimonial Card */}
+          {/* Right Column : Methodology Card */}
           <div className="relative animate-in fade-in slide-in-from-right-8 duration-700 delay-200">
             {/* Decorative background glow */}
             <div className="absolute inset-0 bg-ocean/20 blur-[100px] rounded-full pointer-events-none" />
-            
+
             <div className="glass-card p-10 md:p-12 rounded-3xl border border-ocean/20 bg-card/60 backdrop-blur-xl relative z-10 shadow-[0_20px_60px_rgba(14,165,233,0.1)] hover:shadow-[0_20px_80px_rgba(14,165,233,0.2)] transition-shadow duration-500">
-              <div className="flex gap-1 mb-8">
-                {[1, 2, 3, 4, 5].map((star) => (
-                  <Star key={star} className="w-6 h-6 fill-yellow-400 text-yellow-400" />
-                ))}
+              <div className="w-12 h-12 rounded-xl bg-ocean/10 flex items-center justify-center mb-8">
+                <ShoppingCart className="w-6 h-6 text-ocean" />
               </div>
-              
-              <blockquote className="text-xl md:text-2xl font-heading font-medium leading-relaxed text-foreground mb-10 relative">
-                <span className="absolute -top-6 -left-6 text-6xl text-ocean/20 font-serif">&ldquo;</span>
-                Notre ancienne boutique sous-performait malgré un trafic important. L&apos;équipe Waveia a totalement restructuré notre tunnel d&apos;achat et connecté notre site à notre ERP. En 3 mois, nous avons récupéré les paniers abandonnés qui nous échappaient et notre chiffre d&apos;affaires en ligne a décollé sans augmenter notre budget publicitaire.
-                <span className="absolute -bottom-10 -right-2 text-6xl text-ocean/20 font-serif leading-none">&rdquo;</span>
+              <blockquote className="text-xl md:text-2xl font-heading font-medium leading-relaxed text-foreground">
+                Un tunnel d&apos;achat repensé, un ERP connecté, des paniers abandonnés récupérés : c&apos;est notre méthode pour transformer une boutique qui reçoit du trafic en boutique qui convertit.
               </blockquote>
-              
-              <div className="flex items-center gap-4 pt-8 border-t border-border/50">
-                <div className="w-12 h-12 rounded-full bg-ocean/20 flex items-center justify-center font-bold text-ocean uppercase">
-                  DR
-                </div>
-                <div>
-                  <div className="font-bold text-foreground">Dirigeant</div>
-                  <div className="text-sm text-muted-foreground">Secteur Retail BtoC</div>
-                </div>
-              </div>
             </div>
           </div>
 

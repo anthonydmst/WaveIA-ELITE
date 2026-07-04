@@ -130,10 +130,7 @@ export function HomePageRealisationsBlock() {
                       {project.description}
                     </p>
 
-                    <div className="mt-auto pt-6 border-t border-glass-border flex items-center justify-between">
-                      <span className="inline-flex items-center justify-center px-4 py-1.5 bg-ocean/10 border border-ocean/20 rounded-full text-sm font-bold text-ocean">
-                        {project.results}
-                      </span>
+                    <div className="mt-auto pt-6 border-t border-glass-border flex items-center justify-end">
                       <span className="flex items-center gap-1.5 text-sm font-medium text-muted-foreground group-hover:text-foreground transition-colors">
                         Découvrir
                         <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

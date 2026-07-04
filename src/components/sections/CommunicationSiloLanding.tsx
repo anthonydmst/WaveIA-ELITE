@@ -342,32 +342,6 @@ export function CommunicationSiloLanding() {
          </div>
       </section>
 
-      {/* ─── BLOC 5 : PREUVE SOCIALE ─── */}
-      <section className="py-24 text-center">
-         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-            <span className="inline-flex items-center justify-center gap-2 text-xs font-bold uppercase tracking-widest text-ocean mb-4">
-               RÉALISATION & IMPACT COMMERCIAL
-            </span>
-            <h2 className="text-3xl md:text-5xl font-extrabold font-heading mb-16 leading-tight">Quand la perception du marché s'aligne (enfin) sur <em className="not-italic text-ocean relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:right-0 after:h-[2px] after:bg-gradient-to-r after:from-ocean after:to-transparent">votre savoir-faire.</em></h2>
-            
-            <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-              <div className="glass-card p-8 border border-border rounded-2xl flex flex-col items-center">
-                 <div className="text-ocean mb-6 tracking-widest text-xl">★★★★★</div>
-                 <h3 className="font-bold font-heading text-lg mb-4 text-foreground">Le décalage corrigé</h3>
-                 <p className="italic text-muted-foreground mb-8">« On avait un vrai décalage entre la qualité de notre travail sur le terrain et la tête de nos supports de communication, qui faisaient vraiment datés. Waveia a remis tout ça au niveau. Le rendu est propre, cohérent, et nos commerciaux n'ont plus à s'excuser en présentant notre entreprise. Ça a clairement facilité la conclusion de nos derniers contrats. »</p>
-                 <div className="font-bold text-foreground text-sm uppercase tracking-wider mt-auto">Cogérant — Secteur BTP / Industrie</div>
-              </div>
-
-              <div className="glass-card p-8 border border-border rounded-2xl flex flex-col items-center">
-                 <div className="text-ocean mb-6 tracking-widest text-xl">★★★★★</div>
-                 <h3 className="font-bold font-heading text-lg mb-4 text-foreground">Le soulagement opérationnel</h3>
-                 <p className="italic text-muted-foreground mb-8">« Je cherchais un prestataire capable de comprendre notre métier sans qu'on doive tout leur expliquer de A à Z pendant des heures. L'équipe a vite cerné le besoin et a été très autonome sur la création de notre nouvelle identité et de la vidéo. Le résultat est carré, livré dans les temps annoncés, sans mauvaises surprises sur la facture. »</p>
-                 <div className="font-bold text-foreground text-sm uppercase tracking-wider mt-auto">Dirigeant — Secteur Services B2B / Logistique</div>
-              </div>
-            </div>
-         </div>
-      </section>
-
       {/* ─── BLOC 6 : FAQ ─── */}
       <section className="py-24 bg-card border-y border-border">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">

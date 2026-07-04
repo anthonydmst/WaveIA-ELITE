@@ -5,7 +5,7 @@ import { useState } from "react";
 
 import { Link } from "next-view-transitions";
 import Image from "next/image";
-import { ArrowRight, ExternalLink, Globe, ShoppingCart, Palette, TrendingUp, Star, MapPin } from "lucide-react";
+import { ArrowRight, Globe, ShoppingCart, Palette, TrendingUp, Star, MapPin } from "lucide-react";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { BreadcrumbItem } from "@/lib/breadcrumbs";
 import { SectionHeader } from "@/components/ui/SectionHeader";
@@ -171,18 +171,9 @@ export function RealisationsPageClient({ items }: { items?: BreadcrumbItem[] }) 
                       <SectionHeader as="h3" size="subsection" className="mb-2 group-hover:text-ocean transition-colors">
                         {project.title}
                       </SectionHeader>
-                      <p className="text-sm text-muted-foreground mb-4 line-clamp-2">
+                      <p className="text-sm text-muted-foreground line-clamp-2">
                         {project.description}
                       </p>
-                      <div className="flex items-center justify-between">
-                        <span className="px-3 py-1 bg-ocean/10 border border-ocean/20 rounded-full text-sm font-bold text-ocean">
-                          {project.results}
-                        </span>
-                        <button className="flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground transition-colors">
-                          Voir le projet
-                          <ExternalLink className="w-4 h-4" />
-                        </button>
-                      </div>
                     </div>
                   </article>
 

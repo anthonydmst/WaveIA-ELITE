@@ -16,7 +16,7 @@ import { generateBreadcrumbs } from "@/lib/breadcrumbs";
 export async function generateMetadata(props: { params: Promise<{ slug: string }> }) {
   const params = await props.params;
   const post = getBlogPostBySlug(params.slug);
-  if (!post) return;
+  if (!post) return { title: "Article introuvable - WaveIA", robots: { index: false, follow: false } };
 
   return {
     title: `${post.metadata.title} | Blog WaveIA`,

@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
-import { ArrowRight, Check, X, Quote, Star, AlertTriangle } from 'lucide-react';
+import { ArrowRight, Check, X, AlertTriangle } from 'lucide-react';
 import Link from 'next/link';
 
 export function AuditSeoLanding() {
@@ -291,109 +291,47 @@ export function AuditSeoLanding() {
         </div>
       </section>
 
-      {/* ─── OUTILS & PREUVE SOCIALE ─── */}
+      {/* ─── OUTILS D'INVESTIGATION ─── */}
       <section className="py-24 relative overflow-hidden border-b border-border/50">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div className="animate-in fade-in slide-in-from-bottom-4 duration-700">
-              <span className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-ocean mb-4">
-                <div className="w-5 h-[1.5px] bg-primary"></div> TECHNOLOGIE & RÉSULTATS
-              </span>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold font-heading mb-6 leading-tight">
-                Une stack technologique de pointe au service de votre <em className="not-italic text-ocean relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:right-0 after:h-[2px] after:bg-gradient-to-r after:from-ocean after:to-transparent">croissance.</em>
-              </h2>
-              <p className="text-lg text-muted-foreground font-light leading-relaxed mb-8">
-                Pour vous fournir des données d'une précision absolue, notre agence s'appuie sur les licences des outils d'analyse les plus puissants du marché mondial. C'est le croisement de ces données et de notre expertise humaine (plus de 110 critères vérifiés) qui garantit le succès de nos recommandations.
-              </p>
-              
-              <h3 className="font-heading text-lg font-bold text-foreground mb-6">Nos outils d'investigation SEO :</h3>
-              <div className="space-y-4">
-                <div className="flex gap-4 items-start">
-                  <div className="w-8 h-8 rounded-full bg-ocean/10 flex items-center justify-center shrink-0 mt-1">
-                    <Check className="w-4 h-4 text-ocean" />
-                  </div>
-                  <div>
-                    <strong className="block text-foreground font-heading text-[0.95rem] mb-1">Screaming Frog</strong>
-                    <p className="text-sm text-muted-foreground leading-relaxed">Pour le crawl technique exhaustif de votre architecture.</p>
-                  </div>
+          <div className="max-w-2xl">
+            <span className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-ocean mb-4">
+              <div className="w-5 h-[1.5px] bg-primary"></div> TECHNOLOGIE & RÉSULTATS
+            </span>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold font-heading mb-6 leading-tight">
+              Une stack technologique de pointe au service de votre <em className="not-italic text-ocean relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:right-0 after:h-[2px] after:bg-gradient-to-r after:from-ocean after:to-transparent">croissance.</em>
+            </h2>
+            <p className="text-lg text-muted-foreground font-light leading-relaxed mb-8">
+              Pour vous fournir des données d'une précision absolue, notre agence s'appuie sur les licences des outils d'analyse les plus puissants du marché mondial. C'est le croisement de ces données et de notre expertise humaine (plus de 110 critères vérifiés) qui garantit le succès de nos recommandations.
+            </p>
+
+            <h3 className="font-heading text-lg font-bold text-foreground mb-6">Nos outils d'investigation SEO :</h3>
+            <div className="space-y-4">
+              <div className="flex gap-4 items-start">
+                <div className="w-8 h-8 rounded-full bg-ocean/10 flex items-center justify-center shrink-0 mt-1">
+                  <Check className="w-4 h-4 text-ocean" />
                 </div>
-                <div className="flex gap-4 items-start">
-                  <div className="w-8 h-8 rounded-full bg-ocean/10 flex items-center justify-center shrink-0 mt-1">
-                    <Check className="w-4 h-4 text-ocean" />
-                  </div>
-                  <div>
-                    <strong className="block text-foreground font-heading text-[0.95rem] mb-1">Semrush & Ahrefs</strong>
-                    <p className="text-sm text-muted-foreground leading-relaxed">Pour l'analyse concurrentielle et la stratégie sémantique.</p>
-                  </div>
-                </div>
-                <div className="flex gap-4 items-start">
-                  <div className="w-8 h-8 rounded-full bg-ocean/10 flex items-center justify-center shrink-0 mt-1">
-                    <Check className="w-4 h-4 text-ocean" />
-                  </div>
-                  <div>
-                    <strong className="block text-foreground font-heading text-[0.95rem] mb-1">Google Search Console</strong>
-                    <p className="text-sm text-muted-foreground leading-relaxed">Pour la vérification de l'indexation directe.</p>
-                  </div>
+                <div>
+                  <strong className="block text-foreground font-heading text-[0.95rem] mb-1">Screaming Frog</strong>
+                  <p className="text-sm text-muted-foreground leading-relaxed">Pour le crawl technique exhaustif de votre architecture.</p>
                 </div>
               </div>
-            </div>
-
-            <div className="grid gap-6 mt-12 lg:mt-0">
-              {/* Testimonials */}
-              <div className="glass-card p-6 rounded-2xl border border-border hover:border-ocean/40 transition-colors duration-300 relative overflow-hidden group bg-background/50 backdrop-blur-md">
-                <div className="absolute top-4 right-4 text-ocean/10 group-hover:text-ocean/20 transition-colors">
-                  <Quote className="w-8 h-8" />
+              <div className="flex gap-4 items-start">
+                <div className="w-8 h-8 rounded-full bg-ocean/10 flex items-center justify-center shrink-0 mt-1">
+                  <Check className="w-4 h-4 text-ocean" />
                 </div>
-                <div className="flex items-center gap-1 mb-3">
-                  {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />)}
-                </div>
-                <p className="text-sm text-foreground font-medium mb-4 leading-relaxed relative z-10 italic">
-                  "L'audit technique réalisé par WaveIA a permis d'identifier des points de blocage que trois agences précédentes n'avaient pas vus. Une réactivité impressionnante."
-                </p>
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-ocean/10 flex items-center justify-center font-bold text-xs text-ocean">L.D</div>
-                  <div>
-                    <div className="text-sm font-bold font-heading text-foreground">Directeur Digital</div>
-                    <div className="text-xs text-muted-foreground">Secteur Immobilier</div>
-                  </div>
+                <div>
+                  <strong className="block text-foreground font-heading text-[0.95rem] mb-1">Semrush & Ahrefs</strong>
+                  <p className="text-sm text-muted-foreground leading-relaxed">Pour l'analyse concurrentielle et la stratégie sémantique.</p>
                 </div>
               </div>
-
-              <div className="glass-card p-6 rounded-2xl border border-border hover:border-ocean/40 transition-colors duration-300 relative overflow-hidden group lg:translate-x-6 bg-background/50 backdrop-blur-md">
-                <div className="absolute top-4 right-4 text-ocean/10 group-hover:text-ocean/20 transition-colors">
-                  <Quote className="w-8 h-8" />
+              <div className="flex gap-4 items-start">
+                <div className="w-8 h-8 rounded-full bg-ocean/10 flex items-center justify-center shrink-0 mt-1">
+                  <Check className="w-4 h-4 text-ocean" />
                 </div>
-                <div className="flex items-center gap-1 mb-3">
-                  {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />)}
-                </div>
-                <p className="text-sm text-foreground font-medium mb-4 leading-relaxed relative z-10 italic">
-                  "Une expertise pointue et des recommandations immédiatement applicables. Notre trafic organique a explosé suite à la correction des failles détectées."
-                </p>
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-ocean/10 flex items-center justify-center font-bold text-xs text-ocean">M.T</div>
-                  <div>
-                    <div className="text-sm font-bold font-heading text-foreground">Responsable E-commerce</div>
-                    <div className="text-xs text-muted-foreground">Secteur Alimentaire Premium</div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="glass-card p-6 rounded-2xl border border-border hover:border-ocean/40 transition-colors duration-300 relative overflow-hidden group bg-background/50 backdrop-blur-md">
-                <div className="absolute top-4 right-4 text-ocean/10 group-hover:text-ocean/20 transition-colors">
-                  <Quote className="w-8 h-8" />
-                </div>
-                <div className="flex items-center gap-1 mb-3">
-                  {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />)}
-                </div>
-                <p className="text-sm text-foreground font-medium mb-4 leading-relaxed relative z-10 italic">
-                  "On avait un site refait à neuf, mais invisible sur Google. L'audit de Waveia a mis le doigt sur des problèmes techniques qu'on ne soupçonnait pas du tout. Le plan d'action était clair, sans jargon inutile, et on a enfin commencé à voir notre trafic décoller de manière pérenne."
-                </p>
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-ocean/10 flex items-center justify-center font-bold text-xs text-ocean">S.B</div>
-                  <div>
-                    <div className="text-sm font-bold font-heading text-foreground">Gérant</div>
-                    <div className="text-xs text-muted-foreground">Secteur Services B2B</div>
-                  </div>
+                <div>
+                  <strong className="block text-foreground font-heading text-[0.95rem] mb-1">Google Search Console</strong>
+                  <p className="text-sm text-muted-foreground leading-relaxed">Pour la vérification de l'indexation directe.</p>
                 </div>
               </div>
             </div>

@@ -52,6 +52,7 @@ export async function generateMetadataForSilo(
   if (!service) {
     return {
       title: "Service introuvable - WaveIA",
+      robots: { index: false, follow: false },
     };
   }
 
@@ -66,10 +67,17 @@ export async function generateMetadataForSilo(
   };
   const rootPath = siloToRootPath[silo] ?? "";
 
+  const ogImage = `/og?title=${encodeURIComponent(service.title)}&description=${encodeURIComponent(service.description)}`;
+
   return {
     title: `${service.title} - Agence Web WaveIA`,
     description: service.description,
     alternates: { canonical: `${rootPath}/${service.slug}` },
+    openGraph: {
+      title: service.title,
+      description: service.description,
+      images: [{ url: ogImage, width: 1200, height: 630 }],
+    },
   };
 }
 

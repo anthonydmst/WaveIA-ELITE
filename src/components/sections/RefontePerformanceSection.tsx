@@ -38,7 +38,7 @@ export function RefontePerformanceSection() {
             <span className="text-ocean">l'impact de nos restructurations</span>.
           </h2>
           <p className="text-lg text-muted-foreground font-light leading-relaxed max-w-3xl mx-auto">
-            L'ingénierie technique et l'optimisation de l'interface n'ont qu'une seule finalité : l'amélioration stricte de vos indicateurs de performance (KPIs). Une refonte Waveia vise à rentabiliser votre investissement sur le court terme en maximisant l'efficacité de vos canaux d'acquisition existants. Voici les métriques moyennes observées chez nos clients dans le trimestre suivant la mise en production.
+            L'ingénierie technique et l'optimisation de l'interface n'ont qu'une seule finalité : l'amélioration stricte de vos indicateurs de performance (KPIs). Une refonte Waveia vise à rentabiliser votre investissement sur le court terme en maximisant l'efficacité de vos canaux d'acquisition existants. Voici les leviers que nous activons systématiquement, et l'ordre de grandeur de leur impact attendu sur vos indicateurs.
           </p>
         </div>
 
@@ -67,36 +67,26 @@ export function RefontePerformanceSection() {
           ))}
         </div>
 
-        {/* Testimonial Box */}
+        {/* Methodology Box */}
         <div className="max-w-4xl mx-auto animate-in delay-200">
           <div className="glass-card bg-ocean/5 border border-ocean/20 rounded-3xl p-8 md:p-12 relative overflow-hidden">
             <Quote className="absolute top-8 md:top-12 left-8 md:left-12 w-10 h-10 md:w-12 md:h-12 text-ocean/20" />
-            
+
             {/* Glow effect */}
             <div className="absolute -top-24 -right-24 w-64 h-64 bg-ocean/10 rounded-full blur-3xl pointer-events-none" />
 
             <div className="relative z-10 pl-2 md:pl-16 pt-16 md:pt-2">
               <div className="inline-flex items-center gap-2 bg-background border border-border text-ocean text-xs font-semibold px-4 py-1.5 rounded-full mb-6 uppercase tracking-wider shadow-sm">
-                Cas d'usage
+                Notre approche
               </div>
-              
+
               <h4 className="text-base md:text-lg font-bold font-heading text-foreground mb-6">
                 Restructuration de plateforme et suppression de la dette technique
               </h4>
-              
-              <blockquote className="text-xl md:text-2xl font-light text-foreground leading-relaxed mb-8 italic">
-                « Notre ancienne infrastructure web ne soutenait plus notre volume d'activité. Les temps de chargement dégradaient nos campagnes d'acquisition et les mises à jour nécessitaient des interventions coûteuses. L'équipe Waveia a audité nos flux, sécurisé notre historique d'indexation et déployé une nouvelle architecture robuste. À l'issue du premier trimestre de mise en ligne, le volume de nos leads qualifiés a augmenté de 42 % à budget publicitaire constant, confirmant la rentabilité immédiate de cette refonte. »
+
+              <blockquote className="text-xl md:text-2xl font-light text-foreground leading-relaxed italic">
+                « Une infrastructure qui ne soutient plus votre volume d'activité, des temps de chargement qui dégradent vos campagnes d'acquisition, des mises à jour qui coûtent cher à chaque fois : nous auditons vos flux, sécurisons votre historique d'indexation et déployons une architecture robuste, pensée pour durer. »
               </blockquote>
-              
-              <div className="flex items-center gap-4 pt-6 border-t border-border/40">
-                <div className="w-12 h-12 rounded-full bg-ocean/20 border border-ocean/30 flex items-center justify-center font-heading font-bold text-ocean">
-                  D
-                </div>
-                <div>
-                  <div className="font-bold text-foreground">Dirigeant</div>
-                  <div className="text-sm text-muted-foreground">Commerce de gros</div>
-                </div>
-              </div>
             </div>
           </div>
         </div>

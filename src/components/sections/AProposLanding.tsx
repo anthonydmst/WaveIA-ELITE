@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { ArrowRight, Check, X, MapPin, Search, Bot, Zap, TrendingUp, Brush, Settings, Briefcase, Globe, BarChart } from 'lucide-react';
+import { Link } from 'next-view-transitions';
 import { AGENCY_PROJECT_COUNT } from '@/lib/data';
 
 export function AProposLanding() {
@@ -288,14 +289,18 @@ export function AProposLanding() {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                {[
-                 { emoji: "🛍️", tag: "E-commerce · Bayonne", title: "Boutique en ligne basque", desc: "Création e-commerce complet + SEO local + stratégie SEA. +180% de conversions.", color: "from-blue-100 to-blue-50" },
-                 { emoji: "🏨", tag: "Hôtellerie · Biarritz", title: "Hôtel Boutique Premium", desc: "Refonte identité visuelle + site web + campagnes Meta Ads. Taux d'occupation +35%.", color: "from-amber-100 to-amber-50" },
-                 { emoji: "🏄", tag: "Sport · Hossegor", title: "École de surf 360°", desc: "Création web, SEO local GMB et shooting graphique. Position #1 acquise.", color: "from-emerald-100 to-emerald-50" },
-                 { emoji: "🍽️", tag: "Restauration · Anglet", title: "Restaurant Gastronomique", desc: "Site vitrine élégant et optimisation GMB. Réservations web multipliées par 2,5.", color: "from-rose-100 to-rose-50" },
-                 { emoji: "🏠", tag: "Immobilier · St-Jean-de-Luz", title: "Agence immobilière web", desc: "Plateforme sur-mesure, connectée aux API + leads Ads. +210 leads / mois.", color: "from-violet-100 to-violet-50" },
-                 { emoji: "💆", tag: "Bien-être · Bidart", title: "Centre Spa & Booking", desc: "Identité graphique complète + site de réservation direct. Carnet complet en 6 semaines.", color: "from-orange-100 to-orange-50" }
+                 { emoji: "🛍️", tag: "E-commerce · Bayonne", title: "Boutique en ligne basque", desc: "Création e-commerce complet + SEO local + stratégie SEA.", color: "from-blue-100 to-blue-50" },
+                 { emoji: "🏨", tag: "Hôtellerie · Biarritz", title: "Hôtel Boutique Premium", desc: "Refonte identité visuelle + site web + campagnes Meta Ads.", color: "from-amber-100 to-amber-50" },
+                 { emoji: "🏄", tag: "Sport · Hossegor", title: "École de surf 360°", desc: "Création web, SEO local GMB et shooting graphique.", color: "from-emerald-100 to-emerald-50" },
+                 { emoji: "🍽️", tag: "Restauration · Anglet", title: "Restaurant Gastronomique", desc: "Site vitrine élégant et optimisation GMB.", color: "from-rose-100 to-rose-50" },
+                 { emoji: "🏠", tag: "Immobilier · St-Jean-de-Luz", title: "Agence immobilière web", desc: "Plateforme sur-mesure, connectée aux API + leads Ads.", color: "from-violet-100 to-violet-50" },
+                 { emoji: "💆", tag: "Bien-être · Bidart", title: "Centre Spa & Booking", desc: "Identité graphique complète + site de réservation direct.", color: "from-orange-100 to-orange-50" }
                ].map((p, i) => (
-                 <div key={i} className="glass-card border border-border rounded-3xl overflow-hidden hover:-translate-y-2 hover:shadow-xl transition-all duration-300">
+                 <Link
+                   key={i}
+                   href="/realisations"
+                   className="group glass-card border border-border rounded-3xl overflow-hidden hover:-translate-y-2 hover:shadow-xl transition-all duration-300 block"
+                 >
                    <div className={`h-[200px] w-full bg-gradient-to-br ${p.color} flex items-center justify-center text-6xl relative`}>
                      {p.emoji}
                      <div className="absolute bottom-4 left-4 bg-foreground/80 backdrop-blur-md text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1.5 rounded-full">
@@ -305,11 +310,11 @@ export function AProposLanding() {
                    <div className="p-6">
                      <h3 className="font-heading font-bold text-foreground text-lg mb-2">{p.title}</h3>
                      <p className="text-sm text-muted-foreground leading-relaxed mb-4">{p.desc}</p>
-                     <span className="text-sm font-semibold text-ocean flex items-center gap-1 group-hover:gap-2 transition-all cursor-pointer">
+                     <span className="text-sm font-semibold text-ocean flex items-center gap-1 group-hover:gap-2 transition-all">
                         Découvrir <ArrowRight className="w-3 h-3" />
                      </span>
                    </div>
-                 </div>
+                 </Link>
                ))}
             </div>
          </div>

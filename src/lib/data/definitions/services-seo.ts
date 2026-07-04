@@ -1,6 +1,6 @@
 import { Service } from "../types";
 import { PROCESS_SEO_IA } from "./process";
-import { TECH_FAQS } from "./specific-faqs";
+import { SEO_FAQS } from "./specific-faqs";
 import { CITIES } from "./cities";
 import { CONTENT_SEO_HUB, CONTENT_SEO_AUDIT, CONTENT_SEO_LOCAL_SPECIFIC } from "./content-seo";
 import { CONTENT_SEO_GMB, CONTENT_SEO_NETLINKING } from "./content-seo-2";
@@ -40,7 +40,7 @@ export const SEO_SERVICES: Service[] = [
       },
     ],
     process: PROCESS_SEO_IA,
-    faq: TECH_FAQS,
+    faq: SEO_FAQS,
     content: CONTENT_SEO_HUB,
   },
   // Services
@@ -60,7 +60,7 @@ export const SEO_SERVICES: Service[] = [
       { title: "Opportunités", description: "Les mots-clés que vos concurrents vous volent." },
     ],
     process: PROCESS_SEO_IA,
-    faq: TECH_FAQS,
+    faq: SEO_FAQS,
     content: CONTENT_SEO_AUDIT,
   },
   {
@@ -79,7 +79,7 @@ export const SEO_SERVICES: Service[] = [
         { title: "Gestion Avis", description: "Stratégie pour récolter plus d'avis positifs et y répondre." }
     ],
     process: PROCESS_SEO_IA,
-    faq: TECH_FAQS,
+    faq: SEO_FAQS,
     content: CONTENT_SEO_GMB,
   },
   {
@@ -98,7 +98,7 @@ export const SEO_SERVICES: Service[] = [
         { title: "Maillage Local", description: "Création de pages ville pour couvrir votre zone de chalandise." }
     ],
     process: PROCESS_SEO_IA,
-    faq: TECH_FAQS,
+    faq: SEO_FAQS,
     content: CONTENT_SEO_LOCAL_SPECIFIC,
   },
   {
@@ -117,7 +117,7 @@ export const SEO_SERVICES: Service[] = [
         { title: "Articles Sponsorisés", description: "Rédaction de contenu haute qualité pour insérer vos liens." }
     ],
     process: PROCESS_SEO_IA,
-    faq: TECH_FAQS,
+    faq: SEO_FAQS,
     content: CONTENT_SEO_NETLINKING,
   },
   // Landing SEO par ville (15 Villes)
@@ -145,7 +145,7 @@ export const SEO_SERVICES: Service[] = [
         { title: "Rencontre", description: `Discutons de vos objectifs ${neighborhoodText}.` }
       ],
       process: PROCESS_SEO_IA,
-      faq: TECH_FAQS,
+      faq: SEO_FAQS,
       // ✅ PAS DE CONTENT ICI - Pages ville ont TerritorialContext unique via siloContext
       localContext: { 
         city: city.name, 

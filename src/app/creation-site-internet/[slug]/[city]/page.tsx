@@ -3,6 +3,7 @@ import {
   generateMetadataForCombo,
   generateStaticParamsForCombo,
 } from "@/components/factories/ComboPageFactory";
+import { getComboData } from "@/lib/data/services";
 
 
 
@@ -19,10 +20,11 @@ export async function generateMetadata({
 }: {
   params: Promise<{ slug: string; city: string }>;
 }) {
-  // Essaie d'abord "web", puis "local"
-  const webMeta = await generateMetadataForCombo(params, "web");
-  if (webMeta.title && !webMeta.title.toString().includes("introuvable")) return webMeta;
-  return generateMetadataForCombo(params, "local");
+  // Structural check (not a string match on the title) to pick the silo the
+  // combo actually belongs to before delegating to the shared metadata helper.
+  const { slug, city } = await params;
+  const silo = getComboData(slug, city, "web") ? "web" : "local";
+  return generateMetadataForCombo(params, silo);
 }
 
 // 3. Page Component

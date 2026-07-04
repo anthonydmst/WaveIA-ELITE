@@ -7,7 +7,7 @@ import { SeoSiloLanding } from "@/components/sections/SeoSiloLanding";
 
 export function generateMetadata() {
   const service = SERVICES.find((s) => s.slug === "referencement-seo");
-  if (!service) return { title: "Page introuvable" };
+  if (!service) return { title: "Page introuvable", robots: { index: false, follow: false } };
   
   return {
     title: "Référencement SEO Pays Basque | Audit & Stratégie - WaveIA",

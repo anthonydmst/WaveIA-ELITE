@@ -88,7 +88,7 @@ export async function generateMetadataForCombo(
   const combo = getComboData(slug, city, silo);
 
   if (!combo) {
-    return { title: "Page introuvable" };
+    return { title: "Page introuvable", robots: { index: false, follow: false } };
   }
 
   // Self-referencing canonical (silo → root path mirrors sitemap.ts)
@@ -102,10 +102,17 @@ export async function generateMetadataForCombo(
   };
   const rootPath = siloToRootPath[silo] ?? "";
 
+  const ogImage = `/og?title=${encodeURIComponent(combo.title)}&description=${encodeURIComponent(combo.description)}`;
+
   return {
     title: `${combo.title} - WaveIA`,
     description: combo.description,
     alternates: { canonical: `${rootPath}/${slug}/${city}` },
+    openGraph: {
+      title: combo.title,
+      description: combo.description,
+      images: [{ url: ogImage, width: 1200, height: 630 }],
+    },
   };
 }
 

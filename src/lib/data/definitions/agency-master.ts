@@ -117,7 +117,6 @@ export const PROJECTS_SHOWCASE = [
     description: "Boutique en ligne complète pour un magasin de surf emblématique. Intégration sur-mesure, SEO local optimisé.",
     image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&h=600&fit=crop",
     tags: ["E-commerce", "Conversion", "SEO Local"],
-    results: "+180% de ventes",
     color: "from-ocean to-accent",
     city: "Biarritz"
   },
@@ -128,7 +127,6 @@ export const PROJECTS_SHOWCASE = [
     description: "Site vitrine élégant avec système de réservation intégré. Menu digital interactif et SEO local.",
     image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&h=600&fit=crop",
     tags: ["Site vitrine", "Réservation", "Mobile-first"],
-    results: "+250% réservations",
     color: "from-sunset to-sand",
     city: "Bayonne"
   },
@@ -139,7 +137,6 @@ export const PROJECTS_SHOWCASE = [
     description: "Plateforme immobilière avec recherche avancée et visite virtuelle des biens. Interface de gestion CRM.",
     image: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&h=600&fit=crop",
     tags: ["Application web", "3D", "CRM"],
-    results: "50 biens/mois",
     color: "from-accent to-ocean-light",
     city: "Anglet"
   },
@@ -150,7 +147,6 @@ export const PROJECTS_SHOWCASE = [
     description: "E-commerce premium avec moteur de recommandations personnalisées et gestion d'abonnements mensuels.",
     image: "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=800&h=600&fit=crop",
     tags: ["E-commerce", "Abonnement", "IA"],
-    results: "1200+ abonnés",
     color: "from-sand to-sunset",
     city: "Pays Basque"
   },
@@ -161,7 +157,6 @@ export const PROJECTS_SHOWCASE = [
     description: "Identité visuelle complète et site de réservation de cours. Système de paiement et gestion des plannings.",
     image: "https://images.unsplash.com/photo-1545205597-3d9d02c29597?w=800&h=600&fit=crop",
     tags: ["Branding", "Logo", "Site web"],
-    results: "Notoriété x3",
     color: "from-ocean-light to-ocean",
     city: "Biarritz"
   },
@@ -172,7 +167,6 @@ export const PROJECTS_SHOWCASE = [
     description: "Site professionnel avec prise de rendez-vous en ligne, synchronisation agenda et espace patient sécurisé.",
     image: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&h=600&fit=crop",
     tags: ["Site vitrine", "RDV en ligne", "RGPD"],
-    results: "2h/jour économisées",
     color: "from-ocean to-accent",
     city: "Bayonne"
   }

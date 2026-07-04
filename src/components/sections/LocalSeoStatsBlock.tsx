@@ -125,8 +125,12 @@ export function LocalSeoStatsBlock() {
               </div>
             </div>
           </div>
-          
+
         </div>
+
+        <p className="text-center mt-12 text-xs text-muted-foreground italic max-w-2xl mx-auto">
+          * Sources : Think with Google, BrightLocal Local Consumer Review Survey.
+        </p>
       </div>
     </section>
   );

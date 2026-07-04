@@ -7,7 +7,7 @@ import { CommunicationSiloLanding } from "@/components/sections/CommunicationSil
 
 export function generateMetadata() {
   const service = SERVICES.find((s) => s.slug === "agence-communication");
-  if (!service) return { title: "Page introuvable" };
+  if (!service) return { title: "Page introuvable", robots: { index: false, follow: false } };
   
   return {
     title: "Agence de Communication 360° au Pays Basque | WaveIA",

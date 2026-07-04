@@ -3,6 +3,7 @@ import {
   generateStaticParamsForSilo,
   generateMetadataForSilo,
 } from "@/components/factories/ServicePageFactory";
+import { SERVICES } from "@/lib/data/services";
 
 
 
@@ -18,10 +19,13 @@ export async function generateMetadata({
 }: {
   params: Promise<{ slug: string }>;
 }) {
-  // Essaie d'abord "web", puis "local" si non trouvé
-  const webMeta = await generateMetadataForSilo(params, "web");
-  if (webMeta.title && !webMeta.title.toString().includes("introuvable")) return webMeta;
-  return generateMetadataForSilo(params, "local");
+  // Structural check (not a string match on the title) to pick the silo the
+  // slug actually belongs to before delegating to the shared metadata helper.
+  const { slug } = await params;
+  const silo = SERVICES.find((s) => s.slug === slug && s.silo === "web")
+    ? "web"
+    : "local";
+  return generateMetadataForSilo(params, silo);
 }
 
 import { TechnoTranslator } from "@/components/sections/pedagogic/TechnoTranslator";
@@ -30,7 +34,6 @@ import { SiteEcommerceLanding } from "@/components/sections/SiteEcommerceLanding
 import { SiteRefonteLanding } from "@/components/sections/SiteRefonteLanding";
 import { MaintenanceWebLanding } from "@/components/sections/MaintenanceWebLanding";
 import { ServiceHero } from "@/components/templates/ServiceHero";
-import { SERVICES } from "@/lib/data/services";
 import { BreadcrumbItem } from "@/lib/breadcrumbs";
 
 export default async function Page({ params }: { params: Promise<{ slug: string }> }) {

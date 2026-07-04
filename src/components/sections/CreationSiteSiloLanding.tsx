@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
-import { ArrowRight, Check, X, ShieldCheck, Gauge, Smartphone, Monitor, ShoppingBag, PenTool, Wrench, Search, Code, Cpu, Sparkles, MapPin } from 'lucide-react';
+import { ArrowRight, Check, X, ShieldCheck, Gauge, Smartphone, Monitor, ShoppingBag, PenTool, Wrench, Search, Code, Cpu, Sparkles } from 'lucide-react';
 import { Link } from 'next-view-transitions';
 
 export function CreationSiteSiloLanding() {
@@ -442,69 +442,20 @@ export function CreationSiteSiloLanding() {
          </div>
       </section>
 
-      {/* ─── BLOC 6 : PREUVE PAR LE RÉSULTAT ─── */}
+      {/* ─── BLOC 6 : RÉALISATIONS ─── */}
       <section className="py-24 bg-background">
          <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <div className="max-w-3xl animate-in fade-in slide-in-from-bottom-4 duration-700 mx-auto text-center mb-16">
                <span className="inline-flex items-center justify-center gap-2 text-xs font-bold uppercase tracking-widest text-ocean mb-4">
-                 <div className="w-5 h-[1.5px] bg-primary"></div> PREUVE PAR LE RÉSULTAT <div className="w-5 h-[1.5px] bg-primary"></div>
+                 <div className="w-5 h-[1.5px] bg-primary"></div> NOS RÉALISATIONS <div className="w-5 h-[1.5px] bg-primary"></div>
               </span>
               <h2 className="text-3xl md:text-5xl font-extrabold font-heading leading-tight mb-6">
-                La performance validée par <em className="not-italic text-ocean relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:right-0 after:h-[2px] after:bg-gradient-to-r after:from-ocean after:to-transparent">nos clients.</em>
+                Ne nous croyez pas sur parole, <em className="not-italic text-ocean relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:right-0 after:h-[2px] after:bg-gradient-to-r after:from-ocean after:to-transparent">regardez le résultat.</em>
               </h2>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                Ne nous croyez pas sur parole. Découvrez comment notre ingénierie web a structuré l'acquisition de ces entreprises.
+              <p className="text-lg text-muted-foreground leading-relaxed mb-10">
+                Découvrez comment notre ingénierie web a structuré l'acquisition de nos clients.
               </p>
-            </div>
-
-            <div className="grid md:grid-cols-3 gap-6 max-w-7xl mx-auto mb-16">
-               {[
-                 {
-                   stars: "★★★★★",
-                   text: "« Enfin une agence qui parle de chiffre d'affaires avant de parler de couleurs. Waveia a repensé notre parcours de conversion. Résultat : une plateforme livrée en deux semaines et nos premiers prospects qualifiés générés dès le premier mois. Un investissement immédiatement rentabilisé. »",
-                   sector: "Secteur Industrie & Bâtiment",
-                   location: "Biarritz (64)",
-                   initial: "I"
-                 },
-                 {
-                   stars: "★★★★★",
-                   text: "« Leurs process accélérés par l'IA ne sont pas un argument marketing, c'est une réalité opérationnelle. Notre site a été développé avec une rigueur technique impressionnante. L'interface est ultra-rapide et l'architecture SEO nous a fait gagner un temps précieux sur Google. »",
-                   sector: "Secteur Services Tech",
-                   location: "Bordeaux (33)",
-                   initial: "S"
-                 },
-                 {
-                   stars: "★★★★★",
-                   text: "« Nous avions été déçus par des agences classiques par le passé (délais non tenus, coûts cachés). Avec Waveia, le cadrage est chirurgical. Tout est transparent, de l'audit initial à la mise en ligne. Avoir un partenaire local aussi réactif en Nouvelle-Aquitaine change la donne. »",
-                   sector: "Secteur Conseil B2B",
-                   location: "Bayonne (64)",
-                   initial: "C"
-                 }
-               ].map((testimonial, i) => (
-                  <div key={i} className="glass-card p-8 border border-border rounded-2xl flex flex-col hover:-translate-y-2 hover:border-ocean/40 transition-all duration-300 relative group bg-card">
-                     <div className="text-yellow-400 text-2xl tracking-widest mb-6">
-                       {testimonial.stars}
-                     </div>
-                     <p className="italic text-muted-foreground mb-8 flex-1 leading-relaxed text-sm">
-                       {testimonial.text}
-                     </p>
-                     <div className="flex items-center gap-4 border-t border-border pt-6">
-                        <div className="w-10 h-10 rounded-full bg-ocean/10 text-ocean flex items-center justify-center font-bold text-lg">
-                          {testimonial.initial}
-                        </div>
-                        <div>
-                           <div className="font-bold text-foreground text-sm">{testimonial.sector}</div>
-                           <div className="text-muted-foreground text-xs flex items-center gap-1 mt-0.5">
-                             <MapPin className="w-3 h-3" /> {testimonial.location}
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               ))}
-            </div>
-            
-            <div className="text-center">
-              <Link href="/business-cases" className="inline-flex items-center justify-center gap-2 bg-foreground text-background px-8 py-4 rounded-xl font-bold hover:bg-primary hover:text-white transition-colors duration-300 shadow-lg group">
+              <Link href="/realisations" className="inline-flex items-center justify-center gap-2 bg-foreground text-background px-8 py-4 rounded-xl font-bold hover:bg-primary hover:text-white transition-colors duration-300 shadow-lg group">
                 Voir nos dernières réalisations
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>

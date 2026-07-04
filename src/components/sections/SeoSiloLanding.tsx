@@ -337,50 +337,6 @@ export function SeoSiloLanding() {
          </div>
       </section>
 
-      {/* ─── BLOC 5 : PREUVE SOCIALE ─── */}
-      <section className="py-24 text-center">
-         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-            <span className="inline-flex items-center justify-center gap-2 text-xs font-bold uppercase tracking-widest text-ocean mb-4">
-               PREUVE DE RENTABILITÉ
-            </span>
-            <h2 className="text-3xl md:text-5xl font-extrabold font-heading mb-16 leading-tight">Ils ont transformé leur trafic en <em className="not-italic text-ocean relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:right-0 after:h-[2px] after:bg-gradient-to-r after:from-ocean after:to-transparent">chiffre d'affaires prédictible.</em></h2>
-            
-            <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-              <div className="glass-card p-8 border border-border rounded-2xl flex flex-col items-center">
-                 <div className="text-4xl mb-4 opacity-50">🛠️</div>
-                 <p className="italic text-muted-foreground mb-6">"Invisible de Google Localement, j'étais forcé de payer des pubs onéreuses pour combler mon planning de devis. Après un refinancement local et technique par Wave IA, mon numéro pro sonne sans rien payer."</p>
-                 <div className="font-bold text-foreground">Artisan BTP (Pays Basque)</div>
-                 <div className="flex gap-4 mt-6 border-t border-border pt-6 w-full justify-center">
-                    <div className="text-center flex-1">
-                      <div className="font-heading font-bold text-2xl text-ocean">Top 1</div>
-                      <div className="text-[10px] uppercase tracking-wider text-muted-foreground mt-1">Pack Google Maps</div>
-                    </div>
-                    <div className="text-center flex-1">
-                      <div className="font-heading font-bold text-2xl text-ocean">+450%</div>
-                      <div className="text-[10px] uppercase tracking-wider text-muted-foreground mt-1">Vues de la Fiche</div>
-                    </div>
-                 </div>
-              </div>
-
-              <div className="glass-card p-8 border border-border rounded-2xl flex flex-col items-center">
-                 <div className="text-4xl mb-4 opacity-50">⚖️</div>
-                 <p className="italic text-muted-foreground mb-6">"Notre cabinet subissait un secteur ultra-saturé. Leur stratégie de contenus et leur plan de Netlinking strict nous ont imposés en Top 3 sur des requêtes juridiques nationales majeures en 8 mois."</p>
-                 <div className="font-bold text-foreground">Cabinet d'Avocats National</div>
-                 <div className="flex gap-4 mt-6 border-t border-border pt-6 w-full justify-center">
-                    <div className="text-center flex-1">
-                      <div className="font-heading font-bold text-2xl text-ocean">+25 Kws</div>
-                      <div className="text-[10px] uppercase tracking-wider text-muted-foreground mt-1">En Première Page</div>
-                    </div>
-                    <div className="text-center flex-1">
-                      <div className="font-heading font-bold text-2xl text-ocean">x4</div>
-                      <div className="text-[10px] uppercase tracking-wider text-muted-foreground mt-1">Contacts B2B</div>
-                    </div>
-                 </div>
-              </div>
-            </div>
-         </div>
-      </section>
-
       {/* ─── BLOC 6 : FAQ ─── */}
       <section className="py-24 bg-card border-y border-border">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">

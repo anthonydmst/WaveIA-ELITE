@@ -4,9 +4,8 @@ import {
   CheckCircle2, 
   Search, 
   Rocket, 
-  Users, 
-  BrainCircuit, 
-  MessageSquareQuote,
+  Users,
+  BrainCircuit,
   ArrowRight,
   Target,
   ShieldAlert,
@@ -115,42 +114,6 @@ export function LocalExpertsBlock() {
   );
 }
 
-export function TrustTestimonialsBlock() {
-  const testimonials = [
-    {
-      title: "La confiance numérique",
-      text: "Ce que je retiens le plus de notre collaboration, c'est que la complexité digitale est avant tout une question de perspective. Là où je voyais autrefois des obstacles techniques pesants et des barrières à ma croissance, je vois désormais des leviers stratégiques qui renforcent ma crédibilité et mon business à tous les niveaux. Un défi technique n'est plus un frein, mais une opportunité de me démarquer !"
-    },
-    {
-      title: "Des Résultats Concrets",
-      text: "Le fait que les experts se déplacent change tout : la compréhension de mes enjeux est décuplée. Avant, je me sentais dépassé par le digital, mais depuis ce projet, je me sens enfin aux commandes et aligné avec mon image."
-    }
-  ];
-
-  return (
-    <section className="py-24 relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="text-center mb-16 animate-hero-fade-up">
-          <SectionHeader as="h2" size="section">
-            Ils nous ont fait confiance <span className="font-heading italic text-ocean-text">et ont aimé...</span>
-          </SectionHeader>
-        </div>
-        
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          {testimonials.map((testi, idx) => (
-            <div key={idx} className="bg-glass-bg backdrop-blur-sm border border-glass-border p-8 lg:p-10 rounded-3xl relative">
-              <MessageSquareQuote className="absolute top-8 right-8 w-12 h-12 text-ocean/10" />
-              <h3 className="text-xl font-bold mb-6 text-ocean-light">{testi.title}</h3>
-              <p className="text-muted-foreground leading-relaxed italic relative z-10">
-                « {testi.text} »
-              </p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
 
 export function RevolutionCTABlock() {
   return (

@@ -13,7 +13,7 @@ import { SuccessStepsBlock, LocalExpertsBlock, RevolutionCTABlock, AgencyHowItWo
 
 export function generateMetadata() {
   const service = SERVICES.find((s) => s.slug === "creation-site-internet");
-  if (!service) return { title: "Page introuvable" };
+  if (!service) return { title: "Page introuvable", robots: { index: false, follow: false } };
   
   return {
     title: "Création Site Internet à Bayonne, Biarritz | WaveIA",

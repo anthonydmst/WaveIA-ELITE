@@ -4,7 +4,7 @@ import { SERVICES } from "@/lib/data/services";
 
 export function generateMetadata() {
   const service = SERVICES.find((s) => s.slug === "solutions");
-  if (!service) return { title: "Page introuvable" };
+  if (!service) return { title: "Page introuvable", robots: { index: false, follow: false } };
   
   return {
     title: "Solutions Web par Métier : Restaurant, Hôtel, Immo | WaveIA",

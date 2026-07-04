@@ -89,15 +89,23 @@ export function RefonteFAQSection() {
                   </div>
                 </button>
                 
-                {isOpen && (
-                  <div className="px-6 md:px-8 pb-6 md:pb-8 pt-2 animate-in fade-in slide-in-from-top-2 duration-300">
-                    <div className="pl-0 md:pl-[3.25rem]">
-                      <p className="text-muted-foreground leading-relaxed text-[0.95rem] md:text-base font-light">
-                        {faq.answer}
-                      </p>
+                {/* Always rendered (CSS-only collapse) so the answer stays
+                    crawlable and matches the FAQPage JSON-LD for this service. */}
+                <div
+                  className={`overflow-hidden transition-[grid-template-rows] duration-300 ease-in-out grid ${
+                    isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
+                  }`}
+                >
+                  <div className="min-h-0">
+                    <div className="px-6 md:px-8 pb-6 md:pb-8 pt-2">
+                      <div className="pl-0 md:pl-[3.25rem]">
+                        <p className="text-muted-foreground leading-relaxed text-[0.95rem] md:text-base font-light">
+                          {faq.answer}
+                        </p>
+                      </div>
                     </div>
                   </div>
-                )}
+                </div>
               </div>
             );
           })}

@@ -15,7 +15,7 @@ export async function generateMetadata(props: { params: Promise<{ slug: string }
   const params = await props.params;
   const resource = getResourceBySlug(params.slug);
   
-  if (!resource) return {};
+  if (!resource) return { title: "Ressource introuvable - WaveIA", robots: { index: false, follow: false } };
 
   return {
     title: `${resource.metadata.title} | WaveIA Pays Basque`,
