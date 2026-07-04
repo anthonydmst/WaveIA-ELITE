@@ -48,9 +48,15 @@ export const AGENCE_SERVICES: Service[] = [
     features: [
       { title: "Logo Sur-mesure", description: "Création originale par nos designers seniors. Pas de banques d'images." },
       { title: "Charte Graphique", description: "Les règles d'or pour utiliser votre image partout (Web, Print, Social)." },
-      ...FEATURES_AGENCE_PREMIUM.slice(2)
+      { title: "Déclinaisons Illimitées", description: "Favicon, réseaux sociaux, signature email : tous vos formats sont couverts." },
+      { title: "Fichiers Sources Fournis", description: "Vecteurs modifiables livrés : vous n'êtes jamais bloqué chez un prestataire." },
     ],
-    process: PROCESS_AGENCE_PREMIUM,
+    process: [
+      { title: "Brief Créatif & Positionnement", description: "Exploration de vos valeurs, votre cible et vos concurrents pour cadrer le projet." },
+      { title: "Exploration Visuelle", description: "3 pistes créatives avec moodboards et premières ébauches de logo." },
+      { title: "Vectorisation & Déclinaisons", description: "Finalisation du logo dans tous les formats et usages nécessaires." },
+      { title: "Livraison Charte Graphique", description: "Remise du brand book complet et formation à son utilisation." },
+    ],
     faq: AGENCE_FAQS_MASTER,
     content: CONTENT_AGENCE_IDENTITE,
   },
@@ -68,9 +74,15 @@ export const AGENCE_SERVICES: Service[] = [
     features: [
       { title: "Stratégie Éditoriale", description: "On ne poste pas au hasard. Calendrier planifié pour un mix contenu valeur/vente optimal." },
       { title: "Création de Contenu", description: "Visuels, Reels, Carrousels... Nous produisons tout en interne." },
-      ...FEATURES_AGENCE_PREMIUM.slice(2)
+      { title: "Community Management", description: "Modération et réponses à vos messages et commentaires au quotidien." },
+      { title: "Publicités Ciblées", description: "Campagnes Meta Ads pour amplifier le contenu qui performe déjà organiquement." },
     ],
-    process: PROCESS_AGENCE_PREMIUM,
+    process: [
+      { title: "Audit Comptes & Concurrence", description: "Analyse de vos réseaux actuels et benchmark de vos concurrents." },
+      { title: "Ligne Éditoriale", description: "Définition du ton, des formats et du calendrier de publication." },
+      { title: "Production de Contenu", description: "Création des visuels, Reels et carrousels du premier mois." },
+      { title: "Animation & Reporting Mensuel", description: "Publication, modération et rapport de croissance chaque mois." },
+    ],
     faq: AGENCE_FAQS_MASTER,
     content: CONTENT_AGENCE_RESEAUX,
   },
@@ -88,9 +100,15 @@ export const AGENCE_SERVICES: Service[] = [
     features: [
         { title: "Qualité Studio", description: "Matériel haut de gamme et retouche professionnelle Lightroom/Photoshop." },
         { title: "Direction Artistique", description: "On vous guide sur les poses, le décor et l'ambiance." },
-        ...FEATURES_AGENCE_PREMIUM.slice(2)
+        { title: "Droits d'Usage Illimités", description: "Vos photos vous appartiennent, sans limite de support ni de durée." },
+        { title: "Banque d'Images Propriétaire", description: "Un stock de visuels réutilisable pour tous vos futurs contenus." },
     ],
-    process: PROCESS_AGENCE_PREMIUM,
+    process: [
+        { title: "Brief Visuel & Moodboard", description: "Définition du style et des usages prévus pour vos photos." },
+        { title: "Repérage & Planning Shooting", description: "Organisation du tournage selon la lumière et vos disponibilités." },
+        { title: "Shooting Sur Site", description: "Captation avec équipement studio mobile haut de gamme." },
+        { title: "Retouche & Livraison Galerie", description: "Post-production et livraison multi-format sous une semaine." },
+    ],
     faq: AGENCE_FAQS_MASTER,
     content: CONTENT_AGENCE_PHOTO,
   },
@@ -108,9 +126,15 @@ export const AGENCE_SERVICES: Service[] = [
     features: [
         { title: "Scénarisation", description: "Storyboarding complet avant de tourner. Rien n'est laissé au hasard." },
         { title: "Montage Dynamique", description: "Cuts rapides, sound design, étalonnage. Le style TikTok/Reels qui retient l'attention." },
-        ...FEATURES_AGENCE_PREMIUM.slice(2)
+        { title: "Formats Multi-plateformes", description: "Livraison optimisée en 9:16 (Reels/TikTok) et 16:9 (Web/YouTube)." },
+        { title: "Étalonnage Cinéma", description: "Colorimétrie professionnelle pour une image qui inspire confiance." },
     ],
-    process: PROCESS_AGENCE_PREMIUM,
+    process: [
+        { title: "Storyboard & Script", description: "Écriture du scénario plan par plan avant tout tournage." },
+        { title: "Repérage & Préparation", description: "Choix des lieux et logistique du jour de tournage." },
+        { title: "Tournage Pro", description: "Captation caméra cinéma, stabilisateur et prise de son broadcast." },
+        { title: "Montage & Étalonnage", description: "Montage rythmé, sound design et livraison multi-format." },
+    ],
     faq: AGENCE_FAQS_MASTER,
     content: CONTENT_AGENCE_VIDEO,
   },
@@ -128,12 +152,17 @@ export const AGENCE_SERVICES: Service[] = [
     features: [
       { title: "Audit 360", description: "Analyse complète de votre présence en ligne et de vos concurrents." },
       { title: "Plan d'Action", description: "Calendrier éditorial et marketing sur 6 à 12 mois." },
-      ...FEATURES_AGENCE_PREMIUM.slice(2)
+      { title: "Tableaux de Bord KPIs", description: "Reporting mensuel lisible pour piloter vos décisions avec des données réelles." },
+      { title: "Révision Trimestrielle", description: "Ajustement de la stratégie selon les résultats mesurés sur le terrain." },
     ],
-    process: PROCESS_AGENCE_PREMIUM,
+    process: [
+      { title: "Audit 360° & Benchmark", description: "Analyse de votre présence actuelle et de vos concurrents directs." },
+      { title: "Définition des Objectifs SMART", description: "Cadrage des priorités et des indicateurs à suivre." },
+      { title: "Plan d'Action Éditorial", description: "Calendrier à 6-12 mois avec canaux prioritaires et messages clés." },
+      { title: "Mise en Place du Tracking", description: "Configuration Analytics/Pixel et premier point de suivi." },
+    ],
     faq: AGENCE_FAQS_MASTER,
-    // Import CONTENT_AGENCE_STRATEGIE at top of file first!
-    content: CONTENT_AGENCE_STRATEGIE, 
+    content: CONTENT_AGENCE_STRATEGIE,
   },
   // Power 5 Cities (Dynamic)
   ...CITIES

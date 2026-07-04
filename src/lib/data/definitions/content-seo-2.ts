@@ -71,13 +71,6 @@ export const CONTENT_SEO_GMB: DeepContent = {
       { value: "100+", label: "Avis Collectés", proof: "En 12 Mois" }
     ]
   },
-  testimonial: {
-    quote: "Notre fiche avait 8 avis et des photos de 2018. Après l'opti WaveIA, on a 87 avis à 4.9 étoiles et +300% d'appels depuis Google Maps. Incroyable.",
-    author: "Sandrine Loustau",
-    role: "Gérante",
-    company: "Boulangerie Loustau",
-    rating: 5
-  },
   comparison: {
     title: "GMB Optimisé vs Non Optimisé",
     competitors: ["Fiche Basique", "Pas de Fiche"],
@@ -156,13 +149,6 @@ export const CONTENT_SEO_NETLINKING: DeepContent = {
       { value: "+45%", label: "Autorité Domaine", proof: "Après 6 Mois" },
       { value: "0", label: "Liens Toxiques", proof: "Que du White Hat" }
     ]
-  },
-  testimonial: {
-    quote: "On stagnait en page 2 depuis 2 ans. Après 6 mois de netlinking, on est top 3. La différence c'était vraiment les backlinks de qualité qu'il nous manquait.",
-    author: "Benoît Harriague",
-    role: "CEO",
-    company: "Immobilier Côte Basque",
-    rating: 5
   },
   comparison: {
     title: "Netlinking Éthique vs Black Hat",
@@ -264,13 +250,6 @@ export const CONTENT_TECH_HUB: DeepContent = {
       { value: "x3", label: "Taux Conversion", proof: "Vs ancien site" },
       { value: "100%", label: "Sécurité", proof: "Architecture Jamstack" }
     ]
-  },
-  testimonial: {
-    quote: "On pensait avoir un bon site WordPress. WaveIA nous a montré ce qu'était la vraie performance. Nos leads ont triplé en 2 mois, et nos clients nous complimentent sur la vitesse du site.",
-    author: "Thomas Etcheverry",
-    role: "Fondateur",
-    company: "Immo Côte Ouest",
-    rating: 5
   },
   comparison: {
     title: "Agence Next.js vs Agence Classique",

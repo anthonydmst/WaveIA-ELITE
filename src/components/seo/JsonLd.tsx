@@ -41,16 +41,12 @@ export function JsonLd({ data }: JsonLdProps) {
           addressCountry: COMPANY_CONFIG.address.country,
         },
       },
-      // S-Tier: Automatically inject WebPage linked to the Organization
-      {
-        '@type': 'WebPage',
-        '@id': `${COMPANY_CONFIG.url}/#webpage`,
-        url: COMPANY_CONFIG.url,
-        name: COMPANY_CONFIG.name,
-        isPartOf: {
-          '@id': `${COMPANY_CONFIG.url}/#organization`
-        }
-      },
+      // No auto-injected WebPage node here: it previously hardcoded
+      // COMPANY_CONFIG.url (the homepage) as `url`, so every deep page
+      // (service, combo, blog...) falsely declared itself as the homepage in
+      // its own JSON-LD. This component has no reliable way to know the
+      // current page's real URL, so it's safer to omit it than emit wrong
+      // data — callers that need a WebPage node should pass one explicitly.
       // The specific data passed to the component
       ...(Array.isArray(data) ? data : [data]),
     ],

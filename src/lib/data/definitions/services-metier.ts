@@ -1,5 +1,5 @@
 import { Service } from "../types";
-import { PROCESS_WAVE_PREMIUM, FEATURES_TECH_PREMIUM } from "./premium-defaults";
+import { PROCESS_WAVE_PREMIUM } from "./premium-defaults";
 import { TECH_FAQS } from "./specific-faqs";
 import { 
   CONTENT_HUB_METIER,
@@ -67,9 +67,15 @@ export const METIER_SERVICES: Service[] = [
     features: [
       { title: "Réservation Directe", description: "Module de réservation zéro commission intégré. Gardez 100% de votre marge." },
       { title: "Menu QR Code", description: "Changez votre carte en un clic, sans réimpression." },
-      ...FEATURES_TECH_PREMIUM.slice(2)
+      { title: "SEO Local Restaurant", description: "Positionnement sur 'restaurant + votre ville' et fiche Google optimisée pour le Local Pack." },
+      { title: "Menu 100% Responsive", description: "Une carte lisible et engageante sur mobile, là où se fait la majorité des recherches avant réservation." },
     ],
-    process: PROCESS_WAVE_PREMIUM,
+    process: [
+      { title: "Audit Concurrence Locale (48h)", description: "Analyse des restaurants concurrents et de votre potentiel de réservation directe en ligne." },
+      { title: "Design Appétissant", description: "Maquettes qui mettent en valeur votre carte et l'ambiance de votre salle." },
+      { title: "Intégration Réservation & Menu", description: "Connexion du module de réservation zéro commission et du menu digital QR Code." },
+      { title: "Lancement & Formation Équipe", description: "Mise en ligne et formation de votre personnel à la gestion du menu et des réservations." },
+    ],
     faq: TECH_FAQS,
     content: CONTENT_METIER_RESTO,
   },
@@ -87,9 +93,15 @@ export const METIER_SERVICES: Service[] = [
     features: [
       { title: "Moteur de Réservation", description: "Intégration fluide de votre PMS ou Booking Engine." },
       { title: "Expérience Visuelle", description: "Mettez en valeur vos chambres avec des galeries immersives." },
-      ...FEATURES_TECH_PREMIUM.slice(2)
+      { title: "SEO Multilingue", description: "Visibilité sur les recherches internationales de votre clientèle touristique." },
+      { title: "Réservation Mobile", description: "Un parcours de réservation en 2 taps depuis un smartphone, où se décide la majorité des séjours." },
     ],
-    process: PROCESS_WAVE_PREMIUM,
+    process: [
+      { title: "Audit Canal Direct", description: "Analyse de votre taux de commission OTA actuel et de votre potentiel de réservation directe." },
+      { title: "Design Immersif", description: "Maquettes avec galeries photo et vidéo qui vendent l'expérience de séjour." },
+      { title: "Intégration Booking Engine", description: "Connexion de votre moteur de réservation direct sans commission (D-Edge, Availpro...)." },
+      { title: "Lancement & Suivi RevPAR", description: "Mise en ligne et suivi des indicateurs de conversion en réservation directe." },
+    ],
     faq: TECH_FAQS,
     content: CONTENT_METIER_HOTEL,
   },
@@ -111,9 +123,15 @@ export const METIER_SERVICES: Service[] = [
     features: [
       { title: "Passerelle Logiciel", description: "Compatible avec tous les grands logiciels (Hektor, Apimo, AdaptImmo...)." },
       { title: "Alerte Email", description: "Vos clients reçoivent les nouveaux biens avant tout le monde." },
-      ...FEATURES_TECH_PREMIUM.slice(2)
+      { title: "SEO par Quartier", description: "Positionnement sur 'agence immobilière + ville ou quartier' pour capter les recherches locales." },
+      { title: "Consultation Mobile des Biens", description: "Annonces et photos optimisées pour la consultation sur smartphone." },
     ],
-    process: PROCESS_WAVE_PREMIUM,
+    process: [
+      { title: "Audit Mandats & Logiciel", description: "Analyse de votre logiciel métier (Apimo, Hektor) et de vos mandats actuels." },
+      { title: "Design Vitrine Biens", description: "Maquettes façon magazine pour sublimer vos annonces et exclusivités." },
+      { title: "Synchronisation API", description: "Connexion automatique de vos annonces depuis votre logiciel de transaction." },
+      { title: "Lancement & Formation Estimation", description: "Mise en ligne et formation à l'outil de captation de leads vendeurs." },
+    ],
     faq: TECH_FAQS,
     content: CONTENT_METIER_IMMO,
   },
@@ -131,9 +149,15 @@ export const METIER_SERVICES: Service[] = [
     features: [
       { title: "Devis en Ligne", description: "Formulaire complet pour qualifier la demande avant le premier appel." },
       { title: "Portfolio Chantier", description: "Montrez la qualité de votre travail avec des galeries avant/après." },
-      ...FEATURES_TECH_PREMIUM.slice(2)
+      { title: "SEO Zone d'Intervention", description: "Visibilité sur vos villes de chantier, là où vos clients cherchent un artisan." },
+      { title: "Galerie Mobile Optimisée", description: "Photos avant/après qui chargent vite même en 4G, consultées depuis le chantier." },
     ],
-    process: PROCESS_WAVE_PREMIUM,
+    process: [
+      { title: "Audit Chantiers & Devis", description: "Analyse de vos réalisations existantes et de votre process actuel de devis." },
+      { title: "Design Portfolio Avant/Après", description: "Maquettes centrées sur la preuve visuelle de la qualité de votre travail." },
+      { title: "Développement Formulaire Qualifiant", description: "Intégration du formulaire de devis détaillé pour filtrer les demandes sérieuses." },
+      { title: "Lancement & Référencement Local", description: "Mise en ligne et positionnement sur vos villes d'intervention." },
+    ],
     faq: TECH_FAQS,
     content: CONTENT_METIER_BTP,
   },
@@ -155,9 +179,15 @@ export const METIER_SERVICES: Service[] = [
     features: [
       { title: "Agenda en Ligne", description: "Intégration Doctolib, Maiia ou système propriétaire de RDV." },
       { title: "Formulaire Sécurisé", description: "Pré-consultation RGPD pour gagner du temps en consultation." },
-      ...FEATURES_TECH_PREMIUM.slice(2)
+      { title: "SEO Santé Locale", description: "Visibilité sur 'médecin' ou 'spécialiste + quartier' pour les nouveaux patients." },
+      { title: "Accessibilité Renforcée", description: "Contrastes et tailles de police adaptés à une patientèle senior (WCAG AAA)." },
     ],
-    process: PROCESS_WAVE_PREMIUM,
+    process: [
+      { title: "Audit RGPD & Flux Patients", description: "Analyse de votre parcours de prise de RDV actuel et des exigences RGPD santé." },
+      { title: "Design Rassurant & Accessible", description: "Maquettes sobres, conformes accessibilité, qui inspirent la confiance médicale." },
+      { title: "Intégration Agenda & Pré-consultation", description: "Connexion Doctolib/Maiia et formulaire de pré-consultation sécurisé." },
+      { title: "Lancement & Formation Secrétariat", description: "Mise en ligne et formation de l'équipe à la gestion des rappels automatiques." },
+    ],
     faq: TECH_FAQS,
     content: CONTENT_METIER_SANTE,
   },
@@ -175,9 +205,15 @@ export const METIER_SERVICES: Service[] = [
     features: [
       { title: "Résa Soins", description: "Système de réservation par créneaux et durée de soin." },
       { title: "Vente Forfaits", description: "Vendez vos abonnements et cartes cadeaux en ligne." },
-      ...FEATURES_TECH_PREMIUM.slice(2)
+      { title: "SEO Beauté & Bien-être", description: "Positionnement sur 'massage' ou 'soin + ville' pour capter la recherche locale." },
+      { title: "Galerie Ambiance Mobile", description: "Immersion dans l'univers de votre institut dès le smartphone." },
     ],
-    process: PROCESS_WAVE_PREMIUM,
+    process: [
+      { title: "Audit Planning & Créneaux", description: "Analyse de vos horaires de forte et faible affluence pour cibler les priorités." },
+      { title: "Design Ambiance Zen", description: "Maquettes qui reflètent l'univers et la sérénité de votre institut." },
+      { title: "Intégration Résa & Forfaits", description: "Connexion réservation de soins et vente de cartes cadeaux/abonnements en ligne." },
+      { title: "Lancement & Shooting Galerie", description: "Mise en ligne accompagnée d'une séance photo de vos espaces." },
+    ],
     faq: TECH_FAQS,
     content: CONTENT_METIER_BIEN_ETRE,
   },
@@ -199,9 +235,15 @@ export const METIER_SERVICES: Service[] = [
     features: [
       { title: "Blog Juridique", description: "Positionnez-vous en expert avec des articles SEO." },
       { title: "Contact Sécurisé", description: "Formulaire chiffré pour la confidentialité des échanges." },
-      ...FEATURES_TECH_PREMIUM.slice(2)
+      { title: "SEO par Spécialité", description: "Une page positionnée par domaine de droit (Pénal, Famille, Commercial...)." },
+      { title: "Consultation Confidentielle Mobile", description: "Formulaire chiffré accessible et rassurant, même depuis un smartphone." },
     ],
-    process: PROCESS_WAVE_PREMIUM,
+    process: [
+      { title: "Audit Positionnement Expertise", description: "Analyse de vos domaines de droit et de la concurrence au barreau local." },
+      { title: "Design Sobre & Autorité", description: "Maquettes qui inspirent confiance et reflètent votre sérieux professionnel." },
+      { title: "Rédaction Silo Expertises & Blog", description: "Création des pages par domaine de droit et des premiers articles juridiques." },
+      { title: "Lancement & Suivi Leads Qualifiés", description: "Mise en ligne et suivi des demandes de consultation générées." },
+    ],
     faq: TECH_FAQS,
     content: CONTENT_METIER_JURIDIQUE,
   },
@@ -223,9 +265,15 @@ export const METIER_SERVICES: Service[] = [
     features: [
       { title: "LMS Intégré", description: "Plateforme d'apprentissage en ligne avec vidéos et quizz." },
       { title: "Paiement Formations", description: "Vente et paiement sécurisé de vos parcours de formation." },
-      ...FEATURES_TECH_PREMIUM.slice(2)
+      { title: "SEO Catalogue Formations", description: "Visibilité sur vos intitulés de formation et votre ville d'implantation." },
+      { title: "Inscription Mobile Fluide", description: "Paiement et inscription en quelques taps, sans friction, depuis un smartphone." },
     ],
-    process: PROCESS_WAVE_PREMIUM,
+    process: [
+      { title: "Audit Catalogue & Financement", description: "Analyse de vos formations et des dispositifs de financement (CPF, OPCO)." },
+      { title: "Design Catalogue Attractif", description: "Maquettes du catalogue filtrable par thème, durée et modalité." },
+      { title: "Intégration LMS & Paiement", description: "Connexion de la plateforme d'apprentissage et du paiement CPF/CB." },
+      { title: "Lancement & Formation Équipe", description: "Mise en ligne et formation de l'équipe pédagogique à la gestion des inscriptions." },
+    ],
     faq: TECH_FAQS,
     content: CONTENT_METIER_FORMATION,
   },

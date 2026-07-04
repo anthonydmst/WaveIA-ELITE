@@ -253,13 +253,6 @@ export const CONTENT_AGENCE_HUB: DeepContent = {
       { value: "4.9/5", label: "Satisfaction", proof: "Google Reviews" }
     ]
   },
-  testimonial: {
-    quote: "Avant WaveIA, notre image était floue. Aujourd'hui on a une marque forte, reconnaissable. On nous dit souvent 'j'ai vu votre pub, j'aurais su que c'était vous même sans le logo'.",
-    author: "Céline Durand",
-    role: "Fondatrice",
-    company: "Maison Côte Basque",
-    rating: 5
-  },
   comparison: {
     title: "Agence Créative vs Freelance",
     competitors: ["Freelance Graphiste", "Outils DIY (Canva)"],
@@ -339,13 +332,6 @@ export const CONTENT_AGENCE_IDENTITE: DeepContent = {
       { value: "5-10 ans", label: "Durée de Vie", proof: "Design Intemporel" },
       { value: "4.9/5", label: "Satisfaction", proof: "Clients" }
     ]
-  },
-  testimonial: {
-    quote: "Notre ancien logo était sympa mais amateur. Le nouveau dégag une crédibilité folle. On ose enfin le mettre partout : camion, vitrine, réseaux. C'est nous, en mieux.",
-    author: "Thomas Etcheverry",
-    role: "Gérant",
-    company: "Menuiserie Etcheverry",
-    rating: 5
   },
   comparison: {
     title: "Création Pro vs Logo 5€",
@@ -427,13 +413,6 @@ export const CONTENT_AGENCE_STRATEGIE: DeepContent = {
       { value: "4.8/5", label: "Satisfaction", proof: "Reviews" }
     ]
   },
-  testimonial: {
-    quote: "On faisait des posts quand on y pensait, sans stratégie. Maintenant on a un planning, des objectifs et surtout des RÉSULTATS mesurables. Le game changer.",
-    author: "Sophie Martin",
-    role: "Directrice Marketing",
-    company: "Surf & Travel",
-    rating: 5
-  },
   comparison: {
     title: "Stratégie Pro vs Improvisation",
     competitors: ["Gestion Interne", "CM Freelance"],
@@ -514,13 +493,6 @@ export const CONTENT_AGENCE_PHOTO: DeepContent = {
       { value: "4K HDR", label: "Qualité Standard", proof: "Broadcast Ready" }
     ]
   },
-  testimonial: {
-    quote: "On hésitait sur le budget shooting. Résultat : notre page d'accueil avec la vidéo drone convertit 3x mieux. L'investissement a été rentabilisé en un mois.",
-    author: "Marie Lacoste",
-    role: "Gérante",
-    company: "Hôtel Les Vagues",
-    rating: 5
-  },
   comparison: {
     title: "Shooting Pro vs Smartphone",
     competitors: ["Photo Smartphone", "Banque d'Images"],
@@ -596,13 +568,6 @@ export const CONTENT_AGENCE_RESEAUX: DeepContent = {
       { value: "24h", label: "Temps Réponse", proof: "Community Mgmt" },
       { value: "5.2%", label: "Taux Engagement", proof: "vs 1.2% Moyenne" }
     ]
-  },
-  testimonial: {
-    quote: "En 3 mois, on est passé de 200 à 2500 followers. Mais surtout, on a des demandes en DM chaque semaine qui se transforment en reservations. Les réseaux travaillent enfin pour nous.",
-    author: "Nicolas Aguirre",
-    role: "Chef",
-    company: "Restaurant Zuberoa",
-    rating: 5
   },
   comparison: {
     title: "CM Agence vs Gestion Interne",

@@ -39,13 +39,6 @@ export const CONTENT_SITE_VITRINE: DeepContent = {
       { value: "4.9/5", label: "Satisfaction Client", proof: "Google Reviews" }
     ]
   },
-  testimonial: {
-    quote: "Notre nouveau site a complètement transformé notre image. On reçoit maintenant des demandes de devis qualifiées chaque semaine. L'investissement a été rentabilisé en 3 mois.",
-    author: "Marie Dupont",
-    role: "Gérante",
-    company: "Boulangerie Le Fournil",
-    rating: 5
-  },
   comparison: {
     title: "WaveIA vs Les Alternatives",
     subtitle: "Pourquoi nous choisir plutôt qu'un template ou une agence classique ?",
@@ -128,13 +121,6 @@ export const CONTENT_ECOMMERCE: DeepContent = {
       { value: "24/7", label: "Ventes Automatisées", proof: "Shopify" }
     ]
   },
-  testimonial: {
-    quote: "Depuis la refonte de notre boutique, nos ventes ont explosé. Le checkout optimisé a divisé par 2 les abandons de panier. C'est du concret.",
-    author: "Thomas Martin",
-    role: "Fondateur",
-    company: "Maison Basque",
-    rating: 5
-  },
   tech_stack: {
     title: "Stack E-Commerce Performance",
     description: "L'infrastructure des géants adaptée à votre échelle.",
@@ -211,13 +197,6 @@ export const CONTENT_LOCAL: DeepContent = {
       { title: "Visibilité", text: "Soyez le premier résultat sur votre ville.", icon: "Search" },
       { title: "Identité", text: "Une marque fière de ses racines.", icon: "Heart" }
     ]
-  },
-  testimonial: {
-    quote: "Enfin une agence qui vient nous voir ! On a pu discuter de visu, comprendre nos besoins réels. La différence avec les prestataires parisiens est énorme.",
-    author: "Jean-Michel Etcheverry",
-    role: "Directeur",
-    company: "Transports Etcheverry",
-    rating: 5
   },
   relatedServices: [
     { slug: "/referencement-seo/local", label: "Référencement Local" },

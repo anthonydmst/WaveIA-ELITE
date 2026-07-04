@@ -93,13 +93,6 @@ export const CONTENT_SEO_HUB: DeepContent = {
       { value: "4.9/5", label: "Satisfaction", proof: "Google Reviews" }
     ]
   },
-  testimonial: {
-    quote: "En 6 mois on est passé de la page 4 au top 3 sur nos mots-clés principaux. Le trafic a explosé et les demandes de devis avec.",
-    author: "Marc Dubois",
-    role: "Gérant",
-    company: "Plomberie Dubois",
-    rating: 5
-  },
   comparison: {
     title: "SEO Expert vs Agence Généraliste",
     competitors: ["Agence Généraliste", "Pas de SEO"],
@@ -184,13 +177,6 @@ export const CONTENT_SEO_AUDIT: DeepContent = {
       { value: "100%", label: "Gratuit", proof: "Sans Engagement" }
     ]
   },
-  testimonial: {
-    quote: "L'audit a révélé des erreurs 404 qu'on ne voyait pas et un temps de chargement désastreux. En corrigeant juste ça, on a gagné 15 positions sur notre mot-clé principal.",
-    author: "Julie Mendez",
-    role: "Directrice",
-    company: "Institut Beauté Ocean",
-    rating: 5
-  },
   comparison: {
     title: "Audit WaveIA vs Outils Automatiques",
     competitors: ["SEMRush/Ahrefs", "Google Search Console"],
@@ -273,13 +259,6 @@ export const CONTENT_SEO_LOCAL_SPECIFIC: DeepContent = {
       { value: "50+", label: "Citations NAP", proof: "Par Client" },
       { value: "4.7", label: "Note Moyenne", proof: "Stratégie Avis" }
     ]
-  },
-  testimonial: {
-    quote: "On n'apparaissait même pas sur Maps. Maintenant on est dans le Top 3 du Local Pack sur 'garage auto Bayonne'. Les appels ont triplé en 2 mois.",
-    author: "Pierre Hiriart",
-    role: "Gérant",
-    company: "Garage Basque Auto",
-    rating: 5
   },
   comparison: {
     title: "SEO Local Pro vs DIY",

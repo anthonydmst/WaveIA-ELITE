@@ -71,13 +71,6 @@ export const CONTENT_REFONTE: DeepContent = {
       { value: "0", label: "Downtime", proof: "Migration Transparente" }
     ]
   },
-  testimonial: {
-    quote: "Notre site WordPress de 2016 ramait grave. La refonte a tout changé : design premium, vitesse hallucinante et surtout +180% de conversions en 3 mois. ROI immédiat.",
-    author: "Stéphane Larrieu",
-    role: "Directeur Commercial",
-    company: "Solutions BTP Côte Basque",
-    rating: 5
-  },
   comparison: {
     title: "Refonte Pro vs Ajustements Cosmétiques",
     competitors: ["Changement de thème WordPress", "Retouches CSS"],
@@ -157,13 +150,6 @@ export const CONTENT_MAINTENANCE: DeepContent = {
       { value: "365j", label: "Backups/An", proof: "Automatiques" }
     ]
   },
-  testimonial: {
-    quote: "Notre site s'était fait hacker 2 fois en un an. Depuis qu'on est avec WaveIA en maintenance, plus aucun problème. Et quand on a une question, réponse en moins de 2h. Impeccable.",
-    author: "Nathalie Berger",
-    role: "Gérante",
-    company: "Agence Immobilière Anglet",
-    rating: 5
-  },
   comparison: {
     title: "Maintenance Pro vs DIY",
     competitors: ["Gestion Interne", "Pas de Maintenance"],
@@ -242,13 +228,6 @@ export const CONTENT_AGENCE_VIDEO: DeepContent = {
       { value: "+300%", label: "Partages", proof: "vs Contenu Statique" },
       { value: "4K 60fps", label: "Qualité Pro", proof: "Broadcast Ready" }
     ]
-  },
-  testimonial: {
-    quote: "On a fait une vidéo Reels de présentation de notre hôtel. 150k vues en 10 jours, des centaines de commentaires et surtout 40+ réservations directes tracées depuis ce Reel. Incroyable ROI.",
-    author: "Pierre Etchegaray",
-    role: "Gérant",
-    company: "Hôtel Villa Koegui",
-    rating: 5
   },
   comparison: {
     title: "Production Pro vs Smartphone",

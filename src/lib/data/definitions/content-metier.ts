@@ -67,13 +67,6 @@ export const CONTENT_HUB_METIER: DeepContent = {
       { value: "100%", label: "Connecté", proof: "API Métier" }
     ]
   },
-  testimonial: {
-    quote: "Comparé à notre ancien site générique, celui-ci convertit 3x mieux. Le formulaire de devis qualifié et la galerie avant/après font 80% du travail commercial.",
-    author: "Marc Durand",
-    role: "Gérant",
-    company: "Rénovation Expertise",
-    rating: 5
-  },
   comparison: {
     title: "Expertise Métier vs Agence Généraliste",
     competitors: ["Agence Généraliste", "Template WordPress"],
@@ -156,13 +149,6 @@ export const CONTENT_METIER_SANTE: DeepContent = {
       { value: "10h", label: "Gagnées/Sem", proof: "Secrétariat" },
       { value: "100%", label: "RGPD Compliant", proof: "Hébergement Santé" }
     ]
-  },
-  testimonial: {
-    quote: "Depuis que nos patients prennent RDV en ligne, on a divisé par 3 les appels et par 4 les no-shows. Le formulaire de pré-consultation nous fait gagner un temps fou.",
-    author: "Dr. Sophie Larrieu",
-    role: "Médecin Généraliste",
-    company: "Cabinet Médical Biarritz",
-    rating: 5
   },
   comparison: {
     title: "RDV en Ligne vs Téléphone Seul",
@@ -247,13 +233,6 @@ export const CONTENT_METIER_JURIDIQUE: DeepContent = {
       { value: "100%", label: "SSL Chiffré", proof: "Confidentialité" },
       { value: "4.8/5", label: "Satisfaction", proof: "Reviews" }
     ]
-  },
-  testimonial: {
-    quote: "Depuis la mise en ligne du blog juridique, on reçoit 15 demandes qualifiées par mois. Les clients nous contactent en ayant déjà lu nos articles, les consultations sont plus efficaces.",
-    author: "Me. Jean-Pierre Dubois",
-    role: "Avocat",
-    company: "Cabinet Dubois & Associés",
-    rating: 5
   },
   comparison: {
     title: "Site Avocat Premium vs Annuaire",

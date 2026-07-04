@@ -35,7 +35,9 @@ Base légale : Consentement (formulaires), Intérêt légitime (analytics), Obli
 • Chiffrement SSL/TLS sur toutes les pages
 • Hébergement sécurisé chez Vercel (certifié SOC 2)
 • Accès aux données restreint au personnel autorisé
-• Sauvegardes régulières et plan de reprise d'activité`,
+• Sauvegardes régulières et plan de reprise d'activité
+
+Sous-traitants : les données saisies dans nos formulaires (contact, devis) sont transmises à **Resend** (service d'envoi d'emails transactionnels) pour nous être délivrées, puis stockées uniquement dans notre messagerie professionnelle. Aucune donnée n'est vendue ni partagée à des fins publicitaires.`,
   },
   {
     icon: Trash2,

@@ -66,13 +66,6 @@ export const CONTENT_METIER_BIEN_ETRE: DeepContent = {
       { value: "0", label: "Appels Manqués", proof: "Agenda Online" }
     ]
   },
-  testimonial: {
-    quote: "Depuis qu'on a mis la réservation en ligne, on a rempli nos créneaux creux (mardi matin, dimanche soir). La vente de forfaits en ligne représente maintenant 25% de notre CA.",
-    author: "Émilie Martin",
-    role: "Gérante",
-    company: "Spa Côte des Basques",
-    rating: 5
-  },
   comparison: {
     title: "Résa Online vs Téléphone Seul",
     competitors: ["Téléphone Seul", "Planity Sans Site"],
@@ -156,13 +149,6 @@ export const CONTENT_METIER_FORMATION: DeepContent = {
       { value: "4.7/5", label: "Note Formations", proof: "Avis Apprenants" },
       { value: "100%", label: "Eligible CPF", proof: "Certif Qualiopi" }
     ]
-  },
-  testimonial: {
-    quote: "Avant le site, on galérait à remplir nos sessions. Maintenant les inscriptions se font en ligne et on a même une liste d'attente sur certaines formations. Le ROI a été atteint en 6 semaines.",
-    author: "Thomas Verdier",
-    role: "Directeur",
-    company: "Formation Pro Pays Basque",
-    rating: 5
   },
   comparison: {
     title: "Plateforme LMS vs Catalogue PDF",
