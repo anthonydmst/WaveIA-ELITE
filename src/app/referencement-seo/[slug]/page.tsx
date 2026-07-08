@@ -42,38 +42,10 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
       </>
     );
   } else if (slug === "local") {
-
+    isStandalone = true;
     renderHeroFn = (breadcrumbs) => (
       <>
         <SeoLocalLanding />
-        {service && <ServiceHero hero={service.hero} breadcrumbItems={breadcrumbs} />}
-      </>
-    );
-    extraContent = (
-      <>
-        <LocalSeoStatsBlock />
-        <div className="max-w-4xl mx-auto px-6 lg:px-8 relative z-10 mb-20 mt-8">
-           <TechnoTranslator 
-              title="Le SEO Local Décrypté" 
-              terms={[
-                {
-                  tech: "Pack Local / Map Pack",
-                  human: "Le Podium Google Maps",
-                  description: "Les 3 premières entreprises affichées sur la carte. C'est là que se font 80% des clics locaux."
-                },
-                {
-                  tech: "NAP (Name, Address, Phone)",
-                  human: "Cohérence des Coordonnées",
-                  description: "Google doit trouver la même adresse partout sur le web. La moindre erreur sème le doute et fait baisser votre classement."
-                },
-                {
-                  tech: "Citations Locales",
-                  human: "Annuaires de Confiance",
-                  description: "Être listé sur PagesJaunes ou les annuaires locaux renforce votre crédibilité géographique."
-                }
-              ]}
-           />
-        </div>
       </>
     );
   } else if (slug === "google-my-business") {
