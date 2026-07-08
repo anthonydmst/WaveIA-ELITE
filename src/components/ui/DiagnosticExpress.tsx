@@ -1,17 +1,17 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useId } from "react";
 
 export function DiagnosticExpress() {
   const containerRef = useRef<HTMLDivElement>(null);
+  const rawId = useId().replace(/:/g, '');
+  const uniqueId = "wv-diag-" + rawId;
 
   useEffect(() => {
     if (!containerRef.current) return;
 
     // Check if script already exists
     if (containerRef.current.querySelector("script.wv-script")) return;
-
-    const uniqueId = "wv-diag-" + Math.random().toString(36).substr(2, 9);
 
     const script = document.createElement("script");
     script.className = "wv-script";
@@ -429,10 +429,10 @@ export function DiagnosticExpress() {
     `;
     containerRef.current.appendChild(script);
 
-  }, []);
+  }, [uniqueId]);
 
   const htmlContent = `
-<div class="wv-diag" id="\${uniqueId}">
+<div class="wv-diag" id="${uniqueId}">
 
   <div class="wv-card">
 
